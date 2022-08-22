@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블가이드</title>
+
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/common.js"></script>
+
+
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #333;}
+        ul, ol, li {list-style: none;}
+        header {
+            position: sticky !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        header h1 a {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #666;
+            font-weight: 300;
+            font-size: 20px;
+            color: #fff;
+        }
+        header h1 a span {
+            display: block;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            overflow-x: auto;
+            background-color: #000;
+        }
+        header ul {
+            display: flex;
+            gap: 10px;
+        }
+        header ul li a {
+            display: flex;
+            padding: 10px 20px;
+            white-space: nowrap;
+            color: #fff;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .item-box {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            border: 1px solid transparent;
+        }
+        .item-box > dt {
+            display: flex;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .item-box:hover {
+            border: 1px solid #000;
+        }
+        .item-box:hover > dt::after  {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #2F86EE;
+            border-radius: 50%;
+        }
+        @media all and (max-width: 780px) {
+            header nav {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrap">
+    
+    <header>
+        <h1><a href=""><span>벤처투자종합포털</span> 퍼블리싱 가이드</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#content_01">타이포</a></li>
+                <li><a href="#content_02">버튼</a></li>
+                <li><a href="#content_03">아이콘버튼</a></li>
+                <li><a href="#content_04">라디오</a></li>
+                <li><a href="#content_05">체크박스</a></li>
+                <li><a href="#content_06">인풋</a></li>
+                <li><a href="#content_07">테이블</a></li>
+                <li><a href="#content_08">탭</a></li>
+                <li><a href="#content_09">페이지네이션</a></li>
+                <li><a href="#content_10">팝업</a></li>
+                <li><a href="#content_11">게시판타입</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <dl id="content_01" class="item-box">
+            <dt>타이포</dt>
+            <dd>
+                <dl class="item-content">
+                    <dt>제목</dt>
+                    <dd>
+                        <!-- sub title -->
+                        <div class="tit_box sub_tit">
+                            <h2>벤처투자포털(h2)</h2>
+                            <span>모든 벤처 투자 정보를 하나로</span>
+                        </div>
+                        <!-- //sub title -->
+                        <div class="tit_box">
+                            <h3>페이지타이틀(h3)</h3>
+                            <span>메뉴에 대한 설명을 상세하게 작성합니다. 메뉴에 대한 설명을 상세하게 작성합니다.</span>
+                        </div>
+                        <div class="tit_box">
+                            <h4>페이지타이틀(h4)</h4>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="item-content">
+                    <dt>font</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                내용 강조
+                                <span class="f_color_blue">구분1</span>
+                            </li>
+                            <li>내용 일반 텍스트</li>
+                            <li>Strong</li>
+                            <li>※ Reference</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="item-content">
+                    <dt>UL li</dt>
+                    <dd>
+                        <ul class="list_box type_01">
+                            <li>리스트</li>
+                            <li>리스트</li>
+                            <li>리스트</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="item-content">
+                    <dt>OL li</dt>
+                    <dd>
+                        <ol class="list_box type_02">
+                            <li>리스트</li>
+                            <li>리스트</li>
+                            <li>리스트</li>
+                        </ol>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <dl id="content_02" class="item-box">
+            <dt>버튼</dt>
+            <dd>
+                <dl class="item-content">
+                    <dt>텍스트버튼<br/></dt>
+                    <dd>
+                        <div class="btn_box">
+                            <a href="" class="btn_blue">글쓰기</a>
+                        </div>
+                        <br/>
+                        <div class="btn_box">
+                            <a href="" class="btn_blue">글쓰기</a>
+                        </div>
+                        <br/>
+                        <div class="btn_box_group">
+                            <div class="btn_box">
+                                <a href="" class="btn_blue">글쓰기</a>
+                            </div>
+                            <div class="btn_box">
+                                <a href="" class="btn_blue">글쓰기</a>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="btn_box_group">
+                            <div class="btn_box">
+                                <a href="" class="btn_gray shadow">취소</a>
+                            </div>
+                            <div class="btn_box">
+                                <a href="" class="btn_blue shadow">수정</a>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <br/>
+                <dl class="item-content">
+                    <dt>애니메이션 버튼</dt>
+                    <dd></dd>
+                </dl>
+            </dd>
+        </dl>
+        <br/><br/>
+        <dl id="content_03" class="item-box">
+            <dt>아이콘버튼<br/></dt>
+            <dd>
+                
+            </dd>
+        </dl>
+
+        <dl id="content_04" class="item-box">
+            <dt>라디오</dt>
+            <dd>
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_01" name="rdo_group_01" checked>
+                        <label for="radio_01">선택함</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_02" name="rdo_group_01">
+                        <label for="radio_02">선택안함</label>
+                    </span>
+                </div>
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_03" name="rdo_group_01" class="checked" disabled>
+                        <label for="radio_03">선택함(class추가 disabled)</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_04" name="rdo_group_01" disabled>
+                        <label for="radio_04">선택안함(disabled)</label>
+                    </span>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_05" class="item-box">
+            <dt>체크박스</dt>
+            <dd>
+                <div class="chk_box">
+                    <span>
+                        <input type="checkbox" id="chk_01">
+                        <label for="chk_01">선택함</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_02">
+                        <label for="chk_02">선택안함</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_03" class="checked" disabled>
+                        <label for="chk_03">선택함(class추가 disabled)</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_04" disabled>
+                        <label for="chk_04">선택안함(disabled)</label>
+                    </span>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_06" class="item-box">
+            <dt>인풋</dt>
+            <dd>
+                <dl class="item-content">
+                    <dt>인풋</dt>
+                    <dd>
+                        <div class="inp_box">
+                            <input type="text">
+                        </div>
+                    </dd>
+                </dl>
+                <br/>
+                <dl class="item-content">
+                    <dt>데이트피커</dt>
+                    <dd>
+                        <div class="inp_box datepicker_box">
+                            <input type="text" class="datepicker">
+                        </div>
+                    </dd>
+                </dl>
+                <br/>
+                <dl class="item-content">
+                    <dt>textarea</dt>
+                    <dd>
+                        <div class="textarea_box">
+                            <textarea></textarea>
+                        </div>
+                    </dd>
+                </dl>
+                <br/>
+                <dl class="item-content">
+                    <dt>셀렉트</dt>
+                    <dd>
+                        <div class="sel_box">
+                            <select>
+                                <option value="">셀렉트박스</option>
+                                <option value="">셀렉트박스</option>
+                                <option value="">셀렉트박스</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <dl id="content_07" class="item-box">
+            <dt>테이블</dt>
+            <dd>
+                <div class="tbl_box_data">
+                    <table>
+                        <caption>정보</caption>
+                        <colgroup>
+                            <col width="20%;"/>
+                            <col width="30%;"/>
+                            <col width="20%;"/>
+                            <col width="30%;"/>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="input_01">사업자 등록번호<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group search">
+                                        <div class="inp_box">
+                                            <input type="text" id="input_01" value="174-05-01552">
+                                        </div>
+                                        <div class="box_btn">
+                                            <button class="search">검색</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input_02">기업명<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="inp_box">
+                                            <input type="text" id="input_02" value="아사달">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input_03">대표자명<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="inp_box">
+                                            <input type="text" id="input_03" value="서창녕">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input_04">설립일자<span class="req">*</span></label></th>
+                                <td>
+                                    <div class="inp_group">
+                                        <div class="inp_box datepicker_box">
+                                            <input type="text" id="input_04" class="datepicker">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="input_05">이메일주소<span class="req">*</span></label></th>
+                                <td>
+                                    <div class="inp_group">
+                                        <div class="inp_box">
+                                            <input type="text" id="input_05" value="https://www.asadal.com">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="radio_001">기업업종<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="rdo_box">
+                                        <span>
+                                            <input type="radio" id="radio_001" name="rdo_group_02" checked>
+                                            <label for="radio_001">ICT제조</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_002" name="rdo_group_02">
+                                            <label for="radio_002">ICT서비스</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_003" name="rdo_group_02">
+                                            <label for="radio_003">전기/기계/장비</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_004" name="rdo_group_02">
+                                            <label for="radio_004">화학/소재</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_005" name="rdo_group_02">
+                                            <label for="radio_005">바이오/의료</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_006" name="rdo_group_02">
+                                            <label for="radio_006">영상/공연/음반</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_007" name="rdo_group_02">
+                                            <label for="radio_007">게임</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_008" name="rdo_group_02">
+                                            <label for="radio_008">유통/서비스</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_009" name="rdo_group_02">
+                                            <label for="radio_009">기타</label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input_06">소재지<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="inp_box">
+                                            <input type="text" id="input_06" value="서창녕">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="chk_01">특이사항</label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="chk_box">
+                                            <span>
+                                                <input type="checkbox" id="chk_01" checked>
+                                                <label for="chk_01">벤처기업</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_02">
+                                                <label for="chk_02">이노비즈</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_03">
+                                                <label for="chk_03">창업보육센터입주</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_04">
+                                                <label for="chk_04">기업부설연구소</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_05">
+                                                <label for="chk_05">벤처투자마트 참여</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_06">
+                                                <label for="chk_06">여성기업</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_07">
+                                                <label for="chk_07">청년기업(40세 이하)</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chk_08">
+                                                <label for="chk_08">벤처기업</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="textarea_01">기업소개<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="textarea_box">
+                                            <textarea id="textarea_01">국내 최초 전통주 술 정기 구독 서비스 쇼핑몰에서 소믈리에가 추천하는 다양한 술을 경험하세요.2천종이 넘는 다채로운 전통주가 한 달에 한번, 집 앞으로 찾아옵니다.
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="file_inp">사업계획서<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group file">
+                                        <span class="txt">※ 사업계획서는 외부에 공개되지 않으며, 벤처투자마트 신청 시에 활용됩니다.</span>
+                                        <div class="file_box">
+                                            <input type="file" id="file_inp" class="file_inp">
+                                            <label for="file_inp">파일첨부</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <br/>
+                
+                <div class="tbl_box_data">
+                    <table>
+                        <caption>정보</caption>
+                        <colgroup>
+                            <col width="10%;"/>
+                            <col width="10%;"/>
+                            <col width="80%;"/>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="2"><label for="input_06">사업계획서</label></th>
+                                <th scope="row"><label for="input_06">키워드</label></th>
+                                <td>
+                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input_06">상세설명</label></th>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_08" class="item-box">
+            <dt>탭</dt>
+            <dd>
+                <div class="tab_group">
+                    <ul>
+                        <li class="on"><a href="" rel="tab_content_01">탭버튼</a></li>
+                        <li><a href="" rel="tab_content_02">탭버튼</a></li>
+                        <li><a href="" rel="tab_content_03">탭버튼</a></li>
+                    </ul>
+                    <div class="tab_content">
+                        <div class="on tab_content_01">
+                            <div class="tab_group">
+                                <ul>
+                                    <li class="on"><a href="" rel="tab_content_08">탭버튼</a></li>
+                                    <li><a href="" rel="tab_content_09">탭버튼</a></li>
+                                    <li><a href="" rel="tab_content_10">탭버튼</a></li>
+                                </ul>
+                                <div class="tab_content">
+                                    <div class="on tab_content_08">
+                                        s1111111111111
+                                    </div>
+                                    <div class="tab_content_09">내용2</div>
+                                    <div class="tab_content_10">내용3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content_02">내용2</div>
+                        <div class="tab_content_03">내용3</div>
+                    </div>
+                </div>
+                <div class="tab_group">
+                    <ul>
+                        <li class="on"><a href="" rel="tab_content_04">탭버튼</a></li>
+                        <li><a href="" rel="tab_content_05">탭버튼</a></li>
+                        <li><a href="" rel="tab_content_06">탭버튼</a></li>
+                    </ul>
+                    <div class="tab_content">
+                        <div class="on tab_content_04">내용1</div>
+                        <div class="tab_content_05">내용2</div>
+                        <div class="tab_content_06">내용3</div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_09" class="item-box">
+            <dt>페이지네이션</dt>
+            <dd>
+                1. 페이지네이션 + 글쓰기버튼
+                <div class="board_btn">
+                    <!-- paging -->
+                    <div class="paging_box">
+                        <ul>
+                            <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                            <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                            <li class="on"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">10</a></li>
+                            <li><a href="">100</a></li>
+                            <li><a href="">1000</a></li>
+                            <li><a href="">9</a></li>
+                            <li><a href="">10</a></li>
+                            <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                            <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="btn_box">
+                        <a href="" class="btn_blue">글쓰기</a>
+                    </div>
+                </div>
+            </dd>
+            <dd>
+                2. 페이지네이션
+                <div class="board_btn">
+                    <!-- paging -->
+                    <div class="paging_box">
+                        <ul>
+                            <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                            <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                            <li class="on"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">10</a></li>
+                            <li><a href="">100</a></li>
+                            <li><a href="">1000</a></li>
+                            <li><a href="">9</a></li>
+                            <li><a href="">10</a></li>
+                            <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                            <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_10" class="item-box">
+            <dt>팝업</dt>
+            <dd>
+                <button>팝업버튼</button>
+                <button id="" class="dialog-link ui-button ui-corner-all ui-widget" data-target="#modal_01">
+                    팝업버튼2
+                </button>
+                <button id="" class="dialog-link ui-button ui-corner-all ui-widget" data-target="#modal_02">
+                    팝업버튼3
+                </button>
+            </dd>
+        </dl>
+
+        <dl id="content_11" class="item-box">
+            <dt>게시판타입</dt>
+            <dd>
+                1. 게시판 테이블
+                <div class="tbl_box">
+                    <table>
+                        <caption>공지사항 테이블</caption>
+                        <colgroup>
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="*">
+                            <col width="8%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="7%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">첨부파일</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">등록일시</th>
+                                <th scope="col">조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fixed">
+                                <td class=""><span class="state_box notice">공지</span></td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">공지사항</a></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">공지사항</a><span class="state_box red">NEW</span></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box green">답변완료</span></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box blue">미답변</span></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">비밀글 사용시</a><span class="lock">잠금</span></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><span class="f_color_blue">구분1</span></td>
+                                <td class="agn_l"><a href="">두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.</a></td>
+                                <td></td>
+                                <td>송은희</td>
+                                <td>2021-10-15</td>
+                                <td>110</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+
+                2. p21 게시판
+                <div class="tbl_box_list">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="employment_status">
+                                    <span class="dday">D - 10</span>
+                                    <span class="date">2021-07-28</span>
+                                </div>
+                                <div class="info_box">
+                                    <div class="state_group">
+                                        <span class="blue">투자사</span>
+                                        <span class="black">신입</span>
+                                        <span class="pink">벤처기업</span>
+                                        <span class="green">기관</span>
+                                        <span class="black">온라인스튜디오(영상/편집)</span>
+                                    </div>
+                                    <div class="tit">
+                                        하이투자파트너스㈜ VC투자심사역(경력)채용
+                                        <span>JB인베스트먼트㈜</span>
+                                    </div>
+                                    <div class="post_info">
+                                        <dl>
+                                            <dt>작성자</dt>
+                                            <dd>meta</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>등록일</dt>
+                                            <dd>2022-07-01</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>조회수</dt>
+                                            <dd>36</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="employment_status">
+                                    <span class="dday txt">상시채용</span>
+                                    <span class="date">2021-07-28</span>
+                                </div>
+                                <div class="info_box">
+                                    <div class="state_group">
+                                        <span class="blue">투자사</span>
+                                        <span class="black">신입</span>
+                                        <span class="pink">벤처기업</span>
+                                        <span class="green">기관</span>
+                                        <span class="black">온라인스튜디오(영상/편집)</span>
+                                    </div>
+                                    <div class="tit">
+                                        하이투자파트너스㈜ VC투자심사역(경력)채용
+                                        <span>JB인베스트먼트㈜</span>
+                                    </div>
+                                    <div class="post_info">
+                                        <dl>
+                                            <dt>작성자</dt>
+                                            <dd>meta</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>등록일</dt>
+                                            <dd>2022-07-01</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>조회수</dt>
+                                            <dd>36</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="employment_status">
+                                    <span class="dday txt">채용종료</span>
+                                    <span class="date">2021-07-28</span>
+                                </div>
+                                <div class="info_box">
+                                    <div class="state_group">
+                                        <span class="blue">투자사</span>
+                                        <span class="black">신입</span>
+                                        <span class="pink">벤처기업</span>
+                                        <span class="green">기관</span>
+                                        <span class="black">온라인스튜디오(영상/편집)</span>
+                                    </div>
+                                    <div class="tit">
+                                        하이투자파트너스㈜ VC투자심사역(경력)채용
+                                        <span>JB인베스트먼트㈜</span>
+                                    </div>
+                                    <div class="post_info">
+                                        <dl>
+                                            <dt>작성자</dt>
+                                            <dd>meta</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>등록일</dt>
+                                            <dd>2022-07-01</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>조회수</dt>
+                                            <dd>36</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <br/>
+                3. p115 게시판
+                <div class="tbl_card_list">
+                    <!-- 테이블 상단정보 -->
+                    <div class="card_info">
+                        <div class="public_box">
+                            작성자 <span>별명</span>님은 
+                            <div class="public_btn">
+                                <button>전체공개</button>
+                                <!-- 상태변경 팝업 -->
+                                <div class="public_content">
+                                    <div class="rdo_box">
+                                        <span>
+                                            <input type="radio" id="radio_001" name="rdo_group_02" checked>
+                                            <label for="radio_001">전체공개</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_002" name="rdo_group_02">
+                                            <label for="radio_002">파트너 공개</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="radio_003" name="rdo_group_02">
+                                            <label for="radio_003">비공개 (본인만 공개)</label>
+                                        </span>
+                                    </div>
+    
+                                    <div class="btn_box_group">
+                                        <div class="btn_box">
+                                            <a href="" class="btn_gray shadow">취소</a>
+                                        </div>
+                                        <div class="btn_box">
+                                            <a href="" class="btn_blue shadow">수정</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //상태변경 팝업 -->
+                                상태입니다.
+                            </div>
+                            
+                        </div>
+                        <ul>
+                            <li><button>파트너 대기 <span>3명</span></button></li>
+                            <li><button>나를 추가한 파트너 <span>4050명</span></button></li>
+                            <li><button>내 파트너 <span>320명</span></button></li>
+                        </ul>
+                    </div>
+                    <!-- //테이블 상단정보 -->
+                    <!-- 리스트 -->
+                    <ul>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                        <li>
+                            <a href="">
+                                미래에 더 성장하는 기업이 되길 기원합니다.
+                                <span>2022-10-00 00:00:00</span>
+                            </a>
+                            <button>설정</button>
+                            <!-- 수정/삭제 -->
+                            <div class="card_set">
+                                <ul>
+                                    <li class="edit"><a href="">수정</a></li>
+                                    <li><a href="">삭제</a></li>
+                                </ul>
+                            </div>
+                            <!-- //수정/삭제 -->
+                        </li>
+                    </ul>
+                    <!-- //리스트 -->
+                </div>
+
+                <br/>
+                4.
+
+            </dd>
+        </dl>
+        
+
+    </div>
+
+    <!-- 내용수정팝업 -->
+    <div class="card_edit">
+        <div class="textarea_box">
+            <textarea>미래에 더 성장하는 기업이 되길 기원합니다.</textarea>
+        </div>
+        <div class="txt_count">
+            <strong>50</strong>/<span>1000</span>byte
+        </div>
+        <div class="btn_box_group">
+            <div class="btn_box">
+                <a href="" class="btn_gray shadow">취소</a>
+            </div>
+            <div class="btn_box">
+                <a href="" class="btn_blue shadow">수정</a>
+            </div>
+        </div>
+    </div>
+    <!-- //내용수정팝업 -->
+
+    <!-- 모달창 -->
+    <div id="modal_01" class="dialog" title="팝업제목">
+        <p>예시내용입니다</p>
+        <p>
+            <button id="" class="dialog-link ui-button ui-corner-all ui-widget" data-target="#modal_03">
+                팝업속버튼
+            </button>
+        </p>
+    </div>
+    <!-- 모달창 -->
+    <div id="modal_02" class="dialog" title="팝업제목">
+        <p>예시내용입니다22222222222</p>
+    </div>
+    <!-- 모달창 -->
+    <div id="modal_03" class="dialog" title="팝업제목">
+        <p>예시내용입니다22222222222</p>
+    </div>
+    
+</div>
+<script>
+    
+
+
+</script>
+</body>
+</html>

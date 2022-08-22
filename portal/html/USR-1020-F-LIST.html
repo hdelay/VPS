@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벤처투자종합포털</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub js -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+    <!-- skip nav -->
+    <div class="skip_nav" title="스킵 네비게이션">
+        <ul>
+            <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+            <li><a href="#conteiner" title="본문 바로가기">본문 바로가기</a></li>
+        </ul>
+    </div>
+
+    <!-- header -->
+    <header>
+        <div class="header_top">
+            <h1><a href="">벤처투자포털</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="">벤처투자매칭</a>
+                        <ul>
+                            <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
+                            <li><a href="./html/USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
+                            <li><a href="./html/USR-1030-B-LIST.html">기업홍보</a></li>
+                            <li><a href="./html/USR-1040-F-DASH.html">통합공시</a></li>
+                            <li><a href="./html/USR-1051-H-CONTN.html">벤처투자마트</a></li>
+                            <li><a href="./html/USR-1061-H-CONTN.html">주식유통정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">투자가이드</a>
+                        <ul>
+                            <li><a href="./html/USR-1110-H-CONTN.html">가이드 A to Z</a></li>
+                            <li><a href="./html/USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                            <li><a href="./html/USR-02-04-B-LIST.html">FAQ</a></li>
+                            <li><a href="./html/USR-02-05-B-LIST.html">용어사전</a></li>
+                            <li><a href="./html/USR-1161-H-CONTN.html">교육</a></li>
+                            <li><a href="./html/USR-1162-B-LIST.html">벤처투자상담</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보서비스</a>
+                        <ul>
+                            <li><a href="./html/USR-1211-H-CONTN.html">정책</a></li>
+                            <li><a href="./html/USR-1213-H-CONTN.html">법령</a></li>
+                            <li><a href="./html/USR-1220-F-DASH.html">통계</a></li>
+                            <li><a href="./html/USR-1231-B-LIST.html">자료실</a></li>
+                            <li><a href="./html/USR-1241-F-LIST.html">구인구직</a></li>
+                            <li><a href="./html/USR-12511-H-CONTN.html">업무처리지원</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">벤처투자포털</a>
+                        <ul>
+                            <li><a href="./html/USR-1310-H-CONTN.html">포털소개</a></li>
+                            <li><a href="./html/USR-1320-B-LIST.html">공지사항</a></li>
+                            <li><a href="./html/USR-1330-F-LIST.html">커뮤니티</a></li>
+                            <li><a href="./html/USR-1341-F-LIST.html">벤처투자 TALK</a></li>
+                            <li><a href="./html/USR-1350-F-FORM.html">벤처투자 부당행위 신고센터</a></li>
+                            <li><a href="./html/USR-1361-H-CONTN.html">유관기관 안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util_box">
+                <div class="search_box">
+                    <input type="text">
+                    <button>검색</button>
+                </div>
+                <a href="" class="btn_sitemap" title="사이트맵">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="" class="btn_allmenu" title="모바일 전체메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="btn_bottom">
+                <a href="" class="purple">한국벤처캐피탈협회</a>
+                <a href="" class="blue">벤처투자 업무지원</a>
+            </div>
+            <ul>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><a href="">사이트맵</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="header_bg"></div>
+
+    <!-- quick menu -->
+    <aside class="quick_box">
+        <ul>
+            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
+            <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
+            <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- conteiner -->
+    <div id="container" class="container type_01">
+        
+        <!-- sub title -->
+        <div class="tit_box sub_tit">
+            <h2>벤처투자매칭</h2>
+            <span>모든 벤처 투자 정보를 하나로</span>
+        </div>
+        <!-- //sub title -->
+
+        <!-- main content -->
+        <div class="content_box">
+            
+            <!-- location -->
+            <div class="location">
+                <ul>
+                    <li class="home">
+                        <a href="">home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">벤처투자매칭</a>
+                        <ul>
+                            <li><a href="">투자가이드</a></li>
+                            <li><a href="">정보서비스</a></li>
+                            <li><a href="">벤처투자포털</a></li>
+                        </ul>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:void(0);">투자자 검색</a>
+                        <ul>
+                            <li><a href="">투자유치 희망기업 검색</a></li>
+                            <li><a href="">기업홍보</a></li>
+                            <li><a href="">통합공시</a></li>
+                            <li><a href="">벤처투자마트</a></li>
+                            <li><a href="">주식유통정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="inner">
+                <div class="tit_box">
+                    <h3>투자자 검색</h3>
+                    <span>투자자를 검색합니다.</span>
+                </div>
+    
+
+                <!-- 주요투자업종 -->
+                <div class="search_item">
+
+                    <div class="tit_box">
+                        <h4><span></span>주요투자업종</h4>
+                    </div>
+
+                    <ul class="chk_list img">
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_01">
+                                    <label for="chk_01">ICT제조</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_02">
+                                    <label for="chk_02">ICT서비스</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_03">
+                                    <label for="chk_03">전기/기계/장비</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_04">
+                                    <label for="chk_04">화학/소재</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_05">
+                                    <label for="chk_05">바이오/의료</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_06">
+                                    <label for="chk_06">영상/공연/음반</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_07">
+                                    <label for="chk_07">게임</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_08">
+                                    <label for="chk_08">유통/서비스</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img"></span>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_09">
+                                    <label for="chk_09">기타</label>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- 투자성격 -->
+                <div class="search_item">
+
+                    <div class="tit_box">
+                        <h4><span></span>투자성격</h4>
+                    </div>
+
+                    <ul class="chk_list type_01">
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_10">
+                                    <label for="chk_10">창업초기</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_11">
+                                    <label for="chk_11">엔젤</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_12">
+                                    <label for="chk_12">M&A</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_13">
+                                    <label for="chk_13">세컨더리</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_14">
+                                    <label for="chk_14">소셜</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_15">
+                                    <label for="chk_15">여성</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_16">
+                                    <label for="chk_16">청년</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_17">
+                                    <label for="chk_17">재기지원</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_18">
+                                    <label for="chk_18">고급기술</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_19">
+                                    <label for="chk_19">지역</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_20">
+                                    <label for="chk_20">해외</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_21">
+                                    <label for="chk_21">4차산업혁명</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_22">
+                                    <label for="chk_22">영화</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_23">
+                                    <label for="chk_23">문화산업</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_24">
+                                    <label for="chk_24">관광</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_25">
+                                    <label for="chk_25">디지털 콘텐츠</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk_box">
+                                <span>
+                                    <input type="checkbox" id="chk_26">
+                                    <label for="chk_26">스포츠</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <button>검색조건<br/>더보기▼</button>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- 더보기 내용 -->
+                <div class="search_item_more">
+
+                    <!-- 투자성격 나머지 -->
+                    <div class="search_item">
+                        <ul class="chk_list type_01">
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_27">
+                                        <label for="chk_27">조선업</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_28">
+                                        <label for="chk_28">환경</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_29">
+                                        <label for="chk_29">보건산업</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_30">
+                                        <label for="chk_30">에너지</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_31">
+                                        <label for="chk_31">기술사업화</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_32">
+                                        <label for="chk_32">해양신산업</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_33">
+                                        <label for="chk_33">일반</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_34">
+                                        <label for="chk_34">일자리매칭</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_35">
+                                        <label for="chk_35">사회적기업</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_36">
+                                        <label for="chk_36">도시재생</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_37">
+                                        <label for="chk_37">공유주택</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_38">
+                                        <label for="chk_38">국토교통혁신</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 투자기업 소재지 -->
+                    <div class="search_item">
+
+                        <div class="tit_box">
+                            <h4><span></span>투자기업 소재지</h4>
+                        </div>
+
+                        <ul class="chk_list type_02">
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_39">
+                                        <label for="chk_39">전체</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_40">
+                                        <label for="chk_40">서울</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_41">
+                                        <label for="chk_41">부산</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_42">
+                                        <label for="chk_42">대구</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_43">
+                                        <label for="chk_43">인천</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_44">
+                                        <label for="chk_44">광주</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_45">
+                                        <label for="chk_45">대전</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_46">
+                                        <label for="chk_46">전체</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_47">
+                                        <label for="chk_47">서울</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_48">
+                                        <label for="chk_48">부산</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_49">
+                                        <label for="chk_49">대구</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_50">
+                                        <label for="chk_50">인천</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_51">
+                                        <label for="chk_51">광주</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_52">
+                                        <label for="chk_52">대전</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_53">
+                                        <label for="chk_53">전체</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_54">
+                                        <label for="chk_54">서울</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_55">
+                                        <label for="chk_55">부산</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_56">
+                                        <label for="chk_56">대구</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_57">
+                                        <label for="chk_57">인천</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_58">
+                                        <label for="chk_58">광주</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_59">
+                                        <label for="chk_59">대전</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- 투자기업 업력 -->
+                    <div class="search_item"></div>
+
+                    <!-- 투자자 구분 -->
+                    <div class="search_item"></div>
+
+                    <!-- 운용규모 -->
+                    <div class="search_item"></div>
+
+                    <!-- 투자사 업력 -->
+                    <div class="search_item"></div>
+
+                </div>
+                
+                <!-- 명칭검색 -->
+                <div class="search_item"></div>
+
+                <!-- 탭 -->
+                <div class="tab_group">
+                    <ul>
+                        <li class="on"><a href="" rel="tab_content_01">투자사 보기</a></li>
+                        <li><a href="" rel="tab_content_02">펀드/조합 보기</a></li>
+                    </ul>
+                    <div class="tab_content">
+                        <!-- 첫번째 탭 -->
+                        <div class="on tab_content_01">
+
+                        </div>
+                        <!-- //첫번째 탭 -->
+
+                        <!-- 두번째 탭 -->
+                        <div class="tab_content_02">
+                            
+                        </div>
+                        <!-- //두번째 탭 -->
+                    </div>
+                </div>
+                <!-- //탭 -->
+                
+            </div>
+
+        </div>
+        <!-- //main content -->
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_top">
+            <ul class="footer_link">
+                <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                <li><a href="">홈페이지 이용안내</a></li>
+                <li><a href="">저작권보호 및 이용정책</a></li>
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">찾아오시는길</a></li>
+            </ul>
+            <div class="familysite_box">
+                <div class="family_select">
+                    <select>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트좀더긴텍스트</option>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트</option>
+                    </select>
+                </div>
+                <button>GO</button>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <address>(06595) 서울특별시 서초구 서초대로 45길 16 VR빌딩 2층</address>
+            <div class="tel_num">
+                <dl>
+                    <dt>TEL : </dt>
+                    <dd>02)2156-2100</dd>
+                </dl>
+                <dl>
+                    <dt>FAX : </dt>
+                    <dd>02)2156-2110/2111</dd>
+                </dl>
+            </div>
+            <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

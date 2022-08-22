@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벤처투자종합포털 list</title>
+    <script type="text/javascript" src="./portal/js/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    table {border-collapse:collapse;border-spacing:0;}
+    table th, strong {font-weight:normal;}
+    body{margin:20px;}
+    h1{margin:0 0 10px 0;}
+    a {display: block; text-decoration:none;}
+    a:hover {text-decoration:underline;}
+    .header {display: flex; justify-content: space-between; flex-wrap: wrap;}
+    hr {width: 100%;}
+    .header h1 {display: flex; align-items: center;}
+    .header > div {background-color: #f3f3f3; padding: 0 30px; border-radius: 50px;}
+    .header div p {text-align: right; margin: 0; line-height: 30px; font-size: 14px;}
+    .list_w table {width:100%;margin:20px auto;border-top: solid 2px #555;border-collapse:collapse;border-spacing:0;font-size:12px;text-align:left;}
+    .list_w table tr:hover {background:#f3f3f3;}
+    .list_w table th {padding: 7px 5px;	border: solid 1px #ddd;background: #efefef;vertical-align:middle;}
+    .list_w table td {padding: 7px 3px;border:solid 1px #ccc;vertical-align:middle;}
+    .list_w table td:nth-child(2) {text-align: left;}
+    .list_w table tr.on td {background: rgb(227, 235, 227);}
+    .list_w table tr.title th {background:#666;color:#fff;font-size:18px;border:0;padding-top:7px;}
+    .lastmdate {color: #1155CC;}
+    .stand_by {color:#777;}
+    .ing {color:#4848D4;}
+    .end {color:green;}
+    .list_w table td.link,
+    .list_w table td.etc{text-align: left; padding-left:10px;}
+    #list th{background: #fff;}
+    #list th.con, #list th.date {text-align: center;}
+    .list_w thead tr th {text-align: center;}
+    #list tr:hover th {background: #f3f3f3;}
+    #list tr th:nth-child(1),
+    #list tr th:nth-child(2),
+    #list tr th:nth-child(5),
+    #list tr th:nth-child(6) {text-align: center;}
+    .header > div.file {background-color: transparent; padding: 0; border-radius: 0;}
+    .file ul {display: flex; flex-wrap: wrap; gap: 5px 10px; padding: 0; margin: 0;}
+    .file li {list-style: none;}
+    .file li a {display: flex; padding: 8px 20px; background-color: #f5f5f5; border-radius: 50px; font-size: 12px;}
+    .file li.front a {background-color: #4848D4; color: #fff;}
+    .file li:hover a {text-decoration: none; background-color: #666; color: #fff;}
+    .file li.front:hover a {background-color: #181866;}
+    .design div {display: flex; justify-content: center;}
+    .design div a {display: flex; justify-content: center; border-radius: 20px; padding: 3px 15px; background-color: #4848D4; color: #fff;}
+    .design div a.none {background-color: #aaa;}
+</style>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>벤처투자종합포털 퍼블리싱 리스트</h1>
+            <div>
+                <p>완료된 페이지 : <span class="curr_n"></span>page / Total : <span class="total_n"></span>page</p>
+                <p>진행율 : <span class="per"></span></p>
+            </div>
+            <!-- <hr />
+            <div class="file">
+                <ul>
+                </ul>
+            </div>
+            <hr /> -->
+        </div>
+
+        <div class="list_w">
+            <table class="codinglist">
+                <colgroup>
+                    <col width="3%" />
+                    <col width="12%" />
+                    <col width="27%" />
+                    <col width="18%" />
+                    <col width="8%" />
+                    <col width="4%" />
+                    <col width="*" />
+                </colgroup>
+                <thead>
+                    <tr class="title">
+                        <th colspan="7">벤처투자종합포털</th>
+                    </tr>
+                    <tr>
+                        <th>no.</th>
+                        <th>구분</th>
+                        <th>페이지명</th>
+                        <th>경로</th>
+                        <th>날짜</th>
+                        <th>상태</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody id="list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script defer>
+        
+        $(function(){
+            let menuTableHeader = ['type', '구분','페이지명','경로','날짜','상태','비고']
+    
+            // 객체 초기화
+            let menuDefault = {
+                type:'',
+                division: '',
+                depth1:'',
+                path:'',
+                date:'',
+                con:'',
+                etc:''
+            };
+        
+            // 배열 추가
+            let menuTableList = [
+                //value값이 없으면 빈문자열로 남기기
+                {
+                    division: '퍼블리싱 가이드',
+                    depth1:'',
+                    path:'./portal/html/pub_guide.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+
+                // 메인
+                {
+                    division: '메인',
+                    depth1:'메인',
+                    path:'./portal/html/main.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+
+                // 벤처투자매칭
+                {
+                    division: '',
+                    depth1:'투자자검색(TAB-2)',
+                    path:'./portal/html/USR-1020-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드]'
+                },
+                {
+                    division: '',
+                    depth1:'투자자검색 - 상세(TAB-2)',
+                    path:'./portal/html/USR-1020-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드] 펀드정보[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'투자유치 희망기업 검색',
+                    path:'./portal/html/USR-1010-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드]'
+                },
+                {
+                    division: '',
+                    depth1:'투자유치 희망기업 검색 - 상세(TAB-2)',
+                    path:'./portal/html/USR-1010-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드]'
+                },
+                {
+                    division: '',
+                    depth1:'투자유치 희망기업 검색 - 등록/수정(TAB-3)',
+                    path:'./portal/html/USR-1010-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'기업 홍보',
+                    path:'./portal/html/USR-1030-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'기업 홍보 - 상세',
+                    path:'./portal/html/USR-1030-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'기업 홍보 - 등록/수정',
+                    path:'./portal/html/USR-1030-B-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'통합공시(TAB-10)',
+                    path:'./portal/html/USR-1040-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 벤처투자마트란?',
+                    path:'./portal/html/USR-1051-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 벤처투자마트 신청안내',
+                    path:'./portal/html/USR-1054-F-FORM-INFO.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 벤처투자마트 신청(TAB-3)',
+                    path:'./portal/html/USR-1054-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 벤처투자마트 2차신청',
+                    path:'./portal/html/USR-1055-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 신청 정보 확인',
+                    path:'./portal/html/USR-1056-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 신청 정보 상세(TAB-3)',
+                    path:'./portal/html/USR-1056-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 공지',
+                    path:'./portal/html/USR-1052-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - 공지 상세',
+                    path:'./portal/html/USR-1052-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자마트 - FAQ',
+                    path:'./portal/html/USR-1053-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'주식유통정보 - VC구주유통망',
+                    path:'./portal/html/USR-1061-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'주식유통정보 -  구주거래정보망',
+                    path:'./portal/html/USR-1062-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'주식유통정보 - M&A 거래정보망',
+                    path:'./portal/html/USR-1063-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+
+                // 투자가이드
+                {
+                    division: '투자가이드',
+                    depth1:'가이드 A to Z',
+                    path:'./portal/html/USR-1110-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'맞춤투자가이드',
+                    path:'./portal/html/USR-02-02-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'FAQ(TAB)',
+                    path:'./portal/html/USR-02-04-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'용어사전(TAB)',
+                    path:'./portal/html/USR-02-05-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'용어사전 - 상세',
+                    path:'./portal/html/USR-1150-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'교육',
+                    path:'./portal/html/USR-1161-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자상담',
+                    path:'./portal/html/USR-1162-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자상담 상세',
+                    path:'./portal/html/USR-1162-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자상담 등록/수정',
+                    path:'./portal/html/USR-1162-B-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+
+                // 정보 서비스
+                {
+                    division: '정보 서비스',
+                    depth1:'정책',
+                    path:'./portal/html/USR-1211-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'법령',
+                    path:'./portal/html/USR-1213-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'통계 - 대시보드',
+                    path:'./portal/html/USR-1220-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'통계 - 투자실적(TAB-4)',
+                    path:'./portal/html/USR-1220-F-DASH-2.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 보고서',
+                    path:'./portal/html/USR-1231-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 보고서 상세',
+                    path:'./portal/html/USR-1231-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 뉴스레터 웹진',
+                    path:'./portal/html/USR-1232-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 발행물',
+                    path:'./portal/html/USR-1234-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 서식',
+                    path:'./portal/html/USR-1235-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 서식 상세',
+                    path:'./portal/html/USR-1235-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'자료실 - 프로그램',
+                    path:'./portal/html/USR-1236-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 채용공고',
+                    path:'./portal/html/USR-1241-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 채용공고 상세',
+                    path:'./portal/html/USR-1241-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 채용공고 등록/수정',
+                    path:'./portal/html/USR-1241-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 인력Pool',
+                    path:'./portal/html/USR-1242-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 인력Pool 상세',
+                    path:'./portal/html/USR-1242-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'구인구직 - 인력Pool 등록/수정',
+                    path:'./portal/html/USR-1242-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'업무처리지원 - VC 경력 확인',
+                    path:'./portal/html/USR-12511-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'업무처리지원 - VC 근무 경력 확인',
+                    path:'./portal/html/USR-1251-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'업무처리지원 - VC Track Record',
+                    path:'./portal/html/USR-12512-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'업무처리지원 - 신청이력 확인',
+                    path:'./portal/html/USR-1252-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+
+                // 벤처투자포털
+                {
+                    division: '벤처투자포털',
+                    depth1:'포털소개',
+                    path:'./portal/html/USR-1310-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'공지사항(TAB-6)',
+                    path:'./portal/html/USR-1320-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'공지사항 상세',
+                    path:'./portal/html/USR-1320-B-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'커뮤니티 - 목록',
+                    path:'./portal/html/USR-1330-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'커뮤니티 - 내 커뮤니티(TAB-2)',
+                    path:'./portal/html/USR-1331-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'커뮤니티 - 개설',
+                    path:'./portal/html/USR-1333-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'커뮤니티 - 일정 보기',
+                    path:'./portal/html/USR-1332-B-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'커뮤니티 - 메인(TAB-5)(SUBTAB-5)',
+                    path:'./portal/html/USR-1334-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자TALK(TAB-3)',
+                    path:'./portal/html/USR-1341-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인] 탭확인필요'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자 부당행위 신고센터 - 부당행위 신고',
+                    path:'./portal/html/USR-1350-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드] [2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자 부당행위 신고센터 - 신고내역확인',
+                    path:'./portal/html/USR-1350-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자 부당행위 신고센터 - 신고내역상세',
+                    path:'./portal/html/USR-1350-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'유관기관 안내(TAB-5)',
+                    path:'./portal/html/USR-1361-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+
+                // 회원
+                {
+                    division: '회원',
+                    depth1:'회원가입 - STEP01 약관동의',
+                    path:'./portal/html/USR-2010-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'회원가입 - STEP02 본인인증',
+                    path:'./portal/html/USR-2011-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'회원가입 - STEP03 회원정보입력',
+                    path:'./portal/html/USR-2012-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'회원가입 - STEP04 가입완료',
+                    path:'./portal/html/USR-2013-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'로그인/아웃',
+                    path:'./portal/html/USR-2020-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드] '
+                },
+                {
+                    division: '',
+                    depth1:'아이디/비밀번호 찾기',
+                    path:'./portal/html/USR-2030-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 대시보드',
+                    path:'./portal/html/USR-2040-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드] '
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 사용자정보 관리',
+                    path:'./portal/html/USR-2041-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 즐겨찾기 관리(TAB-2)',
+                    path:'./portal/html/USR-2042-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 일정 관리',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1332-F-DASH'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 온라인 파일 관리',
+                    path:'./portal/html/USR-2043-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 알림 서비스(TAB-2)',
+                    path:'./portal/html/USR-2044-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 알림 서비스 상세',
+                    path:'./portal/html/USR-2044-F-DTL.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 알림 서비스 등록',
+                    path:'./portal/html/USR-2044-F-FORM.html',
+                    date:'',
+                    con:'작업중',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 알림 서비스 쪽지 레이어팝업',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 내가 가입한 커뮤니티',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1331-F-DASH'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 벤처투자상담',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1162-B-LIST'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 벤처투자마트',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1056-F-LIST'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 이력서 관리',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1242-F-FORM '
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - 기업정보 관리',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1010-F-FORM '
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - IR 자료 요청 관리(TAB-2)',
+                    path:'./portal/html/USR-2045-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'마이페이지 - VC 경력 확인',
+                    path:'./portal/html/.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'-> 바로가기 USR-1252-F-LIST'
+                },
+
+                // 검색
+                {
+                    division: '통합검색',
+                    depth1:'',
+                    path:'./portal/html/USR-2110-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+
+                // 사이트맵
+                {
+                    division: '사이트맵',
+                    depth1:'',
+                    path:'./portal/html/USR-2210-F-LIST.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[1차디자인]'
+                },
+
+                // 퀵메뉴
+                {
+                    division: '퀵메뉴',
+                    depth1:'즐겨찾기 메뉴',
+                    path:'./portal/html/USR-3010-F-DASH.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[스타일가이드] '
+                },
+
+                // footer
+                {
+                    division: 'footer',
+                    depth1:'개인정보처리방침',
+                    path:'./portal/html/USR-4010-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'서비스 이용약관',
+                    path:'./portal/html/USR-4110-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'이메일무단수집거부',
+                    path:'./portal/html/USR-4210-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+                {
+                    division: '',
+                    depth1:'관련사이트 바로가기',
+                    path:'./portal/html/USR-4310-H-CONTN.html',
+                    date:'',
+                    con:'작업중',
+                    etc:'[2차디자인]'
+                },
+            ];
+        
+
+            // 작업리스트 화면에 출력
+            let html;
+            for(let i=0; i < menuTableList.length; i++){
+                html += '<tr>'
+                html += '<th class="no">'+(i+1)+'</th>'
+                html += '<th>'+menuTableList[i].division+'</th>'
+                html += '<th>'+menuTableList[i].depth1+'</th>'
+                html += '<th class="link"><a href='+menuTableList[i].path+' target="_blank">'+menuTableList[i].path+'</a></th>'
+                html += '<th class="date">'+menuTableList[i].date+'</th>'
+                html += '<th class="con">'+menuTableList[i].con+'</th>'
+                html += '<th class="etc">'+menuTableList[i].etc+'</th>'
+                html += '</tr>'
+            };
+            //현재 날짜 구하기 YYYY-MM-DD 형식
+            let time = new Date();
+            let year = time.getFullYear();
+            let month = ('0' + (time.getMonth() + 1)).slice(-2);
+            let day = ('0' + time.getDate()).slice(-2);    
+            let today = year + '-' + month + '-' + day;
+
+            //완료된 페이지 개수 구하기
+            let curr_n = 0;
+            for(let i=0; i < menuTableList.length; i++) {
+                if(menuTableList[i].con === '완료'){
+                    curr_n++;
+                    
+                    setTimeout(function(){
+                        $('.con').css({'color': 'blue'});
+                    }, 100);
+                }
+                setTimeout(function(){
+                    //작업이 완료된 페이지를 제외하고 나머지 표시
+                    $('.con').not('.con:contains(완료)').css('color','red');
+                    
+                    // 날짜가 오늘날짜와 같으면 화면에 표시
+                    $('.date:contains('+ today +')').css('color','red');
+                }, 100);
+            }
+            $('.curr_n').text(curr_n);
+
+            $('#list').html(html);
+            
+            // 전체 페이지 개수 구하기
+            let total_n = $('#list tr').length;
+            $('.total_n').text(total_n - 1);
+
+            // 진행률 나타내기
+            $('.per').text(Math.floor((curr_n/total_n)*100) + '%');
+
+        });
+
+    </script>
+</body>
+</html>

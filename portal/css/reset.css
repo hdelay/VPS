@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* ============================================================
+    파일정의 : reset.css
+============================================================ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, select, button, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'scoredream', sans-serif;
+    font-weight: 300;
+	vertical-align: baseline;
+    letter-spacing: -.5px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a {
+	color: #333;
+    text-decoration: none;
+}
+ol, ul, dl, dt, dd, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table caption {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* skip nav */
+.skip_nav a {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -9999px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.6);
+    border: none;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+}
+.skip_nav a:focus,
+.skip_nav a:hover,
+.skip_nav a:active {
+    top: 0;
+}
+
+/* 에스코어드림 웹폰트 */
+@font-face { /* s-core-dream-thin */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream1-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream1-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-extralight */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream2-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream2-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-light */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream3-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream3-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-regular */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream4-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream4-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-medium */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream5-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream5-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-bold */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream6-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream6-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-extrabold */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream7-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream7-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-heavy */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream8-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream8-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face { /* s-core-dream-black */
+    font-family: 'scoredream';
+    src: url('./fonts/scoredream/scdream9-webfont.woff2') format('woff2'),
+         url('./fonts/scoredream/scdream9-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* GmarketSans 웹폰트 */
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('./fonts/gmarketsans/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('./fonts/gmarketsans/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('./fonts/gmarketsans/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 원스토어 모바일 타이틀 */
+@font-face {
+    font-family: 'ONEmobileTitle';
+    src: url('./fonts/one-mobile-title/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
