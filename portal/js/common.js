@@ -107,6 +107,7 @@ $(function(){
         $('body').removeClass('gnb_open');
     })
 
+    // 탭키시 gnb 오픈
     $('header .header_top nav > ul > li > ul li a').focus(function(){
         $('body').addClass('gnb_open');
     });
@@ -125,11 +126,33 @@ $(function(){
         }
     })
 
+    // 모바일 오픈
+    $('.btn_allmenu').on('click', function(e){
+        e.preventDefault();
+        $('.allmenu_box').show();
+        $('body').css({'overflow': 'hidden'});
+    });
+
+    // 모바일 메뉴
+    $('.allmenu_box > ul > li > a').on('click', function(){
+        $(this).parent().siblings().removeClass('on');
+        $(this).parent().addClass('on');
+    });
+
+    // 모바일 메뉴 닫기
+    $('.allmenu_close').on('click', function(e){
+        e.preventDefault();
+        $('.allmenu_box').hide();
+        $('body').css({'overflow': 'auto'});
+    });
+
     // 팝업버튼
     let popBtn = $(".dialog-link");
     let popBody = $(".dialog");
     let beforeScrollPosition = 0; 
     let popupOpenType = false;
+    let quick_popBtn = $(".quick_link");
+    let quick_popBody = $(".quick_dialog");
 
     // 팝업 뒤 html 스크롤 조정가능여부
     window.addEventListener('scroll', function() {
@@ -143,6 +166,13 @@ $(function(){
     });
 
     popBtn.click(function(e) {
+        let poptarget = $(this).attr('data-target');
+        $(poptarget).dialog("open");
+        popupOpenType = true; // html스크롤 조절불가능
+        e.preventDefault();
+    });
+    // 퀵링크 팝업
+    quick_popBtn.click(function(){
         let poptarget = $(this).attr('data-target');
         $(poptarget).dialog("open");
         popupOpenType = true; // html스크롤 조절불가능
@@ -171,6 +201,30 @@ $(function(){
                     popupOpenType = false; // html스크롤 조절가능
                 }
             }]
+    });
+
+    // 퀵팝업 body
+    quick_popBody.dialog({
+        width: 'auto',
+        maxWidth: 420,
+        title: false, // 다이얼로그 제목
+        autoOpen: false,
+        show: {
+            effect: "fade",
+            duration: 100
+        },
+        modal: true,
+        buttons: [{
+                text: "닫기",
+                click: function() {
+                    $(this).dialog("close");
+                    popupOpenType = false; // html스크롤 조절가능
+                }
+            }],
+        open: function(){
+            console.log($(this));
+            $(this).parent().find('.ui-dialog-titlebar').remove();
+        }
     });
 
     // 탭
@@ -234,6 +288,12 @@ $(function(){
     $('.card_edit .btn_gray').on('click', function(e){
         e.preventDefault();
         $(this).parent().parent().parent().removeClass('on')
+    });
+
+    // 검색조건 더보기
+    $('.chk_list.type_01 li.more button').on('click', function(){
+        $('.search_item_more').toggleClass('on');
+        $(this).toggleClass('on');
     });
 
 });
