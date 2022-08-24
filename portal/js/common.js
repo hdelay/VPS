@@ -93,15 +93,14 @@ $(function(){
     });
 
     // header
-    $('header .header_top nav > ul').hover(function(){
-        $('body').addClass('gnb_open');
-    }, function(){
+    $('header .header_top nav > ul > li').hover(function(){
         if($('.header_bg').mouseover()){
             $('body').addClass('gnb_open');
-        } 
-    });
-    $('.header_bg').mouseout(function(){ // 마우스가 배경밖으로 나갔을 경우
-        $('body').removeClass('gnb_open');
+        }
+    }, function(){
+        $('.header_bg').mouseout(function(){ // 마우스가 배경밖으로 나갔을 경우
+            $('body').removeClass('gnb_open');
+        });
     });
     $(document).bind("mouseleave", function(){ // 마우스가 브라우저 밖으로 나갔을 경우
         $('body').removeClass('gnb_open');
@@ -121,6 +120,7 @@ $(function(){
     
         if(scrollLocation > 100){
             $('header').addClass('headerfix');
+            $('body').removeClass('gnb_open');
         } else {
             $('header').removeClass('headerfix');
         }
@@ -137,6 +137,10 @@ $(function(){
     $('.allmenu_box > ul > li > a').on('click', function(){
         $(this).parent().siblings().removeClass('on');
         $(this).parent().addClass('on');
+    });
+    $('.allmenu_box > ul > li > ul > li > a').on('click', function(){
+        $(this).parent().siblings().removeClass('on');
+        $(this).parent().toggleClass('on');
     });
 
     // 모바일 메뉴 닫기

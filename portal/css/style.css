@@ -118,7 +118,10 @@ header .header_top nav > ul > li > ul {
 header .header_top nav > ul > li > ul li {
     text-align: right;
 }
-header .header_top nav > ul > li > ul li:hover a {
+header .header_top nav > ul > li > ul > li > a {
+    font-weight: 500;
+}
+header .header_top nav > ul > li > ul > li:hover > a {
     color: #457cd7;
 }
 header .header_top .util_box {
@@ -131,6 +134,19 @@ header .header_top nav > ul > li:focus > a::before,
 header .header_top nav > ul > li:hover > a::after,
 header .header_top nav > ul > li:focus > a::after {
     width: 50%;
+}
+/* menu 3depth */
+header .header_top nav ul ul ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 5px;
+}
+header .header_top nav ul ul ul li a {
+    font-size: 15px;
+}
+header .header_top nav ul ul ul li:hover a {
+    color: #457cd7;
 }
 header .header_top .util_box a.btn_allmenu,
 header .header_top .util_box a.btn_sitemap {
@@ -293,13 +309,13 @@ header.headerfix .header_bottom ul li a::before {
     left: 0;
     width: 100%;
     height: 0;
-    background: #fff url(../images/bg/bg_gnb.png) no-repeat -317px 145px;
+    background: #fff url(../images/bg/bg_gnb.png) no-repeat -317px center;
     background-size: 645px auto;
     transition: height .3s;
-    z-index: 1;
+    z-index: 2;
 }
 .gnb_open .header_bg {
-    height: 360px;
+    height: 650px;
 }
 
 /* container */
@@ -393,7 +409,7 @@ header.headerfix .header_bottom ul li a::before {
     transition: .2s;
 }
 .content_box .location > ul > li.on > a::after {
-    transform: translateY(-80%) rotate(135deg);
+    transform: translateY(-40%) rotate(135deg);
 }
 .content_box .location > ul > li.home {
     min-width: auto;
@@ -1041,7 +1057,7 @@ footer .footer_bottom {
     .allmenu_box > ul > li.on > a {
         background-color: #2e40a9;
     }
-    .allmenu_box > ul ul {
+    .allmenu_box > ul > li > ul {
         display: none;
         position: absolute;
         top: 0;
@@ -1050,16 +1066,56 @@ footer .footer_bottom {
         height: calc(100vh - 107px);
         background-color: #fff;
     }
-    .allmenu_box > ul li.on ul {
+    .allmenu_box > ul > li.on > ul {
         display: block;
     }
-    .allmenu_box > ul ul li a {
+    .allmenu_box > ul > li > ul > li > a {
         display: flex;
         position: relative;
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, .09);
-        padding: 15px 25px;
+        padding: 15px 37px 15px 25px;
         box-sizing: border-box;
+        font-weight: 400;
+    }
+    .allmenu_box > ul > li > ul > li.depth3 > a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 49%;
+        right: 20px;
+        width: 15px;
+        height: 1px;
+        background-color: #333;
+    }
+    .allmenu_box > ul > li > ul > li.depth3 > a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 49%;
+        right: 20px;
+        width: 15px;
+        height: 1px;
+        background-color: #333;
+        transform: rotate(90deg);
+    }
+    .allmenu_box > ul > li > ul > li.on > a::after {
+        display: none;
+    }
+    .allmenu_box > ul > li > ul > li > ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #edecec;
+    }
+    .allmenu_box > ul > li > ul > li.on > ul {
+        display: flex;
+    }
+    .allmenu_box > ul > li > ul > li > ul > li a {
+        display: flex;
+        font-size: 14px;
         font-weight: 400;
     }
     .allmenu_close {
@@ -1095,9 +1151,15 @@ footer .footer_bottom {
     .container::before {
         min-width: 0;
     }
+    .content_box {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
     .content_box .location > ul > li {
         min-width: 0;
-        width: calc(50% - 25px);
+        width: calc(33.33% - 17px);
         height: 50px;
     }
     .content_box .location > ul > li.home {
@@ -1112,7 +1174,8 @@ footer .footer_bottom {
     }
     .content_box .location > ul > li > a {
         height: 100%;
-        padding: 0 10px;
+        padding: 0 15px 0 10px;
+        font-size: 12px;
     }
     .content_box .location > ul > li > a::after {
         right: 10px;
@@ -1127,6 +1190,8 @@ footer .footer_bottom {
     }
     .content_box .location ul ul li a {
         height: 50px;
+        padding: 0 10px;
+        font-size: 12px;
     }
 
     /* footer */
