@@ -18,7 +18,7 @@
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/fullpage.2.9.7.js"></script> <!-- main -->
     <script src="../js/swiper-bundle.min.js"></script> <!-- main -->
-    <script src="../js/main.js"></script> <!-- main -->
+    <!--<script src="../js/main.js"></script>  main -->
     <script src="../js/common.js"></script>
 
 </head>
@@ -509,9 +509,9 @@
 
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination sec1_full"></div>
-                <button class="swiper-button-prev sec1_full"></button>
-                <button class="swiper-button-next sec1_full"></button>
+                <div class="swiper-pagination sec01"></div>
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
             </div>
             <!-- //스와이퍼 -->
 
@@ -582,5 +582,40 @@
     </div>
 
 </div>
+<style>
+    .shortcuts_box {display: none;}
+</style>
+<script>
+    // swiper
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 400,
+        navigation: {
+          nextEl: '.swiper-container .swiper-button-next',
+          prevEl: '.swiper-container .swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination.sec01',
+            clickable: true,
+        },
+        observer: true,
+        mousewheel: true,                                         
+        on: {
+            slideChange: function(){
+                var idx = this.activeIndex;
+                // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+                if(this.activeIndex != 0 && idx != 2) $.fn.fullpage.setAllowScrolling(false);
+                // console.log('즉시 : ' + idx);
+            },  
+            slideChangeTransitionEnd: function(){
+                var idx = this.activeIndex;
+                // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
+                if(idx == 0 || idx == 2) $.fn.fullpage.setAllowScrolling(true);
+                // console.log('전환후 : ' + idx);
+            }                 
+        }, 
+    });
+</script>
 </body>
 </html>

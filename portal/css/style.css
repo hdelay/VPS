@@ -872,7 +872,7 @@ footer .footer_bottom {
     미디어쿼리 max-width: 1500px
 ============================================================ */
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
     /* header */
     header .header_top {
         padding: 0 20px;
@@ -902,6 +902,14 @@ footer .footer_bottom {
     /* conteiner */
     .content_box {
         max-width: calc(100% - 40px);
+    }
+}
+/* ============================================================
+    미디어쿼리 max-width: 1200px
+============================================================ */
+@media screen and (max-width: 1200px) {
+    header .header_bottom .btn_bottom {
+        flex-direction: column;
     }
 }
 
@@ -1148,6 +1156,9 @@ footer .footer_bottom {
     }
 
     /* conteiner */
+    .container {
+        padding-top: 70px;
+    }
     .container::before {
         min-width: 0;
     }
@@ -1157,7 +1168,23 @@ footer .footer_bottom {
         margin: 0;
         border-radius: 0;
     }
+    .sub_tit {
+        padding: 35px 0 60px;
+    }
+    .sub_tit h2 {
+        font-size: 40px;
+    }
+    .sub_tit span {
+        font-size: 14px;
+    }
+    .sub_tit span::after {
+        width: 40px;
+    }
+    .content_box .inner {
+        padding: 35px 20px;
+    }
     .content_box .location > ul > li {
+        flex: 1;
         min-width: 0;
         width: calc(33.33% - 17px);
         height: 50px;
@@ -1168,6 +1195,7 @@ footer .footer_bottom {
         justify-content: center;
         width: 50px;
         padding: 0;
+        flex: none;
     }
     .content_box .location > ul > li:last-child {
         border-right: none;
@@ -1192,6 +1220,14 @@ footer .footer_bottom {
         height: 50px;
         padding: 0 10px;
         font-size: 12px;
+    }
+
+    /* 투자자 검색 */
+    .search_item {
+        padding-top: 30px;
+    }
+    .search_item.etc {
+        padding-top: 5px;
     }
 
     /* footer */

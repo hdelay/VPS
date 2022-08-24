@@ -1193,21 +1193,176 @@
 }
 
 /* ============================================================
-    미디어쿼리 max-width: 460px
+    미디어쿼리 max-width: 768px
 ============================================================ */
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 768px) {
     .wrap {
         min-width: 0;
         width: 100%;
     }
     /* header */
-    header {
-        
-    }
     /* conteiner */
     .container::before {
         min-width: 0;
         width: 100%;
+    }
+    /* 제목 */
+    .tit_box h3 {
+        font-size: 27px;
+    }
+    .tit_box h3 + span {
+        padding-bottom: 20px;
+    }
+    .tit_box h4 {
+        margin-bottom: 20px;
+    }
+
+    /* sel_box 셀렉트박스 */
+    .sel_box select {
+        font-size: 14px;
+    }
+
+    /* chk_box 라디오박스 */
+    .chk_box input + label {
+        font-size: 14px;
+    }
+
+    /* 카드테이블 타입2 :: 투자자 검색 - 이미지 */
+    .chk_list.img {
+        flex-wrap: wrap;
+    }
+    .chk_list.img li {
+        flex: none;
+        min-width: calc(50% - 7px);
+        height: 80px;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .chk_list.img li .img {
+        height: 50%;
+        background-size: auto 100% !important;
+    }
+
+    /* 카드테이블 타입3 :: 투자자 검색 */
+    .chk_list.type_01 {
+        gap: 5px;
+    }
+    .chk_list.type_01 li {
+        width: auto;
+        padding: 10px 15px;
+    }
+    .chk_list.type_01 li.more {
+        width: 100%;
+    }
+    .chk_list.type_01 li.more button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .chk_list.type_01 li.more button br {
+        display: none;
+    }
+
+    /* 카드테이블 타입4 :: 투자자 검색 */
+    .chk_list.type_02 {
+        padding: 0 15px;
+    }
+    .chk_list.type_02 li {
+        padding: 10px 0;
+    }
+    .chk_list.type_02 li .chk_box {
+        gap: 10px;
+    }
+    .chk_list.type_02 li .chk_box span {
+        width: auto;
+        padding-left: 0;
+    }
+
+    /* 카드테이블 타입5 :: 투자자 검색 */
+    .chk_list.type_03 li .chk_box {
+        gap: 10px;
+    }
+    .chk_list.type_03 li .chk_box span {
+        padding-left: 0;
+    }
+    .chk_list.type_02 li + li {
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    /* 카드테이블 타입6 :: 투자자 검색 */
+    .tbl_card_list.type_02 .list_info {
+        padding-bottom: 20px;
+    }
+    .tbl_card_list.type_02 .list_info ul {
+        justify-content: flex-start;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .tbl_card_list.type_02 .list_info ul li {
+        width: calc(50% - 5px);
+    }
+    .tbl_card_list.type_02 .list_info ul li .sel_box {
+        width: 100%;
+    }
+    .tbl_card_list.type_02 .list_info .total {
+        padding-top: 20px;
+    }
+    .tbl_card_list.type_02 > ul {
+        gap: 10px;
+    }
+    .tbl_card_list.type_02 > ul > li {
+        width: 100%;
+    }
+    .tbl_card_list.type_02 > ul > li a {
+        gap: 5px;
+    }
+    .tbl_card_list.type_02 a .tit span {
+        display: block;
+        margin-left: 0;
+    }
+    .tbl_card_list.type_02 > .txt {
+        margin-top: 10px;
+    }
+
+    /* search form 서치폼 */
+    .search_form_box {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .search_form_box .sel_box {
+        width: 100%;
+        height: 40px;
+    }
+    .search_form_box .sel_box select {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .search_form_box .inp_box {
+        width: 100%;
+        height: 40px;
+    }
+    .search_form_box .btn_box {
+        width: 100%;
+        height: 40px;
+    }
+
+    /* 탭 */
+    .tab_group > ul > li > a {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .tab_group .tab_content > div {
+        padding: 20px 0;
+    }
+
+    /* 페이징 */
+    .board_btn {
+        margin-top: 30px;
+    }
+    .paging_box ul {
+        gap: 3px;
     }
 }

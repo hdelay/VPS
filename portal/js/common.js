@@ -150,6 +150,12 @@ $(function(){
         $('body').css({'overflow': 'auto'});
     });
 
+    $(window).resize(function(){
+        if($(window).width() < 768){
+            $('.allmenu_box').hide();
+        }
+    });
+
     // 팝업버튼
     let popBtn = $(".dialog-link");
     let popBody = $(".dialog");
