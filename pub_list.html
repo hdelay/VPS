@@ -74,13 +74,14 @@
                     <col width="12%" />
                     <col width="27%" />
                     <col width="18%" />
-                    <col width="8%" />
+                    <col width="6%" />
+                    <col width="6%" />
                     <col width="4%" />
                     <col width="*" />
                 </colgroup>
                 <thead>
                     <tr class="title">
-                        <th colspan="7">벤처투자종합포털</th>
+                        <th colspan="8">벤처투자종합포털</th>
                     </tr>
                     <tr>
                         <th>no.</th>
@@ -88,6 +89,7 @@
                         <th>페이지명</th>
                         <th>경로</th>
                         <th>날짜</th>
+                        <th>개발시작날짜</th>
                         <th>상태</th>
                         <th>비고</th>
                     </tr>
@@ -99,7 +101,7 @@
     <script defer>
         
         $(function(){
-            let menuTableHeader = ['type', '구분','페이지명','경로','날짜','상태','비고']
+            let menuTableHeader = ['type', '구분','페이지명','경로','날짜','개발시작날짜','상태','비고']
     
             // 객체 초기화
             let menuDefault = {
@@ -108,6 +110,7 @@
                 depth1:'',
                 path:'',
                 date:'',
+                mdate:'',
                 con:'',
                 etc:''
             };
@@ -120,6 +123,7 @@
                     depth1:'',
                     path:'./portal/html/pub_guide.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:''
                 },
@@ -130,6 +134,7 @@
                     depth1:'메인',
                     path:'./portal/html/main.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:''
                 },
@@ -139,8 +144,9 @@
                     division: '',
                     depth1:'투자자검색(TAB-2)',
                     path:'./portal/html/USR-1020-F-LIST.html',
-                    date:'',
-                    con:'작업중',
+                    date:'2022-08-25',
+                    mdate:'2022-09-05',
+                    con:'완료',
                     etc:'[스타일가이드]'
                 },
                 {
@@ -148,6 +154,7 @@
                     depth1:'투자자검색 - 상세(TAB-2)',
                     path:'./portal/html/USR-1020-F-DTL.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:'[스타일가이드] 펀드정보[2차디자인]'
                 },
@@ -156,6 +163,7 @@
                     depth1:'투자유치 희망기업 검색',
                     path:'./portal/html/USR-1010-F-LIST.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:'[스타일가이드]'
                 },
@@ -164,6 +172,7 @@
                     depth1:'투자유치 희망기업 검색 - 상세(TAB-2)',
                     path:'./portal/html/USR-1010-F-DTL.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:'[스타일가이드]'
                 },
@@ -172,6 +181,7 @@
                     depth1:'투자유치 희망기업 검색 - 등록/수정(TAB-3)',
                     path:'./portal/html/USR-1010-F-DTL.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:''
                 },
@@ -180,6 +190,7 @@
                     depth1:'기업 홍보',
                     path:'./portal/html/USR-1030-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-19',
                     con:'작업중',
                     etc:''
                 },
@@ -188,6 +199,7 @@
                     depth1:'기업 홍보 - 상세',
                     path:'./portal/html/USR-1030-B-DTL.html',
                     date:'',
+                    mdate:'2022-09-19',
                     con:'작업중',
                     etc:''
                 },
@@ -196,6 +208,7 @@
                     depth1:'기업 홍보 - 등록/수정',
                     path:'./portal/html/USR-1030-B-FORM.html',
                     date:'',
+                    mdate:'2022-09-19',
                     con:'작업중',
                     etc:''
                 },
@@ -204,6 +217,7 @@
                     depth1:'통합공시(TAB-10)',
                     path:'./portal/html/USR-1040-F-DASH.html',
                     date:'',
+                    mdate:'2022-09-15',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -212,6 +226,7 @@
                     depth1:'벤처투자마트 - 벤처투자마트란?',
                     path:'./portal/html/USR-1051-H-CONTN.html',
                     date:'',
+                    mdate:'2022-09-22',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -220,6 +235,7 @@
                     depth1:'벤처투자마트 - 벤처투자마트 신청안내',
                     path:'./portal/html/USR-1054-F-FORM-INFO.html',
                     date:'',
+                    mdate:'2022-09-22',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -228,6 +244,7 @@
                     depth1:'벤처투자마트 - 벤처투자마트 신청(TAB-3)',
                     path:'./portal/html/USR-1054-F-FORM.html',
                     date:'',
+                    mdate:'2022-09-27',
                     con:'작업중',
                     etc:''
                 },
@@ -236,6 +253,7 @@
                     depth1:'벤처투자마트 - 벤처투자마트 2차신청',
                     path:'./portal/html/USR-1055-F-FORM.html',
                     date:'',
+                    mdate:'2022-10-04',
                     con:'작업중',
                     etc:''
                 },
@@ -244,6 +262,7 @@
                     depth1:'벤처투자마트 - 신청 정보 확인',
                     path:'./portal/html/USR-1056-F-LIST.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:''
                 },
@@ -252,6 +271,7 @@
                     depth1:'벤처투자마트 - 신청 정보 상세(TAB-3)',
                     path:'./portal/html/USR-1056-F-DTL.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:''
                 },
@@ -260,6 +280,7 @@
                     depth1:'벤처투자마트 - 공지',
                     path:'./portal/html/USR-1052-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-26',
                     con:'작업중',
                     etc:''
                 },
@@ -268,6 +289,7 @@
                     depth1:'벤처투자마트 - 공지 상세',
                     path:'./portal/html/USR-1052-B-DTL.html',
                     date:'',
+                    mdate:'2022-09-26',
                     con:'작업중',
                     etc:''
                 },
@@ -276,6 +298,7 @@
                     depth1:'벤처투자마트 - FAQ',
                     path:'./portal/html/USR-1053-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-29',
                     con:'작업중',
                     etc:''
                 },
@@ -284,6 +307,7 @@
                     depth1:'주식유통정보 - VC구주유통망',
                     path:'./portal/html/USR-1061-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-05',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -292,6 +316,7 @@
                     depth1:'주식유통정보 -  구주거래정보망',
                     path:'./portal/html/USR-1062-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-06',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -300,6 +325,7 @@
                     depth1:'주식유통정보 - M&A 거래정보망',
                     path:'./portal/html/USR-1063-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-07',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -310,6 +336,7 @@
                     depth1:'가이드 A to Z',
                     path:'./portal/html/USR-1110-H-CONTN.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -318,6 +345,7 @@
                     depth1:'맞춤투자가이드',
                     path:'./portal/html/USR-02-02-F-LIST.html',
                     date:'',
+                    mdate:'2022-09-05',
                     con:'작업중',
                     etc:''
                 },
@@ -326,6 +354,7 @@
                     depth1:'FAQ(TAB)',
                     path:'./portal/html/USR-02-04-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-27',
                     con:'작업중',
                     etc:''
                 },
@@ -334,6 +363,7 @@
                     depth1:'용어사전(TAB)',
                     path:'./portal/html/USR-02-05-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-26',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -342,6 +372,7 @@
                     depth1:'용어사전 - 상세',
                     path:'./portal/html/USR-1150-B-DTL.html',
                     date:'',
+                    mdate:'2022-09-30',
                     con:'작업중',
                     etc:''
                 },
@@ -350,6 +381,7 @@
                     depth1:'교육',
                     path:'./portal/html/USR-1161-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-06',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -358,6 +390,7 @@
                     depth1:'벤처투자상담',
                     path:'./portal/html/USR-1162-B-LIST.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:''
                 },
@@ -366,6 +399,7 @@
                     depth1:'벤처투자상담 상세',
                     path:'./portal/html/USR-1162-B-DTL.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:''
                 },
@@ -374,6 +408,7 @@
                     depth1:'벤처투자상담 등록/수정',
                     path:'./portal/html/USR-1162-B-FORM.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:''
                 },
@@ -384,6 +419,7 @@
                     depth1:'정책',
                     path:'./portal/html/USR-1211-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-14',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -392,6 +428,7 @@
                     depth1:'법령',
                     path:'./portal/html/USR-1213-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-18',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -400,6 +437,7 @@
                     depth1:'통계 - 대시보드',
                     path:'./portal/html/USR-1220-F-DASH.html',
                     date:'',
+                    mdate:'2022-10-11',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -408,6 +446,7 @@
                     depth1:'통계 - 투자실적(TAB-4)',
                     path:'./portal/html/USR-1220-F-DASH-2.html',
                     date:'',
+                    mdate:'2022-10-21',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -416,6 +455,7 @@
                     depth1:'자료실 - 보고서',
                     path:'./portal/html/USR-1231-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-13',
                     con:'작업중',
                     etc:''
                 },
@@ -424,6 +464,7 @@
                     depth1:'자료실 - 보고서 상세',
                     path:'./portal/html/USR-1231-B-DTL.html',
                     date:'',
+                    mdate:'2022-09-13',
                     con:'작업중',
                     etc:''
                 },
@@ -432,6 +473,7 @@
                     depth1:'자료실 - 뉴스레터 웹진',
                     path:'./portal/html/USR-1232-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-16',
                     con:'작업중',
                     etc:''
                 },
@@ -440,6 +482,7 @@
                     depth1:'자료실 - 발행물',
                     path:'./portal/html/USR-1234-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-21',
                     con:'작업중',
                     etc:''
                 },
@@ -448,6 +491,7 @@
                     depth1:'자료실 - 서식',
                     path:'./portal/html/USR-1235-B-LIST.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:''
                 },
@@ -456,6 +500,7 @@
                     depth1:'자료실 - 서식 상세',
                     path:'./portal/html/USR-1235-B-DTL.html',
                     date:'',
+                    mdate:'2022-09-26',
                     con:'작업중',
                     etc:''
                 },
@@ -464,6 +509,7 @@
                     depth1:'자료실 - 프로그램',
                     path:'./portal/html/USR-1236-H-CONTN.html',
                     date:'',
+                    mdate:'2022-10-20',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -472,6 +518,7 @@
                     depth1:'구인구직 - 채용공고',
                     path:'./portal/html/USR-1241-F-LIST.html',
                     date:'',
+                    mdate:'2022-10-24',
                     con:'작업중',
                     etc:''
                 },
@@ -480,6 +527,7 @@
                     depth1:'구인구직 - 채용공고 상세',
                     path:'./portal/html/USR-1241-F-DTL.html',
                     date:'',
+                    mdate:'2022-10-24',
                     con:'작업중',
                     etc:''
                 },
@@ -488,6 +536,7 @@
                     depth1:'구인구직 - 채용공고 등록/수정',
                     path:'./portal/html/USR-1241-F-FORM.html',
                     date:'',
+                    mdate:'2022-10-24',
                     con:'작업중',
                     etc:''
                 },
@@ -496,6 +545,7 @@
                     depth1:'구인구직 - 인력Pool',
                     path:'./portal/html/USR-1242-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-01',
                     con:'작업중',
                     etc:''
                 },
@@ -504,6 +554,7 @@
                     depth1:'구인구직 - 인력Pool 상세',
                     path:'./portal/html/USR-1242-F-DTL.html',
                     date:'',
+                    mdate:'2022-11-01',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -512,6 +563,7 @@
                     depth1:'구인구직 - 인력Pool 등록/수정',
                     path:'./portal/html/USR-1242-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-01',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -520,6 +572,7 @@
                     depth1:'업무처리지원 - VC 경력 확인',
                     path:'./portal/html/USR-12511-H-CONTN.html',
                     date:'',
+                    mdate:'2022-11-09',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -528,6 +581,7 @@
                     depth1:'업무처리지원 - VC 근무 경력 확인',
                     path:'./portal/html/USR-1251-F-DTL.html',
                     date:'',
+                    mdate:'2022-10-18',
                     con:'작업중',
                     etc:''
                 },
@@ -536,6 +590,7 @@
                     depth1:'업무처리지원 - VC Track Record',
                     path:'./portal/html/USR-12512-F-DTL.html',
                     date:'',
+                    mdate:'2022-10-24',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -544,6 +599,7 @@
                     depth1:'업무처리지원 - 신청이력 확인',
                     path:'./portal/html/USR-1252-F-LIST.html',
                     date:'',
+                    mdate:'2022-10-31',
                     con:'작업중',
                     etc:''
                 },
@@ -554,6 +610,7 @@
                     depth1:'포털소개',
                     path:'./portal/html/USR-1310-H-CONTN.html',
                     date:'',
+                    mdate:'2022-11-08',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -562,6 +619,7 @@
                     depth1:'공지사항(TAB-6)',
                     path:'./portal/html/USR-1320-B-LIST.html',
                     date:'',
+                    mdate:'2022-11-11',
                     con:'작업중',
                     etc:''
                 },
@@ -570,6 +628,7 @@
                     depth1:'공지사항 상세',
                     path:'./portal/html/USR-1320-B-DTL.html',
                     date:'',
+                    mdate:'2022-11-11',
                     con:'작업중',
                     etc:''
                 },
@@ -578,6 +637,7 @@
                     depth1:'커뮤니티 - 목록',
                     path:'./portal/html/USR-1330-F-LIST.html',
                     date:'',
+                    mdate:'2022-09-07',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -586,6 +646,7 @@
                     depth1:'커뮤니티 - 내 커뮤니티(TAB-2)',
                     path:'./portal/html/USR-1331-F-DASH.html',
                     date:'',
+                    mdate:'2022-09-15',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -594,6 +655,7 @@
                     depth1:'커뮤니티 - 개설',
                     path:'./portal/html/USR-1333-F-FORM.html',
                     date:'',
+                    mdate:'2022-09-30',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -602,6 +664,7 @@
                     depth1:'커뮤니티 - 일정 보기',
                     path:'./portal/html/USR-1332-B-LIST.html',
                     date:'',
+                    mdate:'2022-09-27',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -610,6 +673,7 @@
                     depth1:'커뮤니티 - 메인(TAB-5)(SUBTAB-5)',
                     path:'./portal/html/USR-1334-F-DASH.html',
                     date:'',
+                    mdate:'2022-10-07',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -618,6 +682,7 @@
                     depth1:'벤처투자TALK(TAB-3)',
                     path:'./portal/html/USR-1341-F-LIST.html',
                     date:'',
+                    mdate:'2022-09-29',
                     con:'작업중',
                     etc:'[1차디자인] 탭확인필요'
                 },
@@ -626,6 +691,7 @@
                     depth1:'벤처투자 부당행위 신고센터 - 부당행위 신고',
                     path:'./portal/html/USR-1350-F-FORM.html',
                     date:'',
+                    mdate:'2022-10-19',
                     con:'작업중',
                     etc:'[스타일가이드] [2차디자인]'
                 },
@@ -634,6 +700,7 @@
                     depth1:'벤처투자 부당행위 신고센터 - 신고내역확인',
                     path:'./portal/html/USR-1350-F-LIST.html',
                     date:'',
+                    mdate:'2022-10-25',
                     con:'작업중',
                     etc:''
                 },
@@ -642,6 +709,7 @@
                     depth1:'벤처투자 부당행위 신고센터 - 신고내역상세',
                     path:'./portal/html/USR-1350-F-DTL.html',
                     date:'',
+                    mdate:'2022-10-25',
                     con:'작업중',
                     etc:''
                 },
@@ -650,6 +718,7 @@
                     depth1:'유관기관 안내(TAB-5)',
                     path:'./portal/html/USR-1361-H-CONTN.html',
                     date:'',
+                    mdate:'2022-11-08',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -660,6 +729,7 @@
                     depth1:'회원가입 - STEP01 약관동의',
                     path:'./portal/html/USR-2010-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-10',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -668,6 +738,7 @@
                     depth1:'회원가입 - STEP02 본인인증',
                     path:'./portal/html/USR-2011-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-10',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -676,6 +747,7 @@
                     depth1:'회원가입 - STEP03 회원정보입력',
                     path:'./portal/html/USR-2012-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-10',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -684,6 +756,7 @@
                     depth1:'회원가입 - STEP04 가입완료',
                     path:'./portal/html/USR-2013-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-10',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -692,6 +765,7 @@
                     depth1:'로그인/아웃',
                     path:'./portal/html/USR-2020-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-18',
                     con:'작업중',
                     etc:'[스타일가이드] '
                 },
@@ -700,6 +774,7 @@
                     depth1:'아이디/비밀번호 찾기',
                     path:'./portal/html/USR-2030-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-01',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -708,6 +783,7 @@
                     depth1:'마이페이지 - 대시보드',
                     path:'./portal/html/USR-2040-F-DASH.html',
                     date:'',
+                    mdate:'2022-11-07',
                     con:'작업중',
                     etc:'[스타일가이드] '
                 },
@@ -716,6 +792,7 @@
                     depth1:'마이페이지 - 사용자정보 관리',
                     path:'./portal/html/USR-2041-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-16',
                     con:'작업중',
                     etc:''
                 },
@@ -724,6 +801,7 @@
                     depth1:'마이페이지 - 즐겨찾기 관리(TAB-2)',
                     path:'./portal/html/USR-2042-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-22',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -732,6 +810,7 @@
                     depth1:'마이페이지 - 일정 관리',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'2022-11-17',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1332-F-DASH'
                 },
@@ -740,6 +819,7 @@
                     depth1:'마이페이지 - 온라인 파일 관리',
                     path:'./portal/html/USR-2043-F-LIST.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:''
                 },
@@ -748,6 +828,7 @@
                     depth1:'마이페이지 - 알림 서비스(TAB-2)',
                     path:'./portal/html/USR-2044-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-17',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -756,6 +837,7 @@
                     depth1:'마이페이지 - 알림 서비스 상세',
                     path:'./portal/html/USR-2044-F-DTL.html',
                     date:'',
+                    mdate:'2022-11-17',
                     con:'작업중',
                     etc:''
                 },
@@ -764,6 +846,7 @@
                     depth1:'마이페이지 - 알림 서비스 등록',
                     path:'./portal/html/USR-2044-F-FORM.html',
                     date:'',
+                    mdate:'2022-11-17',
                     con:'작업중',
                     etc:''
                 },
@@ -772,6 +855,7 @@
                     depth1:'마이페이지 - 알림 서비스 쪽지 레이어팝업',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'2022-11-17',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -780,6 +864,7 @@
                     depth1:'마이페이지 - 내가 가입한 커뮤니티',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1331-F-DASH'
                 },
@@ -788,6 +873,7 @@
                     depth1:'마이페이지 - 벤처투자상담',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1162-B-LIST'
                 },
@@ -796,6 +882,7 @@
                     depth1:'마이페이지 - 벤처투자마트',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1056-F-LIST'
                 },
@@ -804,6 +891,7 @@
                     depth1:'마이페이지 - 이력서 관리',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1242-F-FORM '
                 },
@@ -812,6 +900,7 @@
                     depth1:'마이페이지 - 기업정보 관리',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1010-F-FORM '
                 },
@@ -820,6 +909,7 @@
                     depth1:'마이페이지 - IR 자료 요청 관리(TAB-2)',
                     path:'./portal/html/USR-2045-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-07',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -828,6 +918,7 @@
                     depth1:'마이페이지 - VC 경력 확인',
                     path:'./portal/html/.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'-> 바로가기 USR-1252-F-LIST'
                 },
@@ -838,6 +929,7 @@
                     depth1:'',
                     path:'./portal/html/USR-2110-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-28',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -848,6 +940,7 @@
                     depth1:'',
                     path:'./portal/html/USR-2210-F-LIST.html',
                     date:'',
+                    mdate:'2022-11-15',
                     con:'작업중',
                     etc:'[1차디자인]'
                 },
@@ -858,6 +951,7 @@
                     depth1:'즐겨찾기 메뉴',
                     path:'./portal/html/USR-3010-F-DASH.html',
                     date:'',
+                    mdate:'',
                     con:'작업중',
                     etc:'[스타일가이드] '
                 },
@@ -868,6 +962,7 @@
                     depth1:'개인정보처리방침',
                     path:'./portal/html/USR-4010-H-CONTN.html',
                     date:'',
+                    mdate:'2022-12-01',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -876,6 +971,7 @@
                     depth1:'서비스 이용약관',
                     path:'./portal/html/USR-4110-H-CONTN.html',
                     date:'',
+                    mdate:'2022-12-01',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -884,6 +980,7 @@
                     depth1:'이메일무단수집거부',
                     path:'./portal/html/USR-4210-H-CONTN.html',
                     date:'',
+                    mdate:'2022-12-02',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -892,6 +989,7 @@
                     depth1:'관련사이트 바로가기',
                     path:'./portal/html/USR-4310-H-CONTN.html',
                     date:'',
+                    mdate:'2022-12-02',
                     con:'작업중',
                     etc:'[2차디자인]'
                 },
@@ -907,6 +1005,7 @@
                 html += '<th>'+menuTableList[i].depth1+'</th>'
                 html += '<th class="link"><a href='+menuTableList[i].path+' target="_blank">'+menuTableList[i].path+'</a></th>'
                 html += '<th class="date">'+menuTableList[i].date+'</th>'
+                html += '<th class="mdate">'+menuTableList[i].mdate+'</th>'
                 html += '<th class="con">'+menuTableList[i].con+'</th>'
                 html += '<th class="etc">'+menuTableList[i].etc+'</th>'
                 html += '</tr>'

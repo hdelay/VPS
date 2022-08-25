@@ -6,22 +6,42 @@ $(function(){
     $('#fullpage').fullpage({
         anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
         sectionsColor: ['#1bbc9b', '#fff', '#7BAABE', '#fff', '#fff'],
-        menu: '#menu',
+        menu: '.main_quickmenu ul',
         scrollingSpeed: 500,
         //scrollBar: true,
         responsiveWidth: 768,
         afterLoad: function(){
-            if($(this).index() === 1){
-                $('header').addClass('headerfix');
-            } else if($(this).index() === 3){
-                $('header').addClass('headerfix');
-            } else if($(this).index() === 4){
-                $('header').addClass('headerfix');
-            } else if($(this).index() === 5){
-                $('header').addClass('headerfix');
+            if($(window).width() > 768){
+                if($(this).index() === 1){
+                    $('header').addClass('headerfix');
+                    $('.main_quickmenu').addClass('black');
+                } else if($(this).index() === 3){
+                    $('header').addClass('headerfix');
+                    $('.main_quickmenu').addClass('black');
+                } else if($(this).index() === 4){
+                    $('header').addClass('headerfix');
+                    $('.main_quickmenu').addClass('black');
+                } else if($(this).index() === 5){
+                    $('header').addClass('headerfix');
+                    $('.main_quickmenu').addClass('black');
+                } else {
+                    $('header').removeClass('headerfix');
+                    $('.main_quickmenu').removeClass('black');
+                }
             } else {
-                $('header').removeClass('headerfix');
+                if($(this).index() === 0){
+                    $('header').removeClass('headerfix');
+                } else if($(this).index() === 1){
+                    $('header').addClass('headerfix');
+                } else if($(this).index() === 2){
+                    $('header').removeClass('headerfix');
+                } else if($(this).index() === 3){
+                    $('header').addClass('headerfix');
+                } else {
+                    $('header').addClass('headerfix');
+                }
             }
+            
         },
     });
 
@@ -30,7 +50,7 @@ $(function(){
         slidesPerView: 1,
         spaceBetween: 0,
         freeMode: false,
-        speed: 400,
+        speed: 300,
         navigation: {
           nextEl: '.swiper-button-next.sec1_full',
           prevEl: '.swiper-button-prev.sec1_full',
@@ -58,25 +78,46 @@ $(function(){
     });
     
     // 메인 섹션1 스와이퍼 안 스와이퍼
-    /*
+    if($(window).width() < 768){
+        shortcuts_swiper = new Swiper('.shortcuts_box_content', {
+            slidesPerView: 2,
+            pagination: {
+              el: '.swiper-pagination.shortcuts',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next.shortcuts',
+              prevEl: '.swiper-button-prev.shortcuts',
+            },
+        });
+    }
     $(window).resize(function(){
-        var shortcuts_swiper = new Swiper('.shortcuts_box');
-        if($(window).width() < 768){
+        if($(window).width() > 768){
+            shortcuts_swiper.destroy();
+        } else {
             shortcuts_swiper = new Swiper('.shortcuts_box', {
+                slidesPerView: 2,
                 pagination: {
-                  el: '.shortcuts_box .swiper-pagination',
+                  el: '.swiper-pagination.shortcuts',
                   clickable: true,
                 },
                 navigation: {
-                  nextEl: '.shortcuts_box .swiper-button-next',
-                  prevEl: '.shortcuts_box .swiper-button-prev',
+                  nextEl: '.swiper-button-next.shortcuts',
+                  prevEl: '.swiper-button-prev.shortcuts',
                 },
             });
-        } else {
-            shortcuts_swiper.destroy();
         }
     });
-    */
     
+    // 섹션 스크롤 headerfix
+    $(window).scroll(function(){
+        let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+        let sec_02 = $('.sec2').offset().top; // 섹션2 스크롤바 위치
+        let sec_03 = $('.sec3').offset().top; // 섹션3 스크롤바 위치
+        let sec_04 = $('.sec4').offset().top; // 섹션4 스크롤바 위치
+        console.log(scrollLocation);
+        console.log(sec_02);
+        
+    });
 
 });

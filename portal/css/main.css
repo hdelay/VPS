@@ -7,7 +7,7 @@
 .swiper-container {
     height: 100%;
 }
-.swiper-container .swiper-pagination {
+.swiper-container .swiper-pagination.sec1_full {
     display: flex;
     justify-content: flex-start;
     gap: 52px;
@@ -19,7 +19,7 @@
     box-sizing: border-box;
     transform: translateX(-50%);
 }
-.swiper-container .swiper-pagination .swiper-pagination-bullet {
+.swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet {
     position: relative;
     background-color: #fff;
     width: 12px;
@@ -28,10 +28,10 @@
     opacity: .5;
     cursor: pointer;
 }
-.swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
 }
-.swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+.swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     content: "";
     display: block;
     position: absolute;
@@ -44,28 +44,110 @@
     border: 1px solid #fff;
     border-radius: 50%;
 }
-.swiper-container .swiper-button-prev,
-.swiper-container .swiper-button-next {
+.swiper-container .swiper-button-prev.sec1_full,
+.swiper-container .swiper-button-next.sec1_full {
     width: 50px;
     height: 50px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .4);
     border: 1px solid rgba(255, 255, 255, .45);
 }
-.swiper-container .swiper-button-prev::after,
-.swiper-container .swiper-button-next::after {
+.swiper-container .swiper-button-prev.sec1_full::after,
+.swiper-container .swiper-button-next.sec1_full::after {
     font-size: 14px;
     color: #fff;
 }
-.swiper-container .swiper-button-prev {
+.swiper-container .swiper-button-prev.sec1_full {
     top: 320px;
     left: inherit;
     right: 2%;
 }
-.swiper-container .swiper-button-next {
+.swiper-container .swiper-button-next.sec1_full {
     top: 380px;
     right: 2%;
 }
+
+/* 메뉴 */
+.main .main_quickmenu {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.main_quickmenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main_quickmenu ul li {
+    position: relative;
+    padding-left: 20px;
+}
+.main_quickmenu ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #3a5d82;
+    border-radius: 50%;
+    transition: .2s;
+}
+.main_quickmenu ul li.active::before {
+    top: -3px;
+    height: 32px;
+    background-color: #5aabfe;
+    border-radius: 0;
+}
+.main_quickmenu ul li a {
+    font-size: 15px;
+    color: #fff;
+    transition: .2s;
+}
+.main_quickmenu.black ul li a {
+    color: #333;
+}
+.main_quickmenu ul li.active a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #5aabfe;
+}
+.main_quickmenu .mymenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.main_quickmenu .mymenu span {
+    display: block;
+    width: 17px;
+    height: 16px;
+    background: no-repeat center;
+    background-image: url(../images/ico/ico_star.png);
+    margin-right: 10px;
+}
+.main_quickmenu.black .mymenu {
+    border: 2px solid rgba(0, 0, 0, .2);
+    color: #333;
+}
+.main_quickmenu.black .mymenu span {
+    
+    background-image: url(../images/ico/ico_star_blue.png);
+}
+
+/* section01 */
 .swiper-container .slide_wrap {
     display: flex;
     height: 100%;
@@ -289,4 +371,258 @@
 .shortcuts_box .swiper-button-prev,
 .shortcuts_box .swiper-button-next {
     display: none;
+}
+
+/* section02 */
+
+
+
+
+
+/* ============================================================
+    미디어쿼리 max-width: 1500px
+============================================================ */
+
+@media screen and (max-width: 1600px) {
+    .swiper-container .slide_wrap .inner {
+        max-width: 75%;
+    }
+    .swiper-container .swiper-pagination.sec1_full {
+        max-width: 75%;
+    }
+}
+
+/* ============================================================
+    미디어쿼리 max-width: 1300px
+============================================================ */
+@media screen and (max-width: 1300px) {
+    .swiper-container .slide_wrap .inner .sub_tit {
+        font-size: 19px;
+    }
+    .swiper-container .slide_wrap .inner .tit h2 {
+        font-size: 50px;
+    }
+    .swiper-container .slide_wrap .inner .tit h2 strong {
+        font-size: 50px;
+    }
+    .swiper-container .slide_wrap .inner .total {
+        gap: 50px 20px;
+        justify-content: space-between;
+    }
+    .swiper-container .slide_wrap .inner .total li {
+        width: calc(50% - 20px);
+    }
+    .swiper-container .slide_wrap .inner .total li .total_tit {
+        font-size: 18px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_content strong {
+        line-height: 34px;
+        font-size: 35px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_content span {
+        font-size: 18px;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide {
+        max-width: 130px;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a {
+        gap: 7px;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a span {
+        width: 50px;
+        background-size: 100%;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a strong {
+        height: 54px;
+        text-align: center;
+        word-break: keep-all;
+        font-size: 20px;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a em {
+        height: 70px;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a em br {
+        display: none;
+    }
+}
+
+/* ============================================================
+    미디어쿼리 max-width: 1024px
+============================================================ */
+
+@media screen and (max-width: 1024px) {}
+
+/* ============================================================
+    미디어쿼리 max-width: 768px
+============================================================ */
+
+@media screen and (max-width: 768px) {
+    .main_quickmenu {
+        display: none;
+    }
+    .swiper-container {
+        overflow: hidden;
+    }
+    .swiper-container .swiper-button-prev,
+    .swiper-container .swiper-button-next {
+        display: none;
+    }
+    .swiper-container .slide_wrap {
+        padding: 150px 20px 0;
+        height: 100vh;
+    }
+    .swiper-container .slide_wrap .inner {
+        max-width: 100%;
+    }
+    .swiper-container .swiper-pagination.sec1_full {
+        width: auto;
+        max-width: 100%;
+        gap: 30px;
+        top: 102px;
+        left: 20px;
+        padding-left: 12px;
+        transform: translateX(0);
+    }
+    .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+    .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+        width: 30px;
+        height: 30px;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+    /* section01 */
+    .swiper-container .slide_wrap .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 30px;
+    }
+    .swiper-container .slide_wrap .inner .sub_tit {
+        font-size: 15px;
+    }
+    .swiper-container .slide_wrap .inner .sub_tit span {
+        font-size: 15px;
+    }
+    .swiper-container .slide_wrap .inner .tit h2 {
+        font-size: 40px;
+    }
+    .swiper-container .slide_wrap .inner .tit h2 strong {
+        font-size: 40px;
+    }
+    .swiper-container .slide_wrap.first .inner .tit + .total {
+        padding-top: 20px;
+    }
+    .swiper-container .slide_wrap .inner .total {
+        flex-direction: column;
+        gap: 15px 0;
+        min-height: 0;
+        height: auto;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .swiper-container .slide_wrap .inner .total li {
+        width: 100%;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_tit {
+        align-items: center;
+        font-size: 17px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_tit::before {
+        width: 35px;
+        height: 26px;
+        background-size: auto 100%;
+        background-position: center;
+        margin-right: 10px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_content strong {
+        line-height: 29px;
+        font-size: 30px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_content span {
+        font-size: 16px;
+    }
+    .shortcuts_box {
+        position: relative;
+        padding: 0;
+        padding: 0 40px 20px;
+        box-sizing: border-box;
+    }
+    .shortcuts_box .shortcuts_box_content {
+        overflow: hidden;
+    }
+    .shortcuts_box .swiper-button-prev.shortcuts,
+    .shortcuts_box .swiper-button-next.shortcuts {
+        display: block;
+        top: inherit;
+        bottom: 0;
+        background: transparent;
+        height: 18px;
+    }
+    .shortcuts_box .swiper-button-prev.shortcuts {
+        left: 55px;
+    }
+    .shortcuts_box .swiper-button-next.shortcuts {
+        right: 55px;
+    }
+    .shortcuts_box .swiper-button-prev.shortcuts::after,
+    .shortcuts_box .swiper-button-next.shortcuts::after {
+        font-size: 13px;
+        color: #fff;
+    }
+    .shortcuts_box .swiper-pagination.shortcuts {
+        width: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    } 
+    .shortcuts_box .swiper-pagination.shortcuts .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        background: #fff;
+        transition: .2s;
+    }
+    .shortcuts_box .swiper-pagination.shortcuts .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 36px;
+        border-radius: 10px;
+        background-color: #a1c4ff;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide {
+        max-width: 50%;
+        width: 50%;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a em {
+        display: none;
+    }
+    .shortcuts_box .swiper-wrapper .swiper-slide a strong {
+        font-size: 19px;
+    }
+    .shortcuts_box .swiper-wrapper::before,
+    .shortcuts_box .swiper-wrapper::after {
+        display: none;
+    }
+    .shortcuts_box::before,
+    .shortcuts_box::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 9px;
+        background: no-repeat center;
+        background-size: auto 100%;
+        width: 33px;
+        height: 95px;
+    }
+    .shortcuts_box::before {
+        left: 0;
+        background-image: url(../images/ico/ico_main_sec1_left.png);
+    }
+    .shortcuts_box::after {
+        right: 0;
+        background-image: url(../images/ico/ico_main_sec1_right.png);
+    }
 }

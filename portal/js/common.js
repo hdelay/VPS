@@ -117,13 +117,15 @@ $(function(){
     // headerfix
     window.addEventListener('scroll', () => {
         let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
-    
-        if(scrollLocation > 100){
-            $('header').addClass('headerfix');
-            $('body').removeClass('gnb_open');
-        } else {
-            $('header').removeClass('headerfix');
+        if($(window).width() > 768){
+            if(scrollLocation > 100){
+                $('header').addClass('headerfix');
+                $('body').removeClass('gnb_open');
+            } else {
+                $('header').removeClass('headerfix');
+            }
         }
+        
     })
 
     // 모바일 오픈
@@ -304,6 +306,12 @@ $(function(){
     $('.chk_list.type_01 li.more button').on('click', function(){
         $('.search_item_more').toggleClass('on');
         $(this).toggleClass('on');
+    });
+
+    // 투자자검색 업종/업력/지역별 투자 현황 버튼
+    $('.investment_content > ul > li .btn_investment_content li button').on('click', function(){
+        $('.investment_content > ul > li .btn_investment_content li').removeClass();
+        $(this).parent().addClass('on');
     });
 
 });

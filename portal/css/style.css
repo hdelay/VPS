@@ -528,6 +528,161 @@ header.headerfix .header_bottom ul li a::before {
     display: block;
 }
 
+/* 투자자 검색 - 상세 */
+.investor_card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #f6f7f9;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+.investor_card .tit {
+    font-size: 21px;
+    font-weight: 500;
+}
+.investor_card .info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 0 3px;
+}
+.investor_card .info ul li {
+    display: flex;
+}
+.investor_card .info ul li span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.investor_card .info ul li span + span {
+    display: flex;
+}
+.investor_card .info ul li span + span::before {
+    content: "|";
+    display: block;
+    margin: 0 7px;
+}
+.investor_card .hashtag span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.investment_content > ul {
+    display: flex;
+    gap: 35px;
+}
+.investment_content > ul > li {
+    flex: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+}
+.investment_content > ul > li .tit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 60px;
+}
+.investment_content > ul > li .tit strong {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 21px;
+    font-weight: 500;
+}
+.investment_content > ul > li .tit strong em {
+    font-size: 14px;
+    font-style: normal;
+}
+.investment_content > ul > li .tit span {
+    font-size: 14px;
+}
+
+.investment_content > ul > li .btn_investment_content {
+    display: flex;
+    gap: 10px;
+    margin-bottom:20px;
+}
+.investment_content > ul > li .btn_investment_content li button {
+    display: block;
+    padding: 7px 45px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #575757;
+    cursor: pointer;
+}
+.investment_content > ul > li .btn_investment_content li.on button {
+    border-color: #0060ef;
+    color: #0060ef;
+}
+.investment_list {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #f0f3f6;
+}
+.investment_list .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.investment_list .tit strong {
+    font-size: 21px;
+    font-weight: 500;
+}
+.investment_list .tit .btn_box {
+    flex: none;
+    width: 115px;
+}
+.investment_list .tit .btn_box * {
+    background-color: #47ade7;
+    font-size: 13px;
+}
+.investment_list .tit .btn_box *::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg) translate(1%, 90%);
+}
+.investment_list ul {
+    display: flex;
+    gap: 20px
+}
+.investment_list ul li {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    background: #fff;
+}
+.investment_list ul li a {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.investment_list ul li a strong {
+    font-size: 17px;
+    font-weight: 500;
+}
+.investment_list ul li a span {
+    font-size: 13px;
+    color: #666;
+}
+
 /* quick menu */
 .quick_box {
     display: flex;
@@ -708,14 +863,6 @@ footer .footer_bottom {
     letter-spacing: 0;
 }
 
-/* 메인 */
-.main .main_quickmenu {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    z-index: 1;
-}
-
 /* 팝업 */
 .ui-dialog {
     padding: 0;
@@ -869,7 +1016,7 @@ footer .footer_bottom {
 }
 
 /* ============================================================
-    미디어쿼리 max-width: 1500px
+    미디어쿼리 max-width: 1600px
 ============================================================ */
 
 @media screen and (max-width: 1600px) {
@@ -958,9 +1105,16 @@ footer .footer_bottom {
     header .header_top {
         height: 70px;
     }
+    header .header_top h1 {
+        margin-top: 15px;
+    }
     header .header_top h1 a {
         width: 173px;
         background-size: 100%;
+    }
+    .main header.headerfix .header_top {
+        background-color: transparent;
+        backdrop-filter: none;
     }
     .gnb_open header .header_top h1 a,
     header.headerfix .header_top h1 a {
