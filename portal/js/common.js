@@ -117,16 +117,14 @@ $(function(){
     // headerfix
     window.addEventListener('scroll', () => {
         let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
-        if($(window).width() > 768){
-            if(scrollLocation > 100){
-                $('header').addClass('headerfix');
-                $('body').removeClass('gnb_open');
-            } else {
-                $('header').removeClass('headerfix');
-            }
+        if(scrollLocation > 100){
+            $('header').addClass('headerfix');
+            $('body').removeClass('gnb_open');
+        } else {
+            $('header').removeClass('headerfix');
         }
         
-    })
+    });
 
     // 모바일 오픈
     $('.btn_allmenu').on('click', function(e){
@@ -234,7 +232,6 @@ $(function(){
                 }
             }],
         open: function(){
-            console.log($(this));
             $(this).parent().find('.ui-dialog-titlebar').remove();
         }
     });
@@ -281,12 +278,13 @@ $(function(){
     });
 
     // 카드게시판 설정
-    $('.tbl_card_list > ul > li > button').on('click', function(){
+    $('.pop_mini').on('click', function(e){
+        e.preventDefault();
         $(this).siblings().children('ul').toggleClass('on');
     });
     // 영역 외 클릭 닫기
     $('.wrap').click(function(e){
-        if (!$('.tbl_card_list > ul > li').has(e.target).length) { 
+        if (!$('.pop_mini').parent().has(e.target).length) { 
             $('.card_set > ul').removeClass('on');
         } 
     });

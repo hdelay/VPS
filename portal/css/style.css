@@ -339,6 +339,15 @@ header.headerfix .header_bottom ul li a::before {
 .container.type_01::before {
     background-image: url(../images/bg/bg_submain_01.jpg);
 }
+.container.type_02::before {
+    background-image: url(../images/bg/bg_submain_02.jpg);
+}
+.container.type_03::before {
+    background-image: url(../images/bg/bg_submain_03.jpg);
+}
+.container.type_04::before {
+    background-image: url(../images/bg/bg_submain_04.jpg);
+}
 .sub_tit {
     display: flex;
     flex-direction: column;
@@ -1374,6 +1383,20 @@ footer .footer_bottom {
         height: 50px;
         padding: 0 10px;
         font-size: 12px;
+    }
+
+    /* 게시판 */
+    .board_infobox {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+    .board_infobox .search_box {
+        width: 100%;
+    }
+    .board_infobox .search_box input {
+        width: 100%;
     }
 
     /* 투자자 검색 */

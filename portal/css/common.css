@@ -127,6 +127,19 @@
     color: #fff;
     cursor: pointer;
 }
+.btn_box_group.type_tbl {
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+.btn_box_group.type_tbl .btn_box {
+    flex: none;
+    width: auto;
+}
+.btn_box_group.type_tbl .btn_box * {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+}
 .btn_box .btn_blue {
     background-color: #457cd7;
 }
@@ -139,6 +152,47 @@
 .btn_box .btn_skyblue {
     background-color: #448aff;
 }
+.btn_box.bg * {
+    font-size: var(--font-common);
+    color: #333;
+}
+.btn_box.bg *:hover,
+.btn_box.bg *:focus {
+    background-color: #f9fafa;
+    border-color: #333;
+}
+.btn_box.bg *::before {
+    content: "";
+    width: 20px;
+    height: 17px;
+    background: no-repeat center;
+    margin-right: 5px;
+}
+.btn_box.bg .download::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: url(../images/ico/ico_download.png) no-repeat center;
+    margin-left: 5px;
+}
+.btn_box.bg .download::before {
+    display: none;
+}
+.btn_box.bg .btn_modi::before {
+    background-image: url(../images/ico/ico_btn_modi.png);
+}
+.btn_box.bg .btn_delete::before {
+    background-image: url(../images/ico/ico_btn_delete.png);
+}
+.btn_box.bg .btn_list::before {
+    background-image: url(../images/ico/ico_btn_list.png);
+}
+.btn_box.bg .btn_save::before {
+    background-image: url(../images/ico/ico_btn_save.png);
+}
+.btn_box.bg .btn_cancel::before {
+    background-image: url(../images/ico/ico_btn_cancel.png);
+}
 
 /* 제목 */
 .tit_box h2 {
@@ -148,7 +202,7 @@
     letter-spacing: -3px;
 }
 .tit_box h3 {
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: -2.5px;
@@ -225,6 +279,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid #e6e6e6;
+    background-color: #fff;
     font-size: var(--font-common);
     font-weight: 400;
     -webkit-appearance: none; /* 크롬 화살표 없애기 */
@@ -314,7 +369,7 @@
     transform: scale(1);
 }
 
-/* chk_box 라디오박스 */
+/* chk_box 체크박스 */
 .chk_box {
     display: flex;
     flex-wrap: wrap;
@@ -351,6 +406,7 @@
     border: 1px solid #bdbdbd;
     box-sizing: border-box;
     border-radius: 2px;
+    background-color: #fff;
     transition: .2s;
 }
 .chk_box input + label::after {
@@ -382,6 +438,16 @@
 .chk_box input.checked + label::after {
     border-color: #bdbdbd;
     transform: rotate(45deg) scale(1);
+}
+.chk_box.solo {
+    justify-content: center;
+}
+.chk_box.solo span {
+    width: auto;
+    min-height: 19px;
+}
+.chk_box.solo input + label {
+    padding-left: 19px;
 }
 
 /* 혼합 인풋박스 */
@@ -467,6 +533,7 @@
     padding: 25px 0;
     box-sizing: border-box;
     border-right: 1px solid #e2e2e2;
+    vertical-align: middle;
     font-weight: 500;
     font-size: var(--font-l);
 }
@@ -563,6 +630,273 @@
     font-size: 15px;
     font-weight: 300;
     color: #908f8f;
+}
+
+/* 테이블 상세 */
+.tbl_box_detail {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.tbl_box_detail table {
+    width: 100%;
+}
+.tbl_box_detail table tr th,
+.tbl_box_detail table tr td {
+    background-color: #fff;
+    padding: 25px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: var(--font-l);
+}
+.tbl_box_detail table tr td {
+    line-height: 35px;
+    font-weight: 400;
+}
+.tbl_box_detail table tr.bg td {
+    background-color: #f9fafa;
+}
+.tbl_box_detail table tr td .file_download {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+.tbl_box_detail table tr td .file_download .btn_box {
+    width: auto;
+    flex: none;
+}
+.tbl_box_detail table tr td .file_download .btn_box * {
+    padding: 7px 15px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #333;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+.tbl_box_detail table tr td .file_download ul {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+.tbl_box_detail table tr td .file_download ul li a {
+    font-weight: 400;
+}
+.tbl_box_detail table tr td .file_download ul li a:hover {
+    text-decoration: underline;
+}
+.tbl_box_detail .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tbl_box_detail .tit .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tbl_box_detail .tit strong,
+.tbl_box_detail .tit .f_color_blue {
+    font-size: 18px;
+    font-weight: 500;
+}
+.tbl_box_detail .tit .right .info {
+    display: flex;
+    gap: 10px;
+}
+.tbl_box_detail .tit .right .info li {
+    font-size: 15px;
+    color: #868686;
+}
+.tbl_box_detail .tit .right .info li + li::before {
+    content: "ㅣ";
+    margin-right: 10px;
+}
+
+/* 테이블 등록/수정 */
+.tbl_box_add {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.tbl_box_add table {
+    width: 100%;
+}
+.tbl_box_add table tr th,
+.tbl_box_add table tr td {
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: var(--font-l);
+}
+.tbl_box_add table tr td {
+    line-height: 35px;
+    font-weight: 400;
+}
+.tbl_box_add table tr.bg td {
+    background-color: #f9fafa;
+}
+.tbl_box_add td > dl {
+    display: flex;
+    gap: 10px;
+}
+.tbl_box_add td > dl > dt {
+    width: 110px;
+    font-weight: 400;
+}
+.tbl_box_add td > dl > dd {
+    width: calc(100% - 120px);
+}
+.tbl_box_add td > dl > dd .inp_box {
+    max-width: 100%;
+}
+.tbl_box_add tr.tr_password td > dl > dd .inp_box {
+    max-width: 395px;
+}
+.tbl_box_add td .textarea_box textarea {
+    min-height: 200px;
+}
+
+/* 게시판 타입1 ::  */
+.tbl_longcard > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.tbl_longcard > ul > li {
+    position: relative;
+}
+.tbl_longcard > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 40px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_longcard > ul > li > a .tit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tbl_longcard > ul > li > a .tit span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.tbl_longcard > ul > li > a .tit strong {
+    font-size: 20px;
+    font-weight: 500;
+    color: #666;
+}
+.tbl_longcard > ul > li .info {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+.tbl_longcard > ul > li .info > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.tbl_longcard > ul > li .info > ul > li {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+.tbl_longcard > ul > li .info > ul > li a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+.tbl_longcard > ul > li .info > ul > li a.pop_mini:hover {
+    text-decoration: underline;
+}
+.tbl_longcard > ul > li .info > ul > li .card_set > ul {
+    top: 20px;
+    min-width: 145px;
+}
+
+/* 테이블 상세 */
+.tbl_box_detail table tr th,
+.tbl_box_detail table tr td {
+    padding: 15px 0;
+}
+.tbl_box_detail .tit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.tbl_box_detail .tit .left {
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+}
+.tbl_box_detail .tit .left .state_box span {
+    margin-left: 0;
+}
+.tbl_box_detail .tit strong {
+    text-align: left;
+}
+.tbl_box_detail .tit .right .info li {
+    font-size: 14px;
+}
+.tbl_box_detail table tr td .file_download {
+    padding: 0 10px;
+}
+.tbl_box_detail table tr td .file_download ul {
+    margin-left: 0;
+}
+.tbl_box_detail table tr td .file_download ul li a {
+    font-size: 14px;
+}
+
+/* 테이블 등록/수정 */
+.tbl_box_add table tr td {
+    line-height: 1;
+}
+.tbl_box_add td > dl {
+    flex-direction: column;
+    gap: 5px;
+}
+.tbl_box_add td > dl > dt {
+    width: 100%;
+}
+.tbl_box_add td > dl > dd {
+    width: 100%;
+}
+
+/* 카드게시판 :: 용어사전 */
+.tbl_card > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.tbl_card > ul > li {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: calc(33.33% - 20px);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.tbl_card > ul > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
 }
 
 /* 카드테이블 타입1 :: 벤처투자TALK */
@@ -740,6 +1074,7 @@
     box-sizing: border-box;
     border: 1px solid #3366cc;
     background-color: #fff;
+    z-index: 1;
 }
 .card_set > ul.on {
     display: block;
@@ -1214,7 +1549,12 @@
         gap: 5px;
         flex-wrap: wrap;
     }
-
+    
+    /* 버튼 */
+    .btn_box {
+        width: 100%;
+    }
+    
     /* 제목 */
     .tit_box h3 {
         font-size: 27px;
@@ -1234,6 +1574,19 @@
     /* chk_box 라디오박스 */
     .chk_box input + label {
         font-size: 14px;
+    }
+
+    /* 게시판 타입1 ::  */
+    .tbl_longcard > ul {
+        gap: 10px;
+    }
+    .tbl_longcard > ul > li > a {
+        padding: 15px;
+        padding-bottom: 40px;
+    }
+    .tbl_longcard > ul > li .info {
+        bottom: 15px;
+        right: 15px;
     }
 
     /* 카드테이블 타입2 :: 투자자 검색 - 이미지 */
@@ -1375,9 +1728,15 @@
 
     /* 페이징 */
     .board_btn {
+        flex-direction: column;
         margin-top: 30px;
+        gap: 20px;
+        align-items: center;
     }
     .paging_box ul {
         gap: 3px;
+    }
+    .board_btn .paging_box + .btn_box {
+        position: inherit;
     }
 }

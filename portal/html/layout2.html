@@ -328,241 +328,77 @@
                     <h3>공지사항</h3>
                 </div>
     
-                <div class="board_infobox">
-                    <div class="total">전체 <span>150</span>건</div>
-                    <div class="search_box">
-                        <input type="text" placeholder="검색어를 입력해주세요.">
-                        <button>검색</button>
-                    </div>
-                </div>
-    
-                <!-- 게시판 테이블 -->
-                <div class="tbl_box">
+                <div class="tbl_box_detail">
                     <table>
-                        <caption>공지사항 테이블</caption>
+                        <caption>게시판 상세 내용</caption>
                         <colgroup>
-                            <col width="7%" />
-                            <col width="10%" />
-                            <col width="*" />
-                            <col width="8%" />
-                            <col width="10%" />
-                            <col width="15%" />
-                            <col width="7%" />
+                            <col />
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">구분</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">첨부파일</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일시</th>
-                                <th scope="col">조회수</th>
+                                <th scope="">
+                                    <div class="tit">
+                                        <div class="left">
+                                            <span class="f_color_blue">구분1</span>
+                                            <strong>제목입니다</strong>
+                                            <span class="state_box">
+                                                <span class="state_box green">답변완료</span>
+                                                <span class="state_box gray">미답변</span>
+                                            </span>
+                                            <span class="lock">잠금</span>
+                                        </div>
+                                        <div class="right">
+                                            <ul class="info">
+                                                <li>관리자</li>
+                                                <li>2021-10-21</li>
+                                                <li>조회수 129</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="fixed">
-                                <td class=""><span class="state_box"><span class="notice">공지</span></span></td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
                             <tr>
-                                <td>10</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a><span class="state_box"><span class="state_box red">NEW</span></span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
+                                <td>
+                                    2022년 제2회 충남창조경제혁신센터 엔젤투자 유치교육<br/>
+                                    TIPS운영사 심사역, 대기업 벤처캐피탈이 들려주는 초기투자 유치 전략<br/>
+                                    - 강연장소 : 충남창업마루 나비 4층 컨퍼런스 및 유튜브 동시송출<br/>
+                                    - 모집대상 : 스타트업 및 초기투자 엔젤투자 유치에 관심있는 누구나<br/>
+                                    - 강연주제 : TIPS운영사 및 대기업 벤처캐피탈이 들려주는 초기투자 유치전략<br/>
+                                                    13:00 ~ 15:00 성공적인 TIPS과제 설정과 사업계획 작성법(JB벤처스 박디도 이사)<br/>
+                                    - 참가방법 : 구글폼접수(충남창조경제혁신센터 홈페이지) 또는 온오프믹스 참가신청<br/>
+                                    - 문의처 : 충남창조경제혁신센터 투자육성팀(041-536-7832)<br/>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>9</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box"><span class="state_box green">답변완료</span></span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box"><span class="state_box blue">미답변</span></span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">비밀글 사용시</a><span class="lock">잠금</span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
+                            <tr class="bg">
+                                <td>
+                                    <div class="file_download">
+                                        <div class="btn_box bg">
+                                            <a href="" class="download" download>전체 다운로드</a>
+                                        </div>
+                                        <ul>
+                                            <li><a href="" download>AAA.jpg</a></li>
+                                            <li><a href="" download>BBB.hwp</a></li>
+                                            <li><a href="" download>CCC.zip</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                
-                <div class="board_btn">
-                    <!-- paging -->
-                    <div class="paging_box">
-                        <ul>
-                            <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
-                            <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
-                            <li class="on"><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li><a href="">5</a></li>
-                            <li><a href="">10</a></li>
-                            <li><a href="">100</a></li>
-                            <li><a href="">1000</a></li>
-                            <li><a href="">9</a></li>
-                            <li><a href="">10</a></li>
-                            <li class="next"><a href="" title="다음페이지로 이동"></a></li>
-                            <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="btn_box">
-                        <a href="" class="btn_blue">글쓰기</a>
-                    </div>
-                </div>
 
-                <!-- 카드긴타입 -->
-                <div class="tbl_longcard">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="btn_box_group type_tbl">
+                    <div class="btn_box bg">
+                        <a href="" class="btn_modi">수정</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="" class="btn_delete">삭제</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="" class="btn_list">목록</a>
+                    </div>
                 </div>
 
             </div>

@@ -8,21 +8,15 @@
 
     <!-- pub css -->
     <link rel="stylesheet" href="../css/jquery-ui.min.css">
-    <link rel="stylesheet" href="../css/fullpage.css"> <!-- main -->
-    <link rel="stylesheet" href="../css/swiper-bundle.css"> <!-- main -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/main.css"> <!-- main -->
 
     <!-- pub js -->
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
-    <script src="../js/fullpage.2.9.7.js"></script> <!-- main -->
-    <script src="../js/swiper-bundle.min.js"></script> <!-- main -->
-    <script src="../js/main.js"></script> <!-- main -->
     <script src="../js/common.js"></script>
 
 </head>
-<body class="main">
+<body>
 <div class="wrap">
     <!-- skip nav -->
     <div class="skip_nav" title="스킵 네비게이션">
@@ -272,320 +266,281 @@
     </header>
     <div class="header_bg"></div>
 
-    <!-- 바로가기 버튼 -->
-    <div class="main_quickmenu">
+    <!-- quick menu -->
+    <aside class="quick_box">
         <ul>
-            <li data-menuanchor="sec1" class="active"><a href="#sec1">바로가기</a></li>
-            <li data-menuanchor="sec2"><a href="#sec2">통합검색</a></li>
-            <li data-menuanchor="sec3"><a href="#sec3">현황/통계</a></li>
-            <li data-menuanchor="sec4"><a href="#sec4">알림/소통</a></li>
-            <li data-menuanchor="sec5"><a href="#sec5">전자공시</a></li>
+            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
+            <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
+            <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
         </ul>
-        <button class="mymenu"><span></span>마이메뉴</button>
-    </div>
+    </aside>
 
-    <!-- 메인 컨텐츠 -->
-    <div id="fullpage">
-
-        <!-- 바로가기 -->
-        <div class="section sec1 active">
-
-            <!-- 스와이퍼 -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="slide_wrap first">
-                            <div class="inner">
-                                <div class="tit">
-                                    <span class="sub_tit">
-                                        <span>A</span>ll <span>V</span>entuer <span>I</span>nvestment in <span>O</span>ne
-                                    </span>
-                                    <h2><strong>모든 벤처 투자 정보</strong>를 하나로</h2>
-                                </div>
-                                <ul class="total">
-                                    <li>
-                                        <div class="total_tit">등록된 벤처기업</div>
-                                        <div class="total_content">
-                                            <strong>9,203</strong>
-                                            <span>개사</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="total_tit">투자받은 기업수</div>
-                                        <div class="total_content">
-                                            <strong>6,496</strong>
-                                            <span>건</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shortcuts_box">
-                                    <div class="shortcuts_box_content">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>포털소개</strong>
-                                                    <em>벤처투자포털을 소개합니다.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>커뮤니티</strong>
-                                                    <em>벤처기업, 투자자모임에서 <br/>직접 소통해보세요.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>교육서비스</strong>
-                                                    <em>더 자세한 벤처투자에 대해 <br/>알아보세요.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>벤처투자 불법신고</strong>
-                                                    <em>벤처투자와 관련된 불법 사항을 <br/>신고해주세요.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>구인구직</strong>
-                                                    <em>채용정보와 인력풀을 <br/>이용해보세요.</em>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-button-prev shortcuts"></button>
-                                        <button class="swiper-button-next shortcuts"></button>
-                                        <div class="swiper-pagination shortcuts"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //Slide 1 -->
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="slide_wrap second">
-                            <div class="inner">
-                                <div class="tit">
-                                    <h2><strong>벤처기업</strong>에 투자하고 싶다면?</h2>
-                                </div>
-                                <ul class="total">
-                                    <li>
-                                        <div class="total_tit">등록된 벤처기업</div>
-                                        <div class="total_content">
-                                            <strong>9,203</strong>
-                                            <span>개사</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="total_tit">투자받은 기업수</div>
-                                        <div class="total_content">
-                                            <strong>6,496</strong>
-                                            <span>건</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shortcuts_box">
-                                    <div class="shortcuts_box_content">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>벤처기업검색</strong>
-                                                    <em>투자유치를 희망하는 벤처기업을 <br/>찾아보세요</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>동향보고서</strong>
-                                                    <em>최신 벤처투자 트렌드를 <br/>확인하세요.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>온라인IR</strong>
-                                                    <em>벤처기업의 경영실적을 <br/>확인합니다.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>VC구주유통망</strong>
-                                                    <em>벤처투자자산 매매거래를 위한 <br/>플랫폼입니다.</em>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-button-prev shortcuts"></button>
-                                        <button class="swiper-button-next shortcuts"></button>
-                                        <div class="swiper-pagination shortcuts"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //Slide 2 -->
-
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="slide_wrap third">
-                            <div class="inner">
-                                <div class="tit">
-                                    <h2><strong>투자유치</strong>를 희망합니다!</h2>
-                                </div>
-                                <ul class="total">
-                                    <li>
-                                        <div class="total_tit">총 조성금액</div>
-                                        <div class="total_content">
-                                            <strong>8조1,636</strong>
-                                            <span>억원</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="total_tit">출자펀드</div>
-                                        <div class="total_content">
-                                            <strong>781</strong>
-                                            <span>건</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="total_tit">등록된 투자자</div>
-                                        <div class="total_content">
-                                            <strong>215,133</strong>
-                                            <span>개사</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="total_tit">투자 잔액</div>
-                                        <div class="total_content">
-                                            <strong>211,171</strong>
-                                            <span>억원</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shortcuts_box">
-                                    <div class="shortcuts_box_content">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>투자자 검색</strong>
-                                                    <em>분야별 투자기관을 찾아보세요.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>벤처투자마트</strong>
-                                                    <em>투자자-기업간 상담회입니다.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>가이드 A to Z</strong>
-                                                    <em>벤처투자를 위한 모든 정보를 <br/>담았습니다.</em>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="">
-                                                    <span></span>
-                                                    <strong>용어사전</strong>
-                                                    <em>벤처투자와 관련된 용어를 <br/>검색합니다.</em>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-button-prev shortcuts"></button>
-                                        <button class="swiper-button-next shortcuts"></button>
-                                        <div class="swiper-pagination shortcuts"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //Slide 3 -->
-
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination sec1_full"></div>
-                <button class="swiper-button-prev sec1_full"></button>
-                <button class="swiper-button-next sec1_full"></button>
-            </div>
-            <!-- //스와이퍼 -->
-
+    <!-- conteiner -->
+    <div id="container" class="container type_01">
+        
+        <!-- sub title -->
+        <div class="tit_box sub_tit">
+            <h2>벤처투자매칭</h2>
+            <span>모든 벤처 투자 정보를 하나로</span>
         </div>
+        <!-- //sub title -->
 
-        <!-- 통합검색 -->
-        <div class="section sec2 black">
-            <h1>Section2</h1>
-        </div>
-        <!-- //통합검색 -->
-
-        <!-- 현황/통계 -->
-        <div class="section sec3">
-            <h1>Section3</h1>
-        </div>
-        <!-- //현황/통계 -->
-
-        <!-- 알림/소통 -->
-        <div class="section sec4 black">
-            <h1>Section4</h1>
-        </div>
-        <!-- //알림/소통 -->
-
-        <!-- 통합공시 -->
-        <div class="section sec5 black">
-            <h1>Section5</h1>
-        </div>
-        <!-- //통합공시 -->
-
-        <!-- footer -->
-        <footer class="section sec6 fp-auto-height">
-            <div class="footer_top">
-                <ul class="footer_link">
-                    <li><a href=""><strong>개인정보처리방침</strong></a></li>
-                    <li><a href="">홈페이지 이용안내</a></li>
-                    <li><a href="">저작권보호 및 이용정책</a></li>
-                    <li><a href="">사이트맵</a></li>
-                    <li><a href="">찾아오시는길</a></li>
+        <!-- main content -->
+        <div class="content_box">
+            
+            <!-- location -->
+            <div class="location">
+                <ul>
+                    <li class="home">
+                        <a href="">home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">벤처투자매칭</a>
+                        <ul>
+                            <li><a href="">투자가이드</a></li>
+                            <li><a href="">정보서비스</a></li>
+                            <li><a href="">벤처투자포털</a></li>
+                        </ul>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:void(0);">기업홍보</a>
+                        <ul>
+                            <li><a href="">투자자 검색</a></li>
+                            <li><a href="">투자유치 희망기업 검색</a></li>
+                            <li><a href="">통합공시</a></li>
+                            <li><a href="">벤처투자마트</a></li>
+                            <li><a href="">주식유통정보</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                <div class="familysite_box">
-                    <div class="family_select">
-                        <select>
-                            <option value="">관련사이트</option>
-                            <option value="">관련사이트좀더긴텍스트</option>
-                            <option value="">관련사이트</option>
-                            <option value="">관련사이트</option>
-                        </select>
+            </div>
+
+            <div class="inner">
+
+                <div class="tit_box">
+                    <h3>기업홍보</h3>
+                </div>
+    
+                <div class="board_infobox">
+                    <div class="total">전체 <span>150</span>건</div>
+                    <div class="search_box">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button>검색</button>
                     </div>
-                    <button>GO</button>
                 </div>
-            </div>
-            <div class="footer_bottom">
-                <address>(06595) 서울특별시 서초구 서초대로 45길 16 VR빌딩 2층</address>
-                <div class="tel_num">
-                    <dl>
-                        <dt>TEL : </dt>
-                        <dd>02)2156-2100</dd>
-                    </dl>
-                    <dl>
-                        <dt>FAX : </dt>
-                        <dd>02)2156-2110/2111</dd>
-                    </dl>
+    
+                <!-- 게시판 테이블 -->
+                <div class="tbl_longcard">
+                    <ul>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>경영실적공개</span>
+                                    <strong>기업설명회 개최 공지</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>기업홍보</span>
+                                    <strong>[아사달] 기업 홍보 자료입니다.</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>기업설명회</span>
+                                    <strong>[로고스시스템] 경영실적자료 공개</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>경영실적공개</span>
+                                    <strong>기업설명회 개최 공지</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>경영실적공개</span>
+                                    <strong>기업설명회 개최 공지</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./USR-1030-B-DTL.html">
+                                <div class="tit">
+                                    <span>경영실적공개</span>
+                                    <strong>기업설명회 개최 공지</strong>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pop_mini">작성자</a>
+                                        <div class="card_set">
+                                            <ul class="">
+                                                <li><a href="">파트너 신청</a></li>
+                                                <li><a href="">쪽지보내기</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>2022-08-26</li>
+                                    <li>조회수 111</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
+                
+                <div class="board_btn">
+                    <!-- paging -->
+                    <div class="paging_box">
+                        <ul>
+                            <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                            <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                            <li class="on"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                            <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="btn_box">
+                        <a href="./USR-1030-B-FORM.html" class="btn_blue">글쓰기</a>
+                    </div>
+                </div>
+
+                
+
             </div>
-        </footer>
+
+        </div>
+        <!-- //main content -->
 
     </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_top">
+            <ul class="footer_link">
+                <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                <li><a href="">홈페이지 이용안내</a></li>
+                <li><a href="">저작권보호 및 이용정책</a></li>
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">찾아오시는길</a></li>
+            </ul>
+            <div class="familysite_box">
+                <div class="family_select">
+                    <select>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트좀더긴텍스트</option>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트</option>
+                    </select>
+                </div>
+                <button>GO</button>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <address>(06595) 서울특별시 서초구 서초대로 45길 16 VR빌딩 2층</address>
+            <div class="tel_num">
+                <dl>
+                    <dt>TEL : </dt>
+                    <dd>02)2156-2100</dd>
+                </dl>
+                <dl>
+                    <dt>FAX : </dt>
+                    <dd>02)2156-2110/2111</dd>
+                </dl>
+            </div>
+            <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
+        </div>
+    </footer>
 
 </div>
 </body>
