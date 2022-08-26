@@ -1207,6 +1207,14 @@
         min-width: 0;
         width: 100%;
     }
+
+    /* state box / border-radius 있는것 */
+    .state_box.type_02 {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
     /* 제목 */
     .tit_box h3 {
         font-size: 27px;
@@ -1317,6 +1325,13 @@
     }
     .tbl_card_list.type_02 > ul > li a {
         gap: 5px;
+    }
+    .tbl_card_list.type_02 a .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .tbl_card_list.type_02 a .info span + span::before {
+        display: none;
     }
     .tbl_card_list.type_02 a .tit span {
         display: block;

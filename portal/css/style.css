@@ -1384,6 +1384,61 @@ footer .footer_bottom {
         padding-top: 5px;
     }
 
+    /* 투자자 검색 - 상세 */
+    .investor_card {
+        padding: 15px;
+    }
+    .investor_card .info ul li {
+        position: relative;
+        flex-direction: column;
+    }
+    .investor_card .info ul li span + span::before {
+        display: none;
+    }
+    .investor_card .info ul li + li {
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+    .investor_card .info ul li + li::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #d9e1e7;
+    }
+    .investment_content > ul {
+        flex-direction: column;
+    }
+    .investment_content > ul > li {
+        padding: 15px;
+    }
+    .investment_content > ul > li .tit strong {
+        flex-direction: column;
+    }
+    .investment_content > ul > li .btn_investment_content {
+        margin-bottom: 10px;
+    }
+    .investment_content > ul > li .btn_investment_content li {
+        flex: 1;
+    }
+    .investment_content > ul > li .btn_investment_content li button {
+        width: 100%;
+        padding: 7px 0;
+    }
+    .investment_list {
+        padding: 15px;
+    }
+    .investment_list ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .investment_list ul li {
+        padding: 15px;
+    }
+
     /* footer */
     footer {
         padding: 25px;
