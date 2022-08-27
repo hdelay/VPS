@@ -1495,6 +1495,7 @@ footer .footer_bottom {
     .footer_bottom .tel_num dl dt,
     .footer_bottom .tel_num dl dd {
         font-size: 14px;
+        color: #fff;
     }
     .footer_bottom > span {
         font-size: 12px;
