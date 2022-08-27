@@ -448,6 +448,7 @@ header.headerfix .header_bottom ul li a::before {
     border: 1px solid #ccc;
     border-bottom: none;
     box-sizing: border-box;
+    z-index: 1;
 }
 .content_box .location > ul > li.on ul {
     display: block;
