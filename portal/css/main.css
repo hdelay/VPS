@@ -530,7 +530,6 @@
         font-size: 40px;
     }
     .swiper-container .slide_wrap.first .inner .tit + .total {
-        padding-top: 20px;
     }
     .swiper-container .slide_wrap .inner .total {
         flex-direction: column;
@@ -538,7 +537,6 @@
         min-height: 0;
         height: auto;
         justify-content: center;
-        padding: 20px 0;
     }
     .swiper-container .slide_wrap .inner .total li {
         width: 100%;
