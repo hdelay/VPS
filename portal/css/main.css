@@ -482,11 +482,11 @@
         height: 100vh;
     }
     /* iOS only */
-    @supports (-webkit-touch-callout: none) { 
+    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
         .swiper-container .slide_wrap {
             height: -webkit-fill-available;
+            min-height: -webkit-fill-available;
         }
-        
     }
     .swiper-container .slide_wrap .inner {
         max-width: 100%;
