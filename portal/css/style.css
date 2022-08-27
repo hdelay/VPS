@@ -858,6 +858,7 @@ footer .footer_bottom {
     margin-right: 5px;
     font-weight: 500;
     font-size: var(--font-common);
+    color: #fff;
 }
 .footer_bottom .tel_num dl dd {
     height: 21px;
