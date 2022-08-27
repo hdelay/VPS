@@ -473,6 +473,12 @@
     .fullpage-wrapper .section {
         scroll-snap-align: start;
     }
+    /* iOS only */
+    @supports (-webkit-appearance:none) {
+        .fullpage-wrapper .section {
+            height: -webkit-fill-available !important;
+        }
+    }
     .main_quickmenu {
         display: none;
     }
@@ -486,12 +492,6 @@
     .swiper-container .slide_wrap {
         padding: 150px 20px 0;
         min-height: 100vh;
-    }
-    /* iOS only */
-    @supports (-webkit-appearance:none) {
-        .swiper-container .slide_wrap {
-            height: -webkit-fill-available;
-        }
     }
     .swiper-container .slide_wrap .inner {
         max-width: 100%;
