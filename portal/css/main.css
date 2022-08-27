@@ -479,13 +479,12 @@
     }
     .swiper-container .slide_wrap {
         padding: 150px 20px 0;
-        height: 100vh;
+        min-height: 100vh;
     }
     /* iOS only */
-    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+    @supports (-webkit-appearance:none) {
         .swiper-container .slide_wrap {
             height: -webkit-fill-available;
-            min-height: -webkit-fill-available;
         }
     }
     .swiper-container .slide_wrap .inner {
