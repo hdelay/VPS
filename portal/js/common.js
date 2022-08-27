@@ -115,17 +115,18 @@ $(function(){
     });
 
     // headerfix
-    window.addEventListener('scroll', () => {
-        let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
-        if(scrollLocation > 100){
-            $('header').addClass('headerfix');
-            $('body').removeClass('gnb_open');
-        } else {
-            $('header').removeClass('headerfix');
-        }
-        
-    });
-
+    if(!$('body').hasClass('main')){
+        window.addEventListener('scroll', () => {
+            let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+            if(scrollLocation > 100){
+                $('header').addClass('headerfix');
+                $('body').removeClass('gnb_open');
+            } else {
+                $('header').removeClass('headerfix');
+            }
+        });
+    }
+    
     // 모바일 오픈
     $('.btn_allmenu').on('click', function(e){
         e.preventDefault();

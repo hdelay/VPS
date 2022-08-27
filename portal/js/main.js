@@ -78,39 +78,6 @@ $(function(){
     });
     
     // 메인 섹션1 스와이퍼 안 스와이퍼
-    /*
-    if($(window).width() < 768){
-        shortcuts_swiper = new Swiper('.shortcuts_box_content', {
-            slidesPerView: 2,
-            pagination: {
-              el: '.swiper-pagination.shortcuts',
-              clickable: true,
-            },
-            navigation: {
-              nextEl: '.swiper-button-next.shortcuts',
-              prevEl: '.swiper-button-prev.shortcuts',
-            },
-            breakp
-        });
-    }
-    $(window).resize(function(){
-        if($(window).width() > 768){
-            shortcuts_swiper.destroy();
-        } else {
-            shortcuts_swiper = new Swiper('.shortcuts_box', {
-                slidesPerView: 2,
-                pagination: {
-                  el: '.swiper-pagination.shortcuts',
-                  clickable: true,
-                },
-                navigation: {
-                  nextEl: '.swiper-button-next.shortcuts',
-                  prevEl: '.swiper-button-prev.shortcuts',
-                },
-            });
-        }
-    });
-    */
     shortcuts_swiper = new Swiper('.shortcuts_box .shortcuts_box_content', {
         slidesPerView: 2,
         pagination: {
@@ -129,14 +96,14 @@ $(function(){
     });
     
     // 섹션 스크롤 headerfix
+    /*
     $(window).scroll(function(){
         let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
         let sec_02 = $('.sec2').offset().top; // 섹션2 스크롤바 위치
         let sec_03 = $('.sec3').offset().top; // 섹션3 스크롤바 위치
         let sec_04 = $('.sec4').offset().top; // 섹션4 스크롤바 위치
-        console.log(scrollLocation);
-        console.log(sec_02);
-        
-    });
+        // console.log(scrollLocation);
+        // console.log(sec_02);
+    });*/
 
 });
