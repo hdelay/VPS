@@ -1495,6 +1495,10 @@ footer .footer_bottom {
     .footer_bottom .tel_num dl dt,
     .footer_bottom .tel_num dl dd {
         font-size: 14px;
+    }
+    /* 아이폰 글자색 대응 */
+    .footer_bottom .tel_num dl dt a,
+    .footer_bottom .tel_num dl dd a {
         color: #fff;
     }
     .footer_bottom > span {
