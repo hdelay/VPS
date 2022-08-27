@@ -467,6 +467,12 @@
 ============================================================ */
 
 @media screen and (max-width: 768px) {
+    .fullpage-wrapper {
+        scroll-snap-type: y mandatory;
+    }
+    .fullpage-wrapper .section {
+        scroll-snap-align: start;
+    }
     .main_quickmenu {
         display: none;
     }
