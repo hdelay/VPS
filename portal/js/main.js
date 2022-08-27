@@ -78,6 +78,7 @@ $(function(){
     });
     
     // 메인 섹션1 스와이퍼 안 스와이퍼
+    /*
     if($(window).width() < 768){
         shortcuts_swiper = new Swiper('.shortcuts_box_content', {
             slidesPerView: 2,
@@ -89,6 +90,7 @@ $(function(){
               nextEl: '.swiper-button-next.shortcuts',
               prevEl: '.swiper-button-prev.shortcuts',
             },
+            breakp
         });
     }
     $(window).resize(function(){
@@ -106,6 +108,23 @@ $(function(){
                   prevEl: '.swiper-button-prev.shortcuts',
                 },
             });
+        }
+    });
+    */
+    shortcuts_swiper = new Swiper('.shortcuts_box .shortcuts_box_content', {
+        slidesPerView: 2,
+        pagination: {
+            el: '.swiper-pagination.shortcuts',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next.shortcuts',
+            prevEl: '.swiper-button-prev.shortcuts',
+        },
+        breakpoints: {
+            768: {
+              slidesPerView: 5,
+            },
         }
     });
     
