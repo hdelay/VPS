@@ -245,7 +245,6 @@ $(function(){
         // 탭 컨텐츠 숨기기
         $(this).parent().siblings().removeClass('on');
         $(this).parent().parent().siblings().children("div").removeClass('on');
-        console.log($(this).parent().parent().siblings().children("div"));
 
         // 클릭이벤트
         $(this).parent().addClass('on');
@@ -311,6 +310,12 @@ $(function(){
     $('.investment_content > ul > li .btn_investment_content li button').on('click', function(){
         $('.investment_content > ul > li .btn_investment_content li').removeClass();
         $(this).parent().addClass('on');
+    });
+
+    // faq
+    $('.tbl_faq ul li a').on('click', function(){
+        $(this).parent().siblings().find('.answer').slideUp();
+        $(this).parent().find('.answer').slideDown();
     });
 
 });

@@ -693,6 +693,45 @@ header.headerfix .header_bottom ul li a::before {
     color: #666;
 }
 
+/* 벤처투자상담 */
+.answer_box {
+    
+}
+.answer_box::before {
+    /* content: "A"; */
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+}
+.answer_box .textarea_box {}
+
+/* 용어사전 */
+.search_item + .board_infobox {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.dictionary_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 20px;
+}
+.dictionary_box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    transition: .2s;
+}
+.dictionary_box li:hover a {
+    background-color: #01349a;
+    color: #fff;
+}
+
 /* quick menu */
 .quick_box {
     display: flex;
@@ -1462,6 +1501,15 @@ footer .footer_bottom {
     }
     .investment_list ul li {
         padding: 15px;
+    }
+
+    /* 용어사전 */
+    .dictionary_box {
+        padding: 0;
+        justify-content: space-around;
+    }
+    .chk_list.type_02 .dictionary_box li {
+        padding: 0;
     }
 
     /* footer */
