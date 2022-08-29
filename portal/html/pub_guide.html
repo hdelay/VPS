@@ -173,13 +173,43 @@
                     </dd>
                 </dl>
                 <dl class="item-content">
-                    <dt>OL li</dt>
+                    <dt>state</dt>
                     <dd>
-                        <ol class="list_box type_02">
-                            <li>리스트</li>
-                            <li>리스트</li>
-                            <li>리스트</li>
-                        </ol>
+                        1. border-radius
+                        <div class="state_box">
+                            <span class="red">투자사구분</span>
+                            <span class="green">투자사구분</span>
+                            <span class="mauve">투자사구분</span>
+                            <span class="skyblue">투자사구분</span>
+                            <span class="apricot">투자사구분</span>
+                            <span class="lightgreen">투자사구분</span>
+                            <span class="lightpurple">투자사구분</span>
+                            <span class="brown">투자사구분</span>
+                        </div>
+                        2. border-radius gap(마진없음)
+                        <div class="state_box type_02">
+                            <span class="red">투자사구분</span>
+                            <span class="green">투자사구분</span>
+                            <span class="mauve">투자사구분</span>
+                            <span class="skyblue">투자사구분</span>
+                            <span class="apricot">투자사구분</span>
+                            <span class="lightgreen">투자사구분</span>
+                            <span class="lightpurple">투자사구분</span>
+                            <span class="brown">투자사구분</span>
+                        </div>
+                        3. 네모
+                        <div class="state_group">
+                            <span class="blue">투자사구분</span>
+                            <span class="pink">투자사구분</span>
+                            <span class="black">투자사구분</span>
+                            <span class="green">투자사구분</span>
+                            <span class="mauve">투자사구분</span>
+                            <span class="skyblue">투자사구분</span>
+                            <span class="apricot">투자사구분</span>
+                            <span class="lightgreen">투자사구분</span>
+                            <span class="lightpurple">투자사구분</span>
+                            <span class="brown">투자사구분</span>
+                        </div>
                     </dd>
                 </dl>
             </dd>
@@ -229,7 +259,23 @@
         <dl id="content_03" class="item-box">
             <dt>아이콘버튼<br/></dt>
             <dd>
-                
+                <div class="btn_box_group type_tbl">
+                    <div class="btn_box bg">
+                        <a href="./USR-1030-B-FORM.html" class="btn_modi">수정</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="" class="btn_delete">삭제</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="./USR-1030-B-LIST.html" class="btn_list">목록</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="" class="btn_save">저장</a>
+                    </div>
+                    <div class="btn_box bg">
+                        <a href="./USR-1030-B-LIST.html" class="btn_cancel">취소</a>
+                    </div>
+                </div>
             </dd>
         </dl>
 
@@ -547,19 +593,23 @@
             <dt>탭</dt>
             <dd>
                 <div class="tab_group">
-                    <ul>
-                        <li class="on"><a href="" rel="tab_content_01">탭버튼</a></li>
-                        <li><a href="" rel="tab_content_02">탭버튼</a></li>
-                        <li><a href="" rel="tab_content_03">탭버튼</a></li>
-                    </ul>
+                    <div class="tab_btn">
+                        <ul>
+                            <li class="on"><a href="" rel="tab_content_01">탭버튼</a></li>
+                            <li><a href="" rel="tab_content_02">탭버튼</a></li>
+                            <li><a href="" rel="tab_content_03">탭버튼</a></li>
+                        </ul>
+                    </div>
                     <div class="tab_content">
                         <div class="on tab_content_01">
                             <div class="tab_group">
-                                <ul>
-                                    <li class="on"><a href="" rel="tab_content_08">탭버튼</a></li>
-                                    <li><a href="" rel="tab_content_09">탭버튼</a></li>
-                                    <li><a href="" rel="tab_content_10">탭버튼</a></li>
-                                </ul>
+                                <div class="tab_btn">
+                                    <ul>
+                                        <li class="on"><a href="" rel="tab_content_08">탭버튼</a></li>
+                                        <li><a href="" rel="tab_content_09">탭버튼</a></li>
+                                        <li><a href="" rel="tab_content_10">탭버튼</a></li>
+                                    </ul>
+                                </div>
                                 <div class="tab_content">
                                     <div class="on tab_content_08">
                                         s1111111111111
@@ -574,13 +624,15 @@
                     </div>
                 </div>
                 <div class="tab_group">
-                    <ul>
-                        <li class="on"><a href="" rel="tab_content_01">커뮤니티 홈</a></li>
-                        <li><a href="" rel="tab_content_02">공지사항</a></li>
-                        <li><a href="" rel="tab_content_03">자유게시판</a></li>
-                        <li><a href="" rel="tab_content_04">일정알림</a></li>
-                        <li><a href="" rel="tab_content_05">회원</a></li>
-                    </ul>
+                    <div class="tab_btn">
+                        <ul>
+                            <li class="on"><a href="" rel="tab_content_01">커뮤니티 홈</a></li>
+                            <li><a href="" rel="tab_content_02">공지사항</a></li>
+                            <li><a href="" rel="tab_content_03">자유게시판</a></li>
+                            <li><a href="" rel="tab_content_04">일정알림</a></li>
+                            <li><a href="" rel="tab_content_05">회원</a></li>
+                        </ul>
+                    </div>
                     <div class="tab_content">
 
                         <!-- 첫번째 탭 -->
@@ -680,90 +732,6 @@
         <dl id="content_11" class="item-box">
             <dt>게시판타입</dt>
             <dd>
-                1. 게시판 테이블
-                <div class="tbl_box">
-                    <table>
-                        <caption>공지사항 테이블</caption>
-                        <colgroup>
-                            <col width="7%">
-                            <col width="10%">
-                            <col width="*">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="15%">
-                            <col width="7%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">구분</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">첨부파일</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일시</th>
-                                <th scope="col">조회수</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="fixed">
-                                <td class=""><span class="state_box notice">공지</span></td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">공지사항</a><span class="state_box red">NEW</span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box green">답변완료</span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">faq게시판 사용시</a><span class="state_box blue">미답변</span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">비밀글 사용시</a><span class="lock">잠금</span></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><span class="f_color_blue">구분1</span></td>
-                                <td class="agn_l"><a href="">두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.두줄 이상의 제목입니다.</a></td>
-                                <td></td>
-                                <td>송은희</td>
-                                <td>2021-10-15</td>
-                                <td>110</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <br/>
-
                 2. p21 게시판
                 <div class="tbl_box_list">
                     <ul>

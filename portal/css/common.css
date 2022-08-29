@@ -80,6 +80,12 @@
 .state_box .lightgreen {
     background-color: #57c257;
 }
+.state_box .lightpurple {
+    background-color: #9aacd1;
+}
+.state_box .brown {
+    background-color: #caaea0;
+}
 
 /* border-radius 없는것 */
 .state_group {
@@ -103,6 +109,24 @@
 }
 .state_group .black {
     background-color: #666;
+}
+.state_group .mauve {
+    background-color: #ababe8;
+}
+.state_group .skyblue {
+    background-color: #79c5e1;
+}
+.state_group .apricot {
+    background-color: #fcc084;
+}
+.state_group .lightgreen {
+    background-color: #57c257;
+}
+.state_group .lightpurple {
+    background-color: #9aacd1;
+}
+.state_group .brown {
+    background-color: #caaea0;
 }
 
 /* 버튼 */
@@ -520,53 +544,6 @@
     border-right: none;
 }
 
-/* 테이블 */
-.tbl_box {
-    border-top: 1px solid #333;
-}
-.tbl_box table {
-    width: 100%;
-}
-.tbl_box table thead tr th {
-    background-color: #f0f3f6;
-    border-bottom: 1px solid #333;
-    padding: 25px 0;
-    box-sizing: border-box;
-    border-right: 1px solid #e2e2e2;
-    vertical-align: middle;
-    font-weight: 500;
-    font-size: var(--font-l);
-}
-.tbl_box table thead tr th:last-child {
-    border-right: none;
-}
-.tbl_box table tbody tr td {
-    padding: 20px;
-    box-sizing: border-box;
-    border-right: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: 400;
-    font-size: var(--font-common);
-}
-.tbl_box table tbody tr td a {
-    font-weight: 400;
-    font-size: var(--font-common);
-}
-.tbl_box table tbody tr td a:hover {
-    text-decoration: underline;
-}
-.tbl_box table tbody tr td:last-child {
-    border-right: none;
-}
-.tbl_box table tbody tr td em {
-    display: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--font-common);
-}
-
 /* 테이블 타입2 :: 채용공고 */
 .tbl_box_list {
     border-top: 2px solid #c9c9ce;
@@ -832,6 +809,34 @@
 .tbl_longcard > ul > li .info > ul > li .card_set > ul {
     top: 20px;
     min-width: 145px;
+}
+.tbl_longcard.type_chk .chk {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+}
+.tbl_longcard.type_chk > ul > li > a {
+    padding: 25px 25px 25px 65px;
+}
+.tbl_longcard.type_chk > ul > li .info {
+    top: 50%;
+    bottom: inherit;
+    transform: translateY(-50%);
+}
+.tbl_longcard.type_chk > ul > li .card_set > ul {
+    right: inherit;
+    top: 9px;
+    left: 227px;
+}
+.tbl_longcard > ul > li .info > ul li button {
+
+}
+.tbl_longcard > ul > li .info > ul li button.btn_skyblue {
+    background-color: #47ade7;
+}
+.tbl_longcard > ul > li .info > ul li button.btn_gray {
+    background-color: #979797;
 }
 
 /* 카드게시판 :: 용어사전 */
@@ -1468,14 +1473,14 @@
 }
 
 /* 탭 */
-.tab_group > ul {
+.tab_group .tab_btn ul {
     display: flex;
     border-bottom: 1px solid #c1c1c1;
 }
-.tab_group > ul > li {
+.tab_group .tab_btn ul > li {
     flex: 1;
 }
-.tab_group > ul > li > a {
+.tab_group .tab_btn ul > li > a {
     display: flex;
     justify-content: center;
     margin-bottom: -1px;
@@ -1483,7 +1488,7 @@
     font-size: 22px;
     font-weight: 500;
 }
-.tab_group > ul > li.on > a {
+.tab_group .tab_btn ul > li.on > a {
     border-bottom: 2px solid #1c44c8;
     font-weight: 600;
     color: #1c44c8;
@@ -1553,6 +1558,26 @@
     position: absolute;
     top: -2px;
     right: 0;
+}
+
+.btn_state_box {
+    display: flex;
+    margin: 30px 0;
+    gap: 10px;
+}
+.btn_state_box button {
+    display: flex;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+.btn_state_box .btn_skyblue {
+    background-color: #47ade7;
+}
+.btn_state_box .btn_gray {
+    background-color: #979797;
 }
 
 /* ============================================================
@@ -1666,8 +1691,8 @@
         border: none;
         text-align: left;
     }
-    .tbl_box table tbody tr td.tbl_num {
-        display: none;
+    .tbl_box table tr .tbl_num {
+        display: none !important;
     }
     .tbl_box table tbody tr td.tbl_tit {
         display: flex;
@@ -1689,6 +1714,41 @@
         display: inline-block;
         margin-right: 5px;
     }
+    .tbl_box.type_chk table thead {
+        display: flex;
+    }
+    .tbl_box.type_chk table thead tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tbl_box.type_chk table thead tr th {
+        display: flex;
+        width: 100%;
+        padding: 5px 0;
+        padding-left: 60px;
+        font-size: 13px;
+        font-weight: 400;
+        border: none;
+    }
+    .tbl_box.type_chk table thead tr th:last-child {
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .tbl_box.type_chk table tr {
+        position: relative;
+    }
+    .tbl_box.type_chk table tr td {
+        padding-left: 60px;
+        box-sizing: border-box;
+    }
+    .tbl_box.type_chk table tr .tbl_chk {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        width: auto;
+        padding-left: 0;
+        transform: translateY(-50%);
+    }
     
     /* 게시판 타입1 ::  */
     .tbl_longcard > ul {
@@ -1701,6 +1761,28 @@
     .tbl_longcard > ul > li .info {
         bottom: 15px;
         right: 15px;
+    }
+    .tbl_longcard.type_chk > ul > li > a {
+        padding: 15px 15px 70px 60px;
+    }
+    .tbl_longcard.type_chk > ul > li > a .tit {
+        gap: 5px;
+    }
+    .tbl_longcard.type_chk > ul > li .info {
+        left: 0;
+        right: inherit;
+        top: inherit;
+        bottom: 15px;
+        width: 100%;
+        padding: 0 15px 0 60px;
+        box-sizing: border-box;
+        transform: translateY(0);
+    }
+    .tbl_longcard.type_chk > ul > li .info > ul > li {
+        flex: 1;
+    }
+    .tbl_longcard.type_chk > ul > li .info > ul > li .btn_box * {
+        font-size: 14px;
     }
 
     /* 카드게시판 :: 용어사전 */
@@ -1722,6 +1804,9 @@
     .tbl_box_detail table tr th,
     .tbl_box_detail table tr td {
         padding: 15px 0;
+    }
+    .tbl_box_detail table tr td img {
+        max-width: 100%;
     }
     .tbl_box_detail .tit {
         flex-direction: column;
@@ -1915,19 +2000,23 @@
     .tab_group {
 
     }
-    .tab_group > ul {
-        overflow-x: auto;
-        gap: 15px;
+    .tab_group .tab_btn {
+        overflow-y: hidden;
+        height: 46px;
+        border-bottom: 1px solid #c1c1c1;
     }
-    .tab_group > ul > li {
+    .tab_group .tab_btn ul {
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+    .tab_group .tab_btn ul > li {
         flex: none;
     }
-    .tab_group > ul > li > a {
+    .tab_group .tab_btn ul > li > a {
         padding: 10px 0;
         font-size: 18px;
-    }
-    .tab_group > ul > li.on > a {
-        border-bottom: 3px solid #1c44c8;
     }
     .tab_group .tab_content > div {
         padding: 20px 0;
@@ -1945,5 +2034,15 @@
     }
     .board_btn .paging_box + .btn_box {
         position: inherit;
+    }
+
+    .btn_state_box {
+        gap: 5px;
+        margin: 15px 0;
+    }
+    .btn_state_box button {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 0;
     }
 }

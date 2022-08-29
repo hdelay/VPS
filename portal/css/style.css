@@ -732,6 +732,28 @@ header.headerfix .header_bottom ul li a::before {
     color: #fff;
 }
 
+/* 커뮤니티 */
+.community_main_box {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f6f7f9;
+    border-radius: 10px;
+}
+.community_main_box .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.community_main_box .img img {
+    display: block;
+}
+
 /* quick menu */
 .quick_box {
     display: flex;

@@ -238,13 +238,13 @@ $(function(){
     });
 
     // 탭
-    $('.tab_group > ul li a').on('click', function(e){
+    $('.tab_group .tab_btn ul li a').on('click', function(e){
         e.preventDefault();
         var on_tab = $(this).attr("rel")
 
         // 탭 컨텐츠 숨기기
         $(this).parent().siblings().removeClass('on');
-        $(this).parent().parent().siblings().children("div").removeClass('on');
+        $(this).parent().parent().parent().siblings().children("div").removeClass('on');
 
         // 클릭이벤트
         $(this).parent().addClass('on');
