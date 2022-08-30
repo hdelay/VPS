@@ -323,6 +323,7 @@
     -webkit-appearance: none; /* 크롬 화살표 없애기 */
     -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
     appearance: none; /* 화살표 없애기 */
+    color: #333;
 }
 .sel_box::after {
     content: "";
@@ -762,7 +763,7 @@
     min-height: 200px;
 }
 
-/* 게시판 타입1 ::  */
+/* 공통게시판 타입  */
 .tbl_longcard > ul {
     display: flex;
     flex-direction: column;
@@ -912,9 +913,22 @@
     font-size: 21px;
     font-weight: 500;
 }
-.list_group .top .tit span {
+.list_group_info .top .tit span {
     font-size: 13px;
     font-weight: 400;
+}
+.list_group_info .top .tit .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.list_group_info .top .tit .details li {
+    font-size: 13px;
+    font-weight: 400;
+}
+.list_group_info .top .tit .details li span + span::before {
+    content: "ㅣ";
+    margin-right: 5px;
 }
 .list_group_info .bottom ul {
     display: flex;
@@ -1123,7 +1137,7 @@
     font-weight: 400;
 }
 
-/* 카드테이블 타입1 :: 벤처투자TALK */
+/* 카드리스트 타입 :: 벤처투자TALK */
 .tbl_card_list.type_01 {
     display: flex;
     flex-direction: column;
@@ -1364,7 +1378,134 @@
     font-size: 15px;
 }
 
-/* 카드테이블 타입2 :: 투자자 검색 - 이미지 */
+/* 카드리스트 타입 :: 투자자 검색 */
+.tbl_card_list .list_info {
+    padding-bottom: 45px;
+}
+.tbl_card_list .list_info ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.tbl_card_list .list_info ul li .sel_box {
+    width: 170px;
+}
+.tbl_card_list .list_info ul li .sel_box select {
+    padding: 15px;
+}
+.tbl_card_list .list_info .total {
+    font-size: 18px;
+    font-weight: 500;
+}
+.tbl_card_list .list_info .total strong {
+    margin-left: 7px;
+    font-weight: 700;
+    color: #475de6;
+}
+.tbl_card_list.type_02 > ul {
+    display: flex;
+    gap: 25px 40px;
+    flex-wrap: wrap;
+}
+.tbl_card_list.type_02 > ul > li {
+    width: calc(50% - 20px);
+}
+.tbl_card_list.type_02 > ul > li a {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_card_list.type_02 a .tit {
+    font-size: 20px;
+    font-weight: 500;
+}
+.tbl_card_list.type_02 a .tit span {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.tbl_card_list.type_02 a .info span {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.tbl_card_list.type_02 a .info span + span::before {
+    content: "|";
+    margin: 0 5px 0 3px;
+}
+.tbl_card_list.type_02 a .hashtag span {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.tbl_card_list.type_02 > .txt {
+    display: flex;
+    margin-top: 30px;
+    font-size: var(--font-common);
+    font-weight: 400;
+}
+
+/* 카드리스트 타입 :: 투자유치 희망기업 검색 */
+.tbl_card_list.type_03 > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.tbl_card_list.type_03 a {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_card_list.type_03 a .img {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 145px;
+}
+.tbl_card_list.type_03 a .group_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: calc(100% - 175px);
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.tbl_card_list.type_03 a .group_box .tit {
+    font-size: 22px;
+    font-weight: 500;
+}
+.tbl_card_list.type_03 a .group_box .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
+.tbl_card_list.type_03 a .group_box .info span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.tbl_card_list.type_03 a .group_box .info span:nth-child(1)::after,
+.tbl_card_list.type_03 a .group_box .info span:nth-child(2)::after {
+    content: "ㅣ";
+    margin-left: 5px;
+}
+.tbl_card_list.type_03 a .group_box .info .introduce {
+    width: 100%;
+}
+
+/* 체크박스 리스트타입 :: 투자자 검색 - 이미지 */
 .chk_list.img {
     display: flex;
     gap: 10px;
@@ -1418,7 +1559,7 @@
     width: auto;
 }
 
-/* 카드테이블 타입3 :: 투자자 검색 */
+/* 체크박스 리스트타입1 :: 투자자 검색 */
 .chk_list.type_01 {
     display: flex;
     flex-wrap: wrap;
@@ -1460,7 +1601,7 @@
     width: auto;
 }
 
-/* 카드테이블 타입4 :: 투자자 검색 */
+/* 체크박스 리스트타입2 :: 투자자 검색 */
 .chk_list.type_02 {
     display: flex;
     flex-direction: column;
@@ -1484,7 +1625,7 @@
     box-sizing: border-box;
 }
 
-/* 카드테이블 타입5 :: 투자자 검색 */
+/* 체크박스 리스트타입3 :: 투자자 검색 */
 .chk_list.type_03 {
     display: flex;
     flex-direction: column;
@@ -1509,80 +1650,6 @@
     width: auto;
     padding-left: 20px;
     box-sizing: border-box;
-}
-
-/* 카드테이블 타입6 :: 투자자 검색 */
-.tbl_card_list.type_02 .list_info {
-    padding-bottom: 45px;
-}
-.tbl_card_list.type_02 .list_info ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
-.tbl_card_list.type_02 .list_info ul li .sel_box {
-    width: 170px;
-}
-.tbl_card_list.type_02 .list_info ul li .sel_box select {
-    padding: 15px;
-}
-.tbl_card_list.type_02 .list_info .total {
-    font-size: 18px;
-    font-weight: 500;
-}
-.tbl_card_list.type_02 .list_info .total strong {
-    margin-left: 7px;
-    font-weight: 700;
-    color: #475de6;
-}
-.tbl_card_list.type_02 > ul {
-    display: flex;
-    gap: 25px 40px;
-    flex-wrap: wrap;
-}
-.tbl_card_list.type_02 > ul > li {
-    width: calc(50% - 20px);
-}
-.tbl_card_list.type_02 > ul > li a {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    padding: 15px;
-    box-sizing: border-box;
-    border: 1px solid #d9e1e7;
-    border-radius: 5px;
-    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
-}
-.tbl_card_list.type_02 a .tit {
-    font-size: 20px;
-    font-weight: 500;
-}
-.tbl_card_list.type_02 a .tit span {
-    margin-left: 5px;
-    font-size: 13px;
-    font-weight: 400;
-}
-.tbl_card_list.type_02 a .info span {
-    position: relative;
-    font-size: 14px;
-    font-weight: 400;
-    color: #666;
-}
-.tbl_card_list.type_02 a .info span + span::before {
-    content: "|";
-    margin: 0 5px 0 3px;
-}
-.tbl_card_list.type_02 a .hashtag span {
-    margin-left: 5px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #666;
-}
-.tbl_card_list.type_02 > .txt {
-    display: flex;
-    margin-top: 30px;
-    font-size: var(--font-common);
-    font-weight: 400;
 }
 
 
@@ -2045,7 +2112,7 @@
         width: 100%;
     }
 
-    /* 카드테이블 타입2 :: 투자자 검색 - 이미지 */
+    /* 체크박스 리스트타입 :: 투자자 검색 - 이미지 */
     .chk_list.img {
         flex-wrap: wrap;
     }
@@ -2062,7 +2129,7 @@
         background-size: auto 100% !important;
     }
 
-    /* 카드테이블 타입3 :: 투자자 검색 */
+    /* 체크박스 리스트타입1 :: 투자자 검색 */
     .chk_list.type_01 {
         gap: 5px;
     }
@@ -2081,7 +2148,7 @@
         display: none;
     }
 
-    /* 카드테이블 타입4 :: 투자자 검색 */
+    /* 체크박스 리스트타입2 :: 투자자 검색 */
     .chk_list.type_02 {
         padding: 0 15px;
     }
@@ -2096,7 +2163,7 @@
         padding-left: 0;
     }
 
-    /* 카드테이블 타입5 :: 투자자 검색 */
+    /* 체크박스 리스트타입3 :: 투자자 검색 */
     .chk_list.type_03 > li .chk_box {
         gap: 10px;
     }
@@ -2108,22 +2175,22 @@
         padding-top: 0;
     }
 
-    /* 카드테이블 타입6 :: 투자자 검색 */
-    .tbl_card_list.type_02 .list_info {
+    /* 카드리스트 타입 :: 투자자 검색 */
+    .tbl_card_list .list_info {
         padding-bottom: 20px;
     }
-    .tbl_card_list.type_02 .list_info ul {
+    .tbl_card_list .list_info ul {
         justify-content: flex-start;
         gap: 5px;
         flex-wrap: wrap;
     }
-    .tbl_card_list.type_02 .list_info ul li {
+    .tbl_card_list .list_info ul li {
         width: calc(50% - 5px);
     }
-    .tbl_card_list.type_02 .list_info ul li .sel_box {
+    .tbl_card_list .list_info ul li .sel_box {
         width: 100%;
     }
-    .tbl_card_list.type_02 .list_info .total {
+    .tbl_card_list .list_info .total {
         padding-top: 20px;
     }
     .tbl_card_list.type_02 > ul {
@@ -2148,6 +2215,19 @@
     }
     .tbl_card_list.type_02 > .txt {
         margin-top: 10px;
+    }
+
+    /* 카드리스트 타입 :: 투자유치 희망기업 검색 */
+    .tbl_card_list.type_03 a {
+        flex-direction: column;
+    }
+    .tbl_card_list.type_03 a .img {
+        width: 100%;
+        height: 120px;
+    }
+    .tbl_card_list.type_03 a .group_box {
+        width: 100%;
+        padding: 15px;
     }
 
     /* search form 서치폼 */

@@ -870,6 +870,38 @@ header.headerfix .header_bottom ul li a::before {
     -webkit-box-orient: vertical;
 }
 
+/* 비밀번호 확인 */
+.password_confirm_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 0 20px;
+}
+.password_confirm_box > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: var(--font-common);
+    font-weight: 400;
+}
+.password_confirm_box > span::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url(../images/ico/ico_secret.png) no-repeat center;
+    background-size: auto 100%;
+}
+.password_confirm .inp_box input {
+    height: 55px;
+}
+.password_confirm .btn_box_group {
+    margin-top: 20px;
+}
+
 /* quick menu */
 .quick_box {
     display: flex;
