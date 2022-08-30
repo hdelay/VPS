@@ -559,6 +559,53 @@
     border-right: none;
 }
 
+/* 테이블 타입1 :: 데이터 정보 thead */
+.tbl_box {
+    border-top: 1px solid #333;
+}
+.tbl_box table {
+    width: 100%;
+}
+.tbl_box table thead tr th {
+    background-color: #f0f3f6;
+    border-bottom: 1px solid #333;
+    padding: 25px 0;
+    box-sizing: border-box;
+    border-right: 1px solid #e2e2e2;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: var(--font-l);
+}
+.tbl_box table thead tr th:last-child {
+    border-right: none;
+}
+.tbl_box table tbody tr td {
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: var(--font-common);
+}
+.tbl_box table tbody tr td a {
+    font-weight: 400;
+    font-size: var(--font-common);
+}
+.tbl_box table tbody tr td a:hover {
+    text-decoration: underline;
+}
+.tbl_box table tbody tr td:last-child {
+    border-right: none;
+}
+.tbl_box table tbody tr td em {
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-common);
+}
+
 /* 테이블 타입2 :: 채용공고 */
 .tbl_box_list {
     border-top: 2px solid #c9c9ce;
@@ -859,6 +906,7 @@
     display: flex;
     gap: 30px;
     padding: 20px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     background-color: #f6f7f9;
     border-radius: 10px;
@@ -881,13 +929,12 @@
     flex-direction: column;
     justify-content: space-between;
     width: calc(100% - 230px);
-    padding: 20px 0;
     box-sizing: border-box;
 }
 .list_group_info .top .administration_box  {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .list_group_info .top .administration_box .btn_box {
     width: auto;
@@ -936,12 +983,24 @@
     gap: 5px;
 }
 .list_group_info .bottom ul li {
+    display: flex;
+    align-items: center;
     font-size: 13px;
     font-weight: 400;
 }
 .list_group_info .bottom ul li + li::before {
     content: "ㅣ";
     margin-right: 5px;
+}
+.list_group_info .bottom ul li .btn_box {
+    width: auto;
+    gap: 5px;
+}
+.list_group_info .bottom ul li .btn_box button {
+    flex: none;
+    width: auto;
+    padding: 5px 20px;
+    font-size: 15px;
 }
 
 /* 카드게시판 :: 용어사전 */
@@ -1045,10 +1104,12 @@
 }
 .tbl_faq ul li a dl dd {
     max-width: calc(100% - 185px);
+    color: #333;
 }
 .tbl_faq ul li a dl dd::before {
     content: "Q";
     margin-right: 5px;
+    font-weight: 500;
 }
 .tbl_faq ul li .answer {
     display: none;
@@ -1894,85 +1955,12 @@
     }
 
     /* 테이블 */
+    .tbl_box {
+        width: 100%;
+        overflow-x: auto;
+    }
     .tbl_box table {
-        table-layout: fixed;
-    }
-    .tbl_box table colgroup {
-        display: flex;
-    }
-    .tbl_box table thead {
-        display: none;
-    }
-    .tbl_box table tbody tr {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
-        padding: 15px 0;
-        border-bottom: 1px solid #e2e2e2;
-    }
-    .tbl_box table tbody tr td {
-        width: 100%;
-        padding: 0;
-        border: none;
-        text-align: left;
-    }
-    .tbl_box table tr .tbl_num {
-        display: none !important;
-    }
-    .tbl_box table tbody tr td.tbl_tit {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    .tbl_box table tbody tr td.tbl_tit a {
-        max-width: calc(100% - 50px);
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 500;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-    .tbl_box table tbody tr td em {
-        display: inline-block;
-        margin-right: 5px;
-    }
-    .tbl_box.type_chk table thead {
-        display: flex;
-    }
-    .tbl_box.type_chk table thead tr {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .tbl_box.type_chk table thead tr th {
-        display: flex;
-        width: 100%;
-        padding: 5px 0;
-        padding-left: 60px;
-        font-size: 13px;
-        font-weight: 400;
-        border: none;
-    }
-    .tbl_box.type_chk table thead tr th:last-child {
-        border-bottom: 1px solid #e2e2e2;
-    }
-    .tbl_box.type_chk table tr {
-        position: relative;
-    }
-    .tbl_box.type_chk table tr td {
-        padding-left: 60px;
-        box-sizing: border-box;
-    }
-    .tbl_box.type_chk table tr .tbl_chk {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        width: auto;
-        padding-left: 0;
-        transform: translateY(-50%);
+        min-width: 768px;
     }
     
     /* 게시판 타입1 ::  */
@@ -2044,8 +2032,22 @@
     .list_group_info .top .tit strong {
         margin-bottom: 10px;
     }
+    .list_group_info .top .tit .details li {
+        display: flex;
+        flex-direction: column;
+    }
+    .list_group_info .top .tit .details li span + span::before {
+        display: none;
+    }
     .list_group_info .bottom {
         margin-top: 20px;
+    }
+    .list_group_info .bottom ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .list_group_info .bottom ul li + li::before {
+        display: none;
     }
 
     /* 카드게시판 :: 용어사전 */

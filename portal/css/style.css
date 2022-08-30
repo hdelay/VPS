@@ -693,6 +693,75 @@ header.headerfix .header_bottom ul li a::before {
     color: #666;
 }
 
+/* 투자유치 희망기업 검색 */
+.enterprise_info ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.enterprise_info ul li {
+    width: calc(50% - 20px);
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+}
+.enterprise_info ul li dl dt {
+    padding-bottom: 25px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.enterprise_info ul li dl dd + dt {
+    padding-top: 25px;
+}
+.enterprise_info ul li dl dd {
+    font-size: 14px;
+    font-weight: 400;
+}
+.enterprise_info ul li dl dd .img,
+.enterprise_info ul li dl dd .video {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+.enterprise_info ul li dl dd .video video,
+.enterprise_info ul li dl dd .img img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.financial_info .chart_group_box {
+    display: flex;
+    padding: 40px;
+    background-color: #f0f3f6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    gap: 45px;
+    margin-bottom: 60px;
+}
+.financial_info .chart_group_box dl {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+.financial_info .chart_group_box dl dt {
+    font-size: 20px;
+    font-weight: 500;
+}
+.financial_info .chart_group_box dl dd .chart {
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+    border: 1px solid #d9e1e7;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px;
+}
+
 /* 벤처투자상담 */
 .answer_box {
     
@@ -703,8 +772,6 @@ header.headerfix .header_bottom ul li a::before {
     font-size: 50px;
     font-weight: 500;
 }
-.answer_box .textarea_box {}
-
 /* 용어사전 */
 .search_item + .board_infobox {
     margin-top: 30px;
@@ -759,7 +826,7 @@ header.headerfix .header_bottom ul li a::before {
 .community_main_btn {
     display: flex;
     justify-content: flex-end;
-    padding: 20px 0;
+    padding: 0 0 20px;
     box-sizing: border-box;
 }
 .community_main_btn .btn_box {
