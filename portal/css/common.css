@@ -217,6 +217,20 @@
 .btn_box.bg .btn_cancel::before {
     background-image: url(../images/ico/ico_btn_cancel.png);
 }
+.btn_box .btn_arrow_right {
+    align-items: center;
+    background-color: #5ab1f7;
+    font-size: 15px;
+}
+.btn_box .btn_arrow_right::after {
+    content: "";
+    display: flex;
+    width: 26px;
+    height: 19px;
+    background: url(../images/ico/ico_arrow_right.png) no-repeat;
+    background-size: auto 100%;
+    margin-left: 10px;
+}
 
 /* 제목 */
 .tit_box h2 {
@@ -839,6 +853,83 @@
     background-color: #979797;
 }
 
+/* 리스트 타이틀 박스 */
+.list_tit_box {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f6f7f9;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+}
+.list_tit_box .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.list_tit_box .img img {
+    display: block;
+}
+.list_group_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 230px);
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.list_group_info .top .administration_box  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.list_group_info .top .administration_box .btn_box {
+    width: auto;
+    flex: none;
+}
+.list_group_info .top .administration_box .btn_box .btn_setting {
+    align-items: center;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+.list_group_info .top .administration_box .btn_box .btn_setting::before {
+    content: "";
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ico/ico_setting.png) no-repeat center;
+    margin-right: 5px;
+}
+.list_group_info .top .tit strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.list_group .top .tit span {
+    font-size: 13px;
+    font-weight: 400;
+}
+.list_group_info .bottom ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.list_group_info .bottom ul li {
+    font-size: 13px;
+    font-weight: 400;
+}
+.list_group_info .bottom ul li + li::before {
+    content: "ㅣ";
+    margin-right: 5px;
+}
+
 /* 카드게시판 :: 용어사전 */
 .tbl_card > ul {
     display: flex;
@@ -963,6 +1054,73 @@
     width: 18px;
     height: 13px;
     background: url(../images/ico/ico_faq_arrow_right.png) no-repeat center;
+}
+
+/* 뉴스레터 웹진 */
+.tbl_newletter ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.tbl_newletter ul li {
+    display: flex;
+    width: calc(33.33% - 20px);
+}
+.tbl_newletter ul li a {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.tbl_newletter ul li a .division {
+    display: flex;
+}
+.tbl_newletter ul li a .division span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    flex: 1;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+.tbl_newletter ul li a .division span:nth-child(1) {
+    background-color: #7eb9f5;
+}
+.tbl_newletter ul li a .division span:nth-child(2) {
+    background-color: #b9b9f1;
+}
+.tbl_newletter ul li a .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tbl_newletter ul li a .tit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 68px;
+}
+.tbl_newletter ul li a .tit strong {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    font-size: var(--font-common);
+    font-weight: 400;
+}
+.tbl_newletter ul li a .tit span {
+    font-size: var(--font-common);
+    font-weight: 400;
 }
 
 /* 카드테이블 타입1 :: 벤처투자TALK */
@@ -1762,6 +1920,16 @@
         bottom: 15px;
         right: 15px;
     }
+    /*
+    작성자 이름 길때
+    .tbl_longcard > ul > li .info > ul {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .tbl_longcard > ul > li .info > ul > li:nth-child(1) {
+        width: 100%;
+        text-align: right;
+    } */
     .tbl_longcard.type_chk > ul > li > a {
         padding: 15px 15px 70px 60px;
     }
@@ -1783,6 +1951,34 @@
     }
     .tbl_longcard.type_chk > ul > li .info > ul > li .btn_box * {
         font-size: 14px;
+    }
+
+    /* 리스트 타이틀 박스 */
+    .list_tit_box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .list_tit_box .img {
+        width: 100%;
+        height: 150px;
+    }
+    .list_group_info {
+        width: 100%;
+        padding: 0;
+    }
+    .list_group_info .top .administration_box {
+        flex-direction: column-reverse;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .list_group_info .top .administration_box .btn_box a {
+        justify-content: flex-end;
+    }
+    .list_group_info .top .tit strong {
+        margin-bottom: 10px;
+    }
+    .list_group_info .bottom {
+        margin-top: 20px;
     }
 
     /* 카드게시판 :: 용어사전 */
@@ -1994,6 +2190,14 @@
     .tbl_faq ul li .answer::before {
         top: 20px;
         left: 15px;
+    }
+
+    /* 뉴스레터 웹진 */
+    .tbl_newletter ul {
+        gap: 10px;
+    }
+    .tbl_newletter ul li {
+        width: 100%;
     }
 
     /* 탭 */
