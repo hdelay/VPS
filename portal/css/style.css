@@ -722,13 +722,16 @@ header.headerfix .header_bottom ul li a::before {
 .enterprise_info ul li dl dd .video {
     display: flex;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 250px;
     border-radius: 10px;
 }
-.enterprise_info ul li dl dd .video video,
-.enterprise_info ul li dl dd .img img {
+.enterprise_info ul li dl dd .video video {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -760,6 +763,27 @@ header.headerfix .header_bottom ul li a::before {
     box-sizing: border-box;
     border-radius: 10px;
     padding: 30px;
+}
+.financial_box + .tit_box {
+    margin-top: 50px;
+}
+.investment_box > ul {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.investment_box > ul li {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.investment_box > ul li strong {
+    font-weight: 500;
 }
 
 /* 벤처투자상담 */
@@ -1737,6 +1761,29 @@ footer .footer_bottom {
         gap: 10px;
     }
     .investment_list ul li {
+        padding: 15px;
+    }
+
+    /* 투자유치 희망기업 검색 */
+    .enterprise_info ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .enterprise_info ul li {
+        width: 100%;
+    }
+    .financial_info .chart_group_box {
+        padding: 15px;
+        flex-direction: column;
+    }
+    .financial_info .chart_group_box dl dt {
+        font-size: 17px;
+    }
+    .investment_box > ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .investment_box > ul li {
         padding: 15px;
     }
 

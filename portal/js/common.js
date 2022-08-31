@@ -17,80 +17,83 @@ $(function(){
         changeMonth: true,
         changeYear: true,
         yearRange: 'c-100:c',
-		maxDate: "d",
-        buttonImage: "./images/ico/ico_datepicker.svg",
-        buttonImageOnly: true
-    });
-
-    $(".datepicker_start").datepicker({
-        dateFormat: 'yy-mm-dd',
-        prevText: '이전 달',
-        nextText: '다음 달',
-        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-        showMonthAfterYear: true,
-        yearSuffix: '년',
-        showOn: "both",
-        changeMonth: true,
-        changeYear: true,
-        yearRange: 'c-100:c',
-        buttonImage: "./images/ico/ico_datepicker.svg",
-        buttonImageOnly: true
-    });
-    $(".datepicker_end").datepicker({
-        dateFormat: 'yy-mm-dd',
-        prevText: '이전 달',
-        nextText: '다음 달',
-        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-        showMonthAfterYear: true,
-        yearSuffix: '년',
-        showOn: "both",
-        changeMonth: true,
-        changeYear: true,
-        yearRange: 'c-100:c',
-        buttonImage: "./images/ico/ico_datepicker.svg",
-        buttonImageOnly: true
-    });
-    $('.datepicker_end').datepicker("option", "onClose", function ( selectedDate ) {
-        $(".datepicker_start").datepicker( "option", "maxDate", selectedDate );
-    });
-    $('.datepicker_start').datepicker("option", "onClose", function ( selectedDate ) {
-        $(".datepicker_end").datepicker( "option", "minDate", selectedDate );
-    });
-
-    $('.datepicker_month').datepicker({
-        displayFormat: 'yy-mm',
-        dateFormat: 'yy-mm',
-        prevText: '이전 달',
-        nextText: '다음 달',
-        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-        showMonthAfterYear: true,
-        yearSuffix: '년',
-        showOn: 'both',
-        buttonImage: './images/ico/ico_datepicker.svg',
+		// maxDate: "d",
+        buttonImage: "../images/ico/ico_datepicker_img.png",
         buttonImageOnly: true,
-        changeMonth: true,
-        changeYear: true,
-        showButtonPanel: true,
-        closeText: '완료',
-        onClose: function(dateText, inst) { 
-            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
-        }
+        buttonText: "날짜선택"
     });
-    $('.datepicker_month').focus(function(){
-        $('.ui-datepicker-calendar, .ui-datepicker-current').hide();
-    });
+
+    // $(".datepicker_start").datepicker({
+    //     dateFormat: 'yy-mm-dd',
+    //     prevText: '이전 달',
+    //     nextText: '다음 달',
+    //     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    //     showMonthAfterYear: true,
+    //     yearSuffix: '년',
+    //     showOn: "both",
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     yearRange: 'c-100:c',
+    //     buttonImage: "../images/ico/ico_datepicker_img.png",
+    //     buttonImageOnly: true,
+    //     buttonText: "날짜선택"
+    // });
+    // $(".datepicker_end").datepicker({
+    //     dateFormat: 'yy-mm-dd',
+    //     prevText: '이전 달',
+    //     nextText: '다음 달',
+    //     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    //     showMonthAfterYear: true,
+    //     yearSuffix: '년',
+    //     showOn: "both",
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     yearRange: 'c-100:c',
+    //     buttonImage: "../images/ico/ico_datepicker_img.png",
+    //     buttonImageOnly: true,
+    //     buttonText: "날짜선택"
+    // });
+    // $('.datepicker_end').datepicker("option", "onClose", function ( selectedDate ) {
+    //     $(".datepicker_start").datepicker( "option", "maxDate", selectedDate );
+    // });
+    // $('.datepicker_start').datepicker("option", "onClose", function ( selectedDate ) {
+    //     $(".datepicker_end").datepicker( "option", "minDate", selectedDate );
+    // });
+
+    // $('.datepicker_month').datepicker({
+    //     displayFormat: 'yy-mm',
+    //     dateFormat: 'yy-mm',
+    //     prevText: '이전 달',
+    //     nextText: '다음 달',
+    //     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    //     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    //     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    //     showMonthAfterYear: true,
+    //     yearSuffix: '년',
+    //     showOn: 'both',
+    //     buttonImage: './images/ico/ico_datepicker.svg',
+    //     buttonImageOnly: true,
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     showButtonPanel: true,
+    //     closeText: '완료',
+    //     onClose: function(dateText, inst) { 
+    //         $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+    //     }
+    // });
+    // $('.datepicker_month').focus(function(){
+    //     $('.ui-datepicker-calendar, .ui-datepicker-current').hide();
+    // });
 
     // header
     $('header .header_top nav > ul > li').hover(function(){
@@ -246,6 +249,9 @@ $(function(){
         $(this).parent().siblings().removeClass('on');
         $(this).parent().parent().parent().siblings().children("div").removeClass('on');
 
+        // 체크박스 해제
+        $(".chk_all, .all_group input").prop("checked", false);
+
         // 클릭이벤트
         $(this).parent().addClass('on');
         $("." + on_tab).addClass('on');
@@ -267,6 +273,59 @@ $(function(){
     $(".btn_top a").click(function(){
         window.scrollTo({top : 0, behavior: 'smooth'}); 
     });
+
+    // 파일선택
+    $('.file_inp').on('change', function(){
+        let files = $(this)[0].files;
+                
+        for(let i = 0; i < files.length; i++){
+            $(this).siblings('.file_value').text(files[i].name);
+        }
+    });
+
+    // 전체선택
+    var checkAll = document.querySelectorAll('.chk_all');
+    var chkbox = document.querySelectorAll('.all_group input');
+    
+    /* 전체선택 클릭시 */
+    for(var x = 0; x < checkAll.length; x++){
+        checkAll[x].onclick = function(){
+            var thisParent = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement; //#wrapper
+            var childChkbox = thisParent.querySelectorAll('.all_group input'); //해당 귀속 체크박스만
+            
+            if(this.checked == false) {
+                for(var i=0; i<childChkbox.length; i++){ 
+                    childChkbox[i].checked = false; 
+                }//for
+            } else {
+                for(var i=0; i<childChkbox.length; i++){ 
+                    childChkbox[i].checked = true; 
+                }//for
+            }//if,else
+        };//onclick
+    };//for
+    
+    /* 하나라도 언체크시 전체선택 해제 */
+    for(var x = 0; x < chkbox.length; x++){
+        chkbox[x].onclick = function(){
+            var thisParent = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement; //#wrapper
+            var thisChkAll = thisParent.querySelector('.chk_all');
+            var thisChkbox = thisParent.querySelectorAll('.all_group input');
+
+            var total = thisChkbox.length;
+            var checked = $(".all_group input:checked").length;
+
+            if(this.checked == false){
+                thisChkAll.checked = false;
+            }
+            // 모두체크시 all체크
+            if(total == checked){
+                thisChkAll.checked = true;
+            } else {
+                thisChkAll.checked = false;
+            }
+        }; //onclick (전체 chkbox)
+    };//for(전체 chkbox)
 
     // 공개 여부
     $('.card_info .public_box button').on('click', function(){

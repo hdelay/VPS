@@ -152,7 +152,7 @@
     cursor: pointer;
 }
 .btn_box_group.type_tbl {
-    margin-top: 30px;
+    margin: 30px 0 50px;
     justify-content: flex-end;
 }
 .btn_box_group.type_tbl .btn_box {
@@ -268,12 +268,17 @@
 }
 
 .req {
+    position: absolute;
+    top: -5px;
+    right: -10px;
     color: #d11919;
 }
 
 /* input 인풋 */
 .inp_box {
     display: flex;
+}
+.inp_box.min {
     max-width: 395px;
 }
 .inp_box input {
@@ -287,6 +292,16 @@
     font-size: var(--font-common);
 }
 
+/* datepicker */
+.datepicker_box {
+    position: relative;
+}
+.datepicker_box .ui-datepicker-trigger {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
 /* textarea 텍스트에리어 */
 .textarea_box {
     display: flex;
@@ -374,6 +389,7 @@
     height: 18px;
     border-radius: 50%;
     border: 1px solid #bfbfbf;
+    background-color: #fff;
     box-sizing: border-box;
     transition: .3s;
 }
@@ -492,11 +508,15 @@
 /* 혼합 인풋박스 */
 .inp_group {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 .inp_group > * {
     flex: 1;
+}
+.inp_group.search {
+    flex-direction: row;
 }
 .inp_group.search .box_btn > * {
     display: flex;
@@ -511,6 +531,11 @@
 .inp_group.file {
     flex-direction: column;
     align-items: flex-start;
+}
+.inp_group.file .file_box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .inp_group.file .file_box input {
     position: absolute;
@@ -531,6 +556,86 @@
     font-weight: 500;
     color: #fff;
     cursor: pointer;
+}
+.inp_group.address {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inp_group.address span {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.inp_group.address span .inp_box {
+    width: 100%;
+}
+.inp_group.address .box_btn > * {
+    display: flex;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background-color: #555;
+    font-size: var(--font-s);
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+.inp_group.address span:nth-child(2) .inp_box {
+    max-width: 498px;
+}
+.inp_group.txt {
+    flex-direction: row;
+    align-items: center;
+}
+.inp_group.txt * {
+    flex: none;
+}
+.inp_group.txt .inp_box {
+    width: calc(100% - 40px);
+}
+.inp_group.txt .txt {
+    font-size: 14px;
+    font-weight: 400;
+}
+.inp_group .txt_warning {
+    position: relative;
+    padding-left: 25px;
+    font-size: 13px;
+    color: #d11919;
+}
+.inp_group .txt_warning::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #d11919;
+    background-color: #fff;
+}
+.inp_group .txt_warning::after {
+    content: "!";
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 테이블 그룹 */
+.tbl_in_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tbl_in_group .btn_box {
+    width: auto;
+    max-width: 200px;
+    gap: 10px;
+}
+.tbl_in_group .btn_box * {
+    font-size: 15px;
 }
 
 /* 테이블 타입0 :: 데이터 테이블 */
@@ -557,6 +662,9 @@
 }
 .tbl_box_data table tr td:last-child {
     border-right: none;
+}
+.tbl_box_data table tr th label {
+    position: relative;
 }
 
 /* 테이블 타입1 :: 데이터 정보 thead */
@@ -1866,6 +1974,133 @@
     background-color: #979797;
 }
 
+/* datepicker */
+.ui-datepicker {
+    padding: 0;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    padding: 15px;
+    box-sizing: border-box;
+}
+.ui-datepicker .ui-datepicker-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: none;
+}
+.ui-datepicker .ui-datepicker-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    line-height: inherit;
+}
+.ui-datepicker .ui-datepicker-title select {
+    padding: 6px 0;
+    width: auto;
+    font-family: 'scoredream';
+    font-size: 15px;
+    font-weight: 400;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    border: 1px solid #333;
+    border-width: 0 2px 2px 0;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    margin-top: -4px;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+    border: none;
+    cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 50%;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 3px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 3px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 3px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 3px;
+}
+.ui-datepicker .ui-datepicker-prev span {
+    transform: rotate(135deg);
+}
+.ui-datepicker .ui-datepicker-next span {
+    transform: rotate(-45deg);
+    margin-left: -5px;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	background: #f5f5f5;
+	font-weight: normal;
+	color: #333;
+    border-radius: 5px;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    color: #333;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background-color: #1c44c8;
+    border-radius: 5px;
+    color: #fff;
+}
+
 /* ============================================================
     미디어쿼리 max-width: 1500px
 ============================================================ */
@@ -1954,6 +2189,20 @@
         font-size: 11px;
     }
 
+    /* 혼합인풋 */
+    .inp_group.search * {
+        flex: none;
+    }
+    .inp_group.search .inp_box.min {
+        width: calc(100% - 77px);
+    }
+    .inp_group.address span .inp_box.min {
+        width: calc(100% - 102px);
+    }
+    .inp_group .txt {
+        font-size: 14px;
+    }
+
     /* 테이블 */
     .tbl_box {
         width: 100%;
@@ -1961,6 +2210,13 @@
     }
     .tbl_box table {
         min-width: 768px;
+    }
+    .tbl_box table thead tr th {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .tbl_box table tbody tr td {
+        padding: 10px 5px;
     }
     
     /* 게시판 타입1 ::  */
@@ -2112,6 +2368,29 @@
     }
     .tbl_box_add td > dl > dd {
         width: 100%;
+    }
+
+    /* 테이블 타입0 :: 데이터 테이블 */
+    .tbl_box_data > table > colgroup > col {
+        display: flex;
+        width: 100%;
+    }
+    .tbl_box_data > table > tbody > tr {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .tbl_box_data > table > tbody > tr > th {
+        width: 100%;
+        box-sizing: border-box;
+        border-right: none;
+        padding: 15px;
+    }
+    .tbl_box_data > table > tbody > tr > td {
+        width: 100%;
+        box-sizing: border-box;
+        border-right: none;
+        padding: 15px;
     }
 
     /* 체크박스 리스트타입 :: 투자자 검색 - 이미지 */
