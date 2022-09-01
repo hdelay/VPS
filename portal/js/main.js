@@ -5,10 +5,10 @@ $(function(){
     // fullpage
     $('#fullpage').fullpage({
         anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
-        sectionsColor: ['#1bbc9b', '#fff', '#7BAABE', '#fff', '#fff'],
         menu: '.main_quickmenu ul',
         scrollingSpeed: 500,
         //scrollBar: true,
+        scrollOverflow: true,
         responsiveWidth: 768,
         afterLoad: function(){
             if($(window).width() > 768){
@@ -95,15 +95,33 @@ $(function(){
         }
     });
     
-    // 섹션 스크롤 headerfix
-    /*
-    $(window).scroll(function(){
-        let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
-        let sec_02 = $('.sec2').offset().top; // 섹션2 스크롤바 위치
-        let sec_03 = $('.sec3').offset().top; // 섹션3 스크롤바 위치
-        let sec_04 = $('.sec4').offset().top; // 섹션4 스크롤바 위치
-        // console.log(scrollLocation);
-        // console.log(sec_02);
-    });*/
+    // footer 스와이퍼
+    main_ban_swiper = new Swiper('.main_ban_swiper', {
+        slidesPerView: 5,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false, // false-스와이프 후 자동 재생
+        },
+        loop : true,// 슬라이드 반복 여부
+        pagination: {
+            el: '.swiper-pagination.main_ban',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+              slidesPerView: 5,
+            },
+        }
+    });
+    $('.btn_pause').on('click', function(){
+        $('.btn_pause').hide();
+        $('.btn_start').show();
+        main_ban_swiper.autoplay.stop();
+    });
+    $('.btn_start').on('click', function(){
+        $('.btn_pause').show();
+        $('.btn_start').hide();
+        main_ban_swiper.autoplay.start();
+    });
 
 });
