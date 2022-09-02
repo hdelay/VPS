@@ -599,6 +599,7 @@
 .inp_group .txt_warning {
     position: relative;
     padding-left: 25px;
+    line-height: 20px;
     font-size: 13px;
     color: #d11919;
 }
@@ -617,10 +618,24 @@
 .inp_group .txt_warning::after {
     content: "!";
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 7px;
     font-size: 12px;
     font-weight: 700;
+}
+.inp_group.chk {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.inp_group.chk > * {
+    flex: none;
+}
+.inp_group.chk .chk_box span {
+    width: auto;
+}
+.inp_group.chk > .inp_box {
+    margin-left: 10px;
 }
 
 /* 테이블 그룹 */
@@ -938,7 +953,7 @@
 }
 .tbl_longcard > ul > li > a .tit {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .tbl_longcard > ul > li > a .tit span {
@@ -948,6 +963,7 @@
 .tbl_longcard > ul > li > a .tit strong {
     display: flex;
     align-items: center;
+    width: 100%;
     font-size: 20px;
     font-weight: 500;
     color: #666;

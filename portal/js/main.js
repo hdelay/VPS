@@ -103,11 +103,14 @@ $(function(){
             disableOnInteraction: false, // false-스와이프 후 자동 재생
         },
         loop : true,// 슬라이드 반복 여부
-        pagination: {
-            el: '.swiper-pagination.main_ban',
-            clickable: true,
+        navigation: {
+            nextEl: '.swiper-button-next.main_ban',
+            prevEl: '.swiper-button-prev.main_ban',
         },
         breakpoints: {
+            1300: {
+                spaceBetween: 20,
+            },
             768: {
               slidesPerView: 5,
             },
