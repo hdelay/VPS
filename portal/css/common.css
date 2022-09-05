@@ -176,6 +176,9 @@
 .btn_box .btn_skyblue {
     background-color: #448aff;
 }
+.btn_box .btn_navy {
+    background-color: #303f9f;
+}
 .btn_box.bg * {
     font-size: var(--font-common);
     color: #333;
@@ -277,6 +280,7 @@
 /* input 인풋 */
 .inp_box {
     display: flex;
+    width: 100%;
 }
 .inp_box.min {
     max-width: 395px;
@@ -290,6 +294,15 @@
     border-radius: 5px;
     border: 1px solid #e6e6e6; 
     font-size: var(--font-common);
+}
+.inp_box input::placeholder {
+    font-weight: 200;
+    color: #ccc;
+}
+.inp_box input:disabled,
+.textarea_box textarea:disabled {
+    background-color: #f5f5f5;
+    color: #aaa;
 }
 
 /* datepicker */
@@ -305,6 +318,7 @@
 /* textarea 텍스트에리어 */
 .textarea_box {
     display: flex;
+    width: 100%;
 }
 .textarea_box textarea {
     display: block;
@@ -508,15 +522,27 @@
 /* 혼합 인풋박스 */
 .inp_group {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 5px;
 }
-.inp_group > * {
-    flex: 1;
+.inp_group .txt_etc {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 400;
 }
 .inp_group.search {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inp_group.search > * {
+    flex: none;
+}
+.inp_group.search .txt_warning {
+    width: 100%;
+    box-sizing: border-box;
 }
 .inp_group.search .box_btn > * {
     display: flex;
@@ -560,9 +586,26 @@
 .inp_group.file .inp_box {
     width: 100%;
 }
+.inp_group.file .file_value {
+    display: flex;
+    gap: 15px;
+}
+.inp_group.file .file_value span {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    gap: 10px;
+}
+.inp_group.file .file_value span button {
+    padding: 3px 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}
 .inp_group.address {
     flex-direction: column;
     align-items: flex-start;
+    width: 395px;
 }
 .inp_group.address span {
     display: flex;
@@ -582,8 +625,8 @@
     color: #fff;
     cursor: pointer;
 }
-.inp_group.address span:nth-child(2) .inp_box {
-    max-width: 498px;
+.inp_group.address span .inp_box.add_num {
+    width: calc(100% - 106px);
 }
 .inp_group.txt {
     flex-direction: row;
@@ -601,6 +644,7 @@
 }
 .inp_group .txt_warning {
     position: relative;
+    width: 100%;
     padding-left: 25px;
     line-height: 20px;
     font-size: 13px;
@@ -631,14 +675,55 @@
     align-items: center;
     justify-content: flex-start;
 }
-.inp_group.chk > * {
-    flex: none;
+.inp_group.chk .datepicker_box {
+    max-width: 160px;
 }
 .inp_group.chk .chk_box span {
     width: auto;
 }
 .inp_group.chk > .inp_box {
     margin-left: 10px;
+}
+.inp_group.tel {
+    width: 395px;
+    gap: 7px;
+}
+.inp_group.tel .sel_box {
+    width: calc(33.33% - 5px);
+}
+.inp_group.tel .inp_box {
+    width: calc(33.33% - 5px);
+}
+.inp_group.email > div {
+    display: flex;
+    align-items: center;
+    width: 395px;
+    gap: 9px;
+}
+.inp_group.email > div .inp_box {
+    width: calc(50% - 15px);
+}
+.inp_group.email .sel_box {
+    width: 250px;
+}
+.inp_group .rdo_box {
+    gap: 15px;
+}
+.inp_group .rdo_box span {
+    width: auto;
+}
+.inp_group.company_num .inp_group {
+    display: flex;
+    width: 395px;
+}
+.inp_group.company_num .inp_group .inp_box:nth-child(1) {
+    flex: 2;
+}
+.inp_group.company_num .inp_group .inp_box:nth-child(2) {
+    flex: 1;
+}
+.inp_group.company_num .inp_group .inp_box:nth-child(3) {
+    flex: 2;
 }
 
 /* 테이블 그룹 */
@@ -1581,6 +1666,26 @@
 .tbl_card_list .list_info ul li .sel_box select {
     padding: 15px;
 }
+.tbl_card_list .list_info ul li .btn_box {
+    min-width: 170px;
+    width: auto;
+}
+.tbl_card_list .list_info ul li .btn_box > * {
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+.tbl_card_list .list_info ul li .btn_box > *.comu_add::after {
+    content: "╋";
+    margin-top: -5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
 .tbl_card_list .list_info .total {
     font-size: 18px;
     font-weight: 500;
@@ -1684,10 +1789,12 @@
     font-weight: 400;
     color: #666;
 }
-.tbl_card_list.type_03 a .group_box .info span:nth-child(1)::after,
-.tbl_card_list.type_03 a .group_box .info span:nth-child(2)::after {
+.tbl_card_list.type_03 a .group_box .info div span::after {
     content: "ㅣ";
     margin-left: 5px;
+}
+.tbl_card_list.type_03 a .group_box .info span:last-child::after {
+    display: none;
 }
 .tbl_card_list.type_03 a .group_box .info .introduce {
     width: 100%;
@@ -2208,17 +2315,52 @@ a.ui-button:active,
         font-size: 11px;
     }
 
-    /* 혼합인풋 */
+    /* 혼합 인풋박스 */
     .inp_group.search * {
         flex: none;
     }
     .inp_group.search .inp_box.min {
         width: calc(100% - 77px);
     }
-    .inp_group.address span .inp_box.min {
-        width: calc(100% - 102px);
+    .inp_group.search.double_check .inp_box.min {
+        width: calc(100% - 97px);
+    }
+    .inp_group.address {
+        width: 100%;
     }
     .inp_group .txt {
+        font-size: 14px;
+    }
+    .inp_group .txt_etc {
+        width: 100%;
+        margin-left: 0;
+        font-size: 13px;
+    }
+    .inp_group.tel {
+        width: 100%;
+    }
+    .inp_group.email .sel_box {
+        width: 100%;
+    }
+    .inp_group.company_num .inp_group {
+        width: 100%;
+    }
+    .inp_group.company_num .box_btn {
+        width: 100%;
+    }
+    .inp_group.company_num .box_btn * {
+        width: 100%;
+        justify-content: center;
+    }
+    .inp_group.file .file_box {
+        width: 100%;
+    }
+    .inp_group.file .file_value {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: calc(100% - 106px);
+    }
+    .inp_group.file .file_value span {
         font-size: 14px;
     }
 
@@ -2489,6 +2631,20 @@ a.ui-button:active,
     }
     .tbl_card_list .list_info ul li .sel_box {
         width: 100%;
+    }
+    .tbl_card_list .list_info ul li .btn_box {
+        min-width: 0;
+        width: 100%;
+    }
+    .tbl_card_list .list_info ul li .btn_box > * {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+    .tbl_card_list .list_info ul li .btn_box > *.comu_add {
+        flex-direction: row;
+    }
+    .tbl_card_list .list_info ul li .btn_box > *.comu_add::after {
+        font-size: 11px;
     }
     .tbl_card_list .list_info .total {
         padding-top: 20px;

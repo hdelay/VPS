@@ -279,9 +279,14 @@ $(function(){
         let files = $(this)[0].files;
                 
         for(let i = 0; i < files.length; i++){
-            $(this).siblings('.file_value').text(files[i].name);
+            $(this).siblings('.file_value').append('<span>' + files[i].name + '<button class="close">삭제</button></span>');
+            $('.file_value .close').on('click', function(){
+                $(this).parent().remove();
+            });
         }
+        
     });
+    
 
     // 전체선택
     var checkAll = document.querySelectorAll('.chk_all');
