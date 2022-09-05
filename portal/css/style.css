@@ -495,21 +495,30 @@ header.headerfix .header_bottom ul li a::before {
 }
 .board_infobox .search_box {
     display: flex;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 2px solid #609de9;
+}
+.board_infobox .search_box .sel_box {
+    border-radius: 12px 0 0 12px;
+}
+.board_infobox .search_box .sel_box select {
+    border-radius: 12px 0 0 12px;
+    border: none;
+    border-right: 2px solid #609de9;
 }
 .board_infobox .search_box input {
     width: 290px;
     padding: 0 20px;
     height: 60px;
     box-sizing: border-box;
-    border-radius: 15px 0 0 15px;
-    border: 2px solid #609de9;
     border-right: 0;
     font-size: var(--font-common);
 }
 .board_infobox .search_box button {
     width: 60px;
     border: none;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 12px 12px 0;
     background: #609de9 url(../images/ico/ico_sub_search.png) no-repeat center;
     text-indent: -9999px;
     color: #fff;
