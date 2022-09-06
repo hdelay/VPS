@@ -335,14 +335,531 @@
                     </ul>
                 </div>
 
-                
-
-                <div class="btn_box_group">
-                    <div class="btn_box">
-                        <a href="./USR-20122-F-FORM.html" class="btn_navy">기업정보 추가등록</a>
+                <div class="tab_group">
+                    <div class="tab_btn">
+                        <ul>
+                            <li class="on"><a href="" rel="tab_content_01">기업소개</a></li>
+                            <li><a href="" rel="tab_content_02">재무정보</a></li>
+                            <li><a href="" rel="tab_content_03">투자정보</a></li>
+                        </ul>
                     </div>
-                    <div class="btn_box">
-                        <a href="./USR-2013-F-FORM.html" class="btn_blue">회원가입 제출</a>
+                    <div class="tab_content">
+
+                        <!-- 첫번째 탭 -->
+                        <div class="on tab_content_01">
+                            
+                            <div class="tbl_box_data">
+                                <table>
+                                    <caption>정보</caption>
+                                    <colgroup>
+                                        <col width="10%;">
+                                        <col width="10%;">
+                                        <col width="30%;">
+                                        <col width="20%;">
+                                        <col width="30%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="radio_001">공개여부<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="rdo_box">
+                                                        <span>
+                                                            <input type="radio" id="radio_001" name="rdo_group_02">
+                                                            <label for="radio_001">공개</label>
+                                                        </span>
+                                                        <span>
+                                                            <input type="radio" id="radio_002" name="rdo_group_02" checked>
+                                                            <label for="radio_002">비공개</label>
+                                                        </span>
+                                                    </div>
+                                                    <span class="txt_etc">※ 추후 공개되는 메뉴 설명 문구 추가</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="textarea_01">사업소개<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="textarea_box">
+                                                        <textarea id="textarea_01" placeholder="사업소개 내용을 작성해주세요. (300자 이내)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="textarea_02">핵심사업<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="textarea_box">
+                                                        <textarea id="textarea_02" placeholder="핵심사업 주제를 작성해주세요. (50자 이내)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2"><label for="textarea_03">주요제품 및 서비스</label></th>
+                                            <th scope="row"><label for="textarea_03">키워드<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="textarea_box">
+                                                        <textarea id="textarea_03" placeholder="주요제품 및 서비스 키워드를 작성해주세요. (50자 이내)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_04">상세설명<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="textarea_box">
+                                                        <textarea id="textarea_04" placeholder="주요제품 및 서비스 상세설명을 작성해주세요. (300자 이내)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="input_01">홍보영상<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="inp_box">
+                                                        <input type="text" id="input_01" placeholder="URL을 입력해주세요.">
+                                                    </div>
+                                                    <div class="txt_etc">※ 홍보 영상은 유튜브 URL로 입력이 가능하며, 영상 내 동영상 URL 공유하기의 주소를 입력합니다.</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="textarea_05">홍보영상 설명<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="textarea_box">
+                                                        <textarea id="textarea_05" placeholder="홍보영상 설명을 작성해주세요. (300자 이내)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">
+                                                <label for="textarea_05">
+                                                    제품 이미지 첨부
+                                                    <span class="req">*</span><br/>
+                                                    (jpg, png, bmp 만 가능)<br/>
+                                                    (총 100MB 이내)
+                                                </label>
+                                            </th>
+                                            <td colspan="3">
+                                                <div class="image_file_box">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="num">1</span>
+                                                            <div class="img"></div>
+                                                            <div class="file">
+                                                                <input type="file" id="inp_file" class="inp_file">
+                                                                <label for="inp_file">파일첨부</label>
+                                                                <button class="delete">삭제</button>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">2</span>
+                                                            <div class="img"></div>
+                                                            <div class="file">
+                                                                <input type="file" id="inp_file" class="inp_file">
+                                                                <label for="inp_file">파일첨부</label>
+                                                                <button class="delete">삭제</button>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">3</span>
+                                                            <div class="img"></div>
+                                                            <div class="file">
+                                                                <input type="file" id="inp_file" class="inp_file">
+                                                                <label for="inp_file">파일첨부</label>
+                                                                <button class="delete">삭제</button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="4"><label for="">제품 이미지 설명</label></th>
+                                            <th scope="row"><label for=""><span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group"><div class="txt_etc">※ 웹접근성 개선을 위하여 제품 이미지에 대한 설명을 50자 이내로 작성해 주세요.</div></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_06"><span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="image_num">
+                                                    <span class="num">1</span>
+                                                    <div class="inp_group">
+                                                        <div class="textarea_box">
+                                                            <textarea id="textarea_06" placeholder="첨부된 이미지의 설명을 작성해주세요. (50자 이내)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_07"><span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="image_num">
+                                                    <span class="num">2</span>
+                                                    <div class="inp_group">
+                                                        <div class="textarea_box">
+                                                            <textarea id="textarea_07" placeholder="첨부된 이미지의 설명을 작성해주세요. (50자 이내)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_08"><span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="image_num">
+                                                    <span class="num">3</span>
+                                                    <div class="inp_group">
+                                                        <div class="textarea_box">
+                                                            <textarea id="textarea_08" placeholder="첨부된 이미지의 설명을 작성해주세요. (50자 이내)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="btn_box_group type_01">
+                                <div class="btn_box">
+                                    <a href="" class="btn_navy">재무정보 추가입력</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="./USR-2013-F-FORM.html" class="btn_blue">회원가입 제출</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- //첫번째 탭 -->
+
+                        <!-- 두번째 탭 -->
+                        <div class="tab_content_02">
+                            
+                            <div class="tbl_box_data">
+                                <table>
+                                    <caption>재무정보</caption>
+                                    <colgroup>
+                                        <col width="20%;">
+                                        <col width="30%;">
+                                        <col width="20%;">
+                                        <col width="30%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><label for="radio_3">공개여부<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="rdo_box">
+                                                        <span>
+                                                            <input type="radio" id="radio_3" name="rdo_group_2" checked>
+                                                            <label for="radio_3">공개</label>
+                                                        </span>
+                                                        <span>
+                                                            <input type="radio" id="radio_4" name="rdo_group_2">
+                                                            <label for="radio_4">비공개</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_1">재무정보</label></th>
+                                            <td colspan="3">
+                                                <div class="tbl_in_group">
+                                                    <span class="txt">※ 재무정보는 연도 단위로만 입력이 가능합니다.</span>
+                                                    <div class="btn_box">
+                                                        <button class="btn_gray">삭제</button>
+                                                        <button class="btn_blue">+ 년도추가</button>
+                                                    </div>
+                                                    <div class="tbl_box">
+                                                        <table>
+                                                            <caption>재무정보</caption>
+                                                            <colgroup>
+                                                                <col width="8%">
+                                                                <col width="12%">
+                                                                <col width="20%">
+                                                                <col width="20%">
+                                                                <col width="20%">
+                                                                <col width="20%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">
+                                                                        <div class="chk_box solo">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_0001" class="chk_all" name="chk_all">
+                                                                                <label for="chk_0001"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th scope="col">결산년도</th>
+                                                                    <th scope="col">종업원 수 (명)</th>
+                                                                    <th scope="col">자본금 (원)</th>
+                                                                    <th scope="col">매출액 (원)</th>
+                                                                    <th scope="col">순이익 (원)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk_box solo all_group">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_0002" name="chk_all">
+                                                                                <label for="chk_0002"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>2021</td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0002">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0003">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0004">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0005">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk_box solo all_group">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_0003" name="chk_all">
+                                                                                <label for="chk_0003"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>2022</td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0006">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0007">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0008">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text" id="input_0009">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="btn_box_group type_01">
+                                <div class="btn_box">
+                                    <a href="" class="btn_navy">투자정보 추가입력</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="./USR-2013-F-FORM.html" class="btn_blue">회원가입 제출</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- //두번째 탭 -->
+
+                        <!-- 세번째 탭 -->
+                        <div class="tab_content_03">
+                            
+                            <div class="tbl_box_data">
+                                <table>
+                                    <caption>투자정보</caption>
+                                    <colgroup>
+                                        <col width="20%;">
+                                        <col width="30%;">
+                                        <col width="20%;">
+                                        <col width="30%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><label for="radio_5">공개여부<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group">
+                                                    <div class="rdo_box">
+                                                        <span>
+                                                            <input type="radio" id="radio_5" name="rdo_group_3" checked>
+                                                            <label for="radio_5">공개</label>
+                                                        </span>
+                                                        <span>
+                                                            <input type="radio" id="radio_6" name="rdo_group_3">
+                                                            <label for="radio_6">비공개</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_1">재무정보</label></th>
+                                            <td colspan="3">
+                                                <div class="tbl_in_group">
+                                                    <span class="txt">※ 투자유치 금액은 연단위로 통합하여 통계 형태로 표출됩니다.</span>
+                                                    <span class="txt">※ 투자자는 필수입력이 아니며, 내부 통계용으로만 사용됩니다.</span>
+                                                    <div class="btn_box">
+                                                        <button class="btn_gray">삭제</button>
+                                                        <button class="btn_blue">+ 행추가</button>
+                                                    </div>
+                                                    <div class="tbl_box">
+                                                        <table>
+                                                            <caption>재무정보</caption>
+                                                            <colgroup>
+                                                                <col width="8%">
+                                                                <col width="20%">
+                                                                <col width="20%">
+                                                                <col width="*">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">
+                                                                        <div class="chk_box solo">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_00001" class="chk_all" name="chk_all_01">
+                                                                                <label for="chk_00001"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th scope="col">투자일</th>
+                                                                    <th scope="col">투자유치금</th>
+                                                                    <th scope="col">투자자</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk_box solo all_group">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_000002" name="chk_all_02">
+                                                                                <label for="chk_000002"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box datepicker_box">
+                                                                                <input type="text" class="datepicker_day">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group txt">
+                                                                            <div class="inp_box">
+                                                                                <input type="text">
+                                                                            </div>
+                                                                            <span class="txt">억원</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk_box solo all_group">
+                                                                            <span>
+                                                                                <input type="checkbox" id="chk_000003" name="chk_all_02">
+                                                                                <label for="chk_000003"></label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box datepicker_box">
+                                                                                <input type="text" class="datepicker_day">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group txt">
+                                                                            <div class="inp_box">
+                                                                                <input type="text">
+                                                                            </div>
+                                                                            <span class="txt">억원</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="inp_group">
+                                                                            <div class="inp_box">
+                                                                                <input type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="btn_box_group type_01">
+                                <div class="btn_box">
+                                    <a href="./USR-2013-F-FORM.html" class="btn_blue">회원가입 제출</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- //세번째 탭 -->
+
                     </div>
                 </div>
                 

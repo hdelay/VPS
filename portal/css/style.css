@@ -1359,13 +1359,6 @@ header.headerfix .header_bottom ul li a::before {
 .user_info_group .tit_box {
     padding-top: 50px;
 }
-.user_info_group ~ .btn_box_group {
-    justify-content: center;
-    margin-top: 50px;
-}
-.user_info_group ~ .btn_box_group .btn_box {
-    flex: none;
-}
 
 .join_complete {
     display: flex;
@@ -2332,6 +2325,38 @@ footer .footer_bottom {
     }
     .box_step ul li strong {
         font-size: 14px;
+    }
+    .self_authentication_box .content {
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .self_authentication_box .content li {
+        flex: 1;
+        width: 100%;
+        padding: 15px;
+    }
+    .self_authentication_box .content li strong {
+        font-size: 17px;
+    }
+    .self_authentication_box .content li .img {
+        height: 60px;
+        background-size: auto 100%;
+    }
+    .self_authentication_box .content li a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .self_authentication_box .list li {
+        font-size: 14px;
+    }
+    .self_authentication_box .list li span {
+        font-size: 13px;
+    }
+    .join_complete .btn_box {
+        width: 100%;
+    }
+    .join_complete .btn_box * {
+        flex: 1;
     }
 
     /* footer */
