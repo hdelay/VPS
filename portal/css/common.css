@@ -241,6 +241,36 @@
     background-size: auto 100%;
     margin-left: 10px;
 }
+.btn_box .btn_setting {
+    align-items: center;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+.btn_box .btn_setting::before {
+    content: "";
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ico/ico_setting.png) no-repeat center;
+    margin-right: 5px;
+}
+.btn_box .more {
+    display: flex;
+    flex: none;
+    gap: 5px;
+    align-items: center;
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.btn_box .more::after {
+    content: "+";
+    line-height: 26px;
+    font-size: 26px;
+    color: #333;
+}
 
 /* 제목 */
 .tit_box h2 {
@@ -1243,20 +1273,6 @@
 .list_group_info .top .administration_box .btn_box {
     width: auto;
     flex: none;
-}
-.list_group_info .top .administration_box .btn_box .btn_setting {
-    align-items: center;
-    padding: 0;
-    font-size: 14px;
-    color: #333;
-}
-.list_group_info .top .administration_box .btn_box .btn_setting::before {
-    content: "";
-    display: flex;
-    width: 20px;
-    height: 20px;
-    background: url(../images/ico/ico_setting.png) no-repeat center;
-    margin-right: 5px;
 }
 .list_group_info .top .tit strong {
     display: block;
