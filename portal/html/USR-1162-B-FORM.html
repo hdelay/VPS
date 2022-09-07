@@ -322,68 +322,66 @@
                     <h3>벤처투자상담</h3>
                 </div>
     
-                <div class="tbl_box_detail">
+                <div class="tbl_box_data">
                     <table>
-                        <caption>게시판 상세 내용</caption>
+                        <caption>벤처투자등록</caption>
                         <colgroup>
-                            <col />
+                            <col width="20%;">
+                            <col width="30%;">
+                            <col width="20%;">
+                            <col width="30%;">
                         </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="">
-                                    <div class="tit">
-                                        <div class="left">
-                                            <span class="f_color_blue">구분1</span>
-                                            <strong>제목입니다</strong>
-                                            <span class="lock">잠금</span>
-                                            <span class="state_box">
-                                                <span class="state_box green">답변완료</span>
-                                                <span class="state_box gray">미답변</span>
-                                            </span>
-                                        </div>
-                                        <div class="right">
-                                            <ul class="info">
-                                                <li>작성자</li>
-                                                <li>2021-10-21</li>
-                                                <li>조회수 129</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    아직 디자인안왔음 2022-08-29<br/>
-                                    상담내용<br/>
-                                    상담내용<br/>
-                                    상담내용<br/>
-                                    상담내용<br/>
-                                    상담내용<br/>
+                                <th scope="row"><label for="radio_01">구분</label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="rdo_box">
+                                            <span>
+                                                <input type="radio" id="radio_01" name="rdo_group_01">
+                                                <label for="radio_01">한국벤처투자</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_02" name="rdo_group_01">
+                                                <label for="radio_02">한국벤처캐피탈협회</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_03" name="rdo_group_01">
+                                                <label for="radio_03">엔젤협회</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_04" name="rdo_group_01">
+                                                <label for="radio_04">창업진흥원</label>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="answer_box">
-                                        <span class="ico_answer"></span>
-                                        <div class="textarea_box">
-                                            <textarea>답변내용</textarea>
-                                        </div>
+                                <th scope="row"><label for="input_02">제목</label></th>
+                                <td colspan="3">
+                                    <div class="inp_box">
+                                        <input type="text" id="input_02">
                                     </div>
                                 </td>
                             </tr>
                             <tr class="bg">
-                                <td>
-                                    <div class="file_download">
-                                        <div class="btn_box bg">
-                                            <a href="" class="download" download>전체 다운로드</a>
+                                <td colspan="4">
+                                    <div class="inp_group">
+                                        <div class="textarea_box cont">
+                                            <textarea id="textarea_01"></textarea>
                                         </div>
-                                        <ul>
-                                            <li><a href="" download>AAA.jpg</a></li>
-                                            <li><a href="" download>BBB.hwp</a></li>
-                                            <li><a href="" download>CCC.zip</a></li>
-                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="inp_group file">
+                                        <div class="file_box">
+                                            <input type="file" id="file_inp" class="file_inp">
+                                            <label for="file_inp">파일첨부</label>
+                                            <span class="file_value"></span>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -393,13 +391,10 @@
 
                 <div class="btn_box_group type_tbl">
                     <div class="btn_box bg">
-                        <a href="./USR-1162-B-FORM.html" class="btn_modi">수정</a>
+                        <a href="" class="btn_save">저장</a>
                     </div>
                     <div class="btn_box bg">
-                        <a href="" class="btn_delete">삭제</a>
-                    </div>
-                    <div class="btn_box bg">
-                        <a href="./USR-1162-B-LIST.html" class="btn_list">목록</a>
+                        <a href="./USR-1162-B-LIST.html" class="btn_cancel">취소</a>
                     </div>
                 </div>
 

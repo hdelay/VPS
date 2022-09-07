@@ -141,6 +141,12 @@
 .btn_box_group.type_01 .btn_box {
     flex: none;
 }
+.btn_box_group.type_01.left {
+    justify-content: flex-start;
+}
+.btn_box_group.type_01.right {
+    justify-content: flex-end;
+}
 .btn_box {
     display: flex;
     width: 160px;
@@ -374,6 +380,9 @@
     border: 1px solid #e6e6e6; 
     resize: none;
     font-size: var(--font-common);
+}
+.textarea_box.cont textarea {
+    min-height: 150px;
 }
 
 /* select box 셀렉트박스 */
@@ -635,14 +644,15 @@
 }
 .inp_group.file .file_value span {
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid #555;
+    align-items: baseline;
     gap: 10px;
 }
 .inp_group.file .file_value span button {
-    padding: 3px 5px;
-    background-color: #555;
-    color: #fff;
+    display: block;
+    width: 20px;
+    height: 17px;
+    background: url(../images/ico/ico_btn_cancel.png) no-repeat center;
+    text-indent: -9999px;
     cursor: pointer;
 }
 .inp_group.address {
@@ -890,6 +900,10 @@
     border-bottom: 1px solid #e6e6e6;
     background-color: #f9fafa;
 }
+.tbl_box_data table tr.bg th,
+.tbl_box_data table tr.bg td {
+    background-color: #fff;
+}
 .tbl_box_data table tr td:last-child {
     border-right: none;
 }
@@ -1102,52 +1116,6 @@
     margin-right: 10px;
 }
 
-/* 테이블 등록/수정 */
-.tbl_box_add {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-}
-.tbl_box_add table {
-    width: 100%;
-}
-.tbl_box_add table tr th,
-.tbl_box_add table tr td {
-    background-color: #fff;
-    padding: 15px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #e2e2e2;
-    vertical-align: middle;
-    font-weight: 500;
-    font-size: var(--font-l);
-}
-.tbl_box_add table tr td {
-    line-height: 35px;
-    font-weight: 400;
-}
-.tbl_box_add table tr.bg td {
-    background-color: #f9fafa;
-}
-.tbl_box_add td > dl {
-    display: flex;
-    gap: 10px;
-}
-.tbl_box_add td > dl > dt {
-    width: 110px;
-    font-weight: 400;
-}
-.tbl_box_add td > dl > dd {
-    width: calc(100% - 120px);
-}
-.tbl_box_add td > dl > dd .inp_box {
-    max-width: 100%;
-}
-.tbl_box_add tr.tr_password td > dl > dd .inp_box {
-    max-width: 395px;
-}
-.tbl_box_add td .textarea_box textarea {
-    min-height: 200px;
-}
-
 /* 공통게시판 타입  */
 .tbl_longcard > ul {
     display: flex;
@@ -1166,16 +1134,16 @@
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
 }
-.tbl_longcard > ul > li > a .tit {
+.tbl_longcard > ul > li .tit {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.tbl_longcard > ul > li > a .tit span {
+.tbl_longcard > ul > li .tit span {
     font-size: 14px;
     font-weight: 400;
 }
-.tbl_longcard > ul > li > a .tit strong {
+.tbl_longcard > ul > li .tit strong {
     display: flex;
     align-items: center;
     width: 100%;
@@ -1238,6 +1206,81 @@
 }
 .tbl_longcard > ul > li .info > ul li button.btn_gray {
     background-color: #979797;
+}
+
+.tbl_longcard .txt_etc {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.tbl_longcard.type_02 > ul > li {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_longcard > ul > li .tit em {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.tbl_longcard.type_02 > ul > li .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: inherit;
+    bottom: inherit;
+    right: inherit;
+    margin-top: 30px;
+}
+.tbl_longcard.type_02 > ul > li .info > ul > li {
+    display: flex;
+    align-items: center;
+}
+.tbl_longcard.type_02 > ul > li .info > ul > li::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin-left: 8px;
+    border: 1px solid #666;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+} 
+.tbl_longcard.type_02 > ul > li .info > ul > li:last-child::after {
+    display: none;
+}
+.tbl_longcard > ul > li .info .btn_box {
+    flex: none;
+    width: auto;
+}
+.tbl_longcard > ul > li .info .btn_box * {
+    padding: 5px 25px;
+    background-color: #888;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tbl_longcard.type_03 > ul > li {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_longcard.type_03 > ul > li .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: inherit;
+    bottom: inherit;
+    right: inherit;
 }
 
 /* 리스트 타이틀 박스 */

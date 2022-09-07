@@ -798,14 +798,21 @@ header.headerfix .header_bottom ul li a::before {
 
 /* 벤처투자상담 */
 .answer_box {
-    
+    display: flex;
+    gap: 10px;
 }
-.answer_box::before {
-    /* content: "A"; */
+.answer_box .ico_answer {
     display: block;
-    font-size: 50px;
-    font-weight: 500;
+    width: 26px;
+    height: 22px;
+    background: url(../images/ico/ico_answer.png) no-repeat center;
+    background-size: 100% auto;
+    margin-left: 10px;
+    margin-top: 10px;
 }
+.answer_box textarea {
+}
+
 /* 용어사전 */
 .search_item + .board_infobox {
     margin-top: 30px;

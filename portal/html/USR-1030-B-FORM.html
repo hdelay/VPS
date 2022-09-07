@@ -322,61 +322,67 @@
                     <h3>기업홍보</h3>
                 </div>
     
-                <div class="tbl_box_add">
+                <div class="tbl_box_data">
                     <table>
-                        <caption>게시판 등록/수정</caption>
+                        <caption>기업홍보등록</caption>
                         <colgroup>
-                            <col />
+                            <col width="20%;">
+                            <col width="30%;">
+                            <col width="20%;">
+                            <col width="30%;">
                         </colgroup>
                         <tbody>
-                            <tr class="bg">
-                                <td>
-                                    <dl>
-                                        <dt>
-                                            <div class="sel_box">
-                                                <select>
-                                                    <option value="">구분</option>
-                                                    <option value="">구분</option>
-                                                </select>
-                                            </div>
-                                        </dt>
-                                        <dd>
-                                            <div class="inp_group">
-                                                <div class="inp_box">
-                                                    <input type="text" id="input_01">
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                </td>
-                            </tr>
-                            <tr class="bg tr_password">
-                                <td>
-                                    <dl>
-                                        <dt>비밀번호</dt>
-                                        <dd>
-                                            <div class="inp_group">
-                                                <div class="inp_box">
-                                                    <input type="password" id="input_02">
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
+                            <tr>
+                                <th scope="row"><label for="radio_01">구분</label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="rdo_box">
+                                            <span>
+                                                <input type="radio" id="radio_01" name="rdo_group_01">
+                                                <label for="radio_01">구분1</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_02" name="rdo_group_01">
+                                                <label for="radio_02">구분2</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_03" name="rdo_group_01">
+                                                <label for="radio_03">구분3</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_04" name="rdo_group_01">
+                                                <label for="radio_04">구분4</label>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <th scope="row"><label for="input_02">제목</label></th>
+                                <td colspan="3">
+                                    <div class="inp_box">
+                                        <input type="text" id="input_02">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg">
+                                <td colspan="4">
                                     <div class="inp_group">
-                                        <div class="textarea_box">
+                                        <div class="textarea_box cont">
                                             <textarea id="textarea_01"></textarea>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="bg">
-                                <td>
-                                    <!-- 파일첨부 영역 span 지우고 사용 -->
-                                    <span style="display: flex; justify-content: center; align-items: center; width: 100%; height: 150px; background-color: #aaa; color: #fff; font-size: 20px;">파일첨부영역</span>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="inp_group file">
+                                        <div class="file_box">
+                                            <input type="file" id="file_inp" class="file_inp">
+                                            <label for="file_inp">파일첨부</label>
+                                            <span class="file_value"></span>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
