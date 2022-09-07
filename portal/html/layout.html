@@ -269,8 +269,8 @@
     <!-- quick menu -->
     <aside class="quick_box">
         <ul>
-            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
-            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
+            <li class="btn_bell"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_01">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_02">즐겨찾기</a></li>
             <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
             <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
         </ul>
@@ -325,119 +325,17 @@
             <div class="inner">
 
                 <div class="tit_box">
-                    <h3>공지사항</h3>
+                    <h3>메뉴 gnb + 팝업</h3>
                 </div>
     
-                <div class="board_infobox">
-                    <div class="total">전체 <span>150</span>건</div>
-                    <div class="search_box">
-                        <input type="text" placeholder="검색어를 입력해주세요.">
-                        <button>검색</button>
+                <div class="btn_box_group">
+                    <div class="btn_box">
+                        <a href="" class="btn_blue">글쓰기</a>
                     </div>
-                </div>
-
-                <!-- 카드긴타입 -->
-                <div class="tbl_longcard">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>등록일 2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>등록일 2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="tit">
-                                    <span>경영실적공개</span>
-                                    <strong>기업설명회 개최 공지</strong>
-                                </div>
-                            </a>
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <a href="" class="pop_mini">작성자</a>
-                                        <div class="card_set">
-                                            <ul class="">
-                                                <li><a href="">파트너 신청</a></li>
-                                                <li><a href="">쪽지보내기</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>등록일 2022-08-26</li>
-                                    <li>조회수 111</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="board_btn">
-                    <!-- paging -->
-                    <div class="paging_box">
-                        <ul>
-                            <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
-                            <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
-                            <li class="on"><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li><a href="">5</a></li>
-                            <li><a href="">10</a></li>
-                            <li><a href="">100</a></li>
-                            <li><a href="">1000</a></li>
-                            <li><a href="">9</a></li>
-                            <li><a href="">10</a></li>
-                            <li class="next"><a href="" title="다음페이지로 이동"></a></li>
-                            <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
-                        </ul>
-                    </div>
-    
                     <div class="btn_box">
                         <a href="" class="btn_blue">글쓰기</a>
                     </div>
                 </div>
-
-                
 
             </div>
 
@@ -483,6 +381,85 @@
             <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
         </div>
     </footer>
+
+</div>
+
+
+<!-- 알림 팝업 -->
+<div id="quick_01" class="quick_dialog">
+
+    <!-- pop_header -->
+    <div class="pop_header">
+        <h5 class="alarm"><span></span>알림</h5>
+        <div class="more">
+            <button>더보기</button>
+        </div>
+    </div>
+    <!-- //pop_header -->
+
+    <!-- pop_content -->
+    <div class="pop_content">
+        <div class="pop_list">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="pop_state">쪽지알림</span>
+                        IR 자료 요청드립니다.
+                    </a>
+                    <span class="state_box"><span class="state_box red">NEW</span></span>
+                </li>
+                <li>
+                    <a href="">채용공고가 승인되었습니다.</a>
+                    <span class="state_box"><span class="state_box red">NEW</span></span>
+                </li>
+                <li>
+                    <a href="">커뮤니티 5월 정모 공지</a>
+                </li>
+                <li>
+                    <a href="">작성하신 IR 정보가 등록되었습니다.</a>
+                </li>
+                <li>
+                    <a href=""><span class="pop_state">쪽지알림</span>IR 자료 요청</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //pop_content -->
+
+</div>
+
+<!-- 즐겨찾기 팝업 -->
+<div id="quick_02" class="quick_dialog">
+
+    <!-- pop_header -->
+    <div class="pop_header">
+        <h5 class="favorites"><span></span>즐겨찾기</h5>
+        <div class="more">
+            <button>더보기</button>
+        </div>
+    </div>
+    <!-- //pop_header -->
+
+    <!-- pop_content -->
+    <div class="pop_content">
+        <div class="pop_list">
+            <ul>
+                <li>
+                    <a href="">벤처기업 검색</a>
+                </li>
+                <li>
+                    <a href="">벤처투자마트 신청</a>
+                </li>
+                <li>
+                    <a href="">커뮤니티명 - 게시판명</a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn_box">
+            <button>현재 메뉴 즐겨찾기 추가 +</button>
+        </div>
+    </div>
+    <!-- //pop_content -->
 
 </div>
 </body>
