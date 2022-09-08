@@ -808,9 +808,9 @@ header.headerfix .header_bottom ul li a::before {
     background: url(../images/ico/ico_answer.png) no-repeat center;
     background-size: 100% auto;
     margin-left: 10px;
-    margin-top: 10px;
 }
-.answer_box textarea {
+.answer_box .cont {
+    width: calc(100% - 36px);
 }
 
 /* 용어사전 */

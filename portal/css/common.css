@@ -1124,15 +1124,29 @@
 }
 .tbl_longcard > ul > li {
     position: relative;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
 }
 .tbl_longcard > ul > li > a {
     display: flex;
     flex-direction: column;
     padding: 25px 25px 40px;
     box-sizing: border-box;
-    border: 1px solid #d9e1e7;
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_longcard > ul > li.notice > a {
+    background-color: #ebf6fd;
+}
+.tbl_longcard > ul > li.notice .tit strong::before {
+    content: "공지";
+    display: block;
+    padding: 3px 20px;
+    background-color: #3c90f8;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
 }
 .tbl_longcard > ul > li .tit {
     display: flex;
@@ -1281,6 +1295,22 @@
     position: inherit;
     bottom: inherit;
     right: inherit;
+}
+
+.tbl_longcard.type_04 > ul > li {
+    padding: 25px 25px 40px;
+    box-sizing: border-box;
+}
+.tbl_longcard .tit .file {
+    display: flex;
+    gap: 10px;
+}
+.tbl_longcard .tit .file a {
+    font-size: 15px;
+    font-weight: 400;
+}
+.tbl_longcard .tit .file a:hover {
+    text-decoration: underline;
 }
 
 /* 리스트 타이틀 박스 */
@@ -2555,9 +2585,28 @@ a.ui-button:active,
         padding: 15px;
         padding-bottom: 40px;
     }
+    .tbl_longcard > ul > li .tit {
+        gap: 5px;
+    }
+    .tbl_longcard > ul > li .tit strong {
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: 17px;
+    }
+    .tbl_longcard > ul > li.notice .tit strong::before {
+        padding: 3px 10px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
     .tbl_longcard > ul > li .info {
         bottom: 15px;
         right: 15px;
+    }
+    .tbl_longcard > ul > li .info > ul > li {
+        font-size: 12px;
+    }
+    .tbl_longcard > ul > li .info > ul > li a {
+        font-size: 12px;
     }
     /*
     작성자 이름 길때
@@ -2590,6 +2639,13 @@ a.ui-button:active,
     }
     .tbl_longcard.type_chk > ul > li .info > ul > li .btn_box * {
         font-size: 14px;
+    }
+    .tbl_longcard.type_04 > ul > li {
+        padding: 15px;
+        padding-bottom: 40px;
+    }
+    .tbl_longcard .tit .file a {
+        font-size: 12px;
     }
 
     /* 리스트 타이틀 박스 */
