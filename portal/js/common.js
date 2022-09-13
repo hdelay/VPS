@@ -163,6 +163,8 @@ $(function(){
     // 팝업버튼
     let popBtn = $(".dialog-link");
     let popBody = $(".dialog");
+    let noteBtn = $(".note_link");
+    let noteBody = $(".note_dialog");
     let beforeScrollPosition = 0; 
     let popupOpenType = false;
     let quick_popBtn = $(".quick_link");
@@ -185,6 +187,12 @@ $(function(){
         popupOpenType = true; // html스크롤 조절불가능
         e.preventDefault();
     });
+    // noteBtn.click(function(e) {
+    //     let poptarget = $(this).attr('data-target');
+    //     $(poptarget).dialog("open");
+    //     popupOpenType = true; // html스크롤 조절불가능
+    //     e.preventDefault();
+    // });
     // 퀵링크 팝업
     quick_popBtn.click(function(){
         let poptarget = $(this).attr('data-target');
@@ -195,26 +203,29 @@ $(function(){
 
     // 팝업 모달
     popBody.dialog({
+        width: 'auto',
         autoOpen: false,
         show: {
             effect: "fade",
             duration: 100
         },
         modal: true,
-        buttons: [{
-                text: "확인",
-                click: function() {
-                    $( this ).dialog("close");
-                    popupOpenType = false; // html스크롤 조절가능
-                }
-            },
+        buttons: [
             {
                 text: "닫기",
                 click: function() {
                     $(this).dialog("close");
                     popupOpenType = false; // html스크롤 조절가능
                 }
-            }]
+            },
+        ],
+        open: function(){
+            $(this).parent().find('.ui-dialog-titlebar').remove();
+            $('.pop_close').on('click', function(){
+                $(this).parent().parent().parent().dialog("close");
+                popupOpenType = false; // html스크롤 조절가능
+            });
+        }
     });
 
     // 퀵팝업 body
@@ -344,7 +355,7 @@ $(function(){
     // 카드게시판 설정
     $('.pop_mini').on('click', function(e){
         e.preventDefault();
-        $(this).siblings().children('ul').toggleClass('on');
+        $(this).parent().parent().parent().find('.card_set').children('ul').toggleClass('on');
     });
     // 영역 외 클릭 닫기
     $('.wrap').click(function(e){

@@ -188,6 +188,9 @@
     border: 1px solid #d6d6d6;
     color: #333;
 }
+.btn_box .btn_mint {
+    background-color: #18b3aa;
+}
 .btn_box .shadow {
     box-shadow: 0px 2px 4px 1px rgb(0 0 0 / 30%);
 }
@@ -1151,7 +1154,7 @@
 .tbl_longcard > ul > li .tit {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 .tbl_longcard > ul > li .tit span {
     font-size: 14px;
@@ -1164,6 +1167,15 @@
     font-size: 20px;
     font-weight: 500;
     color: #666;
+}
+.tbl_longcard > ul > li .tit strong a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #666;
+}
+.tbl_longcard > ul > li .tit > ul {
+    display: block;
+    width: 100%;
 }
 .tbl_longcard > ul > li .info {
     position: absolute;
@@ -1199,7 +1211,7 @@
     left: 25px;
     transform: translateY(-50%);
 }
-.tbl_longcard.type_chk > ul > li > a {
+.tbl_longcard.type_chk > ul > li .tit {
     padding: 25px 25px 25px 65px;
 }
 .tbl_longcard.type_chk > ul > li .info {
@@ -2621,8 +2633,9 @@ a.ui-button:active,
     .tbl_longcard.type_chk > ul > li > a {
         padding: 15px 15px 70px 60px;
     }
-    .tbl_longcard.type_chk > ul > li > a .tit {
+    .tbl_longcard.type_chk > ul > li .tit {
         gap: 5px;
+        padding: 15px 25px 55px 65px;
     }
     .tbl_longcard.type_chk > ul > li .info {
         left: 0;
@@ -2633,6 +2646,9 @@ a.ui-button:active,
         padding: 0 15px 0 60px;
         box-sizing: border-box;
         transform: translateY(0);
+    }
+    .tbl_longcard > ul > li .info .btn_box * {
+        padding: 5px 0;
     }
     .tbl_longcard.type_chk > ul > li .info > ul > li {
         flex: 1;
@@ -2646,6 +2662,12 @@ a.ui-button:active,
     }
     .tbl_longcard .tit .file a {
         font-size: 12px;
+    }
+
+    .tbl_longcard.type_chk > ul > li .card_set > ul {
+        right: 15px;
+        top: 9px;
+        left: inherit;
     }
 
     /* 리스트 타이틀 박스 */
