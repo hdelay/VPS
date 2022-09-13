@@ -781,6 +781,10 @@
 .inp_group.company_num .inp_group .inp_box:nth-child(3) {
     flex: 2;
 }
+.inp_group.rdo_inp .inp_box {
+    width: 100px;
+    margin-left: 10px;
+}
 .image_file_box ul {
     display: flex;
     flex-wrap: wrap;
@@ -2929,6 +2933,46 @@ a.ui-button:active,
     .tbl_card_list.type_03 a .group_box {
         width: 100%;
         padding: 15px;
+    }
+
+    /* 테이블 타입2 :: 채용공고 */
+    .tbl_box_list ul li a {
+        flex-direction: column;
+        padding: 0 0 10px;
+    }
+    .tbl_box_list ul li a .employment_status {
+        width: 100%;
+        padding: 10px 0;
+        background-color: #f5f5f5;
+    }
+    .tbl_box_list ul li a .employment_status .dday {
+        font-size: 30px;
+    }
+    .tbl_box_list ul li a .employment_status .date {
+        margin-top: 0;
+    }
+    .tbl_box_list ul li a .info_box {
+        width: 100%;
+    }
+    .tbl_box_list ul li a .info_box .state_group {
+        padding: 10px 0;
+        flex-wrap: wrap;
+    }
+    .tbl_box_list ul li a .info_box .state_group span {
+        font-size: 12px;
+    }
+    .tbl_box_list ul li a .info_box .tit {
+        display: flex;
+        flex-direction: column;
+        font-size: 17px;
+    }
+    .tbl_box_list ul li a .info_box .tit span {
+        margin-left: 0;
+        font-size: 14px;
+    }
+    .tbl_box_list ul li a .info_box .post_info dl dt,
+    .tbl_box_list ul li a .info_box .post_info dl dd {
+        font-size: 13px;
     }
 
     /* search form 서치폼 */

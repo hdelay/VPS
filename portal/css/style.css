@@ -523,6 +523,7 @@ header.headerfix .header_bottom ul li a::before {
     background: #609de9 url(../images/ico/ico_sub_search.png) no-repeat center;
     text-indent: -9999px;
     color: #fff;
+    cursor: pointer;
 }
 .lock {
     display: inline-block;
@@ -2615,10 +2616,29 @@ footer .footer_bottom {
         padding-bottom: 10px;
     }
     .board_infobox .search_box {
+        flex-wrap: wrap;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .board_infobox .search_box .sel_box {
         width: 100%;
     }
+    .board_infobox .search_box .sel_box select {
+        border-radius: 5px 5px 0 0;
+        border-right: none;
+        border-bottom: 2px solid #609de9;
+        height: 45px;
+    }
     .board_infobox .search_box input {
-        width: 100%;
+        width: calc(100% - 60px);
+        height: 45px;
+        border-radius: 0;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+    .board_infobox .search_box button {
+        height: 45px;
+        border-radius: 0;
     }
 
     /* 투자자 검색 */
