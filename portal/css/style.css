@@ -864,6 +864,53 @@ header.headerfix .header_bottom ul li a::before {
     background-color: #b785d9;
 }
 
+/* 구인구직 - 인력Pool 상세 */
+.resume_list {
+    border: 1px solid #d9e1e7;
+    padding: 10px 25px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.resume_list dl {
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+.resume_list dl + dl {
+    border-top: 1px solid #d9e1e7;
+}
+.resume_list dl dt {
+    padding-bottom: 10px;
+}
+.resume_list dl dt strong {
+    font-size: 20px;
+    font-weight: 500;
+}
+.resume_list dl dt span {
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.resume_list dl dd ul li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.resume_list dl dd ul li::before {
+    content: "-";
+    margin-right: 8px;
+}
+.resume_etc_box {
+    border: 1px solid #d9e1e7;
+    padding: 25px 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
 /* 커뮤니티 */
 .community_main_btn {
     display: flex;
@@ -2058,7 +2105,39 @@ footer .footer_bottom {
 }
 
 /* 팝업 */
+/* 팝업이미지초기화 */
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: none;
+}
+.ui-widget-header .ui-icon {
+	background-image: none;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon {
+	background-image: none;
+}
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon {
+	background-image: none;
+}
+.ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon {
+	background-image: none;
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: none;
+}
+.ui-button .ui-icon {
+	background-image: none;
+}
+
 .ui-dialog {
+    overflow: hidden;
+    position: fixed;
     padding: 0;
     border-radius: 0;
 }
@@ -2086,6 +2165,9 @@ footer .footer_bottom {
     border-radius: 3px;
 }
 .ui-dialog .quick_dialog + .ui-dialog-buttonpane {
+    position: static;
+    top: inherit;
+    right: inherit;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -2100,10 +2182,13 @@ footer .footer_bottom {
     align-items: center;
     justify-content: center;
     width: calc(100% + 6px);
+    height: 40px;
     margin: -3px;
     padding: 10px 0;
     border: 3px solid #8abbfb;
-    background-color: #8abbfb;
+    box-sizing: border-box;
+    background: #8abbfb;
+    text-indent: 0;
 	font-family: 'scoredream', sans-serif;
     font-weight: 400;
     color: #fff;
@@ -2229,9 +2314,6 @@ footer .footer_bottom {
     padding: 40px;
     box-sizing: border-box;
     border-radius: 3px;
-}
-.note_dialog .tit_box h3 {
-    padding: 0 0 40px;
 }
 .note_dialog .btn_box_group {
     justify-content: flex-end;
@@ -2547,6 +2629,7 @@ footer .footer_bottom {
     }
     .container::before {
         min-width: 0;
+        height: 238px;
     }
     .content_box {
         width: 100%;
@@ -2568,6 +2651,7 @@ footer .footer_bottom {
     }
     .content_box .inner {
         padding: 35px 20px;
+        min-height: calc(100vh - 465px);
     }
     .content_box .location > ul > li {
         flex: 1;
@@ -2747,6 +2831,11 @@ footer .footer_bottom {
         justify-content: center;
         padding: 10px;
         font-size: 15px;
+    }
+
+    /* 구인구직 - 인력Pool 상세 */
+    .resume_list dl {
+        padding: 15px 0;
     }
 
     /* 커뮤니티 */

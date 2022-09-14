@@ -146,6 +146,7 @@
 }
 .btn_box_group.type_01.right {
     justify-content: flex-end;
+    margin-bottom: 30px;
 }
 .btn_box {
     display: flex;
@@ -785,6 +786,35 @@
     width: 100px;
     margin-left: 10px;
 }
+.inp_group.inp_num {
+    justify-content: space-between;
+}
+.inp_group.inp_num .textarea_box,
+.inp_group.inp_num .inp_box {
+    width: calc(100% - 90px);
+}
+.inp_group.inp_num .count {
+    display: flex;
+    justify-content: flex-end;
+    width: 80px;
+    gap: 5px;
+}
+.inp_group.inp_num .count span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.period_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.period_group .chk_box span {
+    width: auto;
+}
+.inp_group.period .inp_box {
+    width: 180px;
+}
+
 .image_file_box ul {
     display: flex;
     flex-wrap: wrap;
@@ -1346,7 +1376,7 @@
     align-items: center;
     overflow: hidden;
     width: 200px;
-    height: 200px;
+    height: 100%;
     border-radius: 10px;
 }
 .list_tit_box .img img {
@@ -1367,6 +1397,22 @@
 .list_group_info .top .administration_box .btn_box {
     width: auto;
     flex: none;
+    gap: 20px;
+}
+.administration_box {
+    display: flex;
+    justify-content: space-between;
+}
+.administration_box .state_box.type_02 {
+    align-items: center;
+}
+.administration_box .btn_box * {
+    flex: none;
+    width: auto;
+}
+.administration_box .btn_box button {
+    padding: 10px;
+    font-size: 15px;
 }
 .list_group_info .top .tit strong {
     display: block;
@@ -1375,7 +1421,7 @@
     font-weight: 500;
 }
 .list_group_info .top .tit span {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
 }
 .list_group_info .top .tit .details {
@@ -1384,7 +1430,7 @@
     gap: 5px;
 }
 .list_group_info .top .tit .details li {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
 }
 .list_group_info .top .tit .details li span + span::before {
@@ -1399,7 +1445,7 @@
 .list_group_info .bottom ul li {
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
 }
 .list_group_info .bottom ul li + li::before {
@@ -1414,7 +1460,7 @@
     flex: none;
     width: auto;
     padding: 5px 20px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* 카드게시판 :: 용어사전 */
@@ -1882,10 +1928,15 @@
     color: #333;
     cursor: pointer;
 }
+.tbl_card_list .list_info ul li .btn_box > *.comu_add {
+    align-items: center;
+}
 .tbl_card_list .list_info ul li .btn_box > *.comu_add::after {
-    content: "╋";
-    margin-top: -5px;
-    margin-left: 5px;
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url(../images/ico/ico_add.png) no-repeat center;
+    margin-left: 8px;
     font-size: 14px;
 }
 .tbl_card_list .list_info .total {
@@ -1922,6 +1973,10 @@
 .tbl_card_list.type_02 a .tit span {
     margin-left: 5px;
     font-size: 13px;
+    font-weight: 400;
+}
+.tbl_card_list.type_02 a .subtit {
+    font-size: 16px;
     font-weight: 400;
 }
 .tbl_card_list.type_02 a .info span {
@@ -2576,6 +2631,13 @@ a.ui-button:active,
     .image_file_box ul li {
         width: 100%;
     }
+    .inp_group.inp_num .textarea_box,
+    .inp_group.inp_num .inp_box {
+        width: 100%;
+    }
+    .inp_group.inp_num .count {
+        width: 100%;
+    }
 
     /* 테이블 */
     .tbl_box {
@@ -2692,11 +2754,17 @@ a.ui-button:active,
         gap: 5px;
         margin-bottom: 10px;
     }
-    .list_group_info .top .administration_box .btn_box a {
+    .list_group_info .top .administration_box .btn_box {
+        width: 100%;
         justify-content: flex-end;
+        gap: 10px;
     }
     .list_group_info .top .tit strong {
         margin-bottom: 10px;
+    }
+    .administration_box .btn_box button {
+        padding: 5px 10px;
+        font-size: 13px;
     }
     .list_group_info .top .tit .details li {
         display: flex;
