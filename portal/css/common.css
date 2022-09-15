@@ -38,6 +38,8 @@
 
 /* 폰트컬러 */
 .f_color_blue {color: #3f89e5;}
+.f_color_orange {color: #ff6f00;}
+.f_color_navy {color: #3949ab;}
 
 /* state box / border-radius 있는것 */
 .state_box > * {
@@ -340,6 +342,16 @@
     padding: 0 25px;
     box-sizing: border-box;
     font-size: 17px;
+    font-weight: 500;
+}
+.content_list_box.type_02 dl {
+    padding: 25px 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #f6f7f9;
+}
+.content_list_box.type_02 dl dt {
     font-weight: 500;
 }
 .content_list_box dl dd ul {
@@ -1003,6 +1015,23 @@
 .tbl_box table thead tr th:last-child {
     border-right: none;
 }
+.tbl_box table thead tr th.bdcolor {
+    border-color: #e2e2e2;
+}
+.tbl_box table tfoot tr td {
+    background-color: #f0f3f6;
+    padding: 15px 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    font-weight: 500;
+    font-size: var(--font-common);
+}
+.tbl_box table tfoot tr td {
+    border-right: none;
+}
 .tbl_box table tbody tr td {
     padding: 20px;
     box-sizing: border-box;
@@ -1293,14 +1322,18 @@
     top: 9px;
     left: 227px;
 }
-.tbl_longcard > ul > li .info > ul li button {
-
-}
 .tbl_longcard > ul > li .info > ul li button.btn_skyblue {
     background-color: #47ade7;
 }
 .tbl_longcard > ul > li .info > ul li button.btn_gray {
     background-color: #979797;
+}
+.tbl_longcard > ul > li .info > ul li button.btn_navy {
+    background-color: #303f9f;;
+}
+.tbl_longcard > ul > li .info > ul li button.disable {
+    opacity: .2;
+    cursor: default;
 }
 
 .tbl_longcard .txt_etc {
@@ -1703,94 +1736,6 @@
     justify-content: flex-end;
     width: 100%;
 }
-.card_info .public_box {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 400;
-}
-.card_info .public_box span {
-    margin: 0 5px;
-    font-size: 18px;
-    font-weight: 400;
-}
-.card_info .public_box .public_btn {
-    position: relative;
-}
-.card_info .public_box button {
-    background-color: transparent;
-    margin: 0 0 0 5px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-}
-.card_info .public_box .public_content {
-    display: none;
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    border: 1px solid #3366cc;
-    padding: 22px 20px;
-    background-color: #fff;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-.card_info .public_box .public_content.on {
-    display: block;
-}
-.card_info .public_box .public_content .rdo_box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}
-.card_info .public_box .public_content .rdo_box input {
-    position: absolute;
-    top: 0;
-    left: -9999px;
-}
-.card_info .public_box .public_content .rdo_box label {
-    position: relative;
-    padding-left: 20px;
-    font-size: 15px;
-    cursor: pointer;
-}
-.card_info .public_box .public_content .rdo_box label::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #333;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-}
-.card_info .public_box .public_content .rdo_box input:checked + label::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #333;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-}
-.card_info .public_box .public_content .btn_box_group {
-    margin-top: 20px;
-}
-.card_info .public_box .public_content .btn_box_group .btn_box {
-    width: 125px;
-}
-.card_info .public_box .public_content .btn_box_group .btn_box * {
-    font-size: 15px;
-}
-
 .card_info ul {
     display: flex;
     gap: 10px;
@@ -1830,25 +1775,76 @@
     flex-basis: calc(25% - 15px);
     position: relative;
 }
-.tbl_card_list.type_01 > ul > li > a {
+.tbl_card_list.type_01 > ul > li .content {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
     position: relative;
     padding: 22px;
     padding-right: 30px;
     box-sizing: border-box;
-    min-height: 180px;
+    min-height: 195px;
     border-radius: 10px;
     border: 1px solid #d9e1e7;
-    font-size: 18px;
+}
+.tbl_card_list.type_01 > ul > li .content span {
+    width: 100%;
+    font-size: 17px;
     font-weight: 300;
 }
-.tbl_card_list.type_01 > ul > li > a > span {
+.tbl_card_list.type_01 > ul > li .content.open span {
+    height: 90px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.tbl_card_list.type_01 > ul > li .content .more {
+    display: none;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #d9e1e7;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .2s;
+}
+.tbl_card_list.type_01 > ul > li .content.open .more {
+    display: block;
+}
+.tbl_card_list.type_01 > ul > li .content .more:hover,
+.tbl_card_list.type_01 > ul > li .content .more:focus {
+    background-color: #f5f5f5;
+}
+.tbl_card_list.type_01 > ul > li .content > ul {
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: 20px;
     right: 20px;
-    font-size: 13px;
 }
-.tbl_card_list.type_01 > ul > li > button {
+.tbl_card_list.type_01 > ul > li .content > ul > li,
+.tbl_card_list.type_01 > ul > li .content > ul > li > a {
+    font-style: normal;
+    font-size: 14px;
+}
+.tbl_card_list.type_01 > ul > li .content > ul > li > a:hover,
+.tbl_card_list.type_01 > ul > li .content > ul > li > a:focus {
+    text-decoration: underline;
+}
+.tbl_card_list.type_01 > ul > li .content > ul > li::before {
+    content: "ㅣ";
+}
+.tbl_card_list.type_01 > ul > li .content > ul > li:nth-child(1)::before {
+    display: none;
+}
+.tbl_card_list.type_01 > ul > li .content > ul .card_set ul {
+    top: 23px;
+}
+.tbl_card_list.type_01 > ul > li > .pop_mini2 {
     position: absolute;
     top: 16px;
     right: 0;
@@ -2370,6 +2366,11 @@
     position: absolute;
     top: -2px;
     right: 0;
+    width: auto;
+    min-width: 160px;
+}
+.paging_box + .btn_box * {
+    padding: 10px 20px;
 }
 
 .btn_state_box {
@@ -3134,6 +3135,26 @@ a.ui-button:active,
         width: 100%;
     }
 
+    /* 카드리스트 타입 :: 벤처투자TALK */
+    .tbl_card_list.type_01 > ul > li {
+        flex-basis: 100%;
+    }
+    .tbl_card_list.type_01 > ul > li .content {
+        padding: 15px;
+        padding-right: 30px;
+        min-height: 170px;
+    }
+    .tbl_card_list.type_01 > ul > li .content span {
+        font-size: 15px;
+    }
+    .tbl_card_list.type_01 > ul > li .content.open span {
+        height: 77px;
+    }
+    .tbl_card_list.type_01 > ul > li .content > ul {
+        right: 15px;
+        bottom: 15px;
+    }
+
     /* 탭 */
     .tab_group {
 
@@ -3172,6 +3193,7 @@ a.ui-button:active,
     }
     .board_btn .paging_box + .btn_box {
         position: inherit;
+        width: 100%;
     }
 
     .btn_state_box {

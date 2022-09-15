@@ -912,16 +912,30 @@ header.headerfix .header_bottom ul li a::before {
 }
 
 /* VC 근무경력 확인 */
-.content_list_box + .btn_box_group.type_01.left {
+.content_list_box .btn_box_group.type_01 {
     padding-left: 20px;
 }
-.content_list_box + .btn_box_group.type_01.left .btn_box {
+.content_list_box .btn_box_group.type_01 .btn_box {
     width: auto;
 }
-.content_list_box + .btn_box_group.type_01.left .btn_box * {
+.content_list_box .btn_box_group.type_01 .btn_box * {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 500;
+}
+.content_list_box .tbl_box {
+    margin: 40px 0;
+}
+.content_list_box .chk_box {
+    justify-content: flex-end;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    border-radius: 10px;
+}
+.content_list_box .chk_box span {
+    width: auto;
 }
 
 /* 커뮤니티 */
@@ -1029,6 +1043,187 @@ header.headerfix .header_bottom ul li a::before {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+/* 벤처투자 Talk */
+.talk_box_group {
+    margin-bottom: 50px;
+}
+.talk_box_group .talk_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 304px;
+    height: 132px;
+    box-sizing: border-box;
+    background: url(../images/bg/bg_Talk.png) no-repeat left center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid #15c3cc;
+    margin-bottom: 35px;
+}
+.talk_box_group .talk_box span {
+    font-weight: 400;
+    font-size: 25px;
+}
+.talk_box_group .talk_box span strong {
+    font-weight: 700;
+}
+.talk_txt {
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #f0f3f6;
+}
+.talk_txt .textarea_box textarea {
+    height: 100px;
+}
+.talk_txt .textarea_box textarea::placeholder {
+    font-weight: 400;
+    color: #999;
+}
+.talk_txt .talk_txt_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.talk_txt .talk_txt_info .left .count span {
+    font-size: 15px;
+    font-weight: 400;
+}
+.talk_txt .talk_txt_info .right {
+    display: flex;
+    gap: 10px;
+}
+.talk_txt .talk_txt_info .right .btn_box * {
+    font-size: 15px;
+}
+.ui-dialog .talk_txt {
+    padding: 0;
+    background-color: transparent;
+}
+.ui-dialog .talk_txt .textarea_box textarea {
+    background-color: #f0f3f6;
+}
+.public_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 400;
+}
+.public_box span {
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.public_box .public_btn {
+    position: relative;
+}
+.public_box button {
+    background-color: transparent;
+    margin: 0 0 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.public_box .public_content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    border: 1px solid #3366cc;
+    padding: 22px 20px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.public_box .public_content.on {
+    display: block;
+}
+.public_box .public_content .rdo_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.public_box .public_content .rdo_box input {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+.public_box .public_content .rdo_box label {
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.public_box .public_content .rdo_box label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+}
+.public_box .public_content .rdo_box input:checked + label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+}
+.public_box .public_content .btn_box_group {
+    margin-top: 20px;
+}
+.public_box .public_content .btn_box_group .btn_box {
+    width: 125px;
+}
+.public_box .public_content .btn_box_group .btn_box * {
+    font-size: 15px;
+}
+.mytalk_box .tab_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.mytalk_box .tab_btn ul {
+    gap: 10px;
+    border-bottom: none;
+}
+.mytalk_box .tab_btn ul > li {
+    flex: none;
+}
+.mytalk_box .tab_btn ul > li:first-child {
+    display: none;
+}
+.mytalk_box .tab_btn ul > li > a {
+    align-items: center;
+    width: auto;
+    height: 55px;
+    padding: 0 40px;
+    border-radius: 10px;
+    border: 1px solid #d5d5d5;
+    font-weight: 400;
+    font-size: var(--font-common);
+    color: #3e3e3e;
+}
+.mytalk_box .tab_btn ul > li.on > a {
+    background-color: #47ade7;
+    border-color: #47ade7;
+    color: #fff;
 }
 
 /* 비밀번호 확인 */
@@ -2399,6 +2594,10 @@ footer .footer_bottom {
 .alpop_box + .ui-dialog-buttonpane button {
     background-image: url(../images/ico/ico_alpop_close.png);
 }
+/* 더보기 내용전체보기 */
+.ui-dialog .note_dialog.more {
+    width: 500px !important;
+}
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
@@ -2916,9 +3115,13 @@ footer .footer_bottom {
     }
 
     /* VC 근무경력 확인 */
-    .content_list_box + .btn_box_group.type_01.left {
-        padding-left: 15px;
+    .content_list_box .btn_box_group.type_01 {
+        padding-left: 0;
         flex-direction: column;
+    }
+    .content_list_box .chk_box {
+        justify-content: center;
+        padding: 25px 0;
     }
 
     /* 커뮤니티 */
@@ -2961,6 +3164,43 @@ footer .footer_bottom {
     }
     .community_content dl dd ul li span {
         font-size: 13px;
+    }
+
+    /* 벤처투자 Talk */
+    .talk_box_group .talk_box {
+        padding: 20px;
+        background: #fff;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .talk_box_group .talk_box span {
+        font-size: 16px;
+    }
+    .talk_box_group .talk_box span br {
+        display: none;
+    }
+    .talk_txt {
+        padding: 15px;
+    }
+    .talk_txt .talk_txt_info .right .btn_box * {
+        padding: 10px 20px;
+    }
+    .public_box .public_content {
+        right: 0;
+        left: inherit;
+        transform: translateX(0)
+    }
+    .mytalk_box .tab_btn {
+        overflow-y: initial;
+        flex-direction: column;
+        height: auto;
+    }
+    .mytalk_box .tab_btn ul {
+        
+    }
+    .mytalk_box .tab_btn ul > li > a {
+        padding: 0 10px;
+        height: 32px;
     }
 
     /* 회원가입 */
@@ -3221,6 +3461,7 @@ footer .footer_bottom {
 
     /* 팝업 */
     .ui-dialog {
+        width: 100% !important;
         height: calc(100vh - 65px) !important;
         bottom: 0 !important;
         top: inherit !important;
@@ -3231,6 +3472,9 @@ footer .footer_bottom {
     .ui-dialog .note_dialog {
         width: 100% !important;
         padding: 15px 20px;
+    }
+    .note_dialog .btn_box_group {
+        justify-content: center
     }
     /* 경고팝업 */
     .ui-dialog .ui-dialog-content.alpop_box {
@@ -3244,6 +3488,9 @@ footer .footer_bottom {
     .alpop_box .pop_footer .btn_box * {
         flex: 1;
         padding: 10px 0;
+    }
+    .ui-dialog .note_dialog.more {
+        width: 100% !important;
     }
 
     /* footer */

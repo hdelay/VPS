@@ -266,6 +266,13 @@ $(function(){
         // 클릭이벤트
         $(this).parent().addClass('on');
         $("." + on_tab).addClass('on');
+
+        // 더보기이벤트
+        $('.tbl_card_list.type_01 .content').each(function(){
+            if($(this).find('span').height() > 88){
+                $(this).addClass('open');
+            }
+        });
     });
 
     // location
@@ -343,7 +350,7 @@ $(function(){
     };//for(전체 chkbox)
 
     // 공개 여부
-    $('.card_info .public_box button').on('click', function(){
+    $('.public_box button').on('click', function(){
         $(this).parent().find('.public_content').addClass('on');
         $('.public_box .btn_gray').on('click', function(e){
             e.preventDefault();
@@ -354,24 +361,27 @@ $(function(){
     // 카드게시판 설정
     $('.pop_mini').on('click', function(e){
         e.preventDefault();
+        $('.card_set ul').removeClass('on');
         $(this).parent().parent().parent().find('.card_set').children('ul').toggleClass('on');
     });
     // 영역 외 클릭 닫기
     $('.wrap').click(function(e){
-        if (!$('.pop_mini').parent().has(e.target).length) { 
+        if (!$('.pop_mini, .pop_mini2').parent().has(e.target).length) { 
             $('.card_set > ul').removeClass('on');
         } 
     });
-    // 카드게시판 수정팝업
-    $('.card_set li.edit a').on('click', function(e){
+    // 내용수정 팝업
+    $('.pop_mini2').on('click', function(e){
         e.preventDefault();
-        $('.card_edit').addClass('on')
-        $('.card_set > ul').removeClass('on');
+        $('.card_set ul').removeClass('on');
+        $(this).parent().find('.edit').children('ul').toggleClass('on');
     });
-    // 수정 팝업 닫기
-    $('.card_edit .btn_gray').on('click', function(e){
-        e.preventDefault();
-        $(this).parent().parent().parent().removeClass('on')
+
+    // 말줄임 더보기 버튼
+    $('.tbl_card_list.type_01 .content').each(function(){
+        if($(this).find('span').height() > 88){
+            $(this).addClass('open');
+        }
     });
 
     // 검색조건 더보기
@@ -408,6 +418,16 @@ $(function(){
         let inp_num = $(this).parent().parent().find('.num')
 		inp_num.text(content.length);
 		if (content.length > 256) {
+            inp_num.css({'color': 'red'});
+		} else {
+            inp_num.css({'color': '#333'});
+        }
+    });
+    $(".talk_txt .textarea_box textarea").on('keyup', function(){
+        let content = $(this).val();
+        let inp_num = $(this).parent().parent().find('.num')
+		inp_num.text(content.length);
+		if (content.length > 500) {
             inp_num.css({'color': 'red'});
 		} else {
             inp_num.css({'color': '#333'});
