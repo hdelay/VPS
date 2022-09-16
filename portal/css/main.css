@@ -435,6 +435,7 @@ header.headerfix .header_top,
 }
 .sec2 .search_box .box_btn {
     width: 145px;
+    height: 81px;
 }
 .sec2 .search_box .box_btn > * {
     justify-content: center;

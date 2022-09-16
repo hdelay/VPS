@@ -1226,6 +1226,146 @@ header.headerfix .header_bottom ul li a::before {
     color: #fff;
 }
 
+/* 벤처투자 부당행위 신고센터 */
+.reporting_misconduct_box .report_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+.reporting_misconduct_box .report_info > div {
+    flex: 1;
+    height: 100%;
+}
+.reporting_misconduct_box .report_info > div .content_list_box.type_02 dl {
+    min-height: 207px;
+}
+.procedure_box .step {
+    margin-bottom: 90px;
+}
+.procedure_box .step ul {
+    display: flex;
+}
+.procedure_box .step ul li {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background: no-repeat left center;
+    background-size: auto 100%;
+    padding: 0 20px 0 105px;
+    box-sizing: border-box;
+    margin-right: 61px;
+    margin-left: -61px;
+    min-width: 180px;
+    height: 122px;
+    box-shadow: 8px 7px 7px 1px rgb(0 0 0 / 16%);
+}
+.procedure_box .step ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -61px;
+    width: 61px;
+    height: 122px;
+    background: no-repeat right center;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.procedure_box .step ul li:nth-child(1) {
+    width: calc((100% - 430px) / 3);
+    background-image: url(../images/bg/step_bg_01.png);
+    margin-left: 0;
+    padding-left: 40px;
+}
+.procedure_box .step ul li:nth-child(2) {
+    width: 397px;
+    background-image: url(../images/bg/step_bg_02.png);
+}
+.procedure_box .step ul li:nth-child(3) {
+    width: calc((100% - 430px) / 3);
+    background-image: url(../images/bg/step_bg_03.png);
+}
+.procedure_box .step ul li:nth-child(4) {
+    width: calc((100% - 430px) / 3);
+    background-image: url(../images/bg/step_bg_04.png);
+}
+.procedure_box .step ul li:nth-child(1)::after {
+    background-image: url(../images/bg/step_bgright_01.png);
+}
+.procedure_box .step ul li:nth-child(2)::after {
+    background-image: url(../images/bg/step_bgright_02.png);
+}
+.procedure_box .step ul li:nth-child(3)::after {
+    background-image: url(../images/bg/step_bgright_03.png);
+}
+.procedure_box .step ul li:nth-child(4)::after {
+    background-image: url(../images/bg/step_bgright_04.png);
+}
+.procedure_box .step ul li span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.procedure_box .step ul li strong {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+.procedure_box > .btn_box_group {
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.procedure_box > .btn_box_group .btn_box {
+    width: 280px;
+    flex: none;
+}
+.procedure_box > .btn_box_group .btn_box * {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.procedure_box .etc_box dt {
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.procedure_box .etc_box dd .btn_box_group {
+    gap: 30px;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box:nth-child(1) > * {
+    background-color: #6b5aa2;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box:nth-child(2) > * {
+    background-color: #4a5fab;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box:nth-child(3) > * {
+    background-color: #3c9196;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box > * {
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box > * strong {
+    width: auto;
+    padding: 0;
+    flex: none;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.procedure_box .etc_box dd .btn_box_group .btn_box > * span {
+    width: auto;
+    padding: 0;
+    flex: none;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 /* 비밀번호 확인 */
 .password_confirm_box {
     display: flex;
@@ -3195,12 +3335,80 @@ footer .footer_bottom {
         flex-direction: column;
         height: auto;
     }
-    .mytalk_box .tab_btn ul {
-        
-    }
     .mytalk_box .tab_btn ul > li > a {
         padding: 0 10px;
         height: 32px;
+    }
+
+    /* 벤처투자 부당행위 신고센터 */
+    .reporting_misconduct_box .report_info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .reporting_misconduct_box .report_info > div .content_list_box.type_02 dl {
+        min-height: 0;
+        padding: 15px;
+    }
+    .procedure_box .step {
+        margin-bottom: 30px;
+    }
+    .procedure_box .step ul {
+        flex-direction: column;
+    }
+    .reporting_misconduct_box .procedure_box .step ul li {
+        height: 90px;
+        margin-left: 0;
+        padding-left: 20px;
+        background-size: auto 100%;
+        background-repeat: repeat;
+    }
+    .procedure_box .step ul li:nth-child(1) {
+        width: calc(30% - 61px);
+    }
+    .procedure_box .step ul li:nth-child(2) {
+        width: calc(85% - 61px);
+    }
+    .procedure_box .step ul li:nth-child(3) {
+        width: calc(90% - 61px);
+    }
+    .procedure_box .step ul li:nth-child(4) {
+        width: calc(100% - 61px);
+    }
+    .reporting_misconduct_box .procedure_box .step ul li::after {
+        height: 90px;
+    }
+    .procedure_box .step ul li span {
+        font-size: 15px;
+    }
+    .procedure_box .step ul li strong {
+        font-size: 16px;
+    }
+    .procedure_box > .btn_box_group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .procedure_box > .btn_box_group .btn_box {
+        flex: 1;
+        width: 100%;
+    }
+    .procedure_box > .btn_box_group .btn_box * {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    .procedure_box .etc_box dt {
+        font-size: 15px;
+    }
+    .procedure_box .etc_box dd .btn_box_group {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .procedure_box .etc_box dd .btn_box_group .btn_box > * {
+        padding: 15px;
+    }
+    .procedure_box .etc_box dd .btn_box_group .btn_box > * strong,
+    .procedure_box .etc_box dd .btn_box_group .btn_box > * span {
+        line-height: 23px;;
+        font-size: 14px;
     }
 
     /* 회원가입 */
