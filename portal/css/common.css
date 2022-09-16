@@ -344,6 +344,9 @@
     font-size: 17px;
     font-weight: 500;
 }
+.content_list_box dl + dl {
+    margin-top: 30px;
+}
 .content_list_box.type_02 dl {
     padding: 25px 35px;
     box-sizing: border-box;
@@ -353,6 +356,16 @@
 }
 .content_list_box.type_02 dl dt {
     font-weight: 500;
+}
+.content_list_box dl dt strong {
+    font-weight: 600;
+    font-size: 20px;
+}
+.content_list_box dl dd p {
+    margin-top: -10px;
+}
+.content_list_box dl dd p + ul {
+    margin-top: 20px;
 }
 .content_list_box dl dd ul {
     display: flex;
@@ -365,6 +378,58 @@
     box-sizing: border-box;
 }
 .content_list_box dl dd ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #a2aef8;
+    border-radius: 50%;
+}
+.content_list_box .list_item > p {
+    padding: 0 25px; 
+}
+.content_list_box .list_item .img {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-top: 1px solid #e8e7e7;
+    border-bottom: 1px solid #e8e7e7;
+}
+.content_list_box .list_item .btn_box {
+    justify-content: center;
+    width: auto;
+    flex: none;
+    margin: 40px 0;
+}
+.content_list_box .list_item .btn_box *.mart {
+    flex: none;
+    width: auto;
+    padding: 20px 60px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.content_list_box .list_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #f6f7f9;
+    margin: 20px 0;
+}
+.content_list_box .list_box li {
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+.content_list_box .list_box li::before {
     content: "";
     display: block;
     position: absolute;
@@ -2668,6 +2733,40 @@ a.ui-button:active,
         gap: 15px;
         padding: 0 15px;
         font-size: 15px;
+    }
+    .content_list_box .list_item > p {
+        padding: 0 15px;
+    }
+    .content_list_box .list_item .img {
+        overflow: auto;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 20px;
+    }
+    .content_list_box .list_item .btn_box *.mart {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 17px;
+    }
+    .content_list_box.type_02 dl {
+        padding: 15px;
+    }
+    .content_list_box dl dd ul li::before {
+        top: 5px;
+        width: 6px;
+        height: 6px;
+    }
+    .content_list_box .list_box {
+        padding: 15px;
+    }
+    .content_list_box .list_box li {
+        font-size: 15px;
+    }
+    .content_list_box .list_box li::before {
+        top: 5px;
+        width: 6px;
+        height: 6px;
     }
 
     /* sel_box 셀렉트박스 */
