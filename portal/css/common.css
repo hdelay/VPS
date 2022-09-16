@@ -1392,6 +1392,56 @@
     font-size: 14px;
     font-weight: 500;
 }
+.tbl_longcard .favorite_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.tbl_longcard .favorite_box .route {
+    display: flex;
+    gap: 5px;
+}
+.tbl_longcard .favorite_box .route li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+.tbl_longcard .favorite_box .route li::after {
+    content: ">";
+    margin-left: 5px;
+}
+.tbl_longcard .favorite_box .route li:last-child::after {
+    display: none;
+}
+.tbl_longcard .favorite_box .favorite_info ul {
+    display: flex;
+    gap: 30px;
+}
+.tbl_longcard .favorite_box .favorite_info li {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #3344a3;
+}
+.tbl_longcard .favorite_box .favorite_info li .img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: url(../images/ico/ico_favorite_star.png) no-repeat center;
+}
+.tbl_longcard .favorite_box .favorite_info li .btn_box {
+    width: auto;
+    flex: none;
+}
+.tbl_longcard .favorite_box .favorite_info li .btn_box * {
+    width: auto;
+    flex: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 14px;
+}
 
 .tbl_longcard.type_03 > ul > li {
     display: flex;
@@ -2776,6 +2826,23 @@ a.ui-button:active,
         right: 15px;
         top: 9px;
         left: inherit;
+    }
+    .tbl_longcard.type_02 > ul > li {
+        padding: 15px;
+    }
+    .tbl_longcard .favorite_box {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .tbl_longcard .favorite_box .favorite_info ul {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .tbl_longcard .favorite_box .favorite_info li {
+        font-size: 14px;
+    }
+    .tbl_longcard .favorite_box .favorite_info li .btn_box * {
+        padding: 10px;
     }
 
     /* 리스트 타이틀 박스 */

@@ -145,7 +145,7 @@
                     path:'./portal/html/secret.html',
                     date:'',
                     mdate:'',
-                    con:'작업중',
+                    con:'완료',
                     etc:''
                 },
 
@@ -213,7 +213,7 @@
                     date:'2022-08-26',
                     mdate:'2022-09-19',
                     con:'완료',
-                    etc:'[게시판 타입1 - 목록] 0908 공지고정 수정'
+                    etc:'[게시판 타입1 - 목록] 0908 공지고정 수정/서치박스 셀렉트 추가'
                 },
                 {
                     division: '',
@@ -365,10 +365,10 @@
                     division: '',
                     depth1:'맞춤투자 가이드',
                     path:'./portal/html/USR-02-02-F-LIST.html',
-                    date:'2022-09-05',
+                    date:'2022-09-16',
                     mdate:'2022-09-05',
                     con:'완료',
-                    etc:'서치박스 셀렉트 추가'
+                    etc:''
                 },
                 {
                     division: '',
@@ -747,10 +747,19 @@
                     division: '',
                     depth1:'벤처투자TALK(TAB-3)',
                     path:'./portal/html/USR-1341-F-LIST.html',
-                    date:'',
+                    date:'2022-09-15',
                     mdate:'2022-09-29',
-                    con:'작업중',
+                    con:'완료',
                     etc:'[1차디자인] 탭확인필요'
+                },
+                {
+                    division: '',
+                    depth1:'벤처투자 부당행위 신고센터 - 부당행위 신고안내',
+                    path:'./portal/html/USR-1350-F-LIST.html',
+                    date:'',
+                    mdate:'2022-10-19',
+                    con:'작업중',
+                    etc:''
                 },
                 {
                     division: '',
@@ -1132,7 +1141,7 @@
             
             // 전체 페이지 개수 구하기
             let total_n = $('#list tr').length;
-            $('.total_n').text(total_n - 1);
+            $('.total_n').text(total_n - 2);
 
             // 진행률 나타내기
             $('.per').text(Math.floor((curr_n/total_n)*100) + '%');
