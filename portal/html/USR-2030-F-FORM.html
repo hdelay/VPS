@@ -315,46 +315,31 @@
                     <span>메뉴에 대한 설명을 상세하게 작성합니다.</span>
                 </div>
     
-                <div class="find_group on">
-                    <div class="find_content">
-                        <div class="find_inp">
-                            <div class="inp_box">
-                                <input type="text" id="input_01" placeholder="이름">
-                            </div>
-                            <div class="inp_group tel">
-                                <div class="sel_box">
-                                    <select id="sel_01">
-                                        <option value="">선택</option>
-                                        <option value="">070</option>
-                                    </select>
-                                </div>
-                                <div class="inp_box">
-                                    <input type="text" id="input_06">
-                                </div>
-                                <div class="inp_box">
-                                    <input type="text" id="input_07">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn_box">
-                            <a href="" class="btn_navy">아이디찾기</a>
-                        </div>
+                <div class="find_group">
+                    <div class="find_txt">
+                        아이디 찾기는 아이디와 본인인증 절차 후, 확인이 가능합니다.
                     </div>
 
-                    <!-- find_group에 'on' class 추가시 show -->
-                    <div class="find_result_box">
-                        <ul>
-                            <li>회원님의 아이디는 <strong>dkdlel1234</strong>로 등록되어 있습니다.</li>
-                            <li>비밀번호가 기억나지않으실 경우 비밀번호 찾기에서 확인하시기 바랍니다.</li>
+                    <div class="self_authentication_box">
+                        <ul class="content">
+                            <li class="phone">
+                                <strong>휴대전화 인증</strong>
+                                <span class="img"></span>
+                                <em>본인 명의의 휴대폰 정보로 인증 후 가입하실 수 있습니다.</em>
+                                <a href="javascript:void(0);" class="dialog-link" data-target="#note_01">인증하기</a>
+                            </li>
+                            <li class="ipin">
+                                <strong>아이핀 인증</strong>
+                                <span class="img"></span>
+                                <em>본인 아이핀 정보로 인증 후 가입하실 수 있습니다.</em>
+                                <a href="javascript:void(0);" class="dialog-link" data-target="#note_01">인증하기</a>
+                            </li>
                         </ul>
-                        <div class="btn_box_group">
-                            <div class="btn_box">
-                                <a href="./USR-2020-F-FORM.html" class="btn_navy">로그인</a>
-                            </div>
-                            <div class="btn_box">
-                                <a href="./USR-2031-F-FORM.html" class="btn_blue">비밀번호 찾기</a>
-                            </div>
-                        </div>
+                        <ul class="list">
+                            <li>입력하신 인증정보는 실명인즐을 위한 자료로 사용되며 이외의 용도로 사용 또는 제공되지 않습니다.</li>
+                            <li>인증이 정상적으로 작동하지 않으면 브라우저의 팝업 차단 기능을 해제하신 후 이용하시기 바랍니다.</li>
+                            <li>인증관련문의<span>- NICE평가정보(주) 고객센터 Tel: 1600-1522</span></li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -482,6 +467,35 @@
     <!-- //pop_content -->
 
 </div>
+
+<!-- 아이디 확인 -->
+<div id="note_01" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>아이디 확인</h3>
+    </div>
+
+    <div class="find_result_box">
+        <ul>
+            <li>귀하의 아이디는 <strong>dkdlel1234</strong>로 등록되어 있습니다.</li>
+            <li>비밀번호가 기억나지않으실 경우 비밀번호 찾기에서 확인하시기 바랍니다.</li>
+        </ul>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box">
+            <a href="./USR-2020-F-FORM.html" class="btn_navy">로그인</a>
+        </div>
+        <div class="btn_box">
+            <a href="./USR-2031-F-FORM.html" class="btn_blue">비밀번호 찾기</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
+
 
 </body>
 </html>

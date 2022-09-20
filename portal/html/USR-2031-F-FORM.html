@@ -315,28 +315,15 @@
                     <span>메뉴에 대한 설명을 상세하게 작성합니다.</span>
                 </div>
     
-                <div class="find_group on">
+                <div class="find_group">
+                    <div class="find_txt">
+                        비밀번호 찾기는 아이디와 본인인증 후, 신규 비밀번호 등록이 가능합니다.
+                    </div>
                     <div class="find_content">
                         <div class="find_inp">
                             <div class="inp_box">
                                 <input type="text" id="input_01" placeholder="아이디">
                             </div>
-                            <div class="inp_box">
-                                <input type="text" id="input_02" placeholder="이름">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="find_content">
-                        <div class="find_inp">
-                            <div class="inp_box">
-                                <input type="password" id="input_03" placeholder="비밀번호">
-                            </div>
-                            <div class="inp_box">
-                                <input type="password" id="input_04" placeholder="비밀번호 확인">
-                            </div>
-                        </div>
-                        <div class="btn_box">
-                            <a href="" class="btn_navy">비밀번호 변경</a>
                         </div>
                     </div>
 
@@ -346,13 +333,13 @@
                                 <strong>휴대전화 인증</strong>
                                 <span class="img"></span>
                                 <em>본인 명의의 휴대폰 정보로 인증 후 가입하실 수 있습니다.</em>
-                                <a href="">인증하기</a>
+                                <a href="javascript:void(0);" class="dialog-link" data-target="#note_01">인증하기</a>
                             </li>
                             <li class="ipin">
                                 <strong>아이핀 인증</strong>
                                 <span class="img"></span>
                                 <em>본인 아이핀 정보로 인증 후 가입하실 수 있습니다.</em>
-                                <a href="">인증하기</a>
+                                <a href="javascript:void(0);" class="dialog-link" data-target="#note_01">인증하기</a>
                             </li>
                         </ul>
                         <ul class="list">
@@ -360,21 +347,6 @@
                             <li>인증이 정상적으로 작동하지 않으면 브라우저의 팝업 차단 기능을 해제하신 후 이용하시기 바랍니다.</li>
                             <li>인증관련문의<span>- NICE평가정보(주) 고객센터 Tel: 1600-1522</span></li>
                         </ul>
-                    </div>
-
-                    <!-- find_group에 'on' class 추가시 show -->
-                    <div class="find_result_box">
-                        <ul>
-                            <li>비밀번호 변경이 완료되었습니다.</li>
-                        </ul>
-                        <div class="btn_box_group">
-                            <div class="btn_box">
-                                <a href="./USR-2020-F-FORM.html" class="btn_navy">로그인</a>
-                            </div>
-                            <div class="btn_box">
-                                <a href="./main.html" class="btn_blue">메인으로 이동</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 
@@ -502,6 +474,41 @@
     <!-- //pop_content -->
 
 </div>
+
+<!-- 비밀번호 변경 팝업 -->
+<div id="note_01" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>비밀번호 변경</h3>
+    </div>
+
+    <div class="find_group">
+        <div class="find_txt">
+            변경할 신규 비밀번호를 입력해주세요.
+        </div>
+        <div class="inp_group">
+            <div class="inp_box">
+                <input type="password" placeholder="비밀번호">
+            </div>
+            <div class="inp_box">
+                <input type="password" placeholder="비밀번호 확인">
+            </div>
+        </div>
+        <div class="find_password_txt">
+            ※ 비밀번호는 영문, 숫자, 특수문자(!@#$%^&*()-_)를 혼용하여 8자 이상 20자 이하로 입력하세요.
+        </div>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_mint shadow" onclick="onShowToast('비밀번호가 정상적으로 변경되었습니다.')">확인</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
 
 </body>
 </html>

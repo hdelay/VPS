@@ -290,6 +290,10 @@
 }
 
 /* 제목 */
+.tit_box.row {
+    display: flex;
+    justify-content: space-between;
+}
 .tit_box h2 {
     font-family: 'koreanAH3';
     font-weight: 700;
@@ -440,6 +444,24 @@
     background-color: #a2aef8;
     border-radius: 50%;
 }
+.tbl_box_data + .content_list_box {
+    margin: 30px 0;
+}
+.content_list_box .content {
+    padding: 25px 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #f6f7f9;
+}
+.content_list_box .content .chk_box {
+    padding: 0;
+    margin-top: 15px;
+    justify-content: flex-start;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
 
 /* input 인풋 */
 .inp_box {
@@ -561,6 +583,9 @@
     font-size: 15px;
     cursor: pointer;
 }
+.rdo_box input:focus + label::before {
+    outline: 1px solid #333;
+}
 .rdo_box input + label::before {
     content: "";
     display: block;
@@ -631,6 +656,9 @@
     padding-left: 25px;
     font-size: 15px;
     cursor: pointer;
+}
+.chk_box input:focus ~ label::before {
+    outline: 1px solid #333;
 }
 .chk_box input ~ label::before {
     content: "";
@@ -871,6 +899,10 @@
     align-items: center;
     width: 395px;
     gap: 9px;
+}
+.inp_group.email > div.chk_box {
+    width: auto;
+    margin-left: 10px;
 }
 .inp_group.email > div .inp_box {
     width: calc(50% - 15px);
@@ -1560,6 +1592,79 @@
     text-decoration: underline;
 }
 
+/* 테이블 타입 :: 메인 */
+.tbl_main_table {
+    display: flex;
+    flex-direction: column;
+}
+.tbl_main_table > span {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #757575;
+}
+.tbl_main_table ul {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #333;
+}
+.tbl_main_table ul li {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #d8d7d7;
+}
+.tbl_main_table ul li > div {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.tbl_main_table ul li > div:nth-child(2) {
+    width: 40%;
+}
+.tbl_main_table ul li > div div {
+    width: 100%;
+}
+.tbl_main_table ul li .date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+.tbl_main_table ul li .date span {
+    font-size: 12px;
+}
+.tbl_main_table ul li .date strong {
+    font-size: 36px;
+    font-weight: 600;
+}
+.tbl_main_table .btn_box {
+    width: auto;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.tbl_main_table .btn_box a {
+    display: flex;
+    flex: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+.tbl_main_table .btn_box a::after {
+    content: "";
+    display: block;
+    width: 91px;
+    height: 15px;
+    background: url(../images/ico/ico_longarrow_right.png) no-repeat center;
+    margin-left: 10px;
+}
+
 /* 리스트 타이틀 박스 */
 .list_tit_box {
     display: flex;
@@ -2221,6 +2326,31 @@
     width: 100%;
 }
 
+/* 카드리스트 타입 :: 법령 */
+.tbl_card_list.type_04 > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px 40px;
+    flex-wrap: wrap;
+}
+.tbl_card_list.type_04 > ul > li {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(50% - 20px);
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+}
+.tbl_card_list.type_04 .tit {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 /* 체크박스 리스트타입 :: 투자자 검색 - 이미지 */
 .chk_list.img {
     display: flex;
@@ -2441,6 +2571,9 @@
 }
 .tab_group .tab_content > div.on {
     display: block;
+}
+.tbl_box_data + .tab_group {
+    margin-top: 30px;
 }
 
 /* 페이징 */
@@ -2811,6 +2944,9 @@ a.ui-button:active,
     }
     .inp_group.email .sel_box {
         width: 100%;
+    }
+    .inp_group.email > div.chk_box {
+        margin-left: 0;
     }
     .inp_group.company_num .inp_group {
         width: 100%;
@@ -3357,6 +3493,67 @@ a.ui-button:active,
     .tbl_card_list.type_01 > ul > li .content > ul {
         right: 15px;
         bottom: 15px;
+    }
+
+    /* 카드리스트 타입 :: 법령 */
+    .tbl_card_list.type_04 > ul {
+        gap: 10px;
+    }
+    .tbl_card_list.type_04 > ul > li {
+        width: 100%;
+        padding: 15px;
+    }
+    .tbl_card_list.type_04 .tit {
+        font-size: 17px;
+    }
+    
+    /* 테이블 타입 :: 메인 */
+    .tbl_main_table > span {
+        margin-bottom: 5px;
+    }
+    .tbl_main_table ul li {
+        padding: 15px 0;
+    }
+    .tbl_main_table ul li > div {
+        padding: 0 5px;
+        justify-content: center;
+        width: 25%;
+        font-size: 12px;
+    }
+    .tbl_main_table ul li > div:nth-child(2) {
+        width: 20%;
+    }
+    .tbl_main_table ul li > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
+    .tbl_main_table ul li > div:nth-child(3) {
+        width: 13%;
+    }
+    .tbl_main_table ul li > div:nth-child(4) {
+        width: 35%;
+        justify-content: flex-start;
+    }
+    .tbl_main_table ul li .date {
+        padding: 0 5px;
+        align-items: center;
+    }
+    .tbl_main_table ul li .date strong {
+        font-size: 24px;
+    }
+    .tbl_main_table ul li .date span {
+        font-size: 10px;
+    }
+    .tbl_main_table .btn_box {
+        margin-top: 20px;
+    }
+    .tbl_main_table .btn_box a {
+        font-size: 15px;
+    }
+    .tbl_main_table .btn_box a::after {
+        width: 50px;
+        background-position: right;
     }
 
     /* 탭 */

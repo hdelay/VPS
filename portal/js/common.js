@@ -1,4 +1,16 @@
+let beforeScrollPosition = 0; 
+let popupOpenType = false;
 
+// 팝업 뒤 html 스크롤 조정가능여부
+window.addEventListener('scroll', function() {
+    const htmlEl = document.getElementsByTagName('html')[0];
+    
+    if(popupOpenType) {
+        htmlEl.scrollTop = beforeScrollPosition;
+    } else {
+        beforeScrollPosition = htmlEl.scrollTop;
+    }
+});
 $(function(){
 
     // datepicker
@@ -165,22 +177,9 @@ $(function(){
     let popBody = $(".dialog");
     let noteBtn = $(".note_link");
     let noteBody = $(".note_dialog");
-    let beforeScrollPosition = 0; 
-    let popupOpenType = false;
     let quick_popBtn = $(".quick_link");
     let quick_popBody = $(".quick_dialog");
-
-    // 팝업 뒤 html 스크롤 조정가능여부
-    window.addEventListener('scroll', function() {
-        const htmlEl = document.getElementsByTagName('html')[0];
-      
-        if(popupOpenType) {
-            htmlEl.scrollTop = beforeScrollPosition;
-        } else {
-            beforeScrollPosition = htmlEl.scrollTop;
-        }
-    });
-
+    
     popBtn.click(function(e) {
         let poptarget = $(this).attr('data-target');
         $(poptarget).dialog("open");
@@ -434,4 +433,24 @@ $(function(){
         }
     });
 
+    // 통합공시 버튼
+    $('.disclosure_box .btn_list button').on('click', function(){
+        $('.disclosure_box .btn_list button').removeClass('on');
+        $(this).addClass('on');
+    });
+
 });
+
+//Toast 팝업
+function onShowToast(show_txt){
+    let obj_toast = $('.toast_box');
+    let obj_time = 3000;
+    obj_toast.addClass('on');
+    obj_toast.find('.txt').text(show_txt);
+    setTimeout(function(){
+        obj_toast.removeClass('on');
+    }, obj_time);
+    $(".dialog").dialog("close");
+    popupOpenType = false;
+    return false;
+}
