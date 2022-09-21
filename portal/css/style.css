@@ -1569,6 +1569,570 @@ a.ico_folder::after {
     font-weight: 500;
 }
 
+/* 유관기관 안내 */
+.relevant_box {}
+.relevant_01 ul:nth-child(1) {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 90px;
+}
+.relevant_01 ul:nth-child(1) li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5eff9;
+    border: 1px solid #c9def3;
+    border-radius: 5px;
+    padding: 35px 15px;
+    box-sizing: border-box;
+}
+.relevant_01 ul:nth-child(1) li .img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    background: #fff no-repeat center;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+.relevant_01 ul:nth-child(1) li:nth-child(1) .img {
+    background-image: url(../images/content/img_relevant_01_01.png);
+}
+.relevant_01 ul:nth-child(1) li:nth-child(2) .img {
+    background-image: url(../images/content/img_relevant_01_02.png);
+}
+.relevant_01 ul:nth-child(1) li:nth-child(3) .img {
+    background-image: url(../images/content/img_relevant_01_03.png);
+}
+.relevant_01 ul:nth-child(1) li:nth-child(4) .img {
+    background-image: url(../images/content/img_relevant_01_04.png);
+}
+.relevant_01 ul:nth-child(1) li strong {
+    word-break: keep-all;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.relevant_01 .tit {
+    margin-bottom: 55px;
+}
+.relevant_01 .tit span {
+    display: block;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 400;
+}
+.relevant_01 .tit strong {
+    display: block;
+    text-align: center;
+    font-size: 58px;
+    font-weight: 600;
+    color: #3163cb;
+}
+.relevant_01 ul:nth-child(3) {
+    display: flex;
+    gap: 60px;
+}
+.relevant_01 ul:nth-child(3) li {
+    width: calc((100% / 4) - 15px);
+}
+.relevant_01 ul:nth-child(3) li .img {
+    display: block;
+    width: 100%;
+    height: 245px;
+    background: #fff no-repeat center;
+    margin-bottom: 30px;
+}
+.relevant_01 ul:nth-child(3) li:nth-child(1) .img {
+    background-image: url(../images/content/img_relevant_01_05.png);
+}
+.relevant_01 ul:nth-child(3) li:nth-child(2) .img {
+    background-image: url(../images/content/img_relevant_01_06.png);
+}
+.relevant_01 ul:nth-child(3) li:nth-child(3) .img {
+    background-image: url(../images/content/img_relevant_01_07.png);
+}
+.relevant_01 ul:nth-child(3) li:nth-child(4) .img {
+    background-image: url(../images/content/img_relevant_01_08.png);
+}
+.relevant_01 ul:nth-child(3) li strong {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.relevant_01 ul:nth-child(3) li em {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+}
+.relevant_01 .btn_box {
+    width: auto;
+}
+.relevant_01 .btn_box * {
+    padding: 10px 20px;
+}
+
+.relevant_02 .schematic_box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.relevant_02 .schematic_box .tit {
+    margin-bottom: 30px;
+}
+.relevant_02 .schematic_box .tit span {
+    display: block;
+    text-align: center;
+    font-size: 31px;
+    font-weight: 400;
+}
+.relevant_02 .schematic_box .tit strong {
+    display: block;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 600;
+    color: #3163cb;
+}
+.schematic_box dl {
+    display: flex;
+    align-items: center;
+}
+.schematic_box dl dt {
+    min-width: 200px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.schematic_box dl dt span {
+    font-size: 26px;
+    font-weight: 500;
+}
+.relevant_02 .schematic_box dl dd {
+    width: calc(100% - 200px);
+}
+.check_box {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+    border-radius: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+}
+.check_box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.check_box strong {
+    margin-left: 10px;
+    font-weight: 600;
+}
+.check_box.blue {
+    background: #3a5dc2 url(../images/content/bg_check_blue.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+.check_box.purple {
+    background: #826ec5 url(../images/content/bg_check_purple.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+.bg_box ul {
+    display: flex;
+    gap: 84px;
+}
+.bg_box ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 237px;
+    height: 206px;
+    background: no-repeat center;
+}
+.bg_box ul li:nth-child(1) {
+    background-image: url(../images/content/img_relevant_bg01.png);
+}
+.bg_box ul li:nth-child(2) {
+    background-image: url(../images/content/img_relevant_bg02.png);
+}
+.bg_box ul li:nth-child(3) {
+    background-image: url(../images/content/img_relevant_bg03.png);
+}
+.bg_box ul li:nth-child(4) {
+    background-image: url(../images/content/img_relevant_bg04.png);
+}
+.bg_box ul li::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -64px;
+    width: 44px;
+    height: 44px;
+    background: url(../images/content/img_relevant_plus.png) no-repeat center;
+    transform: translateY(-50%);
+}
+.bg_box ul li:last-child::after {
+    display: none;
+}
+.relevant_02 .bg_box ul li .img {
+    display: block;
+    width: 100%;
+    height: 70px;
+    background: no-repeat center;
+    margin-bottom: 15px;
+}
+.relevant_02 .bg_box ul li:nth-child(1) .img {
+    background-image: url(../images/content/img_relevant_02_01.png);
+}
+.relevant_02 .bg_box ul li:nth-child(2) .img {
+    background-image: url(../images/content/img_relevant_02_02.png);
+}
+.relevant_02 .bg_box ul li:nth-child(3) .img {
+    background-image: url(../images/content/img_relevant_02_03.png);
+}
+.relevant_02 .bg_box ul li strong {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+.relevant_02 .bg_box ul li em {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+.relevant_02 .schematic_box dl:nth-child(5) dd ul {
+    display: flex;
+    gap: 50px;
+}
+.relevant_02 .schematic_box dl:nth-child(5) dd ul li {
+    position: relative;
+    padding: 15px 0;
+    width: 285px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #c9d0fb;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #273377;
+}
+.relevant_02 .schematic_box dl:nth-child(5) dd ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    width: 1px;
+    height: 43px;
+    background-color: #c9d0fb;
+}
+.relevant_02 .schematic_box dl:nth-child(5) dd ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -58px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c9d0fb;
+    margin-left: -7px;
+}
+.relevant_02 .schematic_box dl:nth-child(6) dd > ul {
+    display: flex;
+    gap: 50px;
+}
+.relevant_02 .schematic_box dl:nth-child(6) dd > ul > li {
+    width: 285px;
+    padding: 30px;
+    background-color: #f6f7fd;
+    box-sizing: border-box;
+    border: 1px solid #cfd2e8;
+    border-radius: 10px;
+}
+.relevant_02 .schematic_box dl:nth-child(6) dd > ul ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.relevant_02 .schematic_box dl:nth-child(6) dd > ul ul li {
+    position: relative;
+    padding-left: 15px;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: #676a7f;
+}
+.relevant_02 .schematic_box dl:nth-child(6) dd > ul ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #676a7f;
+}
+
+.relevant_03 .txt {
+    margin-bottom: 40px;
+}
+.relevant_03 .txt p {
+    font-size: 17px;
+    font-weight: 400;
+}
+.relevant_03 .txt p + p {
+    margin-top: 20px;
+}
+.relevant_03 ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.relevant_03 ul li {
+    display: flex;
+    align-items: center;
+    width: calc(33.33% - 14px);
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+.relevant_03 ul li span {
+    width: calc(100% - 80px);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    word-break: keep-all;
+}
+.relevant_03 ul li .img {
+    display: block;
+    width: 60px;
+    height: 70px;
+    background: no-repeat center;
+    background-size: 100% auto;
+    margin-right: 20px;
+}
+.relevant_03 ul li:nth-child(1) .img {
+    background-image: url(../images/content/img_relevant_03_01.png);
+}
+.relevant_03 ul li:nth-child(2) .img {
+    background-image: url(../images/content/img_relevant_03_02.png);
+}
+.relevant_03 ul li:nth-child(3) .img {
+    background-image: url(../images/content/img_relevant_03_03.png);
+    background-size: auto 100%;
+}
+.relevant_03 ul li:nth-child(4) .img {
+    background-image: url(../images/content/img_relevant_03_04.png);
+}
+.relevant_03 ul li:nth-child(5) .img {
+    background-image: url(../images/content/img_relevant_03_05.png);
+}
+.relevant_03 ul li:nth-child(6) .img {
+    background-image: url(../images/content/img_relevant_03_06.png);
+    background-size: auto 100%;
+}
+.relevant_03 ul li:nth-child(7) .img {
+    background-image: url(../images/content/img_relevant_03_07.png);
+}
+.relevant_03 ul li:nth-child(8) .img {
+    background-image: url(../images/content/img_relevant_03_08.png);
+}
+.relevant_03 ul li:nth-child(9) .img {
+    background-image: url(../images/content/img_relevant_03_09.png);
+}
+.relevant_03 ul li:nth-child(10) .img {
+    background-image: url(../images/content/img_relevant_03_10.png);
+}
+
+.relevant_04 .tit:nth-child(1) {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+.relevant_04 .schematic_box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+}
+.relevant_04 .schematic_box dl dd {
+    width: calc(100% - 200px);
+}
+.relevant_04 .schematic_box dl:nth-child(1) dd {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.relevant_04 .schematic_box dl:nth-child(1) dd .check_box {
+    width: calc(100% - 422px);
+    min-width: 318px;
+    flex-direction: column;
+    align-items: center;
+    background-size: auto 100%;
+    padding: 40px;
+    font-size: 24px;
+}
+.relevant_04 .schematic_box dl:nth-child(1) dd .check_box strong {
+    margin-top: 10px;
+    font-size: 32px;
+}
+.relevant_04 .schematic_box dl:nth-child(1) dd .btn_box {
+    width: auto;
+    flex: none;
+}
+.relevant_04 .schematic_box dl:nth-child(1) dd .btn_box * {
+    padding: 10px 20px;
+}
+.relevant_04 .bg_box ul {
+    flex-wrap: wrap;
+}
+.relevant_04 .bg_box ul li {
+    width: 206px;
+    height: 175px;
+    background-size: auto 100%;
+}
+.relevant_04 .bg_box ul li strong,
+.relevant_04 .bg_box ul li em {
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+.relevant_04 .img:nth-child(3) {
+    margin-top: 100px;
+}
+.relevant_04 .tit:nth-child(4) {
+    margin-top: 85px;
+    margin-bottom: 60px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.relevant_04 .tit:nth-child(4) span {
+    display: block;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.relevant_05 > .tit {
+    display: flex;
+    align-items: center;
+    border: 10px solid #eee;
+    padding: 50px;
+    margin-bottom: 80px;
+}
+.relevant_05 > .tit .img {
+    display: block;
+    width: 121px;
+    height: 133px;
+    background: url(../images/content/img_relevant_05_01.png) no-repeat center;
+    margin-right: 55px;
+}
+.relevant_05 > .tit > div {
+    display: flex;
+    flex-direction: column;
+}
+.relevant_05 > .tit > div strong {
+    font-size: 32px;
+    font-weight: 400;
+}
+.relevant_05 > .tit > div strong span {
+    font-weight: 600;
+    font-size: 36px;
+    color: #1264a2;
+}
+.relevant_05 > .tit > div > span {
+    margin-top: 30px;
+    word-break: keep-all;
+    font-size: 22px;
+    font-weight: 400;
+}
+.relevant_05 > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.relevant_05 > ul li {
+    display: flex;
+}
+.relevant_05 > ul li .tit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.relevant_05 > ul li .tit::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -33px;
+    width: 30px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #ccc;
+}
+.relevant_05 > ul li:nth-child(odd) .tit {
+    border-color: #c7defb;
+    background-color: #3795f4;
+}
+.relevant_05 > ul li:nth-child(even) .tit {
+    border-color: #bdc6fc;
+    background-color: #697ad7;
+}
+.relevant_05 > ul li .tit strong {
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+}
+.relevant_05 > ul li .tit span {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #c9e4ff;
+}
+.relevant_05 > ul li .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 150px - 30px);
+    margin-left: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    gap: 10px;
+}
+.relevant_05 > ul li .box span {
+    font-weight: 400;
+}
+.relevant_05 > ul li .box .blue {
+    color: #1d7cdb;
+}
+
 /* 비밀번호 확인 */
 .password_confirm_box {
     display: flex;
@@ -1947,7 +2511,7 @@ a.ico_folder::after {
 .user_info_group .tit strong {
     font-size: 36px;
     font-weight: 600;
-    color: #c44545;
+    color: #305591;
 }
 .user_info_group .tit span {
     font-size: 26px;
@@ -1975,7 +2539,7 @@ a.ico_folder::after {
 .join_complete span strong {
     font-size: 26px;
     font-weight: 600;
-    color: #c44545;
+    color: #305591;
 }
 .join_complete span em {
     font-style: normal;
@@ -3683,6 +4247,316 @@ footer .footer_bottom {
     .procedure_box .etc_box dd .btn_box_group .btn_box > * strong,
     .procedure_box .etc_box dd .btn_box_group .btn_box > * span {
         line-height: 23px;;
+        font-size: 14px;
+    }
+
+    /* 유관기관 안내 */
+    .relevant_01 ul:nth-child(1) {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .relevant_01 ul:nth-child(1) li {
+        padding: 15px 10px;
+        width: calc(50% - 8px);
+    }
+    .relevant_01 ul:nth-child(1) li .img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+        background-size: auto 65px;
+    }
+    .relevant_01 ul:nth-child(1) li strong {
+        font-size: 15px;
+    }
+    .relevant_01 .tit span {
+        font-size: 19px;
+    }
+    .relevant_01 .tit strong {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+    .relevant_01 ul:nth-child(3) {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .relevant_01 ul:nth-child(3) li {
+        width: calc(50% - 10px);
+    }
+    .relevant_01 ul:nth-child(3) li .img {
+        background-size: 100% auto;
+        height: 150px;
+    }
+    .relevant_01 ul:nth-child(3) li strong {
+        margin-bottom: 5px;
+        word-break: keep-all;
+        font-size: 17px;
+    }
+    .relevant_01 ul:nth-child(3) li em {
+        word-break: keep-all;
+        font-size: 14px;
+    }
+    .relevant_01 .btn_box * {
+        padding: 10px 0;
+    }
+
+    .relevant_02 .schematic_box .tit {
+        margin-bottom: 0;
+    }
+    .relevant_02 .schematic_box .tit span {
+        font-size: 20px;
+    }
+    .relevant_02 .schematic_box .tit strong {
+        font-size: 25px;
+    }
+    .relevant_02 .schematic_box {
+        gap: 15px;
+    }
+    .schematic_box dl {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .schematic_box dl dt {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 23px;
+    }
+    .relevant_02 .schematic_box dl dd {
+        width: 100%;
+    }
+    .check_box {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 18px;
+        background-size: auto 100% !important;
+    }
+    .bg_box ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .bg_box ul li {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: auto;
+        padding: 0;
+        background: none;
+    }
+    .bg_box ul li:nth-child(1),
+    .bg_box ul li:nth-child(2),
+    .bg_box ul li:nth-child(3) {
+        background-image: none;
+    }
+    .relevant_02 .bg_box ul li .img {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+        background-size: 100%;
+    }
+    .relevant_02 .bg_box ul li .img::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: -35px;
+        margin-left: -35px;
+        background: no-repeat center;
+        background-size: auto 80%;
+    }
+    .relevant_02 .bg_box ul li:nth-child(1) .img {
+        background-image: url(../images/content/img_relevant_bg01.png);
+    }
+    .relevant_02 .bg_box ul li:nth-child(1) .img::before {
+        background-image: url(../images/content/img_relevant_02_01.png);
+    }
+    .relevant_02 .bg_box ul li:nth-child(2) .img {
+        background-image: url(../images/content/img_relevant_bg02.png);
+    }
+    .relevant_02 .bg_box ul li:nth-child(2) .img::before {
+        background-image: url(../images/content/img_relevant_02_02.png);
+    }
+    .relevant_02 .bg_box ul li:nth-child(3) .img {
+        background-image: url(../images/content/img_relevant_bg03.png);
+    }
+    .relevant_02 .bg_box ul li:nth-child(3) .img::before {
+        background-image: url(../images/content/img_relevant_02_03.png);
+        background-size: 90% auto;
+    }
+    .relevant_02 .bg_box ul li strong {
+        margin-left: 20px;
+        margin-right: 10px;
+        color: #333;
+    }
+    .relevant_02 .bg_box ul li em {
+        color: #333;
+    }
+    .relevant_02 .schematic_box dl:nth-child(5) dd ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .relevant_02 .schematic_box dl:nth-child(5) dd ul li::before,
+    .relevant_02 .schematic_box dl:nth-child(5) dd ul li::after {
+        display: none;
+    }
+    .relevant_02 .schematic_box dl:nth-child(5) dd ul li {
+        width: 100%;
+    }
+    .relevant_02 .schematic_box dl:nth-child(6) dd > ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .relevant_02 .schematic_box dl:nth-child(6) dd > ul > li {
+        width: 100%;
+        padding: 15px;
+    }
+    .relevant_02 .schematic_box dl:nth-child(6) dd > ul ul {
+        gap: 5px;
+    }
+    .relevant_02 .schematic_box dl:nth-child(6) dd > ul ul li {
+        font-size: 15px;
+    }
+    .relevant_03 .txt p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .relevant_03 ul {
+        flex-direction: column;
+    }
+    .relevant_03 ul li {
+        width: 100%;
+    }
+    .relevant_03 ul li span {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .relevant_04 .tit:nth-child(1) {
+        font-size: 23px;
+    }
+    .relevant_04 .schematic_box {
+        margin-top: 0;
+        gap: 15px;
+    }
+    .relevant_04 .schematic_box dl dd {
+        width: 100%;
+    }
+    .relevant_04 .schematic_box dl:nth-child(1) dd {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .relevant_04 .schematic_box dl:nth-child(1) dd .btn_box {
+        width: 100%;
+    }
+    .relevant_04 .schematic_box dl:nth-child(1) dd .check_box {
+        padding: 15px;
+        text-align: center;
+        word-break: keep-all;
+        font-size: 18px;
+    }
+    .relevant_04 .schematic_box dl:nth-child(1) dd .check_box strong {
+        font-size: 18px;
+    }
+    .relevant_04 .bg_box ul {
+        justify-content: space-between;
+    }
+    .relevant_04 .bg_box ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: no-repeat center;
+        background-size: 100% auto;
+    }
+    .relevant_04 .bg_box ul li:nth-child(1) {
+        background-image: url(../images/content/img_relevant_bg01.png);
+    }
+    .relevant_04 .bg_box ul li:nth-child(2) {
+        background-image: url(../images/content/img_relevant_bg02.png);
+    }
+    .relevant_04 .bg_box ul li:nth-child(3) {
+        background-image: url(../images/content/img_relevant_bg03.png);
+    }
+    .relevant_04 .bg_box ul li:nth-child(4) {
+        background-image: url(../images/content/img_relevant_bg04.png);
+    }
+    .bg_box ul li::after {
+        display: none;
+    }
+    .relevant_04 .bg_box ul li strong,
+    .relevant_04 .bg_box ul li em {
+        font-size: 16px;
+    }
+    .relevant_04 .img:nth-child(3) {
+        margin-top: 20px;
+        overflow-x: auto;
+    }
+    .relevant_04 .tit:nth-child(4) {
+        font-size: 23px;
+    }
+    .relevant_04 .img:nth-child(5) {
+        overflow-x: auto;
+    }
+    .relevant_05 > .tit {
+        padding: 15px;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .relevant_05 > .tit .img {
+        margin-right: 0;
+        width: 100%;
+        height: 70px;
+        background-size: auto 100%;
+        margin-bottom: 10px;
+    }
+    .relevant_05 > .tit > div strong {
+        text-align: center;
+        word-break: keep-all;
+        font-size: 18px;
+    }
+    .relevant_05 > .tit > div strong span {
+        font-size: 18px;
+    }
+    .relevant_05 > .tit > div > span {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .relevant_05 > ul {
+        gap: 15px;
+    }
+    .relevant_05 > ul li {
+        flex-direction: column;
+        align-items: center;
+    }
+    .relevant_05 > ul li .tit {
+        margin-bottom: 30px;
+    }
+    .relevant_05 > ul li .tit::after {
+        bottom: -33px;
+        top: inherit;
+        right: inherit;
+        left: 50%;
+        margin-left: -1px;
+        width: 2px;
+        height: 30px;
+    }
+    .relevant_05 > ul li .box {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+    .relevant_05 > ul li .box span {
         font-size: 14px;
     }
 

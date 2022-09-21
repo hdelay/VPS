@@ -62,6 +62,12 @@ table caption {
     top: 0;
 }
 
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
 /* 에스코어드림 웹폰트 */
 @font-face { /* s-core-dream-thin */
     font-family: 'scoredream';
