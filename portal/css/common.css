@@ -447,6 +447,9 @@
 .tbl_box_data + .content_list_box {
     margin: 30px 0;
 }
+.tbl_box_data + .tit_box {
+    margin-top: 40px;
+}
 .content_list_box .content {
     padding: 25px 35px;
     box-sizing: border-box;
@@ -527,6 +530,9 @@
 .sel_box {
     display: flex;
     position: relative;
+}
+.sel_box.min {
+    max-width: 160px;
 }
 .sel_box select {
     display: block;
@@ -1133,7 +1139,8 @@
 .tbl_box table tfoot tr td {
     border-right: none;
 }
-.tbl_box table tbody tr td {
+.tbl_box table tbody tr td,
+.tbl_box table tbody tr th {
     padding: 20px;
     box-sizing: border-box;
     border-right: 1px solid #e2e2e2;
@@ -1158,6 +1165,23 @@
     font-style: normal;
     font-weight: 400;
     font-size: var(--font-common);
+}
+.tbl_box.scroll {
+    overflow: auto;
+}
+.tbl_box.scroll table {
+    table-layout: fixed;
+}
+.tbl_box.scroll table tbody tr th,
+.tbl_box.scroll table thead tr th:nth-child(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #f0f3f6;
+}
+.tbl_box.scroll table tbody tr th,
+.tbl_box.scroll table tbody tr td {
+    padding: 15px 0;
 }
 
 /* 테이블 타입2 :: 채용공고 */
@@ -1223,20 +1247,32 @@
     font-weight: 500;
     color: #908f8f;
 }
-.tbl_box_list ul li a .info_box  .post_info {
+.tbl_box_list ul li a .info_box .post_info {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
     margin-top: 15px;
 }
-.tbl_box_list ul li a .info_box  .post_info dl {
+.tbl_box_list ul li a .info_box .post_info dl {
     display: flex;
     gap: 5px;
 }
-.tbl_box_list ul li a .info_box  .post_info dl dt,
-.tbl_box_list ul li a .info_box  .post_info dl dd {
+.tbl_box_list ul li a .info_box .post_info dl dt,
+.tbl_box_list ul li a .info_box .post_info dl dd {
     font-size: 15px;
     font-weight: 300;
+    color: #908f8f;
+}
+.declaration_name dl {
+    display: flex;
+    margin-top: 10px;
+}
+.declaration_name dl dt {
+    font-weight: 500;
+    color: #908f8f;
+}
+.declaration_name dl dd {
+    margin-left: 10px;
     color: #908f8f;
 }
 
@@ -2207,6 +2243,19 @@
     background: url(../images/ico/ico_add.png) no-repeat center;
     margin-left: 8px;
     font-size: 14px;
+}
+.list_info ul li.on .btn_box > * {
+    background-color: #3949ab;
+    border-color: #3949ab;
+    color: #fff;
+}
+.list_info ul li .btn_box > *.btn_updown::after {
+    content: "▼";
+    margin-left: 5px;
+}
+.list_info ul li.on .btn_box > *.btn_updown::after {
+    content: "▲";
+    margin-left: 5px;
 }
 .tbl_card_list .list_info .total {
     font-size: 18px;

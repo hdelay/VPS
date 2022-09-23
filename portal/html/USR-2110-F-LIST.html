@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벤처투자종합포털</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub js -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+    <!-- skip nav -->
+    <div class="skip_nav" title="스킵 네비게이션">
+        <ul>
+            <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+            <li><a href="#conteiner" title="본문 바로가기">본문 바로가기</a></li>
+        </ul>
+    </div>
+
+    <!-- header -->
+    <header>
+        <div class="header_top">
+            <h1><a href="">벤처투자포털</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="">벤처투자매칭</a>
+                        <ul>
+                            <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
+                            <li><a href="./USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
+                            <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
+                            <li><a href="./USR-1040-F-DASH.html">통합공시</a></li>
+                            <li>
+                                <a href="./USR-1051-H-CONTN.html">벤처투자마트</a>
+                                <ul>
+                                    <li><a href="./USR-1051-H-CONTN.html">벤처투자마트란?</a></li>
+                                    <li><a href="./USR-1054-F-FORM.html">벤처투자마트 신청</a></li>
+                                    <li><a href="./USR-1056-F-LIST.html">신청 정보 확인</a></li>
+                                    <li><a href="./USR-1052-B-LIST.html">벤처투자마트 공지</a></li>
+                                    <li><a href="./USR-1053-B-LIST.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./USR-1061-H-CONTN.html">주식유통정보</a>
+                                <ul>
+                                    <li><a href="./USR-1061-H-CONTN.html">VC구주유통망</a></li>
+                                    <li><a href="./USR-1062-H-CONTN.html">구주거래정보망</a></li>
+                                    <li><a href="./USR-1063-H-CONTN.html">M&A 거래정보망</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">투자가이드</a>
+                        <ul>
+                            <li><a href="./USR-1110-H-CONTN.html">가이드 A to Z</a></li>
+                            <li><a href="./USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                            <li><a href="./USR-02-04-B-LIST.html">FAQ</a></li>
+                            <li><a href="./USR-1150-B-LIST.html">용어사전</a></li>
+                            <li><a href="./USR-1161-H-CONTN.html">교육</a></li>
+                            <li><a href="./USR-1162-B-LIST.html">벤처투자상담</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보서비스</a>
+                        <ul>
+                            <li><a href="./USR-1211-H-CONTN.html">정책</a></li>
+                            <li><a href="./USR-1213-H-CONTN.html">법령</a></li>
+                            <li>
+                                <a href="./USR-1220-F-DASH.html">통계</a>
+                                <ul>
+                                    <li><a href="./USR-1220-F-DASH.html">대시보드</a></li>
+                                    <li><a href="./USR-1221-F-DTL.html">투자실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./USR-1231-B-LIST.html">자료실</a>
+                                <ul>
+                                    <li><a href="./USR-1231-B-LIST.html">보고서</a></li>
+                                    <li><a href="./USR-1232-B-LIST.html">뉴스레터 웹진</a></li>
+                                    <li><a href="./USR-1234-B-LIST.html">발행물</a></li>
+                                    <li><a href="./USR-1235-B-LIST.html">서식</a></li>
+                                    <li><a href="./USR-1236-H-CONTN.html">프로그램</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./USR-1241-F-LIST.html">구인구직</a>
+                                <ul>
+                                    <li><a href="./USR-1241-F-LIST.html">채용공고</a></li>
+                                    <li><a href="./USR-1242-F-LIST.html">인력Pool</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./USR-1251-H-CONTN.html">업무처리지원</a>
+                                <ul>
+                                    <li><a href="./USR-1251-H-CONTN.html">VC 경력 확인</a></li>
+                                    <li><a href="./USR-1242-F-LIST.html">신청내역확인</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">벤처투자포털</a>
+                        <ul>
+                            <li><a href="./USR-1310-H-CONTN.html">포털소개</a></li>
+                            <li><a href="./USR-1320-B-LIST.html">공지사항</a></li>
+                            <li><a href="./USR-1330-F-LIST.html">커뮤니티</a></li>
+                            <li><a href="./USR-1341-F-LIST.html">벤처투자 TALK</a></li>
+                            <li>
+                                <a href="./USR-1350-F-FORM.html">벤처투자 부당행위 신고센터</a>
+                                <ul>
+                                    <li><a href="./USR-1350-F-FORM.html">부당행위 신고</a></li>
+                                    <li><a href="./USR-1350-F-LIST.html">신고내역확인</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./USR-1361-H-CONTN.html">유관기관 안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util_box">
+                <div class="search_box">
+                    <input type="text">
+                    <button>검색</button>
+                </div>
+                <a href="./USR-2210-F-LIST.html" class="btn_sitemap" title="사이트맵">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="" class="btn_allmenu" title="모바일 전체메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="btn_bottom">
+                <a href="" class="purple">한국벤처캐피탈협회</a>
+                <a href="" class="blue">벤처투자 업무지원</a>
+            </div>
+            <ul>
+                <li><a href="./USR-2020-F-FORM.html">로그인</a></li>
+                <li><a href="./USR-2010-F-FORM.html">회원가입</a></li>
+                <li><a href="./USR-2210-F-LIST.html">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="allmenu_box">
+            <div class="allmenu_box_header">
+                <div class="logo_m"><a href=""></a></div>
+                <div class="allmenu_util">
+                    <ul>
+                        <li class="login"><a href="">로그인</a></li>
+                        <li class="logout"><a href="">로그아웃</a></li>
+                        <li class="join"><a href="">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul>
+                <li class="on">
+                    <a href="">벤처투자매칭</a>
+                    <ul>
+                        <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
+                        <li><a href="./USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
+                        <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
+                        <li><a href="./USR-1040-F-DASH.html">통합공시</a></li>
+                        <li class="depth3">
+                            <a href="">벤처투자마트</a>
+                            <ul>
+                                <li><a href="./USR-1051-H-CONTN.html">벤처투자마트란?</a></li>
+                                <li><a href="./USR-1054-F-FORM.html">벤처투자마트 신청</a></li>
+                                <li><a href="./USR-1056-F-LIST.html">신청 정보 확인</a></li>
+                                <li><a href="./USR-1052-B-LIST.html">벤처투자마트 공지</a></li>
+                                <li><a href="./USR-1053-B-LIST.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="">주식유통정보</a>
+                            <ul>
+                                <li><a href="./USR-1061-H-CONTN.html">VC구주유통망</a></li>
+                                <li><a href="./USR-1062-H-CONTN.html">구주거래정보망</a></li>
+                                <li><a href="./USR-1063-H-CONTN.html">M&A 거래정보망</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">투자가이드</a>
+                    <ul>
+                        <li><a href="./USR-1110-H-CONTN.html">가이드 A to Z</a></li>
+                        <li><a href="./USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                        <li><a href="./USR-02-04-B-LIST.html">FAQ</a></li>
+                        <li><a href="./USR-1150-B-LIST.html">용어사전</a></li>
+                        <li><a href="./USR-1161-H-CONTN.html">교육</a></li>
+                        <li><a href="./USR-1162-B-LIST.html">벤처투자상담</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">정보서비스</a>
+                    <ul>
+                        <li><a href="./USR-1211-H-CONTN.html">정책</a></li>
+                        <li><a href="./USR-1213-H-CONTN.html">법령</a></li>
+                        <li class="depth3">
+                            <a href="">통계</a>
+                            <ul>
+                                <li><a href="./USR-1220-F-DASH.html">대시보드</a></li>
+                                <li><a href="./USR-1221-F-DTL.html">투자실적</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="">자료실</a>
+                            <ul>
+                                <li><a href="./USR-1231-B-LIST.html">보고서</a></li>
+                                <li><a href="./USR-1232-B-LIST.html">뉴스레터 웹진</a></li>
+                                <li><a href="./USR-1234-B-LIST.html">발행물</a></li>
+                                <li><a href="./USR-1235-B-LIST.html">서식</a></li>
+                                <li><a href="./USR-1236-H-CONTN.html">프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="">구인구직</a>
+                            <ul>
+                                <li><a href="./USR-1241-F-LIST.html">채용공고</a></li>
+                                <li><a href="./USR-1242-F-LIST.html">인력Pool</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="l">업무처리지원</a>
+                            <ul>
+                                <li><a href="./USR-1251-H-CONTN.html">VC 경력 확인</a></li>
+                                <li><a href="./USR-1242-F-LIST.html">신청내역확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">벤처투자포털</a>
+                    <ul>
+                        <li><a href="./USR-1310-H-CONTN.html">포털소개</a></li>
+                        <li><a href="./USR-1320-B-LIST.html">공지사항</a></li>
+                        <li><a href="./USR-1330-F-LIST.html">커뮤니티</a></li>
+                        <li><a href="./USR-1341-F-LIST.html">벤처투자 TALK</a></li>
+                        <li class="depth3">
+                            <a href="">벤처투자 부당행위 신고센터</a>
+                            <ul>
+                                <li><a href="./USR-1350-F-FORM.html">부당행위 신고</a></li>
+                                <li><a href="./USR-1350-F-LIST.html">신고내역확인</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./USR-1361-H-CONTN.html">유관기관 안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="" class="allmenu_close" title="닫기"><span></span><span></span></a>
+        </div>
+    </header>
+    <div class="header_bg"></div>
+
+    <!-- quick menu -->
+    <aside class="quick_box">
+        <ul>
+            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
+            <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
+            <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- conteiner -->
+    <div id="container" class="container type_03">
+        
+        <!-- sub title -->
+        <div class="tit_box sub_tit">
+            <h2>마이페이지</h2>
+            <span>모든 벤처 투자 정보를 하나로</span>
+        </div>
+        <!-- //sub title -->
+
+        <!-- main content -->
+        <div class="content_box">
+            
+            <!-- location -->
+            <div class="location">
+                <ul>
+                    <li class="home">
+                        <a href="">home</a>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:void(0);">통합검색</a>
+                        <ul>
+                            <li><a href="">통합검색</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="inner">
+
+                <div class="tit_box">
+                    <h3>통합검색</h3>
+                    <span>메뉴에 대한 설명을 상세하게 작성합니다.</span>
+                </div>
+    
+                <div class="search_page">
+
+                    <!-- 검색박스 -->
+                    <div class="search_box">
+
+                        <div class="inp_group">
+                            <div class="inp_box">
+                                <input type="text">
+                            </div>
+                            <div class="btn_box">
+                                <button class="btn_skyblue">검색</button>
+                            </div>
+                        </div>
+                        <div class="search_word">
+                            <span class="tit">내가 찾은 검색어</span>
+                            <a href="">벤처투자마트<span>삭제</span></a>
+                            <a href="">벤처투자마트<span>삭제</span></a>
+                        </div>
+
+                    </div>
+
+                    <!-- 검색결과 -->
+                    <div class="search_result_box">
+
+                        <div class="search_txt">
+                            <strong>"벤처투자마트"</strong>에 대한 검색 결과입니다.
+                        </div>
+
+                        <div class="tab_group">
+                            <div class="tab_btn">
+                                <ul>
+                                    <li class="on"><a href="" rel="tab_content_01">통합검색<span>(11)</span></a></li>
+                                    <li><a href="" rel="tab_content_02">벤처기업<span>(0)</span></a></li>
+                                    <li><a href="" rel="tab_content_03">투자자<span>(0)</span></a></li>
+                                    <li><a href="" rel="tab_content_04">용어사전<span>(1)</span></a></li>
+                                    <li><a href="" rel="tab_content_05">메뉴<span>(6)</span></a></li>
+                                    <li><a href="" rel="tab_content_06">게시글<span>(3)</span></a></li>
+                                    <li><a href="" rel="tab_content_07">콘텐츠<span>(3)</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="tab_content">
+        
+                                <!-- 첫번째 탭 -->
+                                <div class="on tab_content_01">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>용어사전<span>(총 1건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">"벤처투자마트"</span></dt>
+                                            <dd>
+                                                <a href="">
+                                                    <span class="result_txt">"벤처투자마트"</span>는 엔젤 및 VC투자 유치를 위한 초기 창업기업·중소기업-투자자 간 상담회 개최를 통해 기업에게는 투자유치 기회를, 투자자는 기업발굴 통로의 역할을 하는 프로그램입니다.
+                                                </a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //첫번째 탭 -->
+        
+                                <!-- 두번째 탭 -->
+                                <div class="tab_content_02">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //두번째 탭 -->
+        
+                                <!-- 세번째 탭 -->
+                                <div class="tab_content_03">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //세번째 탭 -->
+        
+                                <!-- 네번째 탭 -->
+                                <div class="tab_content_04">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //네번째 탭 -->
+        
+                                <!-- 다섯번째 탭 -->
+                                <div class="tab_content_05">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //다섯번째 탭 -->
+        
+                                <!-- 여섯번째 탭 -->
+                                <div class="tab_content_06">
+
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>메뉴<span>(총 6건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">벤처투자마트</span>란?</dt>
+                                            <dd><a href="">투자 유치가 필요한 초기 창업기업·중소기업에게 투자자와의 상담을 제공하는 서비스입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>FAQ</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>와 관련된 자주묻는 질문입니다.</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제목</dt>
+                                            <dd><a href=""><span class="result_txt">벤처투자마트</span>상세내용</a></dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //여섯번째 탭 -->
+        
+                                <!-- 일곱번째 탭 -->
+                                <div class="tab_content_07">
+                                    
+                                    <div class="result_box">
+                                        <div class="tit">
+                                            <strong>콘텐츠<span>(총 1건)</span></strong>
+                                        </div>
+                                        <dl>
+                                            <dt><span class="result_txt">"벤처투자마트"</span></dt>
+                                            <dd>
+                                                <a href="">
+                                                    <span class="result_txt">"벤처투자마트"</span>는 엔젤 및 VC투자 유치를 위한 초기 창업기업·중소기업-투자자 간 상담회 개최를 통해 기업에게는 투자유치 기회를, 투자자는 기업발굴 통로의 역할을 하는 프로그램입니다.
+                                                </a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="board_btn">
+                                        <!-- paging -->
+                                        <div class="paging_box">
+                                            <ul>
+                                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                <li class="on"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li><a href="">5</a></li>
+                                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //일곱번째 탭 -->
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- //main content -->
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_top">
+            <ul class="footer_link">
+                <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                <li><a href="">홈페이지 이용안내</a></li>
+                <li><a href="">저작권보호 및 이용정책</a></li>
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">찾아오시는길</a></li>
+            </ul>
+            <div class="familysite_box">
+                <div class="family_select">
+                    <select>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트좀더긴텍스트</option>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트</option>
+                    </select>
+                </div>
+                <button>GO</button>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <address>(06595) 서울특별시 서초구 서초대로 45길 16 VR빌딩 2층</address>
+            <div class="tel_num">
+                <dl>
+                    <dt>TEL : </dt>
+                    <dd>02)2156-2100</dd>
+                </dl>
+                <dl>
+                    <dt>FAX : </dt>
+                    <dd>02)2156-2110/2111</dd>
+                </dl>
+            </div>
+            <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</div>
+
+<!-- 쪽지보내기 팝업 -->
+<div id="note_01" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>쪽지보내기</h3>
+    </div>
+
+    <div class="tbl_box_data">
+        <table>
+            <caption>쪽지보내기</caption>
+            <colgroup>
+                <col width="20%;">
+                <col width="30%;">
+                <col width="20%;">
+                <col width="30%;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="radio_01">구분</label></th>
+                    <td colspan="3">투자제안</td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="input_02">제목</label></th>
+                    <td colspan="3">
+                        <div class="inp_box">
+                            <input type="text" id="input_02">
+                        </div>
+                    </td>
+                </tr>
+                <tr class="bg">
+                    <td colspan="4">
+                        <div class="inp_group">
+                            <div class="textarea_box cont">
+                                <textarea id="textarea_01"></textarea>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box">
+            <a href="" class="btn_mint shadow">저장</a>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_gray shadow pop_close">취소</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

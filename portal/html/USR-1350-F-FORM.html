@@ -360,7 +360,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row" rowspan="2"><label for="input_01">신고인</label></th>
+                                <th scope="row" colspan="2"><label for="sel_01">처리상태</label></th>
+                                <td colspan="3">
+                                    <div class="sel_box min">
+                                        <select id="sel_01">
+                                            <option value="">신고</option>
+                                            <option value="">셀렉트박스</option>
+                                            <option value="">셀렉트박스</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="2"><label for="input_01">신고인정보</label></th>
                                 <th scope="row"><label for="input_01">회사명</label></th>
                                 <td>
                                     <div class="inp_group">
@@ -369,7 +381,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th scope="row"><label for="input_02">이름<span class="req">*</span></label></th>
+                                <th scope="row"><label for="input_02">성명<span class="req">*</span></label></th>
                                 <td>
                                     <div class="inp_group">
                                         <div class="inp_box">
@@ -418,8 +430,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="input_03">피신고인</label></th>
-                                <th scope="row"><label for="input_03">회사명</label></th>
+                                <th scope="row"><label for="input_03">신고대상정보</label></th>
+                                <th scope="row"><label for="input_03">기관명</label></th>
                                 <td>
                                     <div class="inp_group">
                                         <div class="inp_box">
@@ -427,7 +439,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th scope="row"><label for="input_04">이름<span class="req">*</span></label></th>
+                                <th scope="row"><label for="input_04">성명<span class="req">*</span></label></th>
                                 <td>
                                     <div class="inp_group">
                                         <div class="inp_box">
@@ -437,7 +449,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5">
+                                <th scope="row" colspan="2"><label for="textarea_01">신고내용<span class="req">*</span></label></th>
+                                <td colspan="3">
                                     <div class="inp_group">
                                         <div class="textarea_box cont">
                                             <textarea id="textarea_01"></textarea>
@@ -446,7 +459,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5">
+                                <th scope="row" colspan="2"><label for="file_inp">첨부파일<span class="req">*</span></label></th>
+                                <td colspan="3">
                                     <div class="inp_group file">
                                         <div class="file_box">
                                             <input type="file" id="file_inp" class="file_inp">

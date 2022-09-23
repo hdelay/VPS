@@ -921,6 +921,16 @@ header.headerfix .header_bottom ul li a::before {
 .disclosure_box .btn_list button.on span::before {
     background-color: #fff;
 }
+.disclosure_box .btn_list.type_02 {
+    flex-wrap: wrap;
+    gap: 20px 50px;
+}
+.disclosure_box .btn_list.type_02 > * {
+    width: calc((100% / 5) - 40px);
+}
+.disclosure_box + .tit_box {
+    margin-top: 80px;
+}
 
 /* 법령 */
 .ico_list {
@@ -1141,6 +1151,107 @@ a.ico_folder::after {
     width: auto;
 }
 
+/* 통계 */
+.statistics_box {
+    padding: 60px 50px;
+    background: url(../images/bg/bg_statistics_box.png) no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 15px;
+}
+.statistics_box ul {
+    display: flex;
+}
+.statistics_box ul li {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    color: #fff;
+}
+.statistics_box ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .3);
+}
+.statistics_box ul li:first-child::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .3);
+}
+.statistics_box ul li span {
+    font-size: 22px;
+    font-weight: 500;
+}
+.statistics_box ul li strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+.performance_box .chart_group_box {
+    padding: 30px;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 40px;
+}
+
+/* 통계 - 투자실적 */
+.investment_performance_box {
+    display: flex;
+    gap: 50px;
+}
+.investment_performance_box > div {
+    width: calc(50% - 25px);
+    padding: 30px;
+    border: 1px solid #d9e0e6;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.investment_performance_box .left {
+    display: flex;
+    flex-direction: column;
+}
+.investment_performance_box .left .chart {
+    height: 100%;
+}
+.investment_performance_box .left .btn_list {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.investment_performance_box .left .btn_list li * {
+    display: flex;
+    padding: 5px 20px;
+    background-color: #fff;
+    border: 1px solid #d9e0e6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.investment_performance_box .left .btn_list li.on * {
+    background-color: #1c44c8;
+    border-color: #1c44c8;
+    color: #fff;
+}
+.investment_performance_box .right .tbl_info_etc {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
 /* 커뮤니티 */
 .community_main_btn {
     display: flex;
@@ -1246,6 +1357,49 @@ a.ico_folder::after {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+/* 내 커뮤니티 목록 */
+.community_btn_list {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #d9e1e7;
+}
+.community_btn_list ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.community_btn_list ul li .sel_box {
+    width: 170px;
+}
+.community_btn_list ul li .sel_box select {
+    padding: 15px;
+}
+.community_btn_list ul li .btn_box {
+    min-width: 170px;
+    width: auto;
+}
+.community_btn_list ul li .btn_box > * {
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+.community_btn_list ul li .btn_box > *.comu_add {
+    align-items: center;
+}
+.community_btn_list ul li .btn_box > *.comu_add::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url(../images/ico/ico_add.png) no-repeat center;
+    margin-left: 8px;
+    font-size: 14px;
 }
 
 /* 벤처투자 Talk */
@@ -3010,6 +3164,211 @@ a.ico_folder::after {
     background-color: #5c6bc0;
 }
 
+/* 통합검색 */
+.search_page .search_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    box-sizing: border-box;
+    background-color: #f0f3f6;
+    border-radius: 5px;
+}
+.search_page .search_box .inp_group {
+    display: flex;
+    width: 55%;
+}
+.search_page .search_box .inp_group .inp_box {
+    width: calc(100% - 125px);
+    height: 43px;
+}
+.search_page .search_box .inp_group .btn_box {
+    width: 110px;
+    flex: none;
+}
+.search_page .search_box .search_word {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 55%;
+    gap: 10px;
+    margin-top: 10px;
+}
+.search_page .search_box .search_word .tit {
+    display: flex;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #615a53;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+.search_page .search_box .search_word .tit::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #615a53;
+    transform: rotate(45deg) translateY(-80%);
+}
+.search_page .search_box .search_word a {
+    display: flex;
+    align-items: center;
+}
+.search_page .search_box .search_word a span {
+    display: flex;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #827c77;
+    text-indent: -9999px;
+    margin-left: 5px;
+}
+.search_page .search_box .search_word a span::before,
+.search_page .search_box .search_word a span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    width: 10px;
+    height: 1px; 
+    background-color: #fff;
+}
+.search_page .search_box .search_word a span::before {
+    transform: rotate(-45deg);
+}
+.search_page .search_box .search_word a span::after {
+    transform: rotate(45deg);
+}
+.search_result_box {
+    margin-top: 60px;
+}
+.search_result_box .tab_group .tab_content > div {
+    padding-top: 0;
+}
+.search_result_box .tab_group .tab_btn ul > li > a span {
+    font-size: 22px;
+    font-weight: 500;
+}
+.search_result_box .search_txt {
+    font-weight: 500;
+}
+.search_result_box .search_txt strong {
+    font-weight: 600;
+    color: #2850d3;
+}
+.search_result_box .result_box {
+    padding: 40px 0;
+    border-bottom: 1px dashed #dadada;
+}
+.search_result_box .result_box .tit {
+    margin-bottom: 25px;
+}
+.search_result_box .result_box .tit strong {
+    font-size: 20px;
+    font-weight: 600;
+}
+.search_result_box .result_box .tit strong span {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.search_result_box .result_box dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.search_result_box .result_box dl + dl {
+    margin-top: 30px;
+}
+.search_result_box .result_box dl dt {
+    font-size: 17px;
+    font-weight: 600;
+}
+.search_result_box .result_box dl dt .result_txt {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2850d3;
+}
+.search_result_box .result_box dl:hover a,
+.search_result_box .result_box dl a:focus {
+    text-decoration: underline;
+}
+
+/* 사이트맵 */
+.sitemap_box {
+    display: flex;
+    gap: 50px;
+}
+.sitemap_box dl {
+    flex: 1;
+}
+.sitemap_box dl dt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #456cb6;
+    font-size: 20px;
+    font-weight: 600;
+    color: #456cb6;
+}
+.sitemap_box dl dd > ul > li + li {
+    border-top: 1px dashed #cfcfcf;
+}
+.sitemap_box dl dd > ul > li:last-child {
+    border-bottom: 1px dashed #cfcfcf;
+}
+.sitemap_box dl dd > ul > li > a {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+.sitemap_box dl dd > ul > li > a::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: #333;
+}
+.sitemap_box dl dd > ul > li > ul {
+    padding: 30px 25px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+}
+.sitemap_box dl dd > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sitemap_box dl dd > ul > li > ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+}
+.sitemap_box dl dd > ul > li > ul li a::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin-right: 8px;
+    background-color: #666;
+    border-radius: 50%;
+}
+
 /* quick menu */
 .quick_box {
     display: flex;
@@ -4038,6 +4397,17 @@ footer .footer_bottom {
     .disclosure_box .btn_list button span {
         font-size: 17px;
     }
+    .disclosure_box .btn_list.type_02 {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    .disclosure_box .btn_list.type_02 > * {
+        flex: none;
+        width: calc((100% / 2) - 10px);
+    }
+    .disclosure_box + .tit_box span {
+        font-size: 14px;
+    }
 
     /* 법령 */
     .ico_list {
@@ -4103,6 +4473,56 @@ footer .footer_bottom {
         padding: 25px 0;
     }
 
+    /* 통계 */
+    .statistics_box {
+        padding: 15px;
+        background: url(../images/bg/bg_statistics_box_02.png) no-repeat;
+        background-size: auto 100%;
+    }
+    .statistics_box ul {
+        flex-direction: column;
+    }
+    .statistics_box ul li {
+        gap: 5px;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+    .statistics_box ul li:first-child::before {
+        width: 100%;
+        height: 1px;
+    }
+    .statistics_box ul li::after {
+        top: inherit;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+    }
+    .statistics_box ul li span {
+        font-size: 18px;
+    }
+    .statistics_box ul li strong {
+        font-size: 14px;
+    }
+    .disclosure_box + .tit_box {
+        margin-top: 30px;
+    }
+    .performance_box .btn_box_group {
+        flex-direction: column;
+    }
+
+    /* 통계 - 투자실적 */
+    .investment_performance_box {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .investment_performance_box > div {
+        width: 100%;
+        padding: 15px;
+    }
+    .investment_performance_box .left .btn_list li * {
+        padding: 5px 10px;
+    }
+
     /* 커뮤니티 */
     .tbl_longcard > ul > li > a .tit span {
         font-size: 12px;
@@ -4143,6 +4563,23 @@ footer .footer_bottom {
     }
     .community_content dl dd ul li span {
         font-size: 13px;
+    }
+
+    /* 내 커뮤니티 */
+    .community_btn_list ul {
+        justify-content: flex-start;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .community_btn_list ul li {
+        width: calc(50% - 5px);
+    }
+    .community_btn_list ul li .btn_box {
+        min-width: 0;
+    }
+    .community_btn_list ul li .btn_box > * {
+        padding: 15px 10px;
+        font-size: 12px;
     }
 
     /* 벤처투자 Talk */
@@ -4814,6 +5251,79 @@ footer .footer_bottom {
     }
     .comu_calendar .btn_box_group .btn_box a {
         padding: 15px 0;
+    }
+
+    /* 통합검색 */
+    .search_page .search_box {
+        padding: 15px;
+    }
+    .search_page .search_box .inp_group {
+        width: 100%;
+    }
+    .search_page .search_box .inp_group .inp_box {
+        width: 100%;
+    }
+    .search_page .search_box .inp_group .btn_box {
+        width: 100%;
+    }
+    .search_page .search_box .inp_group .btn_box * {
+        font-size: 15px;
+    }
+    .search_page .search_box .search_word {
+        width: 100%;
+        gap: 5px;
+    }
+    .search_page .search_box .search_word .tit {
+        font-size: 14px;
+    }
+    .search_page .search_box .search_word a {
+        font-size: 14px;
+    }
+    .search_result_box .tab_group .tab_btn ul > li > a span {
+        font-size: 18px;
+    }
+    .search_result_box .result_box {
+        padding: 20px 0;
+    }
+    .search_result_box .result_box .tit {
+        margin-bottom: 15px;
+    }
+    .search_result_box .result_box dl dd {
+        font-size: 15px;
+    }
+
+    /* 사이트맵 */
+    .sitemap_box {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .sitemap_box dl {
+        flex: none;
+        width: calc(50% - 5px);
+    }
+    .sitemap_box dl dt {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+    .sitemap_box dl dd > ul > li > a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .sitemap_box dl dd > ul > li > a::before {
+        width: 7px;
+        margin-right: 5px;
+    }
+    .sitemap_box dl dd > ul > li > ul {
+        gap: 5px;
+        padding: 10px;
+    }
+    .sitemap_box dl dd > ul > li > ul li a {
+        font-size: 13px;
+    }
+    .sitemap_box dl dd > ul > li > ul li a::before {
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
     }
 
     /* 팝업 */

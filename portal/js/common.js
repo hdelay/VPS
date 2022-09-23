@@ -112,13 +112,24 @@ $(function(){
         if($('.header_bg').mouseover()){
             $('body').addClass('gnb_open');
         }
+        const arryHeaderHeight = [
+            $('header .header_top nav > ul > li').eq(0).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(1).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(2).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(3).find('ul').height()
+        ];
+        const heightMax = Math.max.apply(null, arryHeaderHeight);
+        $('.gnb_open .header_bg').css({'height': heightMax + 115});
+
     }, function(){
         $('.header_bg').mouseout(function(){ // 마우스가 배경밖으로 나갔을 경우
             $('body').removeClass('gnb_open');
+            $('.header_bg').css({'height': '0'});
         });
     });
     $(document).bind("mouseleave", function(){ // 마우스가 브라우저 밖으로 나갔을 경우
         $('body').removeClass('gnb_open');
+        $('.header_bg').css({'height': '0'});
     })
 
     // 탭키시 gnb 오픈
@@ -437,6 +448,28 @@ $(function(){
     $('.disclosure_box .btn_list button').on('click', function(){
         $('.disclosure_box .btn_list button').removeClass('on');
         $(this).addClass('on');
+    });
+
+    // 버튼 on/off
+    $('.list_info .btn_box *').on('click', function(){
+        $(this).parent().parent().toggleClass('on');
+        if($(this).parent().parent().hasClass('on')){
+            $(this).parent().parent().siblings().removeClass('on');
+        }
+    });
+
+    // 투자실력 버튼
+    $('.investment_performance_box .left .btn_list li *').on('click', function(){
+        $(this).parent().toggleClass('on');
+        if($(this).parent().hasClass('on')){
+            $(this).parent().siblings().removeClass('on');
+        }
+    });
+
+    // 통합검색 remove
+    $('.search_page .search_box .search_word a').on('click', function(e){
+        e.preventDefault();
+        $(this).remove();
     });
 
 });
