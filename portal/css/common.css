@@ -301,7 +301,7 @@
     letter-spacing: -3px;
 }
 .tit_box h3 {
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: -2.5px;
@@ -351,6 +351,9 @@
 .content_list_box dl + dl {
     margin-top: 30px;
 }
+.content_list_box dl dt span {
+    font-weight: 500;
+}
 .content_list_box.type_02 dl {
     padding: 25px 35px;
     box-sizing: border-box;
@@ -371,17 +374,21 @@
 .content_list_box dl dd p + ul {
     margin-top: 20px;
 }
-.content_list_box dl dd ul {
+.content_list_box ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 20px;
 }
-.content_list_box dl dd ul li {
+.content_list_box dl ul {
+    padding-left: 0;
+}
+.content_list_box ul > li {
     position: relative;
     padding-left: 20px;
     box-sizing: border-box;
 }
-.content_list_box dl dd ul li::before {
+.content_list_box ul > li::before {
     content: "";
     display: block;
     position: absolute;
