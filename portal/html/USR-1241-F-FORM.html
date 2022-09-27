@@ -83,12 +83,12 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="./USR-1231-B-LIST.html">자료실</a>
+                                <a href="./USR-1231-B-LIST.html">정보광장</a>
                                 <ul>
-                                    <li><a href="./USR-1231-B-LIST.html">보고서</a></li>
+                                    <li><a href="./USR-1231-B-LIST.html">통계/연구 보고서</a></li>
                                     <li><a href="./USR-1232-B-LIST.html">뉴스레터 웹진</a></li>
                                     <li><a href="./USR-1234-B-LIST.html">발행물</a></li>
-                                    <li><a href="./USR-1235-B-LIST.html">서식</a></li>
+                                    <li><a href="./USR-1235-B-LIST.html">자료실</a></li>
                                     <li><a href="./USR-1236-H-CONTN.html">프로그램</a></li>
                                 </ul>
                             </li>
@@ -218,12 +218,12 @@
                             </ul>
                         </li>
                         <li class="depth3">
-                            <a href="javascript:void(0);">자료실</a>
+                            <a href="javascript:void(0);">정보광장</a>
                             <ul>
-                                <li><a href="./USR-1231-B-LIST.html">보고서</a></li>
+                                <li><a href="./USR-1231-B-LIST.html">통계/연구 보고서</a></li>
                                 <li><a href="./USR-1232-B-LIST.html">뉴스레터 웹진</a></li>
                                 <li><a href="./USR-1234-B-LIST.html">발행물</a></li>
-                                <li><a href="./USR-1235-B-LIST.html">서식</a></li>
+                                <li><a href="./USR-1235-B-LIST.html">자료실</a></li>
                                 <li><a href="./USR-1236-H-CONTN.html">프로그램</a></li>
                             </ul>
                         </li>
@@ -346,19 +346,19 @@
                                         <div class="rdo_box">
                                             <span>
                                                 <input type="radio" id="radio_01" name="rdo_group_01">
-                                                <label for="radio_01">구분1</label>
+                                                <label for="radio_01">투자사</label>
                                             </span>
                                             <span>
                                                 <input type="radio" id="radio_02" name="rdo_group_01">
-                                                <label for="radio_02">구분2</label>
+                                                <label for="radio_02">벤처기업</label>
                                             </span>
                                             <span>
                                                 <input type="radio" id="radio_03" name="rdo_group_01">
-                                                <label for="radio_03">구분3</label>
+                                                <label for="radio_03">중소기업</label>
                                             </span>
                                             <span>
                                                 <input type="radio" id="radio_04" name="rdo_group_01">
-                                                <label for="radio_04">구분4</label>
+                                                <label for="radio_04">기관/협회</label>
                                             </span>
                                         </div>
                                     </div>
@@ -366,8 +366,12 @@
                                 <th scope="row"><label for="input_01">채용구분</label></th>
                                 <td>
                                     <div class="inp_group">
-                                        <div class="inp_box">
-                                            <input type="text" id="input_01">
+                                        <div class="sel_box">
+                                            <select>
+                                                <option value="">선택</option>
+                                                <option value="">신입</option>
+                                                <option value="">경력</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
@@ -382,17 +386,37 @@
                             </tr>
                             <tr>
                                 <th scope="row"><label for="input_03">기업/기관명</label></th>
-                                <td colspan="3">
+                                <td>
                                     <div class="inp_box">
                                         <input type="text" id="input_03">
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="input_01">등록일자</label></th>
+                                <td>
+                                    <div class="inp_box">
+                                        <input type="text" id="input_0222" value="작성일자 자동표시" disabled>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row"><label for="input_04">채용 마감일</label></th>
                                 <td>
-                                    <div class="inp_box datepicker_box">
-                                        <input type="text" id="input_04" class="datepicker_day">
+                                    <div class="inp_group period_chk">
+                                        <div class="inp_group period">
+                                            <div class="inp_box datepicker_box">
+                                                <input type="text" id="input_0333" class="datepicker_start">
+                                            </div>
+                                            <span>~</span>
+                                            <div class="inp_box datepicker_box">
+                                                <input type="text" id="input_0444" class="datepicker_end">
+                                            </div>
+                                        </div>
+                                        <div class="chk_box">
+                                            <span>
+                                                <input type="checkbox" id="chk_01">
+                                                <label for="chk_01">상시채용</label>
+                                            </span>
+                                        </div>
                                     </div>
                                 </td>
                                 <th scope="row"><label for="radio_001">채용인원</label></th>

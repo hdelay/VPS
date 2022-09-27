@@ -828,109 +828,6 @@ header.headerfix .header_bottom ul li a::before {
     flex: none;
     padding: 10px 20px;
 }
-.integrated_box .integrated_item {
-    margin-top: 50px;
-}
-.integrated_box .integrated_item .txt {
-    padding-left: 20px;
-}
-.integrated_count {
-    display: flex;
-    gap: 30px;
-    margin-top: 30px;
-}
-.integrated_count dl {
-    display: flex;
-    flex-direction: column;
-    width: calc(50% - 15px);
-}
-.integrated_count dl dt {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 10px;
-}
-.integrated_count dl dt strong {
-    font-size: 17px;
-    font-weight: 500;
-}
-.integrated_count dl dt span {
-    font-size: 14px;
-}
-.integrated_item .tit_box.row {
-    align-items: baseline;
-    margin-bottom: 35px;
-}
-.integrated_item .tit_box.row h4 {
-    margin-bottom: 0;
-}
-.integrated_item .tit_box.row span {
-    font-size: 14px;
-}
-.disclosure_box .btn_list {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.disclosure_box .btn_list > div {
-    display: flex;
-    gap: 10px;
-}
-.disclosure_box .btn_list button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 165px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    border: 2px solid #8aa7ff;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.disclosure_box .btn_list button.on {
-    background-color: #3949ab;
-    border-color: #3949ab;
-}
-.disclosure_box .btn_list button strong {
-    font-size: 15px;
-    font-weight: 500;
-}
-.disclosure_box .btn_list button.on strong {
-    color: #fff;
-}
-.disclosure_box .btn_list button span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 22px;
-    font-weight: 500;
-    color: #3949ab;
-}
-.disclosure_box .btn_list button.on span {
-    color: #fff;
-}
-.disclosure_box .btn_list button span::before {
-    content: "";
-    display: block;
-    width: 13px;
-    height: 2px;
-    background-color: #3949ab;
-    margin: 9px 0 5px;
-}
-.disclosure_box .btn_list button.on span::before {
-    background-color: #fff;
-}
-.disclosure_box .btn_list.type_02 {
-    flex-wrap: wrap;
-    gap: 20px 50px;
-}
-.disclosure_box .btn_list.type_02 > * {
-    width: calc((100% / 5) - 40px);
-}
-.disclosure_box + .tit_box {
-    margin-top: 80px;
-}
 
 /* 법령 */
 .ico_list {
@@ -1152,6 +1049,33 @@ a.ico_folder::after {
     font-size: 22px;
     font-weight: 500;
     color: #fff;
+}
+.vc_faq + .btn_box_group .btn_box {
+    width: auto;
+}
+.vc_faq + .btn_box_group .btn_box * {
+    padding: 10px 20px;
+}
+.vc_tel dl {
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.vc_tel dl dt {
+    font-weight: 500;
+}
+.vc_tel dl dt::after {
+    content: ":";
+}
+.vc_tel dl dd {
+    font-size: 15px;
+    font-weight: 400;
+}
+.vc_tel dl dd strong {
+    font-weight: 500;
+}
+.vc_tel dl + dl {
+    margin-top: 10px;
 }
 
 /* M&A 거래정보망 */
@@ -4712,38 +4636,6 @@ footer .footer_bottom {
         width: 100%;
         overflow: auto;
     }
-    .integrated_count {
-        flex-direction: column;
-    }
-    .integrated_count dl {
-        width: 100%;
-    }
-    .disclosure_box .btn_list {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-    .disclosure_box .btn_list > div {
-        width: 100%;
-    }
-    .disclosure_box .btn_list button {
-        flex: 1;
-        width: auto;
-        padding: 10px;
-    }
-    .disclosure_box .btn_list button span {
-        font-size: 17px;
-    }
-    .disclosure_box .btn_list.type_02 {
-        gap: 10px;
-        justify-content: flex-start;
-    }
-    .disclosure_box .btn_list.type_02 > * {
-        flex: none;
-        width: calc((100% / 2) - 10px);
-    }
-    .disclosure_box + .tit_box span {
-        font-size: 14px;
-    }
 
     /* 법령 */
     .ico_list {
@@ -4823,6 +4715,17 @@ footer .footer_bottom {
         height: 23px;
         font-size: 15px;
     }
+    .content_list_box .vc_tel {
+        padding: 15px;
+    }
+    .vc_tel dl {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .vc_tel dl dd {
+        word-break: keep-all;
+    }
 
     /* M&A 거래정보망 */
     .list_item .mna_box {
@@ -4895,9 +4798,6 @@ footer .footer_bottom {
     }
     .statistics_box ul li strong {
         font-size: 14px;
-    }
-    .disclosure_box + .tit_box {
-        margin-top: 30px;
     }
     .performance_box .btn_box_group {
         flex-direction: column;

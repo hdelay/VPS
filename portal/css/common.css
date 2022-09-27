@@ -294,6 +294,10 @@
     display: flex;
     justify-content: space-between;
 }
+.tit_box.row > .txt_etc {
+    margin-top: 4px;
+    font-size: 14px;
+}
 .tit_box h2 {
     font-family: 'koreanAH3';
     font-weight: 700;
@@ -854,7 +858,7 @@
 }
 .inp_group .txt_warning {
     position: relative;
-    width: 100%;
+    width: 100% !important;
     padding-left: 25px;
     line-height: 20px;
     font-size: 13px;
@@ -973,6 +977,19 @@
 }
 .inp_group.period .inp_box {
     width: 180px;
+}
+.inp_group.period_chk {
+    display: flex;
+    justify-content: space-between;
+}
+.inp_group.period_chk .period {
+    width: calc(100% - 90px);
+}
+.inp_group.period_chk .period .inp_box {
+    width: calc(50% - 10px);
+}
+.inp_group.period_chk .chk_box span {
+    width: auto;
 }
 
 .image_file_box ul {
@@ -1288,6 +1305,9 @@
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
+.tit_box + .tbl_box_detail {
+    margin-top: 40px;
+}
 .tbl_box_detail table {
     width: 100%;
 }
@@ -1373,6 +1393,33 @@
 .tbl_box_detail.type_02 table tr th:last-child,
 .tbl_box_detail.type_02 table tr td:last-child {
     border-right: none;
+}
+.tbl_box_detail table tr.back_next_box td {
+    padding: 0;
+}
+.back_next_box dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.back_next_box dl + dl {
+    border-top: 1px solid #e2e2e2;
+}
+.back_next_box dl dt {
+    margin-right: 20px;
+    font-weight: 500;
+}
+.back_next_box dl dd {
+    width: calc(100% - 70px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
+}
+.back_next_box dl dd a {
+    font-weight: 400;
 }
 
 /* 공통게시판 타입  */
@@ -1824,7 +1871,7 @@
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(33.33% - 20px);
+    width: calc((100% / 4) - 23px);
     padding: 30px 20px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1843,7 +1890,7 @@
 .tbl_card > ul > li .txt {
     display: flex;
     flex-direction: column;
-    padding: 20px 0 30px;
+    padding: 20px 0 0;
 }
 .tbl_card > ul > li .txt strong {
     font-size: 20px;
@@ -1861,7 +1908,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 .tbl_card > ul > li .txt:hover strong,
@@ -3033,11 +3080,21 @@ a.ui-button:active,
     .image_file_box ul li {
         width: 100%;
     }
+    .inp_group.rdo_inp .inp_box {
+        width: 100%;
+        margin-left: 0;
+    }
     .inp_group.inp_num .textarea_box,
     .inp_group.inp_num .inp_box {
         width: 100%;
     }
     .inp_group.inp_num .count {
+        width: 100%;
+    }
+    .inp_group.period_chk {
+        flex-direction: column;
+    }
+    .inp_group.period_chk .period {
         width: 100%;
     }
 
@@ -3268,6 +3325,16 @@ a.ui-button:active,
     .tbl_box_detail.type_02 table tr td {
         width: 100%;
         border-right: none;
+    }
+    .back_next_box dl {
+        padding: 10px 0;
+    }
+    .back_next_box dl dt {
+        font-size: 14px;
+    }
+    .back_next_box dl dd,
+    .back_next_box dl dd a {
+        font-size: 14px;
     }
     
     /* 테이블 등록/수정 */
