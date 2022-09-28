@@ -501,6 +501,7 @@ header.headerfix .header_bottom ul li a::before {
 }
 .board_infobox .search_box .sel_box {
     border-radius: 12px 0 0 12px;
+    height: 60px;
 }
 .board_infobox .search_box .sel_box select {
     border-radius: 12px 0 0 12px;
@@ -1134,6 +1135,135 @@ a.ico_folder::after {
 .dictionary_box li:hover a {
     background-color: #01349a;
     color: #fff;
+}
+
+/* 교육 */
+.edu_box .bg_box {
+    padding: 25px 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #f6f7f9;
+}
+.edu_box .search_item:nth-child(1) .bg_box {
+    display: flex;
+    gap: 20px;
+}
+.edu_box .bg_box .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 275px;
+    height: 162px;
+    border-radius: 10px;
+}
+.edu_box .bg_box .right {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 295px);
+    line-height: 30px;
+}
+.edu_box .bg_box .right p {
+    word-break: keep-all;
+    font-size: 17px;
+    font-weight: 400;
+}
+.edu_box .search_item:nth-child(2) p {
+    padding-left: 25px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    font-size: 17px;
+    font-weight: 400;
+}
+.edu_box .search_item .check_box {
+    background: url(../images/content/bg_check.png);
+}
+.edu_box .search_item .check_box.brown {
+    background-color: #a47260;
+    border: 3px solid #f8e3db;
+}
+.edu_box .search_item .check_box.orange {
+    background-color: #fb832b;
+    border: 3px solid #ffbb88;
+}
+.edu_box .search_item .check_box.blue {
+    background-color: #105ab5;
+    border: 3px solid #c7defb;
+}
+.edu_box .search_item .check_box.green {
+    background-color: #50a42e;
+    border: 3px solid #d6ffc5;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl + dl {
+    margin-top: 20px;
+}
+.edu_box .search_item:nth-child(2) .bg_box dt {
+    padding: 15px 0 30px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(1) dd {
+    display: flex;
+    justify-content: center;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(1) dd .check_box {
+    width: auto;
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    font-size: 19px;
+    font-weight: 600;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd .check_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    word-break: keep-all;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd .check_box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -103px;
+    width: 100px;
+    height: 1px;
+    background-color: #d9e0e6;
+}
+.edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd .check_box:last-child::after {
+    display: none;
+}
+.edu_box .search_item:nth-child(2) .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.edu_box .search_item:nth-child(3) .content_list_box .list_item .btn_box {
+    margin: 0;
+    justify-content: flex-start;
+}
+.edu_box .search_item:nth-child(3) .content_list_box .list_item .btn_box * {
+    width: auto;
+    flex: none;
+    padding: 10px 20px;
 }
 
 /* 뉴스레터 웹진 */
@@ -4525,12 +4655,19 @@ footer .footer_bottom {
     }
     .board_infobox .search_box .sel_box {
         width: 100%;
+        height: 45px;
+    }
+    .board_infobox .search_box .sel_box:nth-child(2) {
+        width: calc(100% - 60px);
     }
     .board_infobox .search_box .sel_box select {
         border-radius: 5px 5px 0 0;
         border-right: none;
         border-bottom: 2px solid #609de9;
         height: 45px;
+    }
+    .board_infobox .search_box .sel_box:nth-child(2) select {
+        border-bottom: none;
     }
     .board_infobox .search_box input {
         width: calc(100% - 60px);
@@ -4740,6 +4877,53 @@ footer .footer_bottom {
     }
     .chk_list.type_02 .dictionary_box li {
         padding: 0;
+    }
+
+    /* 교육 */
+    .edu_box .bg_box {
+        padding: 15px;
+    }
+    .edu_box .search_item:nth-child(1) .bg_box {
+        flex-direction: column;
+    }
+    .edu_box .bg_box .left {
+        width: 100%;
+    }
+    .edu_box .bg_box .right {
+        width: 100%;
+    }
+    .edu_box .bg_box .right p {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .edu_box .search_item:nth-child(2) p {
+        padding-left: 0;
+        font-size: 15px;
+    }
+    .edu_box .search_item:nth-child(2) .img {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+    .edu_box .search_item:nth-child(2) .bg_box dl:nth-child(1) dd .check_box {
+        padding: 15px;
+        word-break: keep-all;
+        text-align: center;
+        font-size: 16px;
+    }
+    .edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd {
+        gap: 15px;
+    }
+    .edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd .check_box {
+        width: 135px;
+        height: 135px;
+        font-size: 16px;
+    }
+    .edu_box .search_item:nth-child(2) .bg_box dl:nth-child(2) dd .check_box::after {
+        display: none;
+    }
+
+    .edu_box .search_item:nth-child(3) .content_list_box .list_item .btn_box * {
+        font-size: 14px;
     }
 
     /* 뉴스레터 웹진 */

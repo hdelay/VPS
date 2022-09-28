@@ -343,6 +343,9 @@
 .content_list_box .tit_box h4 {
     margin: 35px 0 20px;
 }
+.content_list_box .list_item + .list_item {
+    margin-top: 30px;
+}
 .content_list_box dl {
     display: flex;
     flex-direction: column;
@@ -1262,14 +1265,14 @@
     padding: 35px 0 25px;
 }
 .tbl_box_list ul li a .info_box .tit {
+    display: flex;
+    align-items: center;
     font-size: 22px;
     font-weight: 500;
 }
-.tbl_box_list ul li a .info_box .tit span {
-    margin-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
-    color: #908f8f;
+.tbl_box_list ul li a .info_box .tit .state_box {
+    display: flex;
+    align-items: center;
 }
 .tbl_box_list ul li a .info_box .post_info {
     display: flex;
@@ -1484,6 +1487,16 @@
     position: absolute;
     bottom: 25px;
     right: 25px;
+}
+.tbl_longcard > ul > li .info > .state {
+    text-align: right;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 .tbl_longcard > ul > li .info > ul {
     display: flex;
@@ -3536,12 +3549,8 @@ a.ui-button:active,
     }
     .tbl_box_list ul li a .info_box .tit {
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         font-size: 17px;
-    }
-    .tbl_box_list ul li a .info_box .tit span {
-        margin-left: 0;
-        font-size: 14px;
     }
     .tbl_box_list ul li a .info_box .post_info dl dt,
     .tbl_box_list ul li a .info_box .post_info dl dd {
