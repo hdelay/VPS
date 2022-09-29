@@ -2760,6 +2760,12 @@
 }
 .paging_box + .btn_box * {
     padding: 10px 20px;
+    width: auto;
+    flex: none;
+    min-width: 160px;
+}
+.paging_box + .btn_box * + * {
+    margin-left: 10px;
 }
 
 .btn_state_box {
@@ -3023,6 +3029,9 @@ a.ui-button:active,
         top: 5px;
         width: 6px;
         height: 6px;
+    }
+    .content_list_box .content {
+        padding: 15px;
     }
 
     /* sel_box 셀렉트박스 */
@@ -3737,6 +3746,12 @@ a.ui-button:active,
     .board_btn .paging_box + .btn_box {
         position: inherit;
         width: 100%;
+    }
+    .board_btn .paging_box + .btn_box * {
+        flex: 1;
+        min-width: 0;
+        padding: 10px;
+        font-size: 16px;
     }
 
     .btn_state_box {
