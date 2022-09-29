@@ -499,6 +499,13 @@ header.headerfix .header_bottom ul li a::before {
     border-radius: 15px;
     border: 2px solid #609de9;
 }
+.board_infobox .search_box .sel_group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.board_infobox .search_box .sel_group .sel_box {
+    min-width: 130px;
+}
 .board_infobox .search_box .sel_box {
     border-radius: 12px 0 0 12px;
     height: 60px;
@@ -1287,6 +1294,53 @@ a.ico_folder::after {
 }
 .newsletter_btn li:nth-child(2) a {
     background-color: #b785d9;
+}
+
+/* 프로그램 */
+.program_box .program_name {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.program_box .program_name::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 26px;
+    background: no-repeat center right;
+}
+.program_box .program_name.vp::before {
+    background-image: url(../images/ico/ico_program_01.png);
+}
+.program_box .program_name.security::before {
+    background-image: url(../images/ico/ico_program_02.png);
+}
+.program_box .program_name.firewall::before {
+    background-image: url(../images/ico/ico_program_03.png);
+}
+.program_box .program_name strong {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 102px;
+}
+.program_box .program_name span {
+    display: block;
+}
+.program_box table tr td:nth-child(2) {
+    text-align: left;
+}
+.program_box .btn_box {
+    width: auto;
+}
+.program_box .btn_box * {
+    font-size: 15px;
+}
+.program_box .txt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 5px;
 }
 
 /* 구인구직 - 인력Pool 상세 */
@@ -4654,12 +4708,15 @@ footer .footer_bottom {
         width: 100%;
         border-radius: 5px;
     }
+    .board_infobox .search_box .sel_group {
+        width: 100%;
+    }
+    .board_infobox .search_box .sel_group .sel_box {
+        width: 100%;
+    }
     .board_infobox .search_box .sel_box {
         width: 100%;
         height: 45px;
-    }
-    .board_infobox .search_box .sel_box:nth-child(2) {
-        width: calc(100% - 60px);
     }
     .board_infobox .search_box .sel_box select {
         border-radius: 5px 5px 0 0;
@@ -4667,8 +4724,9 @@ footer .footer_bottom {
         border-bottom: 2px solid #609de9;
         height: 45px;
     }
-    .board_infobox .search_box .sel_box:nth-child(2) select {
-        border-bottom: none;
+    .board_infobox .search_box .sel_group .sel_box select {
+        flex: 1;
+        border-bottom: 2px solid #609de9;
     }
     .board_infobox .search_box input {
         width: calc(100% - 60px);
@@ -4680,6 +4738,12 @@ footer .footer_bottom {
     .board_infobox .search_box button {
         height: 45px;
         border-radius: 0;
+    }
+    .board_infobox .search_box .sel_group.search .sel_box:nth-child(2) {
+        width: calc(100% - 60px);
+    }
+    .board_infobox .search_box .sel_group.search .sel_box:nth-child(2) select {
+        border-bottom: none;
     }
 
     /* 투자자 검색 */
@@ -4937,6 +5001,11 @@ footer .footer_bottom {
         justify-content: center;
         padding: 10px;
         font-size: 15px;
+    }
+
+    /* 프로그램 */
+    .program_box .txt span {
+        font-size: 14px;
     }
 
     /* 구인구직 - 인력Pool 상세 */
