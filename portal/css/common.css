@@ -244,6 +244,12 @@
 .btn_box.bg .btn_cancel::before {
     background-image: url(../images/ico/ico_btn_cancel.png);
 }
+.btn_box.bg .btn_reply::before {
+    background-image: url(../images/ico/ico_btn_reply.png);
+}
+.btn_box.bg .btn_send::before {
+    background-image: url(../images/ico/ico_btn_send.png);
+}
 .btn_box .btn_arrow_right {
     align-items: center;
     background-color: #5ab1f7;
@@ -1318,11 +1324,11 @@
 .tit_box + .tbl_box_detail {
     margin-top: 40px;
 }
-.tbl_box_detail table {
+.tbl_box_detail > table {
     width: 100%;
 }
-.tbl_box_detail table tr th,
-.tbl_box_detail table tr td {
+.tbl_box_detail > table > thead > tr > th,
+.tbl_box_detail > table > tbody > tr > td {
     background-color: #fff;
     padding: 25px 0;
     box-sizing: border-box;
@@ -1331,11 +1337,11 @@
     font-weight: 500;
     font-size: var(--font-l);
 }
-.tbl_box_detail table tr td {
+.tbl_box_detail > table > tbody > tr > td {
     line-height: 35px;
     font-weight: 400;
 }
-.tbl_box_detail table tr.bg td {
+.tbl_box_detail > table > tbody > tr.bg > td {
     background-color: #f9fafa;
 }
 .tbl_box_detail table tr td .file_download {
@@ -3038,6 +3044,9 @@ a.ui-button:active,
     .sel_box select {
         font-size: 14px;
     }
+    .sel_box.min {
+        max-width: 100%;
+    }
 
     /* chk_box 라디오박스 */
     .chk_box input ~ label {
@@ -3076,6 +3085,9 @@ a.ui-button:active,
     }
     .inp_group.email .sel_box {
         width: 100%;
+    }
+    .inp_group.email > div {
+        width: 100%
     }
     .inp_group.email > div.chk_box {
         margin-left: 0;
@@ -3308,11 +3320,14 @@ a.ui-button:active,
     }
 
     /* 테이블 상세 */
-    .tbl_box_detail table tr th,
-    .tbl_box_detail table tr td {
+    .tbl_box_detail table {
+        width: 100% !important;
+    }
+    .tbl_box_detail > table > thead > tr > th,
+    .tbl_box_detail > table > tbody > tr > td {
         padding: 15px 0;
     }
-    .tbl_box_detail table tr td img {
+    .tbl_box_detail > table > tbody > tr > td img {
         max-width: 100%;
     }
     .tbl_box_detail .tit {
@@ -3341,7 +3356,7 @@ a.ui-button:active,
         font-size: 14px;
     }
     
-    .tbl_box_detail.type_02 table colgroup col {
+    .tbl_box_detail.type_02 table > colgroup > col {
         display: flex;
         width: 100%;
     }

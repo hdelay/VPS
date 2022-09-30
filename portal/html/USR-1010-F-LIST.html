@@ -129,7 +129,8 @@
             </nav>
             <div class="util_box">
                 <div class="search_box">
-                    <input type="text">
+                    <input type="text" id="search_inp">
+                    <label for="search_inp" class="hidden">검색어 입력</label>
                     <button>검색</button>
                 </div>
                 <a href="./USR-2210-F-LIST.html" class="btn_sitemap" title="사이트맵">
@@ -766,14 +767,16 @@
                     <div class="search_form_group">
                         <div class="search_form_box">
                             <div class="sel_box">
-                                <select>
+                                <label for="sel" class="hidden">선택</label>
+                                <select id="sel">
                                     <option value="">전체</option>
                                     <option value="">셀렉트박스</option>
                                     <option value="">셀렉트박스</option>
                                 </select>
                             </div>
                             <div class="inp_box">
-                                <input type="text">
+                                <label for="search_inp_02">명칭검색</label>
+                                <input type="text" id="search_inp_02">
                             </div>
                             <div class="btn_box">
                                 <button class="btn_skyblue">검색</button>
@@ -1002,7 +1005,8 @@
             </ul>
             <div class="familysite_box">
                 <div class="family_select">
-                    <select>
+                    <label for="sel_family" class="hidden">관련사이트 선택</label>
+                    <select id="sel_family">
                         <option value="">관련사이트</option>
                         <option value="">관련사이트좀더긴텍스트</option>
                         <option value="">관련사이트</option>

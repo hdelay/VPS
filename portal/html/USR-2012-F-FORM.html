@@ -129,7 +129,8 @@
             </nav>
             <div class="util_box">
                 <div class="search_box">
-                    <input type="text">
+                    <input type="text" id="search_inp">
+                    <label for="search_inp" class="hidden">검색어 입력</label>
                     <button>검색</button>
                 </div>
                 <a href="./USR-2210-F-LIST.html" class="btn_sitemap" title="사이트맵">
@@ -448,9 +449,11 @@
                                                 </select>
                                             </div>
                                             <div class="inp_box">
+                                                <label for="input_08" class="hidden">전화번호 중간자리</label>
                                                 <input type="text" id="input_08">
                                             </div>
                                             <div class="inp_box">
+                                                <label for="input_09" class="hidden">전화번호 중간자리</label>
                                                 <input type="text" id="input_09">
                                             </div>
                                         </div>
@@ -659,7 +662,8 @@
             </ul>
             <div class="familysite_box">
                 <div class="family_select">
-                    <select>
+                    <label for="sel_family" class="hidden">관련사이트 선택</label>
+                    <select id="sel_family">
                         <option value="">관련사이트</option>
                         <option value="">관련사이트좀더긴텍스트</option>
                         <option value="">관련사이트</option>

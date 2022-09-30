@@ -3,6 +3,11 @@
 /* ============================================================
     파일정의 : main.css
 ============================================================ */
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
 
 header.headerfix .header_top,
 .headerfix .header_bottom {
