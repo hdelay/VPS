@@ -1518,6 +1518,24 @@ a.ico_folder::after {
     font-size: 15px;
 }
 
+/* 포털 소개 */
+.content_list_box .introduce_box {
+    flex-direction: row;
+    padding: 0;
+}
+.content_list_box .introduce_box li {
+    padding: 35px 20px;
+    background: url(../images/content/bg_check.png) no-repeat center;
+    color: #fff;
+}
+.content_list_box .introduce_box li::before {
+    display: none;
+}
+.content_list_box .introduce_box li:nth-child(1) {
+    background-color: #549dea;
+    border: 3px solid #bbd5f4;
+}
+
 /* 커뮤니티 */
 .community_main_btn {
     display: flex;
