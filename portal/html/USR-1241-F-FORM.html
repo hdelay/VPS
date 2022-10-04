@@ -368,7 +368,8 @@
                                 <td>
                                     <div class="inp_group">
                                         <div class="sel_box">
-                                            <select>
+                                            <label for="sel_01" class="hidden">채용구분 선택</label>
+                                            <select id="sel_01">
                                                 <option value="">선택</option>
                                                 <option value="">신입</option>
                                                 <option value="">경력</option>
@@ -395,6 +396,7 @@
                                 <th scope="row"><label for="input_01">등록일자</label></th>
                                 <td>
                                     <div class="inp_box">
+                                        <label for="input_0222" class="hidden">등록일자</label>
                                         <input type="text" id="input_0222" value="작성일자 자동표시" disabled>
                                     </div>
                                 </td>
@@ -405,10 +407,12 @@
                                     <div class="inp_group period_chk">
                                         <div class="inp_group period">
                                             <div class="inp_box datepicker_box">
+                                                <label for="input_0333" class="hidden">채용 마감일 시작일</label>
                                                 <input type="text" id="input_0333" class="datepicker_start">
                                             </div>
                                             <span>~</span>
                                             <div class="inp_box datepicker_box">
+                                                <label for="input_0444" class="hidden">채용 마감일 끝</label>
                                                 <input type="text" id="input_0444" class="datepicker_end">
                                             </div>
                                         </div>
@@ -435,6 +439,7 @@
                                 <td colspan="3">
                                     <div class="inp_group">
                                         <div class="textarea_box cont">
+                                            <label for="textarea_01" class="hidden">공고내용 입력</label>
                                             <textarea id="textarea_01"></textarea>
                                         </div>
                                     </div>
