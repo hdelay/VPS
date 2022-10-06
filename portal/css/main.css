@@ -1474,11 +1474,15 @@ header.headerfix .header_top,
     }
     
     /* 공통 */
+    .fp-scrollable {
+        height: auto !important;
+    }
     .section_wrap {
         padding-top: 126px;
     }
     .section_wrap .inner {
         max-width: 100%;
+        height: auto;
         padding: 0 20px;
     }
 

@@ -147,6 +147,7 @@ $(function(){
             if(scrollLocation > 100){
                 $('header').addClass('headerfix');
                 $('body').removeClass('gnb_open');
+                $('.header_bg').css({'height': '0'});
             } else {
                 $('header').removeClass('headerfix');
             }
