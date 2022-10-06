@@ -1600,6 +1600,109 @@ a.ico_folder::after {
     background-color: #f7f7f7;
     margin-bottom: 40px;
 }
+.integrated_box .integrated_item {
+    margin-top: 50px;
+}
+.integrated_box .integrated_item .txt {
+    padding-left: 20px;
+}
+.integrated_count {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.integrated_count dl {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px);
+}
+.integrated_count dl dt {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.integrated_count dl dt strong {
+    font-size: 17px;
+    font-weight: 500;
+}
+.integrated_count dl dt span {
+    font-size: 14px;
+}
+.integrated_item .tit_box.row {
+    align-items: baseline;
+    margin-bottom: 35px;
+}
+.integrated_item .tit_box.row h4 {
+    margin-bottom: 0;
+}
+.integrated_item .tit_box.row span {
+    font-size: 14px;
+}
+.disclosure_box .btn_list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.disclosure_box .btn_list > div {
+    display: flex;
+    gap: 10px;
+}
+.disclosure_box .btn_list button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 165px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #8aa7ff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.disclosure_box .btn_list button.on {
+    background-color: #3949ab;
+    border-color: #3949ab;
+}
+.disclosure_box .btn_list button strong {
+    font-size: 15px;
+    font-weight: 500;
+}
+.disclosure_box .btn_list button.on strong {
+    color: #fff;
+}
+.disclosure_box .btn_list button span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #3949ab;
+}
+.disclosure_box .btn_list button.on span {
+    color: #fff;
+}
+.disclosure_box .btn_list button span::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 2px;
+    background-color: #3949ab;
+    margin: 9px 0 5px;
+}
+.disclosure_box .btn_list button.on span::before {
+    background-color: #fff;
+}
+.disclosure_box .btn_list.type_02 {
+    flex-wrap: wrap;
+    gap: 20px 50px;
+}
+.disclosure_box .btn_list.type_02 > * {
+    width: calc((100% / 5) - 40px);
+}
+.disclosure_box + .tit_box {
+    margin-top: 80px;
+}
 
 /* 통계 - 투자실적 */
 .investment_performance_box {
@@ -4528,6 +4631,10 @@ footer .footer_bottom {
     text-align: center;
     font-size: 15px;
 }
+/* 회원유형 변경신청 */
+.vics_group .vics_txt {
+    margin-bottom: 20px;
+}
 /* 더보기 내용전체보기 */
 .ui-dialog .note_dialog.more {
     width: 500px !important;
@@ -6016,6 +6123,10 @@ footer .footer_bottom {
     }
     .find_result_box .btn_box_group {
         width: 100%;
+    }
+    /* 회원유형 변경신청 */
+    .vics_group .inp_group.search .inp_box.min {
+        width: calc(100% - 97px);
     }
 
     /* 마이페이지 메인 */

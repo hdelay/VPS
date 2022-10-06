@@ -302,9 +302,9 @@
                         </ul>
                     </li>
                     <li class="selected">
-                        <a href="javascript:void(0);">회원가입</a>
+                        <a href="javascript:void(0);">내 정보 관리</a>
                         <ul>
-                            <li><a href="">회원가입</a></li>
+                            <li><a href="">내 정보 관리</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -312,28 +312,7 @@
 
             <div class="inner">
                 <div class="tit_box">
-                    <h3>회원가입</h3>
-                </div>
-    
-                <div class="box_step">
-                    <ul>
-                        <li>
-                            <span class="img"></span>
-                            <strong>1. 약관동의</strong>
-                        </li>
-                        <li>
-                            <span class="img"></span>
-                            <strong>2. 본인인증</strong>
-                        </li>
-                        <li class="on">
-                            <span class="img"></span>
-                            <strong>3. 정보입력</strong>
-                        </li>
-                        <li>
-                            <span class="img"></span>
-                            <strong>4. 가입완료</strong>
-                        </li>
-                    </ul>
+                    <h3>내 정보 관리</h3>
                 </div>
 
                 <div class="tab_group">
@@ -379,11 +358,11 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row" colspan="2"><label for="textarea_01">사업소개<span class="req">*</span></label></th>
+                                            <th scope="row" colspan="2"><label for="textarea_01">기업소개<span class="req">*</span></label></th>
                                             <td colspan="3">
                                                 <div class="inp_group">
                                                     <div class="textarea_box">
-                                                        <textarea id="textarea_01" placeholder="사업소개 내용을 작성해주세요. (300자 이내)"></textarea>
+                                                        <textarea id="textarea_01" placeholder="기업소개 내용을 작성해주세요. (300자 이내)"></textarea>
                                                     </div>
                                                 </div>
                                             </td>
@@ -529,6 +508,20 @@
                                                 </div>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><label for="file_inp">사업계획서<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_group file">
+                                                    <span class="txt">※ 사업계획서는 외부에 공개되지 않으며, 벤처투자마트 신청 시에 활용됩니다.</span>
+                                                    <div class="file_box">
+                                                        <input type="file" id="file_inp" class="file_inp">
+                                                        <label for="file_inp">파일첨부</label>
+                                                        <span class="file_value"></span>
+                                                    </div>
+                                                    <span class="txt_etc">100MB 이내 가능</span>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -578,8 +571,8 @@
                                                 <div class="tbl_in_group">
                                                     <span class="txt">※ 재무정보는 연도 단위로만 입력이 가능합니다.</span>
                                                     <div class="btn_box">
-                                                        <button class="btn_gray">삭제</button>
-                                                        <button class="btn_blue">+ 년도추가</button>
+                                                        <button class="btn_gray">선택삭제</button>
+                                                        <button class="btn_blue">+ 연도추가</button>
                                                     </div>
                                                     <div class="tbl_box">
                                                         <table>
@@ -744,7 +737,7 @@
                                                     <span class="txt">※ 투자유치 금액은 연단위로 통합하여 통계 형태로 표출됩니다.</span>
                                                     <span class="txt">※ 투자자는 필수입력이 아니며, 내부 통계용으로만 사용됩니다.</span>
                                                     <div class="btn_box">
-                                                        <button class="btn_gray">삭제</button>
+                                                        <button class="btn_gray">선택삭제</button>
                                                         <button class="btn_blue">+ 행추가</button>
                                                     </div>
                                                     <div class="tbl_box">
@@ -767,7 +760,7 @@
                                                                         </div>
                                                                     </th>
                                                                     <th scope="col">투자일</th>
-                                                                    <th scope="col">투자유치금</th>
+                                                                    <th scope="col">투자유치금(원)</th>
                                                                     <th scope="col">투자자</th>
                                                                 </tr>
                                                             </thead>
@@ -789,11 +782,10 @@
                                                                         </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div class="inp_group txt">
+                                                                        <div class="inp_group">
                                                                             <div class="inp_box">
                                                                                 <input type="text">
                                                                             </div>
-                                                                            <span class="txt">억원</span>
                                                                         </div>
                                                                     </td>
                                                                     <td>
@@ -821,11 +813,10 @@
                                                                         </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div class="inp_group txt">
+                                                                        <div class="inp_group">
                                                                             <div class="inp_box">
                                                                                 <input type="text">
                                                                             </div>
-                                                                            <span class="txt">억원</span>
                                                                         </div>
                                                                     </td>
                                                                     <td>
