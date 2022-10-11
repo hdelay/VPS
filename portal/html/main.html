@@ -36,7 +36,7 @@
     <!-- header -->
     <header>
         <div class="header_top">
-            <h1><a href="">벤처투자포털</a></h1>
+            <h1><a href="./main.html">벤처투자포털</a></h1>
             <nav id="nav">
                 <ul>
                     <li>
@@ -60,7 +60,6 @@
                                 <a href="./USR-1061-H-CONTN.html">주식유통정보</a>
                                 <ul>
                                     <li><a href="./USR-1061-H-CONTN.html">VC구주유통망</a></li>
-                                    <li><a href="./USR-1062-H-CONTN.html">구주거래정보망</a></li>
                                     <li><a href="./USR-1063-H-CONTN.html">M&A 거래정보망</a></li>
                                 </ul>
                             </li>
@@ -86,7 +85,7 @@
                                 <a href="./USR-1220-F-DASH.html">통계</a>
                                 <ul>
                                     <li><a href="./USR-1220-F-DASH.html">대시보드</a></li>
-                                    <li><a href="./USR-1221-F-DTL.html">투자실적</a></li>
+                                    <li><a href="./USR-1221-F-DASH.html">투자실적</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -191,7 +190,6 @@
                             <a href="javascript:void(0);">주식유통정보</a>
                             <ul>
                                 <li><a href="./USR-1061-H-CONTN.html">VC구주유통망</a></li>
-                                <li><a href="./USR-1062-H-CONTN.html">구주거래정보망</a></li>
                                 <li><a href="./USR-1063-H-CONTN.html">M&A 거래정보망</a></li>
                             </ul>
                         </li>
@@ -217,7 +215,7 @@
                             <a href="javascript:void(0);">통계</a>
                             <ul>
                                 <li><a href="./USR-1220-F-DASH.html">대시보드</a></li>
-                                <li><a href="./USR-1221-F-DTL.html">투자실적</a></li>
+                                <li><a href="./USR-1221-F-DASH.html">투자실적</a></li>
                             </ul>
                         </li>
                         <li class="depth3">
@@ -269,6 +267,16 @@
     </header>
     <div class="header_bg"></div>
 
+    <!-- quick menu -->
+    <aside class="quick_box">
+        <ul>
+            <li class="btn_bell"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_01">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_02">즐겨찾기</a></li>
+            <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
+            <li class="btn_top"><a href="#sec1"><span>TOP</span></a></li>
+        </ul>
+    </aside>
+
     <!-- 바로가기 버튼 -->
     <div class="main_quickmenu">
         <ul>
@@ -278,7 +286,6 @@
             <li data-menuanchor="sec4"><a href="#sec4">알림/소통</a></li>
             <li data-menuanchor="sec5"><a href="#sec5">전자공시</a></li>
         </ul>
-        <button class="mymenu"><span></span>마이메뉴</button>
     </div>
 
     <!-- 메인 컨텐츠 -->
@@ -294,12 +301,18 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="slide_wrap first">
+                            <div class="img">
+                                <video autoplay loop muted>
+                                    <source src="../images/video/CK_ta01150000215_1080p.mp4" ype="video/mp4">
+                                    해당 브라우저는 video 태그를 지원하지 않습니다.
+                                </video>
+                            </div>
                             <div class="inner">
                                 <div class="tit">
-                                    <span class="sub_tit">
-                                        <span>A</span>ll <span>V</span>entuer <span>I</span>nvestment in <span>O</span>ne
-                                    </span>
-                                    <h2><strong>모든 벤처 투자 정보</strong>를 하나로</h2>
+                                    <h2>
+                                        <div><strong>모든 벤처 투자 정보</strong>를 하나로</div>
+                                        <em>모든 벤처 투자 정보</em>
+                                    </h2>
                                 </div>
                                 <ul class="total">
                                     <li>
@@ -324,35 +337,30 @@
                                                 <a href="">
                                                     <span></span>
                                                     <strong>포털소개</strong>
-                                                    <em>벤처투자포털을 소개합니다.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>커뮤니티</strong>
-                                                    <em>벤처기업, 투자자모임에서 <br/>직접 소통해보세요.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>교육서비스</strong>
-                                                    <em>더 자세한 벤처투자에 대해 <br/>알아보세요.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>벤처투자 불법신고</strong>
-                                                    <em>벤처투자와 관련된 불법 사항을 <br/>신고해주세요.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>구인구직</strong>
-                                                    <em>채용정보와 인력풀을 <br/>이용해보세요.</em>
                                                 </a>
                                             </div>
                                         </div>
@@ -369,9 +377,13 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="slide_wrap second">
+                            <div class="img"><img src="../images/bg/bg_main_sec1_08.png" alt=""></div>
                             <div class="inner">
                                 <div class="tit">
-                                    <h2><strong>벤처기업</strong>에 투자하고 싶다면?</h2>
+                                    <h2>
+                                        <div><strong>벤처기업</strong>에 투자하고 싶다면?</div>
+                                        <em>벤처기업</em>
+                                    </h2>
                                 </div>
                                 <ul class="total">
                                     <li>
@@ -396,28 +408,24 @@
                                                 <a href="">
                                                     <span></span>
                                                     <strong>벤처기업검색</strong>
-                                                    <em>투자유치를 희망하는 벤처기업을 <br/>찾아보세요</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>동향보고서</strong>
-                                                    <em>최신 벤처투자 트렌드를 <br/>확인하세요.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>온라인IR</strong>
-                                                    <em>벤처기업의 경영실적을 <br/>확인합니다.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>VC구주유통망</strong>
-                                                    <em>벤처투자자산 매매거래를 위한 <br/>플랫폼입니다.</em>
                                                 </a>
                                             </div>
                                         </div>
@@ -434,9 +442,13 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="slide_wrap third">
+                            <div class="img"><img src="../images/bg/bg_main_sec1_09.png" alt=""></div>
                             <div class="inner">
                                 <div class="tit">
-                                    <h2><strong>투자유치</strong>를 희망합니다!</h2>
+                                    <h2>
+                                        <div><strong>투자유치</strong>를 희망합니다!</div>
+                                        <em>투자유치</em>
+                                    </h2>
                                 </div>
                                 <ul class="total">
                                     <li>
@@ -475,28 +487,24 @@
                                                 <a href="">
                                                     <span></span>
                                                     <strong>투자자 검색</strong>
-                                                    <em>분야별 투자기관을 찾아보세요.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>벤처투자마트</strong>
-                                                    <em>투자자-기업간 상담회입니다.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>가이드 A to Z</strong>
-                                                    <em>벤처투자를 위한 모든 정보를 <br/>담았습니다.</em>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="">
                                                     <span></span>
                                                     <strong>용어사전</strong>
-                                                    <em>벤처투자와 관련된 용어를 <br/>검색합니다.</em>
                                                 </a>
                                             </div>
                                         </div>
@@ -1503,7 +1511,7 @@
                 </ul>
                 <div class="familysite_box">
                     <div class="family_select">
-                        <label for="family_select">관련사이트 선택</label>
+                        <label for="family_select" class="hidden">관련사이트 선택</label>
                         <select id="family_select">
                             <option value="">관련사이트</option>
                             <option value="">관련사이트좀더긴텍스트</option>
@@ -1531,6 +1539,83 @@
         </footer>
 
     </div>
+
+</div>
+<!-- 알림 팝업 -->
+<div id="quick_01" class="quick_dialog">
+
+    <!-- pop_header -->
+    <div class="pop_header">
+        <h5 class="alarm"><span></span>알림</h5>
+        <div class="more">
+            <button>더보기</button>
+        </div>
+    </div>
+    <!-- //pop_header -->
+
+    <!-- pop_content -->
+    <div class="pop_content">
+        <div class="pop_list">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="pop_state">쪽지알림</span>
+                        IR 자료 요청드립니다.
+                    </a>
+                    <span class="state_box"><span class="state_box red">NEW</span></span>
+                </li>
+                <li>
+                    <a href="">채용공고가 승인되었습니다.</a>
+                    <span class="state_box"><span class="state_box red">NEW</span></span>
+                </li>
+                <li>
+                    <a href="">커뮤니티 5월 정모 공지</a>
+                </li>
+                <li>
+                    <a href="">작성하신 IR 정보가 등록되었습니다.</a>
+                </li>
+                <li>
+                    <a href=""><span class="pop_state">쪽지알림</span>IR 자료 요청</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //pop_content -->
+
+</div>
+
+<!-- 즐겨찾기 팝업 -->
+<div id="quick_02" class="quick_dialog">
+
+    <!-- pop_header -->
+    <div class="pop_header">
+        <h5 class="favorites"><span></span>즐겨찾기</h5>
+        <div class="more">
+            <button>더보기</button>
+        </div>
+    </div>
+    <!-- //pop_header -->
+
+    <!-- pop_content -->
+    <div class="pop_content">
+        <div class="pop_list">
+            <ul>
+                <li>
+                    <a href="">벤처기업 검색</a>
+                </li>
+                <li>
+                    <a href="">벤처투자마트 신청</a>
+                </li>
+                <li>
+                    <a href="">커뮤니티명 - 게시판명</a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn_box">
+            <button>현재 메뉴 즐겨찾기 추가 +</button>
+        </div>
+    </div>
+    <!-- //pop_content -->
 
 </div>
 </body>

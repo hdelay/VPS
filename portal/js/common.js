@@ -310,8 +310,8 @@ $(function(){
     });
 
     // TOP 버튼
-    $(".btn_top a").click(function(){
-        window.scrollTo({top : 0, behavior: 'smooth'}); 
+    $('.btn_top a').on('click', function(){
+        $("html, body").animate({scrollTop : 0}, 500);
     });
 
     // 파일선택
