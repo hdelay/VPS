@@ -9,8 +9,7 @@
     left: -9999px;
 }
 
-header.headerfix .header_top,
-.headerfix .header_bottom {
+header.headerfix .header_top {
     background-color: rgba(255, 255, 255, .6);
 }
 
@@ -40,12 +39,12 @@ header.headerfix .header_top,
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
-    background-color: #574b82;
+    background-color: #977af7;
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet::after {
     font-size: 25px;
     font-weight: 800;
-    color: #b5b5b5;
+    color: #fff;
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(1)::after {
     content: "일반인";
@@ -94,57 +93,73 @@ header.headerfix .header_top,
 .main_quickmenu ul {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+.main_quickmenu ul li {
+    position: relative;
+    padding-left: 20px;
 }
 .main_quickmenu ul li::before {
-    content: "01";
-    display: none;
-    position: absolute;
-    top: -30px;
-    left: 0;
-    font-size: 20px;
-    font-weight: 500;
-    color: #b5b5b5;
-}
-.main_quickmenu ul li:nth-child(1)::before {
-    content: "01";
-}
-.main_quickmenu ul li:nth-child(2)::before {
-    content: "02";
-}
-.main_quickmenu ul li:nth-child(3)::before {
-    content: "03";
-}
-.main_quickmenu ul li:nth-child(4)::before {
-    content: "04";
-}
-.main_quickmenu ul li:nth-child(5)::before {
-    content: "05";
+    content: "";
     display: block;
     position: absolute;
-    top: inherit;
+    top: 8px;
     left: 0;
-    bottom: -30px;
+    width: 4px;
+    height: 4px;
+    background-color: #3a5d82;
+    border-radius: 50%;
+    transition: .2s;
 }
 .main_quickmenu ul li.active::before {
-    display: block;
-    font-weight: 600;
-    color: #5aabfe;
+    top: -3px;
+    height: 32px;
+    background-color: #5aabfe;
+    border-radius: 0;
 }
 .main_quickmenu ul li a {
-    display: block;
+    font-size: 15px;
+    color: #fff;
     transition: .2s;
-    width: 4px;
-    height: 27px;
-    background-color: #b5b5b5;
-    margin-left: 10px;
-    text-indent: -9999px;
 }
 .main_quickmenu.black ul li a {
     font-weight: 400;
     color: #333;
 }
 .main_quickmenu ul li.active a {
-    background-color: #5aabfe;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3f71c4;
+}
+.main_quickmenu .mymenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.main_quickmenu .mymenu span {
+    display: block;
+    width: 17px;
+    height: 16px;
+    background: no-repeat center;
+    background-image: url(../images/ico/ico_star.png);
+    margin-right: 10px;
+}
+.main_quickmenu.black .mymenu {
+    border: 2px solid rgba(0, 0, 0, .2);
+    color: #333;
+}
+.main_quickmenu.black .mymenu span {
+    background-image: url(../images/ico/ico_star_blue.png);
 }
 
 /* section01 */

@@ -40,7 +40,8 @@ header .header_top h1 a {
     text-indent: -9999px;
 }
 .gnb_open header .header_top h1 a,
-header.headerfix .header_top h1 a {
+header.headerfix .header_top h1 a,
+header.font_black .header_top h1 a {
     background: url(../images/logo_b.png) no-repeat center;
 }
 /* menu 1depth */
@@ -66,7 +67,8 @@ header .header_top nav > ul > li > a {
     color: #fff;
 }
 .gnb_open header .header_top nav > ul > li > a,
-header.headerfix .header_top nav > ul > li > a {
+header.headerfix .header_top nav > ul > li > a,
+header.font_black .header_top nav > ul > li > a {
     color: #333;
 }
 header .header_top nav > ul > li > a::before {
@@ -168,7 +170,8 @@ header .header_top .util_box a.btn_sitemap span {
 .gnb_open header .header_top .util_box a.btn_allmenu span,
 header.headerfix .header_top .util_box a.btn_allmenu span,
 .gnb_open header .header_top .util_box a.btn_sitemap span,
-header.headerfix .header_top .util_box a.btn_sitemap span {
+header.headerfix .header_top .util_box a.btn_sitemap span,
+header.font_black .header_top .util_box a.btn_sitemap span {
     background-color: #333;
 }
 header .header_top .util_box a.btn_allmenu span:nth-child(2),
@@ -230,7 +233,8 @@ header .header_top .search_box.on button {
     transform: translateY(-50%);
 }
 .gnb_open header .header_top .search_box .search_inp + button,
-header.headerfix .header_top .search_box .search_inp + button {
+header.headerfix .header_top .search_box .search_inp + button,
+header.font_black .header_top .search_box .search_inp + button {
     background: url(../images/ico/ico_gnb_search_b.png) no-repeat center;
     background-size: auto 100%;
 }
@@ -252,7 +256,8 @@ header.headerfix .header_top .search_box .search_inp + button {
     color: #fff;
 }
 .gnb_open .btn_login_box li a,
-header.headerfix .btn_login_box li a {
+header.headerfix .btn_login_box li a,
+header.font_black .btn_login_box li a {
     color: #333;
 }
 .btn_login_box li a::before {
@@ -268,7 +273,8 @@ header.headerfix .btn_login_box li a {
     transform: translateY(-50%);
 }
 .gnb_open .btn_login_box li a::before,
-header.headerfix .btn_login_box li a::before {
+header.headerfix .btn_login_box li a::before,
+header.font_black .btn_login_box li a::before {
     background-color: #333;
 }
 .allmenu_box {
@@ -284,7 +290,7 @@ header.headerfix .btn_login_box li a::before {
     background: #fff url(../images/bg/bg_gnb.png) no-repeat -317px center;
     background-size: 645px auto;
     transition: height .3s;
-    z-index: 2;
+    z-index: 11;
 }
 .gnb_open .header_bg {
     height: 650px;

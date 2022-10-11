@@ -12,21 +12,30 @@ $(function(){
         responsiveWidth: 768,
         afterLoad: function(){
             if($(window).width() > 768){
-                if($(this).index() === 1){
+                if($(this).index() === 0){
+                    $('header').addClass('font_black');
+                    $('.main_quickmenu').addClass('black');
+                    $('header').removeClass('headerfix');
+                } else if($(this).index() === 1){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
+                    $('header').removeClass('font_black');
                 } else if($(this).index() === 3){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
+                    $('header').removeClass('font_black');
                 } else if($(this).index() === 4){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
+                    $('header').removeClass('font_black');
                 } else if($(this).index() === 5){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
+                    $('header').removeClass('font_black');
                 } else {
                     $('header').removeClass('headerfix');
                     $('.main_quickmenu').removeClass('black');
+                    $('header').removeClass('font_black');
                 }
             } else {
                 if($(this).index() === 0){
