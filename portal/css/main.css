@@ -204,7 +204,7 @@ header.headerfix .header_top {
     font-family: 'ONEmobileTitle';
     font-weight: 500;
     font-size: 65px;
-    color: #fff;
+    color: #333;
     z-index: 2;
 }
 .swiper-container .slide_wrap .inner .tit h2 div {
@@ -212,22 +212,10 @@ header.headerfix .header_top {
     font-weight: 500;
     font-size: 65px;
     font-style: normal;
-    text-shadow: 2px 0px 6px rgb(0 0 0 / 22%);
+    /* text-shadow: 2px 0px 6px rgb(0 0 0 / 22%); */
 }
 .swiper-container .slide_wrap .inner .tit h2 div strong {
     font-weight: 400;
-}
-.swiper-container .slide_wrap .inner .tit h2 em {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #11e0eb, #77bbff);
-    font-family: 'ONEmobileTitle';
-    font-weight: 600;
-    font-size: 65px;
-    font-style: normal;
-    color: transparent;
-    -webkit-background-clip: text;
 }
 .swiper-container .slide_wrap .inner .total {
     display: flex;
@@ -250,8 +238,8 @@ header.headerfix .header_top {
     display: flex;
     align-items: flex-end;
     font-size: 22px;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 500;
+    color: #333;
 }
 .swiper-container .slide_wrap .inner .total li .total_content {
     display: flex;
@@ -261,12 +249,12 @@ header.headerfix .header_top {
 .swiper-container .slide_wrap .inner .total li .total_content strong {
     font-size: 22px;
     font-weight: 800;
-    color: #fdebc8;
+    color: #ff5a39;
 }
 .swiper-container .slide_wrap .inner .total li .total_content span {
     font-size: 22px;
     font-weight: 600;
-    color: #fff;
+    color: #333;
 }
 .shortcuts_box {
     position: relative;
