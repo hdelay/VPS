@@ -2509,37 +2509,12 @@
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
 }
 .chk_list.img li .img {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 70px;
     margin-bottom: 10px;
-}
-.chk_list.img li:nth-child(1) .img {
-    background: url(../images/ico/ico_search_01.png) no-repeat center;
-}
-.chk_list.img li:nth-child(2) .img {
-    background: url(../images/ico/ico_search_02.png) no-repeat center;
-}
-.chk_list.img li:nth-child(3) .img {
-    background: url(../images/ico/ico_search_03.png) no-repeat center;
-}
-.chk_list.img li:nth-child(4) .img {
-    background: url(../images/ico/ico_search_04.png) no-repeat center;
-}
-.chk_list.img li:nth-child(5) .img {
-    background: url(../images/ico/ico_search_05.png) no-repeat center;
-}
-.chk_list.img li:nth-child(6) .img {
-    background: url(../images/ico/ico_search_06.png) no-repeat center;
-}
-.chk_list.img li:nth-child(7) .img {
-    background: url(../images/ico/ico_search_07.png) no-repeat center;
-}
-.chk_list.img li:nth-child(8) .img {
-    background: url(../images/ico/ico_search_08.png) no-repeat center;
-}
-.chk_list.img li:nth-child(9) .img {
-    background: url(../images/ico/ico_search_09.png) no-repeat center;
 }
 .chk_list.img li .chk_box span {
     justify-content: center;
@@ -2565,22 +2540,6 @@
 .chk_list.type_01 li.more {
     padding: 0;
     border: 2px solid #3a54c4;
-}
-.chk_list.type_01 li.more button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 2px;
-    font-weight: 500;
-    font-size: 15px;
-    color: #3a54c4;
-    cursor: pointer;
-}
-.chk_list.type_01 li.more button.on {
-    background-color: #3a54c4;
-    color: #fff;
 }
 .chk_list.type_01 li .chk_box span {
     justify-content: center;
@@ -2667,7 +2626,7 @@
     font-size: 15px;
 }
 .search_form_box .inp_box {
-    width: 600px;
+    width: calc(100% - 186px);
     max-width: none;
 }
 .search_form_box .btn_box {

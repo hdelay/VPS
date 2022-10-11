@@ -407,7 +407,7 @@ $(function(){
     });
 
     // 검색조건 더보기
-    $('.chk_list.type_01 li.more button').on('click', function(){
+    $('.search_item .more').on('click', function(){
         $('.search_item_more').toggleClass('on');
         $(this).toggleClass('on');
     });

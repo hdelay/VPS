@@ -528,6 +528,32 @@ header.headerfix .btn_login_box li a::before {
 .search_item_more.on {
     display: block;
 }
+.search_item .search_form_group {
+    padding-bottom: 0;
+}
+.search_item.board_infobox .btn_box {
+    width: auto;
+    flex: none;
+}
+.search_item.board_infobox .btn_box > * {
+    padding: 10px 20px;
+    min-width: 160px;
+}
+.search_item.board_infobox .more {
+    padding: 10px 20px;
+    min-width: 0;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    font-size: 16px;
+}
+.search_item.board_infobox .more.on {
+    background-color: #3949ab;
+    color: #fff;
+}
+.search_item.board_infobox .btn_box .more.on::after {
+    content: "-";
+    color: #fff;
+}
 
 /* 투자자 검색 - 상세 */
 .investor_card {
@@ -5078,6 +5104,12 @@ footer .footer_bottom {
     }
     .search_item.etc {
         padding-top: 5px;
+    }
+    .search_item.board_infobox {
+        flex-direction: row;
+    }
+    .search_item.board_infobox .btn_box {
+        flex: 1;
     }
 
     /* 투자자 검색 - 상세 */
