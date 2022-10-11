@@ -139,6 +139,17 @@ $(function(){
     $('header .header_top nav > ul > li > ul li a').blur(function(){
         $('body').removeClass('gnb_open');
     });
+    
+    // 검색버튼
+    $('header .header_top .search_box button').on('click', function(){
+        $(this).parent().toggleClass('on');
+    });
+    // 영역 외 클릭 닫기
+    $('.wrap').click(function(e){
+        if(!$('header .header_top .search_box').has(e.target).length){
+            $('header .header_top .search_box').removeClass('on');
+        }
+    });
 
     // headerfix
     if(!$('body').hasClass('main')){

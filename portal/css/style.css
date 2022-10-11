@@ -181,96 +181,68 @@ header .header_top .util_box a.btn_allmenu {
 header .header_top .search_box {
     display: flex;
     position: relative;
-    min-width: 345px;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+}
+header .header_top .search_box .search_inp {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+header .header_top .search_box.on .search_inp {
+    display: block;
 }
 header .header_top .search_box input {
-    width: 100%;
+    width: 305px;
     height: 45px;
     box-sizing: border-box;
     border-radius: 50px;
     padding: 0 20px;
     border: 2px solid rgba(255, 255, 255, 0.59);
-    background-color: transparent;
+    background-color: #fff;
     transition: .3s;
 }
 .gnb_open header .header_top .search_box input,
 header.headerfix .header_top .search_box input {
     border-color: #333;
 }
-header .header_top .search_box input:hover,
-header .header_top .search_box input:focus {
-    background-color: #fff;
-}
 header .header_top .search_box button {
     display: flex;
+    width: 25px;
+    height: 25px;
+    border: none;
+    padding: 0 25px;
+    background: url(../images/ico/ico_gnb_search.png) no-repeat center;
+    background-size: auto 100%;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+header .header_top .search_box.on button {
     position: absolute;
     top: 50%;
-    right: 15px;
-    width: 21px;
-    height: 21px;
-    border: none;
-    background: url(../images/ico/ico_gnb_search.png) no-repeat center;
-    text-indent: -9999px;
+    right: 0;
+    background: url(../images/ico/ico_gnb_search_b.png) no-repeat center;
+    background-size: auto 100%;
     transform: translateY(-50%);
 }
-header .header_top .search_box button {
-    background: url(../images/ico/ico_gnb_search.png) no-repeat center;
-}
-header .header_top .search_box input:hover + button,
-header .header_top .search_box input:focus + button,
-.gnb_open header .header_top .search_box input + button,
-header.headerfix .header_top .search_box input + button {
+.gnb_open header .header_top .search_box .search_inp + button,
+header.headerfix .header_top .search_box .search_inp + button {
     background: url(../images/ico/ico_gnb_search_b.png) no-repeat center;
+    background-size: auto 100%;
 }
-
-header .header_bottom {
+.btn_login_box {
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    padding: 0 45px;
-    padding-bottom: 15px;   
-    box-sizing: border-box;
-    background-color: transparent;
+    gap: 10px;
 }
-.gnb_open header .header_bottom {
-    background: transparent;
-    backdrop-filter: none;
-}
-header .header_bottom ul {
-    display: flex;
-    gap: 15px;
-}
-header .header_bottom .btn_bottom {
-    display: flex;
-    gap: 15px;
-}
-header .header_bottom .btn_bottom a {
-    display: flex;
-    padding: 7px 15px;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: var(--font-xs);
-    color: #fff;
-}
-header .header_bottom .btn_bottom a.purple {
-    background-color: rgba(142, 102, 253, 0.35);
-}
-header .header_bottom .btn_bottom a.blue {
-    background-color: rgb(83, 132, 255, 0.35);
-}
-.gnb_open header .header_bottom .btn_bottom a.purple,
-header.headerfix .header_bottom .btn_bottom a.purple {
-    background-color: rgba(142, 102, 253, 1);
-}
-.gnb_open header .header_bottom .btn_bottom a.blue,
-header.headerfix .header_bottom .btn_bottom a.blue {
-    background-color: rgb(83, 132, 255, 1);
-}
-header .header_bottom ul li {
+.btn_login_box li {
     display: flex;
     align-items: center;
 }
-header .header_bottom ul li a {
+.btn_login_box li a {
     display: flex;
     position: relative;
     padding-left: 10px;
@@ -279,11 +251,11 @@ header .header_bottom ul li a {
     font-weight: 500;
     color: #fff;
 }
-.gnb_open header .header_bottom ul li a,
-header.headerfix .header_bottom ul li a {
+.gnb_open .btn_login_box li a,
+header.headerfix .btn_login_box li a {
     color: #333;
 }
-header .header_bottom ul li a::before {
+.btn_login_box li a::before {
     content: "";
     display: block;
     position: absolute;
@@ -295,8 +267,8 @@ header .header_bottom ul li a::before {
     background-color: #fff;
     transform: translateY(-50%);
 }
-.gnb_open header .header_bottom ul li a::before,
-header.headerfix .header_bottom ul li a::before {
+.gnb_open .btn_login_box li a::before,
+header.headerfix .btn_login_box li a::before {
     background-color: #333;
 }
 .allmenu_box {
@@ -320,7 +292,7 @@ header.headerfix .header_bottom ul li a::before {
 
 /* container */
 .container {
-    padding-top: 127px;
+    padding-top: 95px;
     box-sizing: border-box;
     min-height: calc(100vh - 295px);
 }
@@ -4010,6 +3982,9 @@ a.ico_folder::after {
     padding: 0 10px;
     box-sizing: border-box;
 }
+.txt_item > dd > p {
+    margin-bottom: 10px;
+}
 .txt_item > dd dl + dl {
     margin-top: 20px;
 }
@@ -4791,13 +4766,13 @@ footer .footer_bottom {
     header .header_top nav {
         display: none;
     }
-    header .header_top .search_box {
-        display: none;
+    header .header_top .util_box {
+        gap: 10px;
     }
     header .header_top .util_box a.btn_allmenu {
         display: flex;
     }
-    header .header_bottom {
+    .btn_login_box {
         display: none;
     }
     .allmenu_box {

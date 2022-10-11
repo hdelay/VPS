@@ -128,9 +128,15 @@
                 </ul>
             </nav>
             <div class="util_box">
+                <ul class="btn_login_box">
+                    <li><a href="./USR-2020-F-FORM.html">로그인</a></li>
+                    <li><a href="./USR-2010-F-FORM.html">회원가입</a></li>
+                </ul>
                 <div class="search_box">
-                    <input type="text" id="search_inp">
-                    <label for="search_inp" class="hidden">검색어 입력</label>
+                    <div class="search_inp">
+                        <input type="text" id="search_inp">
+                        <label for="search_inp" class="hidden">검색어 입력</label>
+                    </div>
                     <button>검색</button>
                 </div>
                 <a href="./USR-2210-F-LIST.html" class="btn_sitemap" title="사이트맵">
@@ -144,17 +150,6 @@
                     <span></span>
                 </a>
             </div>
-        </div>
-        <div class="header_bottom">
-            <div class="btn_bottom">
-                <a href="" class="purple">한국벤처캐피탈협회</a>
-                <a href="" class="blue">벤처투자 업무지원</a>
-            </div>
-            <ul>
-                <li><a href="./USR-2020-F-FORM.html">로그인</a></li>
-                <li><a href="./USR-2010-F-FORM.html">회원가입</a></li>
-                <li><a href="./USR-2210-F-LIST.html">사이트맵</a></li>
-            </ul>
         </div>
         <div class="allmenu_box">
             <div class="allmenu_box_header">
@@ -342,59 +337,54 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row"><label for="input_01">이력서 명</label></th>
-                                <td colspan="3">
+                                <th scope="row"><label for="input_01">이력서 명<span class="req">*</span></label></th>
+                                <td>
                                     <div class="inp_group">
                                         <div class="inp_box">
                                             <input type="text" id="input_01">
                                         </div>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="radio_1">분야</label></th>
-                                <td colspan="3">
-                                    <div class="rdo_box">
-                                        <span>
-                                            <input type="radio" id="radio_1" name="rdo_group_1">
-                                            <label for="radio_1">변호사</label>
-                                        </span>
-                                        <span>
-                                            <input type="radio" id="radio_2" name="rdo_group_1">
-                                            <label for="radio_2">변리사</label>
-                                        </span>
+                                <th scope="row"><label for="radio_11">공개여부<span class="req">*</span></label></th>
+                                <td>
+                                    <div class="inp_group">
+                                        <div class="rdo_box">
+                                            <span>
+                                                <input type="radio" id="radio_11" name="rdo_group_11">
+                                                <label for="radio_11">공개</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" id="radio_22" name="rdo_group_11">
+                                                <label for="radio_22">비공개</label>
+                                            </span>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="radio_2">경력</label></th>
-                                <td colspan="3">
-                                    <div class="rdo_box">
-                                        <span>
-                                            <input type="radio" id="radio_2" name="rdo_group_2">
-                                            <label for="radio_2">3년 이하</label>
-                                        </span>
-                                        <span>
-                                            <input type="radio" id="radio_3" name="rdo_group_2">
-                                            <label for="radio_3">3 ~ 5년</label>
-                                        </span>
-                                        <span>
-                                            <input type="radio" id="radio_4" name="rdo_group_2">
-                                            <label for="radio_4">5 ~ 10년</label>
-                                        </span>
-                                        <span>
-                                            <input type="radio" id="radio_5" name="rdo_group_2">
-                                            <label for="radio_5">10 ~ 15년</label>
-                                        </span>
-                                        <span>
-                                            <input type="radio" id="radio_6" name="rdo_group_2">
-                                            <label for="radio_6">15년 이상</label>
-                                        </span>
+                                <th scope="row"><label for="sel_01">직무분야<span class="req">*</span></label></th>
+                                <td>
+                                    <div class="sel_box">
+                                        <select id="sel_01">
+                                            <option value="">선택</option>
+                                            <option value="">셀렉트박스</option>
+                                            <option value="">셀렉트박스</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="sel_02">근무경력<span class="req">*</span></label></th>
+                                <td>
+                                    <div class="sel_box">
+                                        <select id="sel_02">
+                                            <option value="">선택</option>
+                                            <option value="">셀렉트박스</option>
+                                            <option value="">셀렉트박스</option>
+                                        </select>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="radio_1">자기소개</label></th>
+                                <th scope="row"><label for="radio_1">자기소개<span class="req">*</span></label></th>
                                 <td colspan="3">
                                     <div class="inp_group inp_num">
                                         <div class="textarea_box">
@@ -409,7 +399,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="radio_1">경력</label></th>
+                                <th scope="row"><label for="radio_1">근무이력<span class="req">*</span></label></th>
                                 <td colspan="3">
                                     
                                     <div class="tbl_in_group">
@@ -587,6 +577,14 @@
                                         </div>
                                     </div>
 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="textarea_02">특이사항</label></th>
+                                <td colspan="3">
+                                    <div class="textarea_box">
+                                        <textarea id="textarea_02"></textarea>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
