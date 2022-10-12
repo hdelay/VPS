@@ -1551,17 +1551,22 @@ a.ico_folder::after {
 }
 
 /* 통계 */
-.statistics_box {
-    padding: 60px 50px;
+.statistics_group {
+    position: relative;
+    padding: 60px 115px;
     background: url(../images/bg/bg_statistics_box.png) no-repeat center;
     background-size: 100% 100%;
     border-radius: 15px;
+}
+.statistics_box {
+    overflow: hidden;
 }
 .statistics_box ul {
     display: flex;
 }
 .statistics_box ul li {
     display: flex;
+    min-width: 209px;
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -1596,6 +1601,25 @@ a.ico_folder::after {
 .statistics_box ul li strong {
     font-size: 15px;
     font-weight: 400;
+}
+.statistics_group .swiper-button-prev,
+.statistics_group .swiper-button-next {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 37px;
+    height: 39px;
+    background: no-repeat center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.statistics_group .swiper-button-prev {
+    left: 35px;
+    background-image: url(../images/ico/statistics_box_left.png);
+}
+.statistics_group .swiper-button-next {
+    right: 35px;
+    background-image: url(../images/ico/statistics_box_right.png);
 }
 .performance_box .chart_group_box {
     padding: 30px;
@@ -5424,15 +5448,19 @@ footer .footer_bottom {
     }
 
     /* 통계 */
-    .statistics_box {
+    .statistics_group {
         padding: 15px;
         background: url(../images/bg/bg_statistics_box_02.png) no-repeat;
-        background-size: auto 100%;
+        background-size: 100% auto;
+    }
+    .statistics_box {
+        
     }
     .statistics_box ul {
-        flex-direction: column;
+        
     }
     .statistics_box ul li {
+        min-width: 100%;
         gap: 5px;
         padding: 10px 0;
         box-sizing: border-box;

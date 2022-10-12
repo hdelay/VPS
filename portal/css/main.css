@@ -19,7 +19,7 @@ header.headerfix .header_top {
 .swiper-container .swiper-pagination.sec1_full {
     display: flex;
     justify-content: flex-start;
-    top: 220px;
+    top: 22%;
     left: 50%;
     bottom: inherit;
     width: 1300px;
@@ -50,10 +50,10 @@ header.headerfix .header_top {
     content: "일반인";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(2)::after {
-    content: "투자자";
+    content: "투자희망기업";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(3)::after {
-    content: "투자희망기업";
+    content: "투자자";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     color: #fff;
@@ -1143,7 +1143,7 @@ header.headerfix .header_top {
         padding-top: 170px;
     }
     .swiper-container .swiper-pagination.sec1_full {
-        top: 260px;
+        top: 22%;
     }
     .swiper-container > .swiper-wrapper > .swiper-slide {
         height: 100vh;

@@ -3409,6 +3409,9 @@ a.ui-button:active,
         height: 50%;
         background-size: auto 100% !important;
     }
+    .chk_list.img li .img img {
+        height: 100%;
+    }
 
     /* 체크박스 리스트타입1 :: 투자자 검색 */
     .chk_list.type_01 {
