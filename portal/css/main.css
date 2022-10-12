@@ -155,7 +155,7 @@ header.headerfix .header_top {
     margin-right: 10px;
 }
 .main_quickmenu.black .mymenu {
-    border: 2px solid rgba(0, 0, 0, .2);
+    border: 2px solid rgba(255, 255, 255, .4);
     color: #333;
 }
 .main_quickmenu.black .mymenu span {
@@ -182,6 +182,8 @@ header.headerfix .header_top {
     z-index: -1;
 }
 .swiper-container .slide_wrap .img > * {
+    width: 100%;
+    min-width: 2000px;
     height: 100%;
     object-fit: fill;
 }
@@ -284,56 +286,101 @@ header.headerfix .header_top {
     align-items: center;
     gap: 15px;
     height: 100%;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(255, 255, 255, .6);
     border-radius: 50%;
-    color: #fff;
+    color: #333;
 }
 .shortcuts_box .swiper-wrapper .swiper-slide a span {
     display: block;
     width: 45px;
     height: 45px;
     background: no-repeat center;
-    background-size: 90%;
+    background-size: 80%;
+    transition: .3s;
+}
+.first .shortcuts_box .swiper-wrapper .swiper-slide a span {
 }
 .first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut1_01.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_01_off.png);
+}
+.first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_01_on.png);
 }
 .first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut1_02.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_02_off.png);
+}
+.first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_02_on.png);
 }
 .first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut1_03.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_03_off.png);
+}
+.first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_03_on.png);
 }
 .first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut1_04.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_04_off.png);
+}
+.first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_04_on.png);
 }
 .first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(5) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut1_05.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_05_off.png);
 }
+.first .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(5) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut1_05_on.png);
+}
+
 .second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut2_01.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_01_off.png);
+}
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1):hover a span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_01_on.png);
 }
 .second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut2_02.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_02_off.png);
+}
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_02_on.png);
 }
 .second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut2_03.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_03_off.png);
+}
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_03_on.png);
 }
 .second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut2_04.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_04_off.png);
 }
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_04_on.png);
+}
+
 .third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut3_01.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_01_off.png);
+}
+.third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_01_on.png);
 }
 .third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut3_02.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_02_off.png);
+}
+.third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(2) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_02_on.png);
 }
 .third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut3_03.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_03_off.png);
+}
+.third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(3) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_03_on.png);
 }
 .third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a span {
-    background-image: url(../images/ico/ico_main_sec1_shortcut3_04.png);
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_04_off.png);
 }
+.third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut3_04_on.png);
+}
+
 .shortcuts_box .swiper-wrapper .swiper-slide a strong {
     font-size: 16px;
     font-weight: 500;
@@ -1295,33 +1342,31 @@ header.headerfix .header_top {
         flex-direction: column;
         padding-bottom: 30px;
     }
-    .swiper-container .slide_wrap .inner .sub_tit {
-        font-size: 15px;
-    }
-    .swiper-container .slide_wrap .inner .sub_tit span {
-        font-size: 15px;
+    .swiper-container .slide_wrap .inner .tit {
+        margin-top: 50px;
     }
     .swiper-container .slide_wrap .inner .tit h2 strong,
     .swiper-container .slide_wrap .inner .tit h2 div {
-        font-size: 40px;
+        font-size: 32px;
+        word-break: keep-all;
     }
     .swiper-container .slide_wrap .inner .tit h2 em {
         font-size: 40px;
     }
     .swiper-container .slide_wrap .inner .total {
         flex-direction: column;
-        gap: 10px 0;
+        gap: 0;
         min-height: 0;
         height: auto;
         justify-content: center;
     }
     .swiper-container .slide_wrap .inner .total li {
         width: 100%;
-        padding-bottom: 13px;
+        padding: 12px 0;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit {
         align-items: center;
-        font-size: 15px;
+        font-size: 17px;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit::before {
         width: 35px;
@@ -1331,11 +1376,10 @@ header.headerfix .header_top {
         margin-right: 10px;
     }
     .swiper-container .slide_wrap .inner .total li .total_content strong {
-        line-height: 24px;
-        font-size: 25px;
+        font-size: 17px;
     }
     .swiper-container .slide_wrap .inner .total li .total_content span {
-        font-size: 14px;
+        font-size: 17px;
     }
     .shortcuts_box {
         position: relative;
@@ -1356,10 +1400,10 @@ header.headerfix .header_top {
         height: 18px;
     }
     .shortcuts_box .swiper-button-prev.shortcuts {
-        left: 55px;
+        left: 80px;
     }
     .shortcuts_box .swiper-button-next.shortcuts {
-        right: 55px;
+        right: 80px;
     }
     .shortcuts_box .swiper-button-prev.shortcuts::after,
     .shortcuts_box .swiper-button-next.shortcuts::after {
@@ -1384,10 +1428,13 @@ header.headerfix .header_top {
         border-radius: 10px;
         background-color: #a1c4ff;
     }
+    .shortcuts_box .swiper-wrapper {
+        gap: 10px;
+    }
     .shortcuts_box .swiper-wrapper .swiper-slide {
         max-width: 50%;
-        width: 116px !important;
-        height: 116px;
+        width: 150px !important;
+        height: 150px;
         flex: none;
     }
     .shortcuts_box .swiper-wrapper .swiper-slide a {
@@ -1398,7 +1445,6 @@ header.headerfix .header_top {
         display: none;
     }
     .shortcuts_box .swiper-wrapper .swiper-slide a strong {
-        height: 40px;
         font-size: 15px;
     }
     

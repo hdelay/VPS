@@ -4979,6 +4979,9 @@ footer .footer_bottom {
     .allmenu_close span:nth-child(2) {
         transform: rotate(45deg);
     }
+    header .header_top .search_box input {
+        width: calc(100vw - 73px);
+    }
 
     /* quick_box */
     .quick_box {
