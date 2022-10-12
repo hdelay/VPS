@@ -1570,6 +1570,7 @@ a.ico_folder::after {
     min-width: 209px;
     flex: 1;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 15px;
     position: relative;
@@ -1600,6 +1601,7 @@ a.ico_folder::after {
     font-weight: 500;
 }
 .statistics_box ul li strong {
+    text-align: center;
     font-size: 15px;
     font-weight: 400;
 }

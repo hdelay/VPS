@@ -47,7 +47,7 @@ header.headerfix .header_top {
     color: #fff;
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(1)::after {
-    content: "일반인";
+    content: "종합";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(2)::after {
     content: "투자희망기업";
