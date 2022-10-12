@@ -226,22 +226,38 @@ header.headerfix .header_top {
     margin: 20px 0;
     align-items: center;
     min-height: 142px;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 .swiper-container .slide_wrap .inner .total li {
     display: flex;
     justify-content: space-between;
-    width: 375px;
-    padding: 20px 0;
+    min-width: 375px;
+    gap: 30px;
+    padding: 38px 0 11px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
+.swiper-container .slide_wrap.second .inner .total li,
+.swiper-container .slide_wrap.third .inner .total li {
+    min-width: 485px;
+}
 .swiper-container .slide_wrap .inner .total li .total_tit {
     display: flex;
+    position: relative;
     align-items: flex-end;
     font-size: 22px;
     font-weight: 500;
     color: #333;
+}
+.swiper-container .slide_wrap .inner .total li .total_tit span {
+    position: absolute;
+    top: -26px;
+    left: 0;
+    font-size: 13px;
+    padding: 2px 7px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-weight: 500;
 }
 .swiper-container .slide_wrap .inner .total li .total_content {
     display: flex;
@@ -648,25 +664,19 @@ header.headerfix .header_top {
     background: no-repeat center;
     background-size: auto 100%;
 }
-.sec3 .tab_content .sec_cont_01 .total li:nth-child(1) .total_tit::before {
+.sec3 .tab_content .sec_cont_01 .total li .total_tit.money::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_01.png);
 }
-.sec3 .tab_content .sec_cont_01 .total li:nth-child(2) .total_tit::before {
+.sec3 .tab_content .sec_cont_01 .total li .total_tit.search_m::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_02.png);
 }
-.sec3 .tab_content .sec_cont_02 .total li:nth-child(1) .total_tit::before {
-    background-image: url(../images/ico/ico_main_sec03_li_bg_01.png);
-}
-.sec3 .tab_content .sec_cont_02 .total li:nth-child(2) .total_tit::before {
-    background-image: url(../images/ico/ico_main_sec03_li_bg_02.png);
-}
-.sec3 .tab_content .sec_cont_03 .total li:nth-child(1) .total_tit::before {
+.sec3 .tab_content .sec_cont_03 .total li .total_tit.people::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_03.png);
 }
-.sec3 .tab_content .sec_cont_03 .total li:nth-child(2) .total_tit::before {
+.sec3 .tab_content .sec_cont_03 .total li .total_tit.chart::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_04.png);
 }
-.sec3 .tab_content .sec_cont_03 .total li:nth-child(3) .total_tit::before {
+.sec3 .tab_content .sec_cont_03 .total li .total_tit.gold::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_05.png);
 }
 .sec3 .inner > .tab_group > .tab_content .total_chart .total > span {
@@ -1170,6 +1180,9 @@ header.headerfix .header_top {
     .swiper-container .slide_wrap .inner .total li .total_tit {
         font-size: 18px;
     }
+    .swiper-container .slide_wrap .inner .total li .total_content {
+        gap: 5px;
+    }
     .swiper-container .slide_wrap .inner .total li .total_content strong {
         font-size: 18px;
     }
@@ -1354,19 +1367,24 @@ header.headerfix .header_top {
         font-size: 40px;
     }
     .swiper-container .slide_wrap .inner .total {
-        flex-direction: column;
         gap: 0;
         min-height: 0;
         height: auto;
         justify-content: center;
     }
     .swiper-container .slide_wrap .inner .total li {
+        gap: 5px;
         width: 100%;
+        min-width: 0;
         padding: 12px 0;
+    }
+    .swiper-container .slide_wrap.second .inner .total li,
+    .swiper-container .slide_wrap.third .inner .total li {
+        min-width: 0;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit {
         align-items: center;
-        font-size: 17px;
+        font-size: 15px;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit::before {
         width: 35px;
@@ -1376,10 +1394,10 @@ header.headerfix .header_top {
         margin-right: 10px;
     }
     .swiper-container .slide_wrap .inner .total li .total_content strong {
-        font-size: 17px;
+        font-size: 15px;
     }
     .swiper-container .slide_wrap .inner .total li .total_content span {
-        font-size: 17px;
+        font-size: 15px;
     }
     .shortcuts_box {
         position: relative;
