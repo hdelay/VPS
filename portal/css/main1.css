@@ -13,6 +13,28 @@ header.headerfix .header_top,
 .headerfix .header_bottom {
     background-color: rgba(255, 255, 255, .6);
 }
+/* 헤더 임시 */
+header.font_black .header_top h1 a {
+    background: url(../images/logo.png) no-repeat center;
+}
+header.font_black .header_top nav > ul > li > a {
+    color: #fff;
+}
+header.font_black .btn_login_box li a {
+    color: #fff;
+}
+header.font_black .header_top .search_box .search_inp + button {
+    background: url(../images/ico/ico_gnb_search.png) no-repeat center;
+}
+header.font_black .header_top .util_box a.btn_sitemap span {
+    background-color: #fff;
+}
+.main_quickmenu.black ul li a {
+    color: #fff;
+}
+header.font_black .btn_login_box li a::before {
+    background-color: #fff;
+}
 
 .swiper-container {
     height: 100%;
