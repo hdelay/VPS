@@ -644,7 +644,7 @@ header.headerfix .header_top {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, .1);
-    padding: 25px 30px;
+    padding: 15px 30px;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -664,19 +664,19 @@ header.headerfix .header_top {
     background: no-repeat center;
     background-size: auto 100%;
 }
-.sec3 .tab_content .sec_cont_01 .total li .total_tit.money::before {
+.sec3 .tab_content .total li .total_tit.money::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_01.png);
 }
-.sec3 .tab_content .sec_cont_01 .total li .total_tit.search_m::before {
+.sec3 .tab_content .total li .total_tit.search_m::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_02.png);
 }
-.sec3 .tab_content .sec_cont_03 .total li .total_tit.people::before {
+.sec3 .tab_content .total li .total_tit.people::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_03.png);
 }
-.sec3 .tab_content .sec_cont_03 .total li .total_tit.chart::before {
+.sec3 .tab_content .total li .total_tit.chart::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_04.png);
 }
-.sec3 .tab_content .sec_cont_03 .total li .total_tit.gold::before {
+.sec3 .tab_content .total li .total_tit.gold::before {
     background-image: url(../images/ico/ico_main_sec03_li_bg_05.png);
 }
 .sec3 .inner > .tab_group > .tab_content .total_chart .total > span {
