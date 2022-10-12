@@ -50,10 +50,10 @@ header.headerfix .header_top {
     content: "종합";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(2)::after {
-    content: "투자희망기업";
+    content: "투자자";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet:nth-child(3)::after {
-    content: "투자자";
+    content: "투자희망기업";
 }
 .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     color: #fff;
@@ -1332,6 +1332,9 @@ header.headerfix .header_top {
         padding: 70px 20px 0;
         height: 100%;
     }
+    .swiper-container .slide_wrap .img {
+        justify-content: flex-start;
+    }
     .swiper-container .slide_wrap .img video {
         width: auto;
     }
@@ -1341,7 +1344,7 @@ header.headerfix .header_top {
     .swiper-container .swiper-pagination.sec1_full {
         width: auto;
         max-width: 100%;
-        top: 110px;
+        top: 11%;
         left: 20px;
         transform: translateX(0);
     }
@@ -1457,13 +1460,14 @@ header.headerfix .header_top {
     }
     .shortcuts_box .swiper-wrapper .swiper-slide {
         max-width: 50%;
-        width: 150px !important;
-        height: 150px;
+        width: calc(50% - 5px) !important;
+        height: 100px;
         flex: none;
     }
     .shortcuts_box .swiper-wrapper .swiper-slide a {
         padding: 10px;
         box-sizing: border-box;
+        border-radius: 10px;
     }
     .shortcuts_box .swiper-wrapper .swiper-slide a em {
         display: none;
