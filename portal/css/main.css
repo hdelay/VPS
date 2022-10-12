@@ -237,9 +237,11 @@ header.headerfix .header_top {
     box-sizing: border-box;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
-.swiper-container .slide_wrap.second .inner .total li,
-.swiper-container .slide_wrap.third .inner .total li {
+.swiper-container .slide_wrap.second .inner .total li {
     min-width: 485px;
+}
+.swiper-container .slide_wrap.third .inner .total li {
+    min-width: 425px;
 }
 .swiper-container .slide_wrap .inner .total li .total_tit {
     display: flex;
