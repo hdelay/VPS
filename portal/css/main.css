@@ -1152,10 +1152,10 @@ header.headerfix .header_top {
 ============================================================ */
 @media screen and (max-width: 1300px) {
     .swiper-container .slide_wrap {
-        padding-top: 170px;
+        padding-top: 95px;
     }
     .swiper-container .swiper-pagination.sec1_full {
-        top: 22%;
+        top: 11%;
     }
     .swiper-container > .swiper-wrapper > .swiper-slide {
         height: 100vh;
