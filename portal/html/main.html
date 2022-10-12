@@ -377,7 +377,7 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="slide_wrap second">
-                            <div class="img"><img src="../images/bg/bg_main_sec1_09.png" alt=""></div>
+                            <div class="img"><img src="../images/bg/bg_main_sec1_10.png" alt=""></div>
                             <div class="inner">
                                 <div class="tit">
                                     <h2>
@@ -441,7 +441,7 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="slide_wrap third">
-                            <div class="img"><img src="../images/bg/bg_main_sec1_08.png" alt=""></div>
+                            <div class="img"><img src="../images/bg/bg_main_sec1_11.png" alt=""></div>
                             <div class="inner">
                                 <div class="tit">
                                     <h2>
@@ -1616,56 +1616,5 @@
     <!-- //pop_content -->
 
 </div>
-<script>
-    $('#fullpage').fullpage({
-        anchors: ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'],
-        menu: '.main_quickmenu ul',
-        scrollingSpeed: 500,
-        //scrollBar: true,
-        scrollOverflow: true,
-        responsiveWidth: 768,
-        afterLoad: function(){
-            if($(window).width() > 768){
-                if($(this).index() === 0){
-                    $('header').addClass('font_black');
-                    $('header').removeClass('headerfix');
-                    $('.main_quickmenu').removeClass('black');
-                } else if($(this).index() === 1){
-                    $('header').addClass('headerfix');
-                    $('.main_quickmenu').addClass('black');
-                    $('header').removeClass('font_black');
-                } else if($(this).index() === 3){
-                    $('header').addClass('headerfix');
-                    $('.main_quickmenu').addClass('black');
-                    $('header').removeClass('font_black');
-                } else if($(this).index() === 4){
-                    $('header').addClass('headerfix');
-                    $('.main_quickmenu').addClass('black');
-                    $('header').removeClass('font_black');
-                } else if($(this).index() === 5){
-                    $('header').addClass('headerfix');
-                    $('.main_quickmenu').addClass('black');
-                    $('header').removeClass('font_black');
-                } else {
-                    $('header').removeClass('headerfix');
-                    $('.main_quickmenu').removeClass('black');
-                    $('header').removeClass('font_black');
-                }
-            } else {
-                if($(this).index() === 0){
-                    $('header').removeClass('headerfix');
-                } else if($(this).index() === 1){
-                    $('header').addClass('headerfix');
-                } else if($(this).index() === 2){
-                    $('header').removeClass('headerfix');
-                } else if($(this).index() === 3){
-                    $('header').addClass('headerfix');
-                } else {
-                    $('header').addClass('headerfix');
-                }
-            }
-        },
-    });
-</script>
 </body>
 </html>
