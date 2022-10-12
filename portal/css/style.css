@@ -43,6 +43,7 @@ header .header_top h1 a {
 header.headerfix .header_top h1 a,
 header.font_black .header_top h1 a {
     background: url(../images/logo_b.png) no-repeat center;
+    background-size: 100%;
 }
 /* menu 1depth */
 header .header_top nav {

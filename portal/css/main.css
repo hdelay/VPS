@@ -1376,7 +1376,7 @@ header.headerfix .header_top {
         gap: 5px;
         width: 100%;
         min-width: 0;
-        padding: 12px 0;
+        padding: 30px 0 10px;
     }
     .swiper-container .slide_wrap.second .inner .total li,
     .swiper-container .slide_wrap.third .inner .total li {
@@ -1385,6 +1385,10 @@ header.headerfix .header_top {
     .swiper-container .slide_wrap .inner .total li .total_tit {
         align-items: center;
         font-size: 15px;
+    }
+    .swiper-container .slide_wrap .inner .total li .total_tit span {
+        top: -21px;
+        font-size: 11px;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit::before {
         width: 35px;
