@@ -809,6 +809,10 @@ header.font_black .btn_login_box li a::before {
 .investment_box > ul li strong {
     font-weight: 500;
 }
+/* 1013 고객요청으로 폰트크기 줄임 */
+.search_item .chk_list.img .chk_box input ~ label.fontsize_s {
+    font-size: 14px;
+}
 
 /* 통합공시 */
 .integrated_box .img {
