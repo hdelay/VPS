@@ -2495,7 +2495,7 @@
 /* 체크박스 리스트타입 :: 투자자 검색 - 이미지 */
 .chk_list.img {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 .chk_list.img li {
     display: flex;
