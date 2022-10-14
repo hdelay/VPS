@@ -2563,6 +2563,9 @@
 .chk_list.type_02 > li + li {
     border-top: 1px solid #d9e1e7;
 }
+.chk_list.type_02 > li .chk_box {
+    align-items: baseline;
+}
 .chk_list.type_02 > li .chk_box span {
     justify-content: flex-start;
     align-items: center;
