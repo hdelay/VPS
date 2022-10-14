@@ -2325,6 +2325,11 @@
     color: #333;
     cursor: pointer;
 }
+.tbl_card_list .list_info ul li .btn_box > *.arrow::after {
+    content: "▼";
+    margin-left: 3px;
+    margin-top: -2px;
+}
 .tbl_card_list .list_info ul li .btn_box > *.comu_add {
     align-items: center;
 }
@@ -2340,6 +2345,9 @@
     background-color: #3949ab;
     border-color: #3949ab;
     color: #fff;
+}
+.list_info ul li.on .btn_box > *.arrow::after {
+    content: "▲";
 }
 .list_info ul li .btn_box > *.btn_updown::after {
     content: "▼";
