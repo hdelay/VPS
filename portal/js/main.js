@@ -10,6 +10,7 @@ $(function(){
         //scrollBar: true,
         scrollOverflow: true,
         responsiveWidth: 768,
+        responsiveHeight: 710,
         afterLoad: function(){
             if($(window).width() > 768){
                 if($(this).index() === 0){
