@@ -3895,6 +3895,14 @@ a.ico_folder::after {
     background-color: #5c6bc0;
 }
 
+/* 내 정보 관리 */
+.trans_enterprise {
+    display: none;
+}
+.trans_enterprise.on {
+    display: block;
+}
+
 /* 통합검색 */
 .search_page .search_box {
     display: flex;

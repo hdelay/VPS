@@ -507,6 +507,11 @@ $(function(){
         } 
     });
 
+    // 기업정보 입력
+    $('.trans_enterprise_btn').on('click', function(){
+        $('.trans_enterprise').toggleClass('on');
+    });
+
 });
 
 //Toast 팝업

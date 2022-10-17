@@ -461,6 +461,9 @@
                     </div>
 
                     <div class="btn_box_group type_01">
+                        <div class="btn_box max">
+                            <a href="javascript:void(0);" class="btn_blue dialog-link" data-target="#note_03">전문투자자 변경 신청</a>
+                        </div>
                         <div class="btn_box">
                             <a href="javascript:void(0);" class="btn_white dialog-link" data-target="#note_01">비밀번호 변경</a>
                         </div>
@@ -730,6 +733,9 @@
 
                 <div class="btn_box_group type_01">
                     <div class="btn_box">
+                        <a href="javascript:void(0);" class="btn_white dialog-link" data-target="#alpop_03">탈퇴</a>
+                    </div>
+                    <div class="btn_box">
                         <a href="javascript:void(0);" class="btn_navy dialog-link" data-target="#alpop_02">기업추가정보 등록</a>
                     </div>
                     <div class="btn_box">
@@ -964,6 +970,106 @@
         <div class="btn_box">
             <button class="btn_white pop_close">취소</button>
             <button class="btn_mint pop_close">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 탈퇴 팝업 -->
+<div id="alpop_03" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img1"></span>
+    </div>
+
+    <div class="pop_content">
+        탈퇴하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_white pop_close">취소</button>
+            <button class="btn_mint pop_close dialog-link" data-target="#note_04">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 비밀번호 인증 팝업2 -->
+<div id="note_04" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>비밀번호 인증</h3>
+    </div>
+
+    <div class="find_group">
+        <div class="find_txt">
+            비밀번호 인증 절차 후, 변경이 가능합니다.<br/>
+            현재 비밀번호를 입력해주세요.
+        </div>
+        <div class="inp_group">
+            <div class="inp_box">
+                <input type="password" placeholder="비밀번호를 입력하세요.">
+            </div>
+        </div>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_gray shadow">취소</a>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_mint shadow" onclick="onShowToast('벤처투자종합포털 회원 탈퇴가 정상처리되었습니다.')">확인</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- 회원유형 변경 신청 팝업 -->
+<div id="note_03" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>회원유형 변경 신청</h3>
+    </div>
+
+    <div class="vics_group">
+        <div class="vics_txt">
+            회원유형 변경과 전문투자자 변경에 관한 안내 문구 표시
+        </div>
+        <div class="tbl_box_data">
+            <table>
+                <caption>회원유형 변경 테이블</caption>
+                <colgroup>
+                    <col width="20%;">
+                    <col width="30%;">
+                    <col width="20%;">
+                    <col width="30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><label for="input_0111">VICS ID</label></th>
+                        <td colspan="3">
+                            <div class="inp_group search">
+                                <div class="inp_box min">
+                                    <input type="text" id="input_0111" placeholder="venture 입력 또는 미입력">
+                                </div>
+                                <div class="box_btn">
+                                    <button class="search" onclick="onShowToast('일치된 정보가 없어 회원유형 변경이 불가능합니다.')">재직확인</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_mint shadow" onclick="onShowToast('회원유형 변경 처리가 완료되었습니다.')">변경신청</a>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_gray shadow">취소</a>
         </div>
     </div>
 

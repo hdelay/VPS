@@ -159,7 +159,7 @@
     display: flex;
     flex: 1;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px;
     width: 100%;
     border-radius: 5px;
     font-size: 18px;
@@ -293,6 +293,9 @@
     line-height: 26px;
     font-size: 26px;
     color: #333;
+}
+.btn_box.max {
+    width: auto;
 }
 
 /* 제목 */
