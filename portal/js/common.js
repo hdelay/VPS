@@ -135,9 +135,18 @@ $(function(){
     // 탭키시 gnb 오픈
     $('header .header_top nav > ul > li > ul li a').focus(function(){
         $('body').addClass('gnb_open');
+        const arryHeaderHeight = [
+            $('header .header_top nav > ul > li').eq(0).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(1).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(2).find('ul').height(),
+            $('header .header_top nav > ul > li').eq(3).find('ul').height()
+        ];
+        const heightMax = Math.max.apply(null, arryHeaderHeight);
+        $('.gnb_open .header_bg').css({'height': heightMax + 115});
     });
     $('header .header_top nav > ul > li > ul li a').blur(function(){
         $('body').removeClass('gnb_open');
+        $('.header_bg').css({'height': '0'});
     });
     
     // 검색버튼
@@ -274,7 +283,7 @@ $(function(){
     });
 
     // 탭
-    $('.tab_group .tab_btn ul li a').on('click', function(e){
+    $('.tab_group .tab_btn > ul > li > a').on('click', function(e){
         e.preventDefault();
         var on_tab = $(this).attr("rel")
 
@@ -482,6 +491,20 @@ $(function(){
     $('.search_page .search_box .search_word a').on('click', function(e){
         e.preventDefault();
         $(this).remove();
+    });
+
+    // 커뮤니티 마우스hover
+    $('.tab_submenu_group > a').focus(function(){
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().find('a').focus(function(){
+            $('.tab_group .tab_btn > ul > li > a').parent().removeClass('active');
+        });
+    });
+    // 영역 외 클릭 닫기
+    $('.wrap').click(function(e){
+        if (!$('.tab_submenu_group > a').parent().has(e.target).length) { 
+            $('.tab_group .tab_btn > ul > li').removeClass('active');
+        } 
     });
 
 });
