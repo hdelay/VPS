@@ -718,32 +718,32 @@ header.font_black .btn_login_box li a::before {
 }
 
 /* 투자유치 희망기업 검색 */
-.enterprise_info ul {
+.enterprise_info > ul {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
-.enterprise_info ul li {
+.enterprise_info > ul > li {
     width: calc(50% - 20px);
     padding: 25px;
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #d9e1e7;
 }
-.enterprise_info ul li dl dt {
+.enterprise_info ul li > dl > dt {
     padding-bottom: 25px;
     font-size: 21px;
     font-weight: 500;
 }
-.enterprise_info ul li dl dd + dt {
+.enterprise_info ul li > dl > dd + dt {
     padding-top: 25px;
 }
-.enterprise_info ul li dl dd {
+.enterprise_info ul li > dl > dd {
     font-size: 14px;
     font-weight: 400;
 }
-.enterprise_info ul li dl dd .img,
-.enterprise_info ul li dl dd .video {
+.enterprise_info ul li > dl > dd .img,
+.enterprise_info ul li > dl > dd .video {
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -752,12 +752,24 @@ header.font_black .btn_login_box li a::before {
     height: 250px;
     border-radius: 10px;
 }
-.enterprise_info ul li dl dd .video video {
+.enterprise_info ul li > dl > dd .video video {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+.enterprise_info ul li > dl > dd dl + dl {
+    margin-top: 15px;
+}
+.enterprise_info ul li > dl > dd dt {
+    font-size: 17px;
+    font-weight: 500;
+}
+.enterprise_info ul li > dl > dd dd {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 400;
 }
 .financial_info .chart_group_box {
     display: flex;
@@ -808,6 +820,75 @@ header.font_black .btn_login_box li a::before {
 }
 .investment_box > ul li strong {
     font-weight: 500;
+}
+.company_img {
+    position: relative;
+    overflow: hidden;
+}
+.company_img ul {
+    display: flex;
+    width: 300%;
+}
+.company_img ul li {
+    width: 100%;
+}
+.company_img ul li img {
+    width: 100%;
+}
+.company_img button {
+    cursor: pointer;
+}
+.company_img .swiper-button-prev,
+.company_img .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+}
+.company_img .swiper-button-prev {
+    left: 20px;
+}
+.company_img .swiper-button-next {
+    right: 20px;
+}
+.company_img .swiper-button-prev::after,
+.company_img .swiper-button-next::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid;
+    border-width: 0px 0 2px 2px;
+}
+.company_img .swiper-button-prev::after {
+    content: "";
+    transform: rotate(45deg);
+}
+.company_img .swiper-button-next::after {
+    content: "";    
+    transform: rotate(-135deg);
+}
+.company_img .swiper-pagination {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.company_img .swiper-pagination-bullet {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+.company_img .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgba(255, 255, 255, .8);
 }
 /* 1013 고객요청으로 폰트크기 줄임 */
 .search_item .chk_list.img .chk_box input ~ label.fontsize_s {
@@ -5211,11 +5292,11 @@ footer .footer_bottom {
     }
 
     /* 투자유치 희망기업 검색 */
-    .enterprise_info ul {
+    .enterprise_info > ul {
         flex-direction: column;
         gap: 10px;
     }
-    .enterprise_info ul li {
+    .enterprise_info > ul > li {
         width: 100%;
         padding: 15px;
     }
@@ -5232,6 +5313,11 @@ footer .footer_bottom {
     }
     .investment_box > ul li {
         padding: 15px;
+    }
+    .company_img .swiper-button-prev::after,
+    .company_img .swiper-button-next::after {
+        width: 10px;
+        height: 10px;
     }
 
     /* 통합공시 */

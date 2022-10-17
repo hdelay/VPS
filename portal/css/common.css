@@ -337,6 +337,16 @@
     border-radius: 4px;
     margin-right: 10px;
 }
+.tit_box.row .btn_box {
+    flex: none;
+    width: auto;
+    margin-bottom: 35px;
+}
+.tit_box.row .btn_box * {
+    padding: 10px 20px;
+    flex: none;
+    width: auto;
+}
 
 .req {
     position: absolute;
@@ -1192,7 +1202,8 @@
     font-weight: 400;
     font-size: var(--font-common);
 }
-.tbl_box table tbody tr td a {
+.tbl_box table tbody tr td a,
+.tbl_box table tbody tr td button {
     font-weight: 400;
     font-size: var(--font-common);
 }
@@ -1860,8 +1871,8 @@
 }
 .list_group_info .top .tit .details {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .list_group_info .top .tit .details li {
     font-size: 14px;
@@ -2976,6 +2987,12 @@ a.ui-button:active,
     }
     .tit_box h4 {
         margin-bottom: 20px;
+    }
+    .tit_box.row .btn_box {
+        margin-bottom: 20px;
+    }
+    .tit_box.row .btn_box * {
+        font-size: 15px;
     }
 
     /* list 리스트 */
