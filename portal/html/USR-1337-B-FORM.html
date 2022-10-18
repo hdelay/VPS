@@ -349,7 +349,7 @@
 
                 <div class="community_main_btn">
                     <div class="btn_box">
-                        <a href="./USR-1330-F-LIST.html" class="btn_arrow_right">커뮤니티 목록으로 이동</a>
+                        <a href="" class="btn_arrow_right">커뮤니티 목록으로 이동</a>
                     </div>
                 </div>
                 
@@ -881,7 +881,15 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><label for="input_01">일정</label></th>
+                                            <th scope="row"><label for="input_02">제목<span class="req">*</span></label></th>
+                                            <td colspan="3">
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_02">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="input_01">일정<span class="req">*</span></label></th>
                                             <td colspan="3">
                                                 <div class="inp_group">
                                                     <div class="inp_box datepicker_box min">
@@ -891,30 +899,26 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><label for="input_02">제목</label></th>
-                                            <td colspan="3">
+                                            <th scope="row"><label for="input_02">작성자</label></th>
+                                            <td>
                                                 <div class="inp_box">
-                                                    <input type="text" id="input_02">
+                                                    <input type="text" id="input_02" value="자동표시" readonly>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><label for="input_02">작성일자</label></th>
+                                            <td>
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_02" value="자동표시" readonly>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><label for="textarea_01">내용</label></th>
+                                            <th scope="row"><label for="textarea_01">내용<span class="req">*</span></label></th>
                                             <td colspan="3">
                                                 <div class="inp_group">
                                                     <div class="textarea_box cont">
+                                                        <label for="textarea_01" class="hidden">입력</label>
                                                         <textarea id="textarea_01"></textarea>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4">
-                                                <div class="inp_group file">
-                                                    <div class="file_box">
-                                                        <input type="file" id="file_inp" class="file_inp">
-                                                        <label for="file_inp">파일첨부</label>
-                                                        <span class="file_value"></span>
                                                     </div>
                                                 </div>
                                             </td>

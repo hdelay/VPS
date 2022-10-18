@@ -539,7 +539,7 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><label for="input_02">제목</label></th>
+                                            <th scope="row"><label for="input_02">제목<span class="req">*</span></label></th>
                                             <td colspan="3">
                                                 <div class="inp_box">
                                                     <input type="text" id="input_02">
@@ -547,7 +547,21 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><label for="textarea_01">내용</label></th>
+                                            <th scope="row"><label for="input_02">작성자</label></th>
+                                            <td>
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_02" value="자동표시" readonly>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><label for="input_02">작성일자</label></th>
+                                            <td>
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_02" value="자동표시" readonly>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="textarea_01">내용<span class="req">*</span></label></th>
                                             <td colspan="3">
                                                 <div class="inp_group">
                                                     <div class="textarea_box cont">
@@ -557,7 +571,8 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="4">
+                                            <th scope="row"><label for="file_inp">첨부파일</label></th>
+                                            <td colspan="3">
                                                 <div class="inp_group file">
                                                     <div class="file_box">
                                                         <input type="file" id="file_inp" class="file_inp">
