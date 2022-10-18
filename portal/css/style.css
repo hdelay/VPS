@@ -4037,6 +4037,15 @@ a.ico_folder::after {
 .search_result_box .result_box dl a:focus {
     text-decoration: underline;
 }
+.search_result_box .result_box .more {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+.search_result_box .result_box .more a {
+    font-weight: 500;
+}
 
 /* 사이트맵 */
 .sitemap_box {
@@ -6411,6 +6420,10 @@ footer .footer_bottom {
     }
     .search_result_box .result_box dl dd {
         font-size: 15px;
+    }
+    .search_result_box .result_box .more {
+        margin-top: 10px;
+        margin-bottom: -10px;
     }
 
     /* 사이트맵 */
