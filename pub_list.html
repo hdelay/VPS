@@ -52,6 +52,8 @@
     .design div {display: flex; justify-content: center;}
     .design div a {display: flex; justify-content: center; border-radius: 20px; padding: 3px 15px; background-color: #4848D4; color: #fff;}
     .design div a.none {background-color: #aaa;}
+    .none_tr th {background-color: #aaa !important; color: #bbb !important;}
+    .none_tr th a {color: #bbb;}
 </style>
 <body>
     <div class="wrap">
@@ -216,14 +218,15 @@
                     con:'완료',
                     etc:'[스타일가이드]'
                 },
-                {
+                // <span class="none"></span>1018 내정보관리에서 진행
+                { 
                     division: '',
                     depth1:'투자유치 희망기업 검색 - 등록/수정(TAB-3)',
                     path:'./portal/html/USR-1010-F-FORM.html',
                     date:'2022-08-31',
                     mdate:'2022-09-05',
                     con:'완료',
-                    etc:''
+                    etc:'<span class="none"></span>1018 내정보관리에서 진행'
                 },
                 {
                     division: '',
@@ -526,6 +529,7 @@
                     con:'완료',
                     etc:'[게시판 타입1 - 상세]'
                 },
+                // <span class="none"></span>1018 제공할 프로그램 미존재로 삭제
                 {
                     division: '',
                     depth1:'정보광장 - 프로그램',
@@ -533,7 +537,7 @@
                     date:'2022-09-29',
                     mdate:'2022-10-20',
                     con:'완료',
-                    etc:'[2차디자인]'
+                    etc:'<span class="none"></span>1018 제공할 프로그램 미존재로 삭제'
                 },
                 {
                     division: '',
@@ -953,6 +957,7 @@
                     con:'완료',
                     etc:'-> 바로가기 USR-1332-B-LIST.html'
                 },
+                // <span class="none"></span>1018 기능 삭제
                 {
                     division: '',
                     depth1:'마이페이지 - 온라인 파일 관리',
@@ -960,7 +965,7 @@
                     date:'2022-09-08',
                     mdate:'',
                     con:'완료',
-                    etc:''
+                    etc:'<span class="none"></span>1018 기능 삭제'
                 },
                 {
                     division: '',
@@ -980,6 +985,7 @@
                     con:'완료',
                     etc:''
                 },
+                // <span class="none"></span>1018 팝업으로 대체
                 {
                     division: '',
                     depth1:'마이페이지 - 알림 서비스 등록',
@@ -987,7 +993,7 @@
                     date:'2022-09-13',
                     mdate:'2022-11-17',
                     con:'완료',
-                    etc:''
+                    etc:'<span class="none"></span>1018 팝업으로 대체'
                 },
                 {
                     division: '',
@@ -1103,6 +1109,7 @@
                     con:'작업중',
                     etc:'<span class="red">컨텐츠 없음</span><span class="blue">디자인요청</span> [2차디자인]'
                 },
+                // <span class="none"></span>1018 footer 콤보박스 바로가기로 대체
                 {
                     division: '',
                     depth1:'관련사이트 바로가기',
@@ -1110,7 +1117,7 @@
                     date:'',
                     mdate:'2022-12-02',
                     con:'작업중',
-                    etc:'<span class="red">컨텐츠 확인필요</span> [2차디자인]'
+                    etc:'<span class="none"></span>1018 footer 콤보박스 바로가기로 대체'
                 },
                 {
                     division: '에러페이지',
@@ -1182,6 +1189,9 @@
 
             // 진행률 나타내기
             $('.per').text(Math.floor((curr_n/total_n)*100) + '%');
+
+            // 삭제페이지
+            $('.none').parent().parent().addClass('none_tr');
 
         });
 
