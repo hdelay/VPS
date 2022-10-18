@@ -517,7 +517,7 @@ $(function(){
 //Toast 팝업
 function onShowToast(show_txt){
     let obj_toast = $('.toast_box');
-    let obj_time = 3000;
+    let obj_time = 2000;
     obj_toast.addClass('on');
     obj_toast.find('.txt').text(show_txt);
     setTimeout(function(){
