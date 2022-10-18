@@ -2173,7 +2173,7 @@ a.ico_folder::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    margin: 15px 0 30px;
 }
 .talk_txt .talk_txt_info .left .count span {
     font-size: 15px;
@@ -2284,24 +2284,22 @@ a.ico_folder::after {
 }
 .mytalk_box .tab_btn {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 20px;
 }
 .mytalk_box .tab_btn ul {
     gap: 10px;
     border-bottom: none;
+    flex-wrap: wrap;
 }
 .mytalk_box .tab_btn ul > li {
     flex: none;
-}
-.mytalk_box .tab_btn ul > li:first-child {
-    display: none;
 }
 .mytalk_box .tab_btn ul > li > a {
     align-items: center;
     width: auto;
     height: 55px;
-    padding: 0 40px;
+    padding: 0 30px;
     border-radius: 10px;
     border: 1px solid #d5d5d5;
     font-weight: 400;
@@ -5730,6 +5728,9 @@ footer .footer_bottom {
     .mytalk_box .tab_btn ul > li > a {
         padding: 0 10px;
         height: 32px;
+    }
+    .mytalk_box .tab_btn ul {
+        flex-wrap: nowrap;
     }
 
     /* 벤처투자 부당행위 신고센터 */

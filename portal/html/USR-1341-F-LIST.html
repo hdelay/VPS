@@ -369,6 +369,21 @@
                         <!-- 첫번째 탭 -->
                         <div class="on tab_content_01">
 
+                            <div class="board_infobox">
+                                <div class="total">전체 <span>150</span>건</div>
+                                <div class="search_box">
+                                    <div class="sel_box">
+                                        <select>
+                                            <option value="">검색조건</option>
+                                            <option value="">닉네임</option>
+                                            <option value="">내용</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                    <button>검색</button>
+                                </div>
+                            </div>
+
                             <div class="tbl_card_list type_01">
                                 <!-- 리스트 -->
                                 <ul>
@@ -550,6 +565,21 @@
 
                         <!-- 두번째 탭 -->
                         <div class="tab_content_02">
+
+                            <div class="board_infobox">
+                                <div class="total">전체 <span>150</span>건</div>
+                                <div class="search_box">
+                                    <div class="sel_box">
+                                        <select>
+                                            <option value="">검색조건</option>
+                                            <option value="">닉네임</option>
+                                            <option value="">내용</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                    <button>검색</button>
+                                </div>
+                            </div>
                             
                             <div class="tbl_card_list type_01">
                                 <!-- 리스트 -->
@@ -725,6 +755,10 @@
                                         <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
                                     </ul>
                                 </div>
+
+                                <div class="btn_box">
+                                    <a href="" class="btn_blue">내 파트너(38명) 목록 보기</a>
+                                </div>
                             </div>
 
                         </div>
@@ -735,51 +769,33 @@
 
                             <div class="tab_group mytalk_box">
                                 <div class="tab_btn">
-                                    <div class="public_box">
-                                        작성자 <span>별명</span>님은 
-                                        <div class="public_btn">
-                                            <button>전체공개</button>
-                                            <!-- 상태변경 팝업 -->
-                                            <div class="public_content">
-                                                <div class="rdo_box">
-                                                    <span>
-                                                        <input type="radio" id="radio_001" name="rdo_group_02">
-                                                        <label for="radio_001">전체공개</label>
-                                                    </span>
-                                                    <span>
-                                                        <input type="radio" id="radio_002" name="rdo_group_02">
-                                                        <label for="radio_002">파트너 공개</label>
-                                                    </span>
-                                                    <span>
-                                                        <input type="radio" id="radio_003" name="rdo_group_02">
-                                                        <label for="radio_003">비공개 (본인만 공개)</label>
-                                                    </span>
-                                                </div>
-                
-                                                <div class="btn_box_group">
-                                                    <div class="btn_box">
-                                                        <a href="" class="btn_gray shadow">취소</a>
-                                                    </div>
-                                                    <div class="btn_box">
-                                                        <a href="" class="btn_blue shadow">수정</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //상태변경 팝업 -->
-                                            상태입니다.
-                                        </div>
-                                    </div>
                                     <ul>
-                                        <li class="on"><a href="" rel="tab_content_04">MY Talk</a></li>
-                                        <li><a href="" rel="tab_content_05">파트너 대기 3명 ></a></li>
-                                        <li><a href="" rel="tab_content_06">나를 추가한 파트너 4050명 ></a></li>
-                                        <li><a href="" rel="tab_content_07">내 파트너 320명 ></a></li>
+                                        <li class="on"><a href="" rel="tab_content_04">MY Talk (3건)</a></li>
+                                        <li><a href="" rel="tab_content_05">파트너 신청 대기 목록 (38명)</a></li>
+                                        <li><a href="" rel="tab_content_06">나를 추가한 파트너 목록 (13명)</a></li>
+                                        <li><a href="" rel="tab_content_07">내가 추가한 파트너 목록 (38명)</a></li>
+                                        <li><a href="" rel="tab_content_08">차단한 파트너 목록 (3명)</a></li>
                                     </ul>
                                 </div>
                                 <div class="tab_content">
             
                                     <!-- 첫번째 탭 -->
                                     <div class="on tab_content_04">
+
+                                        <div class="board_infobox">
+                                            <div class="total">전체 <span>150</span>건</div>
+                                            <div class="search_box">
+                                                <div class="sel_box">
+                                                    <select>
+                                                        <option value="">검색조건</option>
+                                                        <option value="">닉네임</option>
+                                                        <option value="">내용</option>
+                                                    </select>
+                                                </div>
+                                                <input type="text" placeholder="검색어를 입력해주세요.">
+                                                <button>검색</button>
+                                            </div>
+                                        </div>
                                         
                                         <div class="tbl_card_list type_01">
                                             <!-- 리스트 -->
@@ -792,6 +808,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -801,15 +818,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -819,6 +827,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -828,15 +837,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -846,6 +846,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -855,15 +856,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -873,6 +865,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -882,15 +875,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -900,6 +884,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -909,15 +894,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -927,6 +903,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -936,15 +913,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -954,6 +922,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -963,15 +932,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                                 <li>
                                                     <div class="content">
@@ -981,6 +941,7 @@
                                                         <button class="more dialog-link" data-target="#note_03">더보기</button>
                                                         <ul>
                                                             <li>2022-10-00 00:00:00</li>
+                                                            <li><button class="modify dialog-link" data-target="#note_02">수정</button></li>
                                                             <!--  -->
                                                             <div class="card_set">
                                                                 <ul>
@@ -990,15 +951,6 @@
                                                             </div>
                                                         </ul>
                                                     </div>
-                                                    <button class="pop_mini2">설정</button>
-                                                    <!-- 수정/삭제 -->
-                                                    <div class="card_set edit">
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_02">수정</a></li>
-                                                            <li><a href="">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- //수정/삭제 -->
                                                 </li>
                                             </ul>
                                             <!-- //리스트 -->
@@ -1053,48 +1005,12 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_skyblue">신청 수락</button>
+                                                                    <button class="btn_skyblue dialog-link" data-target="#alpop_05">신청 수락</button>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">신청 거절</button>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="chk">
-                                                        <div class="chk_box solo">
-                                                            <span>
-                                                                <input type="checkbox" id="chk_01">
-                                                                <label for="chk_01"></label>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tit">
-                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
-                                                        <ul>
-                                                            <li><span>신청일 2022-04-27</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="card_set">
-                                                        <ul>
-                                                            <li><a href="">파트너 신청</a></li>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="info">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="btn_box">
-                                                                    <button class="btn_skyblue">신청 수락</button>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="btn_box">
-                                                                    <button class="btn_gray">신청 거절</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_06">신청 거절</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1125,48 +1041,12 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_skyblue">신청 수락</button>
+                                                                    <button class="btn_skyblue dialog-link" data-target="#alpop_05">신청 수락</button>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">신청 거절</button>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="chk">
-                                                        <div class="chk_box solo">
-                                                            <span>
-                                                                <input type="checkbox" id="chk_01">
-                                                                <label for="chk_01"></label>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tit">
-                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
-                                                        <ul>
-                                                            <li><span>신청일 2022-04-27</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="card_set">
-                                                        <ul>
-                                                            <li><a href="">파트너 신청</a></li>
-                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="info">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="btn_box">
-                                                                    <button class="btn_skyblue">신청 수락</button>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="btn_box">
-                                                                    <button class="btn_gray">신청 거절</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_06">신청 거절</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1197,12 +1077,84 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_skyblue">신청 수락</button>
+                                                                    <button class="btn_skyblue dialog-link" data-target="#alpop_05">신청 수락</button>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">신청 거절</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_06">신청 거절</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>신청일 2022-04-27</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_skyblue dialog-link" data-target="#alpop_05">신청 수락</button>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_06">신청 거절</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>신청일 2022-04-27</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_skyblue dialog-link" data-target="#alpop_05">신청 수락</button>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_06">신청 거절</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1212,8 +1164,8 @@
                                         </div>
 
                                         <div class="btn_state_box">
-                                            <button class="btn_skyblue">신청 수락</button>
-                                            <button class="btn_gray">신청 거절</button>
+                                            <button class="btn_skyblue dialog-link" data-target="#alpop_05">선택 수락</button>
+                                            <button class="btn_gray dialog-link" data-target="#alpop_06">선택 거절</button>
                                         </div>
 
                                         <div class="board_btn">
@@ -1277,7 +1229,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 차단</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_07">파트너 차단</button>
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -1314,7 +1266,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 차단</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_07">파트너 차단</button>
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -1351,7 +1303,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 차단</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_07">파트너 차단</button>
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -1388,7 +1340,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 차단</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_07">파트너 차단</button>
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -1425,12 +1377,12 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 차단</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_07">파트너 차단</button>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_navy">파트너 신청</button>
+                                                                    <button class="btn_navy dialog-link" data-target="#alpop_08">파트너 신청</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1440,7 +1392,8 @@
                                         </div>
 
                                         <div class="btn_state_box">
-                                            <button class="btn_gray">파트너 차단</button>
+                                            <button class="btn_navy dialog-link" data-target="#alpop_07">파트너 선택 신청</button>
+                                            <button class="btn_gray dialog-link" data-target="#alpop_08">파트너 선택 차단</button>
                                         </div>
 
                                         <div class="board_btn">
@@ -1504,7 +1457,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 삭제</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 삭제</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1536,7 +1489,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 삭제</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 삭제</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1568,7 +1521,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 삭제</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 삭제</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1600,7 +1553,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 삭제</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 삭제</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1632,7 +1585,7 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="btn_box">
-                                                                    <button class="btn_gray">파트너 삭제</button>
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 삭제</button>
                                                                 </div>
                                                             </li>
                                                         </ul>
@@ -1642,7 +1595,181 @@
                                         </div>
 
                                         <div class="btn_state_box">
-                                            <button class="btn_gray">파트너 삭제</button>
+                                            <button class="btn_gray dialog-link" data-target="#alpop_09">파트너 선택 삭제</button>
+                                        </div>
+
+                                        <div class="board_btn">
+                                            <!-- paging -->
+                                            <div class="paging_box">
+                                                <ul>
+                                                    <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                                    <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                                    <li class="on"><a href="">1</a></li>
+                                                    <li><a href="">2</a></li>
+                                                    <li><a href="">3</a></li>
+                                                    <li><a href="">4</a></li>
+                                                    <li><a href="">5</a></li>
+                                                    <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                                    <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- //네번째 탭 -->
+
+                                    <!-- 다섯번째 탭 -->
+                                    <div class="tab_content_08">
+                                        
+                                        <div class="board_infobox">
+                                            <div></div>
+                                            <div class="search_box">
+                                                <label for="search_04" class="hidden">검색어 입력</label>
+                                                <input type="text" id="search_04" placeholder="검색어를 입력해주세요.">
+                                                <button>검색</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- 게시판 테이블 -->
+                                        <div class="tbl_longcard type_chk">
+                                            <ul>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>파트너 신청일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 수락일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 차단일 2022-04-27 10:00:01</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_10">차단 해제</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>파트너 신청일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 수락일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 차단일 2022-04-27 10:00:01</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_10">차단 해제</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>파트너 신청일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 수락일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 차단일 2022-04-27 10:00:01</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_10">차단 해제</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="chk">
+                                                        <div class="chk_box solo">
+                                                            <span>
+                                                                <input type="checkbox" id="chk_01">
+                                                                <label for="chk_01"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tit">
+                                                        <strong><a href="" class="pop_mini">회원별명</a></strong>
+                                                        <ul>
+                                                            <li><span>파트너 신청일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 수락일 2022-04-27 10:00:01</span></li>
+                                                            <li><span>파트너 차단일 2022-04-27 10:00:01</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card_set">
+                                                        <ul>
+                                                            <li><a href="">파트너 신청</a></li>
+                                                            <li><a href="javascript:void(0);" class="dialog-link" data-target="#note_01">쪽지보내기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="btn_box">
+                                                                    <button class="btn_gray dialog-link" data-target="#alpop_10">차단 해제</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="btn_state_box">
+                                            <button class="btn_gray dialog-link" data-target="#alpop_10">파트너 선택 해제</button>
                                         </div>
 
                                         <div class="board_btn">
@@ -1798,7 +1925,7 @@
 
     <div class="btn_box_group">
         <div class="btn_box">
-            <a href="" class="btn_mint shadow">저장</a>
+            <a href="javascript:void(0);" class="btn_mint shadow" onclick="onShowToast('쪽지 발송이 완료되었습니다.')">저장</a>
         </div>
         <div class="btn_box">
             <a href="javascript:void(0);" class="btn_gray shadow pop_close">취소</a>
@@ -1820,18 +1947,25 @@
             <textarea id="talk_txt" placeholder="벤처투자 TALK는 500자 까지 작성 가능합니다."></textarea>
         </div>
         <div class="talk_txt_info">
-            <div class="left">
-                <span class="count">
-                    <span class="num">0</span>
-                    <span class="total">/ 500</span>
-                </span>
+            <div class="left">2022-09-01 14:00:01</div>
+            <div class="right">
+                <div class="sel_box">
+                    <select>
+                        <option value="">전체공개</option>
+                        <option value="">파트너 공개</option>
+                        <option value="">비공개</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="btn_box_group">
         <div class="btn_box">
-            <a href="" class="btn_mint shadow">수정</a>
+            <a href="" class="btn_gray shadow dialog-link" data-target="#alpop_04">삭제</a>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_mint shadow dialog-link" data-target="#alpop_03">수정</a>
         </div>
         <div class="btn_box">
             <a href="javascript:void(0);" class="btn_gray shadow pop_close">취소</a>
@@ -1839,5 +1973,169 @@
     </div>
 
 </div>
+
+<!-- 경고팝업 3 -->
+<div id="alpop_04" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        벤처투자 TALK 게시글을 삭제하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('게시글이 삭제되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 경고팝업 3 -->
+<div id="alpop_03" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        벤처투자 TALK 내용을 수정하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('게시글이 정상수정 되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 수락 팝업 -->
+<div id="alpop_05" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너 신청을 수락하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너 신청 수락이 정상처리 되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 거절 팝업 -->
+<div id="alpop_06" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너 신청을 거절하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너 신청 거절이 정상처리 되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 차단 팝업 -->
+<div id="alpop_07" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너를 차단하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너 차단이 완료되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 신청 팝업 -->
+<div id="alpop_08" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너 신청을 하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너 신청이 정상처리 되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 삭제 팝업 -->
+<div id="alpop_09" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너를 삭제하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너가 삭제되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 해제 팝업 -->
+<div id="alpop_10" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        파트너의 차단을 해제하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('파트너의 차단이 해제되었습니다.')">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
+
 </body>
 </html>
