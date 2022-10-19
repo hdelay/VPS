@@ -357,7 +357,7 @@
 
                 <div class="btn_box_group type_tbl">
                     <div class="btn_box bg">
-                        <a href="./USR-2044-F-FORM.html" class="btn_modi">답장</a>
+                        <a href="javascript:void(0);" class="btn_modi dialog-link" data-target="#note_01">답장</a>
                     </div>
                     <div class="btn_box bg">
                         <a href="" class="btn_delete">삭제</a>
@@ -433,5 +433,63 @@
     </footer>
 
 </div>
+
+<!-- 쪽지보내기 팝업 -->
+<div id="note_01" class="dialog note_dialog">
+
+    <div class="tit_box">
+        <h3>쪽지보내기</h3>
+    </div>
+
+    <div class="tbl_box_data">
+        <table>
+            <caption>쪽지보내기</caption>
+            <colgroup>
+                <col width="20%;">
+                <col width="30%;">
+                <col width="20%;">
+                <col width="30%;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="radio_01">구분</label></th>
+                    <td colspan="3">투자제안</td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="input_02">제목</label></th>
+                    <td colspan="3">
+                        <div class="inp_box">
+                            <input type="text" id="input_02">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="textarea_01">내용</label></th>
+                    <td colspan="3">
+                        <div class="inp_group">
+                            <div class="textarea_box cont">
+                                <textarea id="textarea_01"></textarea>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn_box_group">
+        <div class="btn_box bg">
+            <a href="javascript:void(0);" class="btn_send shadow" onclick="onShowToast('쪽지 발송이 완료되었습니다.');">보내기</a>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:void(0);" class="btn_gray shadow pop_close">취소</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
+
 </body>
 </html>

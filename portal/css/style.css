@@ -4702,6 +4702,10 @@ footer .footer_bottom {
     font-size: 15px;
     color: #fff;
 }
+.note_dialog .btn_box_group .btn_box *.btn_send {
+    border: 1px solid #d9e0e6;
+    color: #333;
+}
 /* 경고팝업 */
 .ui-dialog .ui-dialog-content.alpop_box {
     padding: 30px;
