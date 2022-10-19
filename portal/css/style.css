@@ -35,8 +35,8 @@ header .header_top {
 header .header_top h1 a {
     display: flex;
     background: url(../images/logo.png) no-repeat center;
-    width: 244px;
-    height: 37px;
+    width: 252px;
+    height: 45px;
     text-indent: -9999px;
 }
 .gnb_open header .header_top h1 a,
@@ -1925,12 +1925,12 @@ a.ico_folder::after {
 .design_ci {
     display: flex;
     position: relative;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
+    gap: 40px;
     width: 100%;
     min-height: 160px;
-    padding: 20px;
+    padding: 30px 20px 20px;
     box-sizing: border-box;
     border-radius: 10px;
     background-color: #f6f7f9;
@@ -1956,7 +1956,6 @@ a.ico_folder::after {
     background-color: #f6f7f9;
 }
 .content_list_box .list_item .design_ci .img {
-    width: 100%;
     border: none;
 }
 .design_color {
@@ -5628,13 +5627,20 @@ footer .footer_bottom {
         box-sizing: border-box;
     }
     .design_ci {
-        align-items: center;
+        flex-wrap: wrap;
         padding: 15px;
         min-height: 0;
+        gap: 20px;
     }
     .content_list_box .list_item .design_ci .img {
-        width: auto;
+        width: 100%;
         padding: 0;
+        justify-content: center;
+        padding: 0 40px 20px;
+        border-bottom: 1px dashed #d9e1e7;
+    }
+    .content_list_box .list_item .design_ci .img img {
+        width: 100%;
     }
     .design_box .design_name {
         font-size: 17px;
