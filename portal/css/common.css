@@ -2708,10 +2708,12 @@
 .tab_group .tab_btn > ul > li .tab_submenu {
     display: none;
     position: absolute;
-    top: 89px;
+    top: 90px;
     left: 0;
     width: 100%;
     height: 0px;
+    border: 1px solid #c1c1c1;
+    box-sizing: border-box;
     z-index: 10;
 }
 .tab_group .tab_btn > ul > li:hover .tab_submenu,
@@ -2720,11 +2722,26 @@
     display: block;
     height: auto;
 }
+.tab_group .tab_btn > ul > li .tab_submenu li {
+    box-sizing: border-box;
+}
+.tab_group .tab_btn > ul > li .tab_submenu li + li {
+    border-top: 1px solid #c1c1c1;
+}
 .tab_group .tab_btn > ul > li .tab_submenu li a {
     display: block;
     width: 100%;
     background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+.tab_group .tab_btn > ul > li .tab_submenu li a:hover,
+.tab_group .tab_btn > ul > li .tab_submenu li a:focus {
+    background-color: #f0f3ff;
+    color: #4b65d0;
 }
 
 /* 페이징 */
@@ -3761,15 +3778,16 @@ a.ui-button:active,
 
     }
     .tab_group .tab_btn {
-        overflow-y: hidden;
+        
         height: 46px;
         border-bottom: 1px solid #c1c1c1;
     }
     .tab_group .tab_btn ul {
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: inherit;
         gap: 15px;
         padding-bottom: 15px;
+        border-bottom: none;
     }
     .tab_group .tab_btn ul > li {
         flex: none;
@@ -3780,6 +3798,38 @@ a.ui-button:active,
     }
     .tab_group .tab_content > div {
         padding: 20px 0;
+    }
+
+    .tab_group .tab_btn > ul > li.tab_submenu_group {
+        display: flex;
+    }
+    .tab_group .tab_btn > ul > li .tab_submenu {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        width: auto;
+        height: auto;
+        border: none;
+    }
+    .tab_group .tab_btn > ul > li .tab_submenu ul {
+        display: flex;
+        border: none;
+        padding: 0;
+        gap: 10px;
+        margin-bottom: 1px;
+    }
+    .tab_group .tab_btn > ul > li .tab_submenu li + li {
+        border-top: none;
+    }
+    .tab_group .tab_btn > ul > li .tab_submenu li a {
+        padding: 5px 10px;
+        background-color: #e3ebf7;
+        border-radius: 20px;
+        border: none;
+        font-size: 14px;
     }
 
     /* 페이징 */

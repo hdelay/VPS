@@ -75,7 +75,12 @@ $(function(){
             slideChange: function(){
                 var idx = this.activeIndex;
                 // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
-                if(this.activeIndex != 0 && idx != 2) $.fn.fullpage.setAllowScrolling(false);
+                if(this.activeIndex != 0 && idx != 2) {
+                    $.fn.fullpage.setAllowScrolling(false);
+                    $('header').removeClass('font_black');
+                } else {
+                    $('header').addClass('font_black');
+                }
                 // console.log('즉시 : ' + idx);
             },  
             slideChangeTransitionEnd: function(){
