@@ -895,6 +895,18 @@ header.font_black .btn_login_box li a::before {
 .search_item .chk_list.img .chk_box input ~ label.fontsize_s {
     font-size: 14px;
 }
+.chk_list.type_03 .chk_list_more {
+    display: none;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px dashed #d9e1e7;
+}
+.chk_list.type_03 .chk_list_more.on {
+    display: block;
+}
+.chk_list.type_03 .chk_list_more .chk_box {
+    gap: 20px 45px;
+}
 
 /* 통합공시 */
 .integrated_box .img {

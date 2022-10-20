@@ -512,6 +512,16 @@ $(function(){
         $('.trans_enterprise').toggleClass('on');
     });
 
+    // 투자검색 체크박스 클릭시 상세검색 show
+    $('.chk_list_more_btn input').change(function(){
+        let chkbox = $('.chk_list_more_btn input:checked').length;
+        if(chkbox > 0) {
+            $('.chk_list_more').addClass('on');
+        } else {
+            $('.chk_list_more').removeClass('on');
+        }
+    });
+
 });
 
 //Toast 팝업
