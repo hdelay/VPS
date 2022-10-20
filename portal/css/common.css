@@ -3038,6 +3038,9 @@ a.ui-button:active,
     .tit_box h4 {
         margin-bottom: 20px;
     }
+    .tit_box h4 span {
+        min-width: 23px;
+    }
     .tit_box.row .btn_box {
         margin-bottom: 20px;
     }
