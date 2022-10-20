@@ -4163,6 +4163,11 @@ a.ico_folder::after {
 .txt_item > dd {
     font-weight: 500;
 }
+.txt_item > dd > span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
 .txt_item > dd > strong {
     font-weight: 600;
 }
@@ -6619,6 +6624,9 @@ footer .footer_bottom {
     }
     .txt_item > dt {
         font-size: 16px;
+    }
+    .txt_item > dd {
+        font-size: 14px;
     }
     .txt_item > dd > strong {
         font-size: 14px;
