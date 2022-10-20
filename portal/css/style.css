@@ -1722,6 +1722,13 @@ a.ico_folder::after {
     right: 35px;
     background-image: url(../images/ico/statistics_box_right.png);
 }
+.statistics_group .standard {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    font-weight: 400;
+    color: #fff;
+}
 .performance_box .chart_group_box {
     padding: 30px;
     border: 1px solid #d6d6d6;

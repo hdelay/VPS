@@ -230,6 +230,7 @@ header.headerfix .header_top {
 }
 .swiper-container .slide_wrap .inner .total li {
     display: flex;
+    position: relative;
     justify-content: space-between;
     min-width: 375px;
     gap: 30px;
@@ -275,6 +276,15 @@ header.headerfix .header_top {
     font-size: 22px;
     font-weight: 600;
     color: #333;
+}
+.swiper-container .slide_wrap .inner .total .standard {
+    display: flex;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    justify-content: flex-end;
+    font-size: 15px;
+    font-weight: 500;
 }
 .shortcuts_box {
     position: relative;
@@ -1388,6 +1398,7 @@ header.headerfix .header_top {
         min-height: 0;
         height: auto;
         justify-content: center;
+        margin-bottom: 40px;
     }
     .swiper-container .slide_wrap .inner .total li {
         gap: 5px;
