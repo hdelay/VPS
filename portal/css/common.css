@@ -40,6 +40,7 @@
 .f_color_blue {color: #3f89e5;}
 .f_color_orange {color: #ff6f00;}
 .f_color_navy {color: #3949ab;}
+.f_color_red {color: #f73c3c;}
 
 /* state box / border-radius 있는것 */
 .state_box > * {
