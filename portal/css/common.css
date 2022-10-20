@@ -3785,7 +3785,7 @@ a.ui-button:active,
     }
     .tab_group .tab_btn ul {
         overflow-x: auto;
-        overflow-y: inherit;
+        overflow-y: hidden;
         gap: 15px;
         padding-bottom: 15px;
         border-bottom: none;

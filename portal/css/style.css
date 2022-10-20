@@ -1843,7 +1843,9 @@ a.ico_folder::after {
 /* 통계 - 투자실적 */
 .investment_performance_box {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
+    margin-bottom: 50px;
 }
 .investment_performance_box > div {
     width: calc(50% - 25px);
@@ -1878,7 +1880,18 @@ a.ico_folder::after {
     border-color: #1c44c8;
     color: #fff;
 }
-.investment_performance_box .right .tbl_info_etc {
+.investment_performance_box .right .tbl_info_etc,
+.investment_performance_box .left .tbl_info_etc {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.investment_performance_box > .all {
+    width: 100%;
+}
+.investment_performance_box .all .tbl_info_etc {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
