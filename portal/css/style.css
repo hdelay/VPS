@@ -4209,6 +4209,11 @@ a.ico_folder::after {
 .txt_item_list dl dd {
     font-weight: 500;
 }
+.txt_item_list dl dd > span {
+    display: block;
+    margin: 5px 0 10px;
+    font-weight: 500;
+}
 .txt_item_numlist > li {
     position: relative;
     padding-left: 30px;
@@ -4316,6 +4321,9 @@ a.ico_folder::after {
     word-break: keep-all;
     font-weight: 500;
 }
+.txt_item .tbl_box table tbody tr td .f_color_red {
+    font-weight: 500;
+}
 .txt_item .tbl_box table tbody tr th:first-child,
 .txt_item .tbl_box table tbody tr td:first-child {
     border-left: 1px solid #adadad;
@@ -4366,6 +4374,19 @@ a.ico_folder::after {
 }
 .txt_item_detail .blue_dl dl dt {
     margin-right: 5px;
+}
+
+/* 개인정보 동의(필수) */
+.txt_tit_box p {
+    line-height: 25px;
+    font-weight: 500;
+}
+.txt_tit_box .tit {
+    margin: 75px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #5158bd;
 }
 
 /* 에러페이지 */
