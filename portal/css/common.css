@@ -705,7 +705,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px 0;
-    width: 100%;
 }
 .chk_box + .chk_box {
     margin-top: 10px; /* 예비용 */
@@ -796,6 +795,11 @@
     margin-left: 5px;
     font-size: 13px;
     font-weight: 400;
+}
+.inp_group .txt_all {
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
 }
 .inp_group.search {
     flex-direction: row;

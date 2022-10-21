@@ -1665,13 +1665,14 @@ a.ico_folder::after {
 }
 .statistics_box ul li {
     display: flex;
+    position: relative;
+    min-height: 82px;
     min-width: 209px;
     flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    position: relative;
     color: #fff;
 }
 .statistics_box ul li::after {
@@ -1781,6 +1782,7 @@ a.ico_folder::after {
 .disclosure_box .btn_list {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 .disclosure_box .btn_list > div {
     display: flex;
@@ -1894,6 +1896,42 @@ a.ico_folder::after {
     box-sizing: border-box;
     border-radius: 10px;
 }
+.investment_performance_box.type_03 {
+    gap: 0 50px;
+}
+.investment_performance_box.type_03 > div {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+.investment_performance_box.type_03 .all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 50px;
+    padding: 30px;
+    border: 1px solid #d9e0e6;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.investment_performance_box.type_03 .all > div {
+    position: relative;
+    width: calc(50% - 25px);
+}
+/* .investment_performance_box.type_03 .all > div:nth-child(2)::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    width: 1px;
+    height: 100%;
+    background-color: #d9e0e6;
+} */
+.investment_performance_box.type_03 .all .tit_box.rowsel {
+    width: 100%;
+}
+
 
 /* 포털 소개 */
 .content_list_box .introduce_box {
@@ -5743,6 +5781,7 @@ footer .footer_bottom {
     }
     .statistics_box ul li {
         min-width: 100%;
+        min-height: auto;
         gap: 5px;
         padding: 10px 0;
         box-sizing: border-box;
@@ -5775,6 +5814,9 @@ footer .footer_bottom {
     .disclosure_box .btn_list button {
         padding: 10px;
     }
+    .disclosure_box .btn_list.type_02 {
+        flex-wrap: wrap;
+    }
     .disclosure_box .btn_list.type_02 > * {
         flex-basis: calc(50% - 10px);
     }
@@ -5799,6 +5841,15 @@ footer .footer_bottom {
     }
     .investment_performance_box.type_02 .content_box {
         padding: 15px;
+    }
+    .investment_performance_box.type_03 .all {
+        flex-direction: column;
+    }
+    .investment_performance_box.type_03 .all > div {
+        width: 100%;
+    }
+    .investment_performance_box.type_03 .all .all_right {
+        margin-top: 20px;
     }
 
     /* 포털 소개 */
