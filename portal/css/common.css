@@ -89,6 +89,17 @@
 .state_box .brown {
     background-color: #caaea0;
 }
+.state_box .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #999;
+}
 
 /* border-radius 없는것 */
 .state_group {
@@ -2552,6 +2563,7 @@
     gap: 5px 10px;
 }
 .tbl_card_list.type_03 a .group_box .info span {
+    word-break: keep-all;
     font-size: 14px;
     font-weight: 400;
     color: #666;

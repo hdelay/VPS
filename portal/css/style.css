@@ -5462,6 +5462,7 @@ footer .footer_bottom {
     }
     .search_item.board_infobox {
         flex-direction: row;
+        align-items: center;
     }
     .search_item.board_infobox .btn_box {
         flex: 1;
