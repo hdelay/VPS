@@ -93,8 +93,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     padding: 0;
     background-color: #f5f5f5;
     border: 1px solid #ddd;
@@ -3104,6 +3104,10 @@ a.ui-button:active,
         display: flex;
         gap: 5px;
         flex-wrap: wrap;
+    }
+    .state_box .more {
+        width: 20px;
+        height: 20px;
     }
     
     /* 버튼 */
