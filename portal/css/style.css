@@ -37,6 +37,7 @@ header .header_top h1 a {
     background: url(../images/logo.png) no-repeat center;
     width: 252px;
     height: 45px;
+    background-size: 100%;
     text-indent: -9999px;
 }
 .gnb_open header .header_top h1 a,
