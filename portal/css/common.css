@@ -351,6 +351,33 @@
     flex: none;
     width: auto;
 }
+.tit_box h5 {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.tit_box h5::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+}
+.tit_box.rowsel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.tit_box.rowsel span {
+    margin-bottom: 0;
+}
 
 .req {
     position: absolute;
@@ -1455,6 +1482,48 @@
 }
 .back_next_box dl dd a {
     font-weight: 400;
+}
+
+/* 투자실적 테이블 */
+.tbl_investment {
+    border-top: 2px solid #333;
+}
+.tbl_investment table {
+    width: 100%;
+}
+.tbl_investment table thead tr th {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border-right: 1px solid #e2e2e2;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: var(--font-l);
+}
+.tbl_investment table thead tr th:last-child {
+    border-right: none;
+}
+.tbl_investment table tbody tr td,
+.tbl_investment table tbody tr th {
+    padding: 15px;
+    box-sizing: border-box;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: var(--font-common);
+}
+.tbl_investment table tbody tr th {
+    text-align: left;
+    word-break: keep-all;
+    font-weight: 500;
+}
+.tbl_investment table tbody tr td:last-child {
+    border-right: none;
+}
+.tbl_investment.min table tbody tr th {
+    text-align: center;
 }
 
 /* 공통게시판 타입  */
@@ -3037,6 +3106,7 @@ a.ui-button:active,
     }
     .tit_box h4 {
         margin-bottom: 20px;
+        font-size: 17px;
     }
     .tit_box h4 span {
         min-width: 23px;
@@ -3046,6 +3116,9 @@ a.ui-button:active,
     }
     .tit_box.row .btn_box * {
         font-size: 15px;
+    }
+    .tit_box h5 {
+        font-size: 16px;
     }
 
     /* list 리스트 */
@@ -3449,6 +3522,17 @@ a.ui-button:active,
     }
     .tbl_box_add td > dl > dd {
         width: 100%;
+    }
+
+    /* 투자실적 테이블 */
+    .tbl_investment {
+        overflow-x: auto;
+    }
+    .tbl_investment table {
+        min-width: 500px;
+    }
+    .tbl_investment.min table {
+        min-width: 200px;
     }
 
     /* 테이블 타입0 :: 데이터 테이블 */

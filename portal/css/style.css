@@ -1736,6 +1736,9 @@ a.ico_folder::after {
     background-color: #f7f7f7;
     margin-bottom: 40px;
 }
+.performance_box .chart_group_box img {
+    width: 100%;
+}
 .integrated_box .integrated_item {
     margin-top: 50px;
 }
@@ -1778,7 +1781,6 @@ a.ico_folder::after {
 .disclosure_box .btn_list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 .disclosure_box .btn_list > div {
     display: flex;
@@ -1829,16 +1831,13 @@ a.ico_folder::after {
 .disclosure_box .btn_list button.on span::before {
     background-color: #fff;
 }
-.disclosure_box .btn_list.type_02 {
-    flex-wrap: wrap;
-    gap: 20px 50px;
-}
 .disclosure_box .btn_list.type_02 > * {
-    width: calc((100% / 5) - 40px);
+    flex: 1;
 }
 .disclosure_box + .tit_box {
     margin-top: 80px;
 }
+
 
 /* 통계 - 투자실적 */
 .investment_performance_box {
@@ -1854,31 +1853,12 @@ a.ico_folder::after {
     box-sizing: border-box;
     border-radius: 10px;
 }
-.investment_performance_box .left {
+.investment_performance_box > div {
     display: flex;
     flex-direction: column;
 }
-.investment_performance_box .left .chart {
+.investment_performance_box .chart {
     height: 100%;
-}
-.investment_performance_box .left .btn_list {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-}
-.investment_performance_box .left .btn_list li * {
-    display: flex;
-    padding: 5px 20px;
-    background-color: #fff;
-    border: 1px solid #d9e0e6;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.investment_performance_box .left .btn_list li.on * {
-    background-color: #1c44c8;
-    border-color: #1c44c8;
-    color: #fff;
 }
 .investment_performance_box .right .tbl_info_etc,
 .investment_performance_box .left .tbl_info_etc {
@@ -1897,6 +1877,22 @@ a.ico_folder::after {
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 15px;
+}
+.investment_performance_box .all .tit_box .tbl_info_etc {
+    margin-bottom: 0;
+}
+.investment_performance_box.type_02 > div {
+    width: calc(50% - 25px);
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+.investment_performance_box.type_02 .content_box {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #d9e0e6;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 /* 포털 소개 */
@@ -5745,12 +5741,6 @@ footer .footer_bottom {
         background: url(../images/bg/bg_statistics_box_02.png) no-repeat;
         background-size: 100% auto;
     }
-    .statistics_box {
-        
-    }
-    .statistics_box ul {
-        
-    }
     .statistics_box ul li {
         min-width: 100%;
         gap: 5px;
@@ -5773,8 +5763,23 @@ footer .footer_bottom {
     .statistics_box ul li strong {
         font-size: 14px;
     }
+    .statistics_group .standard {
+        bottom: inherit;
+        top: 5px;
+        right: 10px;
+        font-size: 14px;
+    }
     .performance_box .btn_box_group {
         flex-direction: column;
+    }
+    .disclosure_box .btn_list button {
+        padding: 10px;
+    }
+    .disclosure_box .btn_list.type_02 > * {
+        flex-basis: calc(50% - 10px);
+    }
+    .disclosure_box .btn_list button span {
+        font-size: 17px;
     }
 
     /* 통계 - 투자실적 */
@@ -5788,6 +5793,12 @@ footer .footer_bottom {
     }
     .investment_performance_box .left .btn_list li * {
         padding: 5px 10px;
+    }
+    .investment_performance_box.type_02 > div {
+        width: 100%;
+    }
+    .investment_performance_box.type_02 .content_box {
+        padding: 15px;
     }
 
     /* 포털 소개 */
