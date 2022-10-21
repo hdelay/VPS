@@ -2577,6 +2577,12 @@
 }
 .tbl_card_list.type_03 a .group_box .info .introduce {
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
 }
 
 /* 카드리스트 타입 :: 법령 */
