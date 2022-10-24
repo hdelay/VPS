@@ -1357,6 +1357,9 @@ header.headerfix .header_top {
     .swiper-container .slide_wrap .img video {
         width: auto;
     }
+    .swiper-container .slide_wrap .img > * {
+        margin-left: -100px;
+    }
     .swiper-container .slide_wrap .inner {
         max-width: 100%;
     }

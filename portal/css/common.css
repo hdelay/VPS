@@ -1675,7 +1675,7 @@
 .tbl_longcard > ul > li .info > ul li button.btn_navy {
     background-color: #303f9f;;
 }
-.tbl_longcard > ul > li .info > ul li button.disable {
+.tbl_longcard > ul > li .info > ul li button.disabled {
     opacity: .2;
     cursor: default;
 }
