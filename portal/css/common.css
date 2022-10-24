@@ -2266,6 +2266,9 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
+.tbl_card_list.type_01.nomore > ul > li .content {
+    min-height: 170px;
+}
 .tbl_card_list.type_01 > ul > li .content .more {
     display: none;
     width: 50%;
@@ -3815,6 +3818,9 @@ a.ui-button:active,
         padding: 15px;
         padding-right: 30px;
         min-height: 170px;
+    }
+    .tbl_card_list.type_01.nomore > ul > li .content {
+        min-height: 145px;
     }
     .tbl_card_list.type_01 > ul > li .content span {
         font-size: 15px;
