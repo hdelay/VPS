@@ -3480,7 +3480,7 @@ a.ico_folder::after {
     gap: 30px;
 }
 .join_complete span {
-    display: flex;
+    word-break: keep-all;
     font-size: 17px;
     font-weight: 400;
 }
@@ -6480,6 +6480,9 @@ footer .footer_bottom {
     }
     .join_complete .btn_box * {
         flex: 1;
+    }
+    .join_complete span {
+        text-align: center;
     }
 
     /* 로그인 */

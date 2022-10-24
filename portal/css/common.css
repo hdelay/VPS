@@ -3123,6 +3123,9 @@ a.ui-button:active,
     .btn_box {
         width: 100%;
     }
+    .btn_box * {
+        font-size: 15px;
+    }
     .btn_box_group.type_01 .btn_box {
         flex: 1;
     }
