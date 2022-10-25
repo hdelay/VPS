@@ -404,6 +404,10 @@
 .content_list_box .list_item + .list_item {
     margin-top: 30px;
 }
+.list_item.bd_b {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d9e1e7;
+}
 .content_list_box dl {
     display: flex;
     flex-direction: column;
@@ -1248,6 +1252,9 @@
     vertical-align: middle;
     font-weight: 400;
     font-size: var(--font-common);
+}
+.tbl_box table tbody tr td {
+    word-break: keep-all;
 }
 .tbl_box table tbody tr td a,
 .tbl_box table tbody tr td button {
@@ -3226,6 +3233,13 @@ a.ui-button:active,
     }
     .inp_group.search.double_check .inp_box.min {
         width: calc(100% - 97px);
+    }
+    .inp_group.search.tel_btn .box_btn {
+        width: 100%;
+    }
+    .inp_group.search.tel_btn .box_btn * {
+        width: 100%;
+        justify-content: center;
     }
     .inp_group.address {
         width: 100%;
