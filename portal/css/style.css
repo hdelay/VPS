@@ -1994,10 +1994,13 @@ a.ico_folder::after {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 160px;
+    padding: 60px 0;
     border-radius: 10px;
     background-color: #f6f7f9;
     border: 1px solid #d9e1e7;
+}
+.design_box.white {
+    background-color: #0c3c85;
 }
 .design_box .design_name {
     font-size: 45px;
@@ -2006,20 +2009,28 @@ a.ico_folder::after {
 .design_box .design_name span {
     font-weight: 500;
 }
-.design_ci {
+.design_box + dl {
+    padding: 30px 0;
+    gap: 15px;
+}
+.design_box + dl dt strong {
+    font-size: 27px;
+}
+.design_box + dl dd {
+    line-height: 28px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.design_box_group {
     display: flex;
-    position: relative;
+    gap: 20px;
+}
+.design_box_group .design_box:nth-child(1) .img_bi {
+    display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    width: 100%;
-    min-height: 160px;
-    padding: 30px 20px 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #f6f7f9;
-    border: 1px solid #d9e1e7;
-    margin-top: 30px;
+}
+.design_box_group .design_box:nth-child(1) .img_bi img {
+    width: 70%;
 }
 .content_list_box .list_item .design_ci .btn_box {
     position: absolute;
@@ -2056,7 +2067,6 @@ a.ico_folder::after {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 160px;
     border-radius: 10px;
     padding: 20px;
     background-color: #f6f7f9;
@@ -2064,6 +2074,29 @@ a.ico_folder::after {
 }
 .design_color ul li::before {
     display: none;
+}
+.design_color dl {
+    gap: 15px;
+}
+.design_color dl dt {
+    font-weight: 600;
+}
+.design_color dl dd {
+    font-weight: 500;
+}
+.design_color .color_box {
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+}
+.design_color .color_box.skyblue {
+    background-color: rgb(73, 157, 242);
+}
+.design_color .color_box.veryperi {
+    background-color: rgb(127, 127, 243);
+}
+.design_color .color_box.navy {
+    background-color: rgb(2, 47, 135);
 }
 
 /* 커뮤니티 */
@@ -5887,11 +5920,21 @@ footer .footer_bottom {
         padding: 15px;
         box-sizing: border-box;
     }
-    .design_ci {
-        flex-wrap: wrap;
-        padding: 15px;
-        min-height: 0;
-        gap: 20px;
+    .design_bi {
+        width: 80%;
+    }
+    .design_bi img {
+        width: 100%;
+    }
+    .design_box + dl {
+        padding-bottom: 0;
+    }
+    .design_box + dl dt strong {
+        font-size: 19px;
+    }
+    .design_box + dl dd {
+        font-size: 15px;
+        word-break: keep-all;
     }
     .content_list_box .list_item .design_ci .img {
         width: 100%;
@@ -5912,9 +5955,32 @@ footer .footer_bottom {
         right: inherit;
         margin-top: 15px;
     }
+    .design_box_group {
+        flex-direction: column;
+    }
+    .design_box_group .design_box {
+        height: 110px;
+    }
+    .design_box_group .design_box .img_bi img {
+        width: 100% !important;
+    }
+    .design_box_group .design_box:nth-child(2) .img_bi {
+        display: flex;
+        justify-content: center;
+    }
+    .design_box_group .design_box:nth-child(2) .img_bi img {
+        width: 80% !important;
+    }
     .design_color ul {
         flex-direction: column;
         gap: 5px;
+    }
+    .design_color ul li {
+        justify-content: flex-start;
+    }
+    .design_color .color_box {
+        height: 100px;
+        width: 100px;
     }
 
     /* 커뮤니티 */
