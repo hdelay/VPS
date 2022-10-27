@@ -2172,8 +2172,14 @@
 }
 .tbl_newletter ul li a .img {
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 188px;
+}
+.tbl_newletter ul li a .img img {
+    max-width: 100%;
 }
 .tbl_newletter ul li a .tit {
     display: flex;
@@ -2196,6 +2202,13 @@
     font-weight: 400;
 }
 .tbl_newletter ul li a .tit span {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: center;
     font-size: var(--font-common);
     font-weight: 400;
 }
@@ -2554,6 +2567,9 @@
     justify-content: center;
     width: 175px;
     height: 145px;
+}
+.tbl_card_list.type_03 a .img img {
+    max-height: 100%;
 }
 .tbl_card_list.type_03 a .group_box {
     display: flex;
