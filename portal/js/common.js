@@ -510,6 +510,10 @@ $(function(){
     // 기업정보 입력
     $('.trans_enterprise_btn').on('click', function(){
         $('.trans_enterprise').toggleClass('on');
+		
+		if( $('.trans_enterprise').hasClass('on') ) {
+			$('html').animate({ scrollTop : $('.trans_enterprise').offset().top }, 500);
+		}
     });
 
     // 투자검색 체크박스 클릭시 상세검색 show
