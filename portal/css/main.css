@@ -122,11 +122,16 @@ header.headerfix .header_top {
     color: #fff;
     transition: .2s;
 }
+.main_quickmenu ul li.active a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
 .main_quickmenu.black ul li a {
     font-weight: 400;
     color: #333;
 }
-.main_quickmenu ul li.active a {
+.main_quickmenu.black ul li.active a {
     font-size: 20px;
     font-weight: 600;
     color: #3f71c4;
