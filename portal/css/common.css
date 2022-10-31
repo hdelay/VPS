@@ -1200,6 +1200,10 @@
     border-bottom: 1px solid #e6e6e6;
     background-color: #f9fafa;
     vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .tbl_box_data table tr.bg th,
 .tbl_box_data table tr.bg td {
@@ -2535,6 +2539,11 @@
     font-size: 14px;
     font-weight: 400;
     color: #666;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .tbl_card_list.type_02 a .info span + span::before {
     content: "|";
