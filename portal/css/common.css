@@ -2560,6 +2560,9 @@
     border: 1px solid #d9e1e7;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
 }
+.tbl_card_list.type_03 > ul > li > a {
+    min-height: 145px;
+}
 .tbl_card_list.type_03 a .img {
     display: flex;
     overflow: hidden;
@@ -3753,6 +3756,10 @@ a.ui-button:active,
     .tbl_card_list.type_03 a .img {
         width: 100%;
         height: 120px;
+    }
+    .tbl_card_list.type_03 a .img img {
+        width: 100%;
+        max-height: inherit;
     }
     .tbl_card_list.type_03 a .group_box {
         width: 100%;
