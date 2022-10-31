@@ -4253,6 +4253,7 @@ a.ico_folder::after {
     font-weight: 600;
 }
 .txt_item > dd {
+    word-break: keep-all;
     font-weight: 500;
 }
 .txt_item > dd > span {
