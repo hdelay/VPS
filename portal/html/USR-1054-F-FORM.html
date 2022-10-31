@@ -361,16 +361,25 @@
                             <a href="" class="btn_skyblue">신청내역 확인 ></a>
                         </div>
                         <div class="btn_box">
-                            <a href="" class="btn_navy">벤처투자마트 신청하기 ></a>
+                            <a href="" class="btn_navy">
+                                <span>VC(한국벤처캐피탈협회)</span>
+                                벤처투자마트 신청하기 >
+                            </a>
+                        </div>
+                        <div class="btn_box">
+                            <a href="" class="btn_navy">
+                                <span>한국엔젤투자협회</span>
+                                벤처투자마트 신청하기 >
+                            </a>
                         </div>
                     </div>
-                    <div class="notice_box">
+                    <!-- <div class="notice_box">
                         지금은 신청 기간이 아닙니다.
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- 신청정보 -->
-                <div>
+                <div class="btn_mart_content">
                     <div class="tit_box">
                         <h4><span></span>신청정보</h4>
                     </div>
@@ -386,19 +395,8 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><label for="radio_001">상담희망<span class="req">*</span></label></th>
-                                    <td colspan="3">
-                                        <div class="rdo_box">
-                                            <span>
-                                                <input type="radio" id="radio_001" name="rdo_group_002">
-                                                <label for="radio_001">엔젤투자자</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="radio_002" name="rdo_group_002">
-                                                <label for="radio_002">VC(벤처캐피탈)</label>
-                                            </span>
-                                        </div>
-                                    </td>
+                                    <th scope="row"><label for="radio_001">상담희망분야<span class="req">*</span></label></th>
+                                    <td colspan="3">VC(벤처캐피탈)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><label for="radio_0011">기업분류<span class="req">*</span></label></th>
@@ -414,57 +412,119 @@
                                             </span>
                                             <span>
                                                 <input type="radio" id="radio_0033" name="rdo_group_003">
-                                                <label for="radio_0033">법인</label>
+                                                <label for="radio_0033">법인사업자</label>
                                             </span>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><label for="sel_02">신청 담당자 전화번호</label></th>
+                                    <th scope="row"><label for="input_03">성명<span class="req">*</span></label></th>
                                     <td colspan="3">
-                                        <div class="inp_group tel">
-                                            <div class="sel_box">
-                                                <select id="sel_02">
-                                                    <option value="">선택</option>
-                                                    <option value="">010</option>
-                                                </select>
-                                            </div>
-                                            <div class="inp_box">
-                                                <label for="input_08" class="hidden">전화번호 중간자리</label>
-                                                <input type="text" id="input_08">
-                                            </div>
-                                            <div class="inp_box">
-                                                <label for="input_09" class="hidden">전화번호 중간자리</label>
-                                                <input type="text" id="input_09">
+                                        <div class="inp_group">
+                                            <div class="inp_box min">
+                                                <input type="text" id="input_03" value="홍길동" disabled>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><label for="input_10">신청 담당자 이메일</label></th>
+                                    <th scope="row"><label for="sel_02">전화번호</label></th>
+                                    <td colspan="3">
+                                        <div class="inp_group tel">
+                                            <div class="sel_box">
+                                                <select id="sel_02" disabled>
+                                                    <option value="">02</option>
+                                                </select>
+                                            </div>
+                                            <div class="inp_box">
+                                                <label for="input_08" class="hidden">전화번호 중간자리</label>
+                                                <input type="text" id="input_08" disabled>
+                                            </div>
+                                            <div class="inp_box">
+                                                <label for="input_09" class="hidden">전화번호 끝자리</label>
+                                                <input type="text" id="input_09" disabled>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="sel_02">휴대폰번호<span class="req">*</span></label></th>
+                                    <td colspan="3">
+                                        <div class="inp_group tel">
+                                            <div class="sel_box">
+                                                <select id="sel_03" disabled>
+                                                    <option value="">02</option>
+                                                </select>
+                                            </div>
+                                            <div class="inp_box">
+                                                <label for="input_008" class="hidden">휴대폰번호 중간자리</label>
+                                                <input type="text" id="input_008" disabled>
+                                            </div>
+                                            <div class="inp_box">
+                                                <label for="input_009" class="hidden">휴대폰번호 끝자리</label>
+                                                <input type="text" id="input_009" disabled>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_10">이메일<span class="req">*</span></label></th>
                                     <td colspan="3">
                                         <div class="inp_group email">
                                             <div>
                                                 <div class="inp_box">
-                                                    <input type="text" id="input_10">
+                                                    <input type="text" id="input_10" disabled>
                                                 </div>
                                                 <span>@</span>
                                                 <div class="inp_box">
                                                     <label for="input_11" class="hidden">이메일 뒷주소 입력</label>
-                                                    <input type="text" id="input_11">
+                                                    <input type="text" id="input_11" disabled>
                                                 </div>
                                             </div>
                                             <div class="sel_box">
                                                 <label for="sel_03" class="hidden">선택</label>
-                                                <select id="sel_03">
-                                                    <option value="">직접입력</option>
+                                                <select id="sel_03" disabled>
                                                     <option value="">naver.com</option>
                                                 </select>
                                             </div>
-                                            <div class="chk_box">
+                                            <!-- <div class="chk_box">
                                                 <span>
                                                     <input type="checkbox" id="chk_00001">
                                                     <label for="chk_00001">이메일 수신 동의</label>
+                                                </span>
+                                            </div> -->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_10">SNS 수신동의<span class="req">*</span></label></th>
+                                    <td colspan="3">
+                                        <div class="inp_group">
+                                            <div class="rdo_box">
+                                                <span>
+                                                    <input type="radio" id="radio_001" name="rdo_group_01" checked>
+                                                    <label for="radio_001">동의</label>
+                                                </span>
+                                                <span>
+                                                    <input type="radio" id="radio_002" name="rdo_group_01">
+                                                    <label for="radio_002">미동의</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_10">이메일 수신동의<span class="req">*</span></label></th>
+                                    <td colspan="3">
+                                        <div class="inp_group">
+                                            <div class="rdo_box">
+                                                <span>
+                                                    <input type="radio" id="radio_003" name="rdo_group_02" checked>
+                                                    <label for="radio_003">동의</label>
+                                                </span>
+                                                <span>
+                                                    <input type="radio" id="radio_004" name="rdo_group_02">
+                                                    <label for="radio_004">미동의</label>
                                                 </span>
                                             </div>
                                         </div>
@@ -474,7 +534,7 @@
                         </table>
                     </div>
     
-                    <div class="content_list_box">
+                    <!-- <div class="content_list_box">
                         <div class="list_item">
                             <div class="content">
                                 신청서는 투자유치 희망기업에서 등록하신 정보로 표출됩니다.<br/>
@@ -488,8 +548,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+
+                    <div class="tit_box">
+                        <h4><span></span>기업정보</h4>
                     </div>
-    
                     <!-- 기업정보 입력 -->
                     <div class="tbl_box_data">
                         <table>
@@ -504,12 +567,17 @@
                                 <tr>
                                     <th scope="row"><label for="input_01">사업자 등록번호<span class="req">*</span></label></th>
                                     <td colspan="3">
-                                        <div class="inp_group search">
-                                            <div class="inp_box min">
-                                                <input type="text" id="input_01" value="174-05-01552">
-                                            </div>
-                                            <div class="box_btn">
-                                                <button class="search dialog-link" data-target="#alpop_03">검색</button>
+                                        <div class="inp_group search company_num">
+                                            <div class="inp_group">
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_001" value="144" disabled>
+                                                </div>
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_002" value="86" disabled>
+                                                </div>
+                                                <div class="inp_box">
+                                                    <input type="text" id="input_003" value="02432" disabled>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
@@ -518,7 +586,7 @@
                                     <th scope="row"><label for="input_02">기업명<span class="req">*</span></label></th>
                                     <td colspan="3">
                                         <div class="inp_group">
-                                            <div class="inp_box">
+                                            <div class="inp_box min">
                                                 <input type="text" id="input_02" value="아사달">
                                             </div>
                                         </div>
@@ -528,7 +596,7 @@
                                     <th scope="row"><label for="input_03">대표자명<span class="req">*</span></label></th>
                                     <td colspan="3">
                                         <div class="inp_group">
-                                            <div class="inp_box">
+                                            <div class="inp_box min">
                                                 <input type="text" id="input_03" value="서창녕">
                                             </div>
                                         </div>
@@ -536,17 +604,19 @@
                                 </tr>
                                 <tr>
                                     <th scope="row"><label for="input_00004">설립일자<span class="req">*</span></label></th>
-                                    <td>
+                                    <td colspan="3">
                                         <div class="inp_group">
-                                            <div class="inp_box datepicker_box">
+                                            <div class="inp_box datepicker_box min">
                                                 <input type="text" id="input_00004" class="datepicker_day">
                                             </div>
                                         </div>
                                     </td>
-                                    <th scope="row"><label for="input_05">이메일주소<span class="req">*</span></label></th>
-                                    <td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_05">홈페이지</label></th>
+                                    <td colspan="3">
                                         <div class="inp_group">
-                                            <div class="inp_box">
+                                            <div class="inp_box min">
                                                 <input type="text" id="input_05" value="https://www.asadal.com">
                                             </div>
                                         </div>
@@ -596,12 +666,27 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><label for="input_06">소재지<span class="req">*</span></label></th>
+                                    <th scope="row"><label for="input_008">사업장 소재지<span class="req">*</span></label></th>
                                     <td colspan="3">
-                                        <div class="inp_group">
-                                            <div class="inp_box">
-                                                <input type="text" id="input_06" value="서창녕">
-                                            </div>
+                                        <div class="inp_group address">
+                                            <span>
+                                                <div class="inp_box add_num">
+                                                    <input type="text" id="" disabled>
+                                                </div>
+                                                <div class="box_btn">
+                                                    <button class="search" id="input_008">주소검색</button>
+                                                </div>
+                                            </span>
+                                            <span>
+                                                <div class="inp_box">
+                                                    <input type="text" id="" disabled>
+                                                </div>
+                                            </span>
+                                            <span>
+                                                <div class="inp_box">
+                                                    <input type="text" id="">
+                                                </div>
+                                            </span>
                                         </div>
                                     </td>
                                 </tr>
@@ -636,42 +721,27 @@
                                                 </span>
                                                 <span>
                                                     <input type="checkbox" id="chk_07">
-                                                    <label for="chk_07">청년기업(40세 이하)</label>
+                                                    <label for="chk_07">창업초기</label>
                                                 </span>
                                                 <span>
                                                     <input type="checkbox" id="chk_08">
-                                                    <label for="chk_08">벤처기업</label>
+                                                    <label for="chk_08">청년기업(40세 이하)</label>
                                                 </span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="textarea_01">기업소개<span class="req">*</span></label></th>
-                                    <td colspan="3">
-                                        <div class="inp_group">
-                                            <div class="textarea_box">
-                                                <textarea id="textarea_01">국내 최초 전통주 술 정기 구독 서비스 쇼핑몰에서 소믈리에가 추천하는 다양한 술을 경험하세요.2천종이 넘는 다채로운 전통주가 한 달에 한번, 집 앞으로 찾아옵니다.
-                                                </textarea>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="file_inp">사업계획서<span class="req">*</span></label></th>
-                                    <td colspan="3">
-                                        <div class="inp_group file">
-                                            <span class="txt">※ 사업계획서는 외부에 공개되지 않으며, 벤처투자마트 신청 시에 활용됩니다.</span>
-                                            <div class="file_box">
-                                                <input type="file" id="file_inp" class="file_inp">
-                                                <label for="file_inp">파일첨부</label>
-                                                <span class="file_value"></span>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+
+                    <div class="btn_box_group type_01">
+                        <div class="btn_box">
+                            <a href="javascript:void(0);" class="btn_white" onclick="onShowToast('입력하신 정보가 임시저장되었습니다.');">임시저장</a>
+                        </div>
+                        <div class="btn_box">
+                            <a href="javascript:void(0);" class="btn_blue dialog-link" data-target="#alpop_04">제출</a>
+                        </div>
                     </div>
     
                     <!-- 기업정보 추가입력 -->
@@ -700,35 +770,17 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th scope="row" colspan="2"><label for="radio_001">공개여부<span class="req">*</span></label></th>
-                                                <td colspan="3">
-                                                    <div class="inp_group">
-                                                        <div class="rdo_box">
-                                                            <span>
-                                                                <input type="radio" id="radio_001" name="rdo_group_02">
-                                                                <label for="radio_001">공개</label>
-                                                            </span>
-                                                            <span>
-                                                                <input type="radio" id="radio_002" name="rdo_group_02" checked>
-                                                                <label for="radio_002">비공개</label>
-                                                            </span>
-                                                        </div>
-                                                        <span class="txt_etc">※ 추후 공개되는 메뉴 설명 문구 추가</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" colspan="2"><label for="textarea_01">사업소개<span class="req">*</span></label></th>
+                                                <th scope="row" colspan="2"><label for="textarea_01">기업소개</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="textarea_box">
-                                                            <textarea id="textarea_01" placeholder="사업소개 내용을 작성해주세요. (300자 이내)"></textarea>
+                                                            <textarea id="textarea_01" placeholder="기업소개 내용을 작성해주세요. (300자 이내)"></textarea>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row" colspan="2"><label for="textarea_02">핵심사업<span class="req">*</span></label></th>
+                                                <th scope="row" colspan="2"><label for="textarea_02">핵심사업</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="textarea_box">
@@ -739,7 +791,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row" rowspan="2"><label for="textarea_03">주요제품 및 서비스</label></th>
-                                                <th scope="row"><label for="textarea_03">키워드<span class="req">*</span></label></th>
+                                                <th scope="row"><label for="textarea_03">키워드</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="textarea_box">
@@ -749,7 +801,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><label for="textarea_04">상세설명<span class="req">*</span></label></th>
+                                                <th scope="row"><label for="textarea_04">상세설명</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="textarea_box">
@@ -759,7 +811,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row" colspan="2"><label for="input_01">홍보영상<span class="req">*</span></label></th>
+                                                <th scope="row" colspan="2"><label for="input_01">홍보영상</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="inp_box">
@@ -770,7 +822,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row" colspan="2"><label for="textarea_05">홍보영상 설명<span class="req">*</span></label></th>
+                                                <th scope="row" colspan="2"><label for="textarea_05">홍보영상 설명</label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group">
                                                         <div class="textarea_box">
@@ -782,8 +834,7 @@
                                             <tr>
                                                 <th scope="row" colspan="2">
                                                     <label for="textarea_05">
-                                                        제품 이미지 첨부
-                                                        <span class="req">*</span><br/>
+                                                        제품 이미지 첨부<br/>
                                                         (jpg, png, bmp 만 가능)<br/>
                                                         (총 100MB 이내)
                                                     </label>
@@ -824,13 +875,13 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row" rowspan="4"><label for="">제품 이미지 설명</label></th>
-                                                <th scope="row"><label for=""><span class="req">*</span></label></th>
+                                                <th scope="row"><label for=""></label></th>
                                                 <td colspan="3">
                                                     <div class="inp_group"><div class="txt_etc">※ 웹접근성 개선을 위하여 제품 이미지에 대한 설명을 50자 이내로 작성해 주세요.</div></div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><label for="textarea_06"><span class="req">*</span></label></th>
+                                                <th scope="row"><label for="textarea_06"></label></th>
                                                 <td colspan="3">
                                                     <div class="image_num">
                                                         <span class="num">1</span>
@@ -843,7 +894,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><label for="textarea_07"><span class="req">*</span></label></th>
+                                                <th scope="row"><label for="textarea_07"></label></th>
                                                 <td colspan="3">
                                                     <div class="image_num">
                                                         <span class="num">2</span>
@@ -856,7 +907,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><label for="textarea_08"><span class="req">*</span></label></th>
+                                                <th scope="row"><label for="textarea_08"></label></th>
                                                 <td colspan="3">
                                                     <div class="image_num">
                                                         <span class="num">3</span>
@@ -868,16 +919,26 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2"><label for="file_inp">사업계획서</label></th>
+                                                <td colspan="3">
+                                                    <div class="inp_group file">
+                                                        <span class="txt">※ 사업계획서는 외부에 공개되지 않으며, 벤처투자마트 신청 시에 활용됩니다.</span>
+                                                        <div class="file_box">
+                                                            <input type="file" id="file_inp" class="file_inp">
+                                                            <label for="file_inp">파일첨부</label>
+                                                            <span class="file_value"></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
     
                                 <div class="btn_box_group type_01">
                                     <div class="btn_box">
-                                        <a href="" class="btn_navy">재무정보 추가입력</a>
-                                    </div>
-                                    <div class="btn_box">
-                                        <a href="" class="btn_blue">임시저장</a>
+                                        <a href="" class="btn_navy">다음</a>
                                     </div>
                                 </div>
     
@@ -897,23 +958,6 @@
                                             <col width="30%;">
                                         </colgroup>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row"><label for="radio_3">공개여부<span class="req">*</span></label></th>
-                                                <td colspan="3">
-                                                    <div class="inp_group">
-                                                        <div class="rdo_box">
-                                                            <span>
-                                                                <input type="radio" id="radio_3" name="rdo_group_2" checked>
-                                                                <label for="radio_3">공개</label>
-                                                            </span>
-                                                            <span>
-                                                                <input type="radio" id="radio_4" name="rdo_group_2">
-                                                                <label for="radio_4">비공개</label>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
                                             <tr>
                                                 <th scope="row"><label for="textarea_1">재무정보</label></th>
                                                 <td colspan="3">
@@ -1074,19 +1118,13 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th scope="row"><label for="radio_5">공개여부<span class="req">*</span></label></th>
+                                                <th scope="row"><label for="radio_5">투자희망금액</label></th>
                                                 <td colspan="3">
-                                                    <div class="inp_group">
-                                                        <div class="rdo_box">
-                                                            <span>
-                                                                <input type="radio" id="radio_5" name="rdo_group_3" checked>
-                                                                <label for="radio_5">공개</label>
-                                                            </span>
-                                                            <span>
-                                                                <input type="radio" id="radio_6" name="rdo_group_3">
-                                                                <label for="radio_6">비공개</label>
-                                                            </span>
+                                                    <div class="inp_group inp_txt">
+                                                        <div class="inp_box min">
+                                                            <input type="text" id="input_01">
                                                         </div>
+                                                        <span class="txt">원</span>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -1287,5 +1325,29 @@
     </div>
 
 </div>
+
+<!-- 제출팝업 -->
+<div id="alpop_04" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        벤처투자마트 신청서를 제출하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint" onclick="onShowToast('벤처투자마트 신청이 완료되었습니다.');">확인</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
+
 </body>
 </html>

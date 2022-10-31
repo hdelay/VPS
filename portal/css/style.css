@@ -1001,8 +1001,16 @@ a.ico_folder::after {
     flex: none;
     width: 280px;
 }
-.btn_mart_notice .btn_box_group .btn_box * {
+.btn_mart_notice .btn_box_group .btn_box > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn_mart_notice .btn_box_group .btn_box span {
+    padding: 0;
     font-size: 20px;
     font-weight: 600;
 }
@@ -1017,6 +1025,9 @@ a.ico_folder::after {
     font-size: 25px;
     font-weight: 500;
     color: #273377;
+}
+.btn_mart_content {
+    margin-top: 60px;
 }
 
 /* VC구주유통망 */
@@ -5615,6 +5626,9 @@ footer .footer_bottom {
     }
     .btn_mart_notice .btn_box_group .btn_box * {
         padding: 10px 0;
+        font-size: 16px;
+    }
+    .btn_mart_notice .btn_box_group .btn_box span {
         font-size: 16px;
     }
     .btn_mart_notice .notice_box {
