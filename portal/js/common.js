@@ -488,9 +488,9 @@ $(function(){
     });
 
     // 통합검색 remove
-    $('.search_page .search_box .search_word a').on('click', function(e){
+    $('.search_page .search_box .search_word .delete').on('click', function(e){
         e.preventDefault();
-        $(this).remove();
+        $(this).parent().remove();
     });
 
     // 커뮤니티 마우스hover

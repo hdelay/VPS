@@ -4060,6 +4060,10 @@ a.ico_folder::after {
     font-weight: 400;
     color: #fff;
 }
+.search_page .search_box .search_word .word_box {
+    display: flex;
+    align-items: center;
+}
 .search_page .search_box .search_word .tit::after {
     content: "";
     display: block;
@@ -4071,11 +4075,7 @@ a.ico_folder::after {
     background-color: #615a53;
     transform: rotate(45deg) translateY(-80%);
 }
-.search_page .search_box .search_word a {
-    display: flex;
-    align-items: center;
-}
-.search_page .search_box .search_word a span {
+.search_page .search_box .search_word .delete {
     display: flex;
     position: relative;
     width: 15px;
@@ -4083,9 +4083,10 @@ a.ico_folder::after {
     background-color: #827c77;
     text-indent: -9999px;
     margin-left: 5px;
+    cursor: pointer;
 }
-.search_page .search_box .search_word a span::before,
-.search_page .search_box .search_word a span::after {
+.search_page .search_box .search_word .delete::before,
+.search_page .search_box .search_word .delete::after {
     content: "";
     display: block;
     position: absolute;
@@ -4095,10 +4096,10 @@ a.ico_folder::after {
     height: 1px; 
     background-color: #fff;
 }
-.search_page .search_box .search_word a span::before {
+.search_page .search_box .search_word .delete::before {
     transform: rotate(-45deg);
 }
-.search_page .search_box .search_word a span::after {
+.search_page .search_box .search_word .delete::after {
     transform: rotate(45deg);
 }
 .search_result_box {
@@ -4150,6 +4151,14 @@ a.ico_folder::after {
     font-size: 17px;
     font-weight: 600;
     color: #2850d3;
+}
+.search_result_box .result_box dl dd a {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .search_result_box .result_box dl:hover a,
 .search_result_box .result_box dl a:focus {
