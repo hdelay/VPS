@@ -3423,16 +3423,21 @@ a.ico_folder::after {
     flex: none;
 }
 
+.self_authentication_box {
+    width: 80%;
+    margin: 0 auto;
+}
 .self_authentication_box .content {
     display: flex;
+    justify-content: center;
     gap: 30px;
-    padding: 0 0 30px;
+    padding: 50px 0 50px;
 }
 .self_authentication_box .content li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(50% - 15px);
+    flex: 1;
     border: 1px solid #d9e0e6;
     padding: 30px 0;
     border-radius: 10px;

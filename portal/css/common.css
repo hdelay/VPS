@@ -2366,7 +2366,7 @@
     word-break: break-all;
 }
 .tbl_card_list.type_01 > ul > li .content.open span {
-    height: 90px;
+    height: 93px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
