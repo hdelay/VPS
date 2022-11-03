@@ -1681,6 +1681,9 @@
     color: #666;
 }
 .tbl_longcard > ul > li .tit strong a {
+    display: block;
+    width: 75%;
+    word-break: break-all;
     font-size: 20px;
     font-weight: 500;
     color: #666;
@@ -2360,6 +2363,7 @@
     width: 100%;
     font-size: 17px;
     font-weight: 300;
+    word-break: break-all;
 }
 .tbl_card_list.type_01 > ul > li .content.open span {
     height: 90px;
@@ -3491,6 +3495,9 @@ a.ui-button:active,
         flex-wrap: wrap;
         gap: 10px;
         font-size: 17px;
+    }
+    .tbl_longcard > ul > li .tit strong a {
+        width: 100%;
     }
     .tbl_longcard > ul > li.notice .tit strong::before {
         padding: 3px 10px;

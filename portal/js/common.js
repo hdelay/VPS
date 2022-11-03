@@ -151,7 +151,12 @@ $(function(){
     
     // 검색버튼
     $('header .header_top .search_box button').on('click', function(){
-        $(this).parent().toggleClass('on');
+        if($(this).parent().hasClass('on')){
+            $(this).parent().removeClass('on');
+        } else {
+            $(this).parent().addClass('on');
+            $(this).parent().find('input').focus();
+        }
     });
     // 영역 외 클릭 닫기
     $('.wrap').click(function(e){
@@ -505,7 +510,7 @@ $(function(){
         if (!$('.tab_submenu_group > a').parent().has(e.target).length) { 
             $('.tab_group .tab_btn > ul > li').removeClass('active');
         } 
-    });
+    }); 
 
     // 기업정보 입력
     $('.trans_enterprise_btn').on('click', function(){
