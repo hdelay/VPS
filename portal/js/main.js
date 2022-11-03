@@ -88,6 +88,11 @@ $(function(){
                 // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
                 if(idx == 0 || idx == 2) $.fn.fullpage.setAllowScrolling(true);
                 // console.log('전환후 : ' + idx);
+                
+                const activeIndex = this.activeIndex;
+                const activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
+                const activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
+                activeSlideVideo.play();
             },      
         }, 
     });

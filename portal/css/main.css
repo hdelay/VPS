@@ -194,6 +194,9 @@ header.headerfix .header_top {
 }
 .swiper-container .slide_wrap .img video {
     width: 100%;
+    min-width: 2600px;
+    height: auto;
+    margin-left: 27%;
 }
 .swiper-container .slide_wrap .inner {
     display: flex;
