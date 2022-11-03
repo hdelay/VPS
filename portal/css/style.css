@@ -6556,6 +6556,9 @@ footer .footer_bottom {
     .box_step ul li strong {
         font-size: 14px;
     }
+    .self_authentication_box {
+        width: 100%;
+    }
     .self_authentication_box .content {
         gap: 15px;
         justify-content: space-between;
