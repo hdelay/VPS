@@ -3724,7 +3724,7 @@ a.ico_folder::after {
     color: #333;
 }
 .find_group .self_authentication_box {
-    margin: 50px 0;
+    margin: 50px auto;
 }
 .find_content .btn_box {
     flex: none;
@@ -6562,6 +6562,7 @@ footer .footer_bottom {
     .self_authentication_box .content {
         gap: 15px;
         justify-content: space-between;
+        padding: 0 0 20px;
     }
     .self_authentication_box .content li {
         flex: 1;
