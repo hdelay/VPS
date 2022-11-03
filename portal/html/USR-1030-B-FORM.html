@@ -318,66 +318,80 @@
     
                 <div class="tbl_box_data">
                     <table>
-                        <caption>기업홍보등록</caption>
+                        <caption>기업홍보 등록</caption>
                         <colgroup>
-                            <col width="20%;">
-                            <col width="30%;">
-                            <col width="20%;">
-                            <col width="30%;">
+                            <col width="11%;">
+                            <col width="39%;">
+                            <col width="11%;">
+                            <col width="39%;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row"><label for="radio_01">구분</label></th>
+                                <th><label for="baTitle">제목<span class="req">*</span></label></th>
                                 <td colspan="3">
                                     <div class="inp_group">
-                                        <div class="rdo_box">
+                                        <div class="inp_box">
+                                            <input id="baTitle" name="baTitle" title="제목 입력" type="text" value="">
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label>이름</label></th>
+                                <td colspan="3">사용자</td>
+                            </tr>
+                            <tr>
+                                <th><label for="baSecret">비공개</label></th>
+                                <td colspan="3">
+                                    <div class="inp_group chk">
+                                        <div class="chk_box">
                                             <span>
-                                                <input type="radio" id="radio_01" name="rdo_group_01">
-                                                <label for="radio_01">구분1</label>
+                                                <input id="baSecret" name="baSecret" title="비공개 여부 선택" type="checkbox" value="true"><input type="hidden" name="_baSecret" value="on">
+                                                <label for="baSecret">&nbsp;</label>
                                             </span>
-                                            <span>
-                                                <input type="radio" id="radio_02" name="rdo_group_01">
-                                                <label for="radio_02">구분2</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="radio_03" name="rdo_group_01">
-                                                <label for="radio_03">구분3</label>
-                                            </span>
-                                            <span>
-                                                <input type="radio" id="radio_04" name="rdo_group_01">
-                                                <label for="radio_04">구분4</label>
-                                            </span>
+                                        </div>
+                                        
+                                        <div class="inp_box datepicker_box">
+                                            <input id="baSecretPassword" name="baSecretPassword" title="비밀번호 입력" placeholder="비밀번호" type="password" value="" maxlength="20">
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>     
+                            <tr>
+                                <th><label for="baCustomField1">기업/기관명<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="inp_box">
+                                            <input id="baCustomField1" name="baCustomField1" title="기업/기관명 입력" type="text" value="">
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="input_02">제목</label></th>
+                                <th><label for="baCustomField2">동영상 링크</label></th>
                                 <td colspan="3">
-                                    <div class="inp_box">
-                                        <input type="text" id="input_02">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="bg">
-                                <td colspan="4">
                                     <div class="inp_group">
-                                        <div class="textarea_box cont">
-                                            <label for="textarea_01" class="hidden">입력</label>
-                                            <textarea id="textarea_01"></textarea>
+                                        <div class="inp_box">
+                                            <input id="baCustomField2" name="baCustomField2" title="동영상 링크 입력" type="text" value="">
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="4">
-                                    <div class="inp_group file">
-                                        <div class="file_box">
-                                            <input type="file" id="file_inp" class="file_inp">
-                                            <label for="file_inp">파일첨부</label>
-                                            <span class="file_value"></span>
+                                <th><label for="baContentHtml">내용<span class="req">*</span></label></th>
+                                <td colspan="3">
+                                    <div class="inp_group">
+                                        <div class="textarea_box">
+                                            <textarea id="baContentHtml" name="baContentHtml" title="내용 입력" rows="10" cols="30"></textarea>
                                         </div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="kupload">첨부파일<span class="req">*</span></label></th>
+                                <td colspan="3" id="fileAltText" style="border-bottom: none;">
                                 </td>
                             </tr>
                         </tbody>
@@ -386,7 +400,7 @@
 
                 <div class="btn_box_group type_tbl">
                     <div class="btn_box bg">
-                        <a href="" class="btn_save">저장</a>
+                        <a href="" class="btn_save">등록</a>
                     </div>
                     <div class="btn_box bg">
                         <a href="./USR-1030-B-LIST.html" class="btn_cancel">취소</a>
