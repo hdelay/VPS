@@ -2619,11 +2619,16 @@
     font-size: 14px;
     font-weight: 400;
     color: #666;
-    width: 100%;
-    display: block;
+    max-width: 100%;
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.tbl_card_list.type_02 a .info span em {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
 }
 .tbl_card_list.type_02 a .info span + span::before {
     content: "|";
