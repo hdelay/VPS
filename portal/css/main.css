@@ -194,7 +194,7 @@ header.headerfix .header_top {
 }
 .swiper-container .slide_wrap .img video {
     width: 100%;
-    min-width: 2600px;
+    min-width: 150vw;
     height: auto;
     margin-left: 19%;
 }
