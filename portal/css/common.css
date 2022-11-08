@@ -1590,6 +1590,9 @@
 /* 투자실적 테이블 */
 .tbl_investment {
     border-top: 2px solid #333;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
 }
 .tbl_investment table {
     width: 100%;
