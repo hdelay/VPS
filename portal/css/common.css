@@ -162,6 +162,12 @@
     justify-content: flex-end;
     margin-bottom: 30px;
 }
+.btn_box_group.center {
+    justify-content: center;
+}
+.btn_box_group.center .btn_box {
+    flex: none;
+}
 .btn_box {
     display: flex;
     width: 160px;
