@@ -89,10 +89,12 @@ $(function(){
                 if(idx == 0 || idx == 2) $.fn.fullpage.setAllowScrolling(true);
                 // console.log('전환후 : ' + idx);
                 
+                /* 동영상 슬라이드시 재생
                 const activeIndex = this.activeIndex;
                 const activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
                 const activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
                 activeSlideVideo.play();
+                */
             },      
         }, 
     });
