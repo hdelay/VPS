@@ -2031,10 +2031,17 @@
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.list_group_info .top .administration_box .btn_box {
+.list_group_info .top .administration_box .btn_box_group {
     width: auto;
     flex: none;
     gap: 20px;
+}
+.list_group_info .top .administration_box .btn_box_group .btn_box {
+    width: auto;
+    flex: none;
+}
+.list_group_info .top .administration_box .btn_box_group .btn_box * {
+    font-size: 14px;
 }
 .administration_box {
     display: flex;
@@ -2860,7 +2867,36 @@
     padding-left: 20px;
     box-sizing: border-box;
 }
-
+.chk_list.type_03 li .chk_box .chk_btn {
+    display: flex;
+    padding-left: 0;
+    flex: 1;
+    justify-content: flex-end;
+}
+.chk_list.type_03 li .chk_box .chk_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+    transition: .2s;
+}
+.chk_list.type_03 li .chk_box .chk_btn button:hover {
+    border-color: #457cd7;
+    background-color: #457cd7;
+    color: #fff;
+}
+.chk_list.type_03 li .chk_box .chk_btn.on button {
+    border-color: #457cd7;
+    background-color: #457cd7;
+    color: #fff;
+}
 
 /* search form 서치폼 */
 .search_form_group {
@@ -3616,10 +3652,14 @@ a.ui-button:active,
         gap: 5px;
         margin-bottom: 10px;
     }
-    .list_group_info .top .administration_box .btn_box {
+    .list_group_info .top .administration_box .btn_box_group {
         width: 100%;
         justify-content: flex-end;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .list_group_info .top .administration_box .btn_box_group .btn_box * {
+        padding: 3px 7px;
     }
     .list_group_info .top .tit strong {
         margin-bottom: 10px;

@@ -530,6 +530,10 @@ $(function(){
             $('.chk_list_more').removeClass('on');
         }
     });
+    $('.chk_list_more_btn .chk_btn button').on('click', function(){
+        $(this).parent().toggleClass('on');
+        $('.chk_list_more').toggleClass('on');
+    });
 
 });
 
