@@ -1697,6 +1697,9 @@
     font-weight: 500;
     color: #666;
 }
+.tbl_longcard.add > ul > li .tit strong a {
+    width: auto;
+}
 .tbl_longcard > ul > li .tit > ul {
     display: block;
     width: 100%;
