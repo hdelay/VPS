@@ -2253,6 +2253,7 @@
     flex-direction: column;
     border-radius: 10px;
     border: 1px solid #ddd;
+    width: 100%;
 }
 .tbl_newletter ul li a .division {
     display: flex;
