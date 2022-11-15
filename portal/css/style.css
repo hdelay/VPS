@@ -6105,6 +6105,9 @@ footer .footer_bottom {
     .design_box_group .design_box .img_bi img {
         width: 100% !important;
     }
+    .design_box_group .design_box:nth-child(2) {
+        height: auto;
+    }
     .design_box_group .design_box:nth-child(2) .img_bi {
         display: flex;
         justify-content: center;
