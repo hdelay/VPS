@@ -531,60 +531,6 @@ $(function(){
         }
     });
 
-    // 대시보드 스와이퍼
-    // swiper
-    var swiper = new Swiper('.statistics_01 .statistics_box', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        freeMode: false,
-        speed: 300,
-        navigation: {
-          nextEl: '.statistics_01 .swiper-button-next',
-          prevEl: '.statistics_01 .swiper-button-prev',
-        },
-        observer: true,
-        mousewheel: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 5,
-            },
-        }
-    });
-    var swiper = new Swiper('.statistics_02 .statistics_box', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        freeMode: false,
-        speed: 300,
-        navigation: {
-          nextEl: '.statistics_02 .swiper-button-next',
-          prevEl: '.statistics_02 .swiper-button-prev',
-        },
-        observer: true,
-        mousewheel: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 5,
-            },
-        }
-    });
-    var swiper = new Swiper('.statistics_03 .statistics_box', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        freeMode: false,
-        speed: 300,
-        navigation: {
-          nextEl: '.statistics_03 .swiper-button-next',
-          prevEl: '.statistics_03 .swiper-button-prev',
-        },
-        observer: true,
-        mousewheel: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 5,
-            },
-        }
-    });
-
 });
 
 //Toast 팝업
