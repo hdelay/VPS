@@ -415,6 +415,7 @@ header.headerfix .header_top {
 }
 
 .shortcuts_box .swiper-wrapper .swiper-slide a strong {
+    text-align: center;
     font-size: 16px;
     font-weight: 500;
 }
