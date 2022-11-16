@@ -105,13 +105,14 @@ header.headerfix .header_top nav > ul > li > a::after {
 header .header_top nav > ul > li > ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     position: absolute;
     top: 95px;
-    right: 0;
-    width: 125%;
+    left: 50%;
+    width: 160%;
     height: 0;
     overflow: hidden;
+    transform: translateX(-50%);
     opacity: 0;
     transition: .5s;
 }
@@ -120,13 +121,17 @@ header .header_top nav > ul > li > ul {
     opacity: 1;
 }
 header .header_top nav > ul > li > ul li {
-    text-align: right;
+    text-align: center;
 }
 header .header_top nav > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 5px 10px;
     font-weight: 500;
+    transition: .2s;
 }
 header .header_top nav > ul > li > ul > li:hover > a {
-    color: #457cd7;
+    background-color: #609de9;
+    color: #fff;
 }
 header .header_top .util_box {
     display: flex;
@@ -5432,6 +5437,7 @@ footer .footer_bottom {
         border-bottom: 1px solid rgba(0, 0, 0, .09);
         padding: 15px 37px 15px 25px;
         box-sizing: border-box;
+        font-size: 14px;
         font-weight: 400;
     }
     .allmenu_box > ul > li > ul > li.depth3 > a::before {
