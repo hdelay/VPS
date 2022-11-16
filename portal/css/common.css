@@ -1908,8 +1908,12 @@
 }
 
 .tbl_longcard.type_04 > ul > li {
-    padding: 25px 25px 40px;
+    padding: 25px;
     box-sizing: border-box;
+}
+.tbl_longcard.type_04 > ul > li .card_set > ul {
+    right: inherit;
+    left: 27px;
 }
 .tbl_longcard .tit .file {
     display: flex;
@@ -3606,7 +3610,9 @@ a.ui-button:active,
     }
     .tbl_longcard.type_04 > ul > li {
         padding: 15px;
-        padding-bottom: 40px;
+    }
+    .tbl_longcard.type_04 > ul > li .tit strong a {
+        max-width: 100%;
     }
     .tbl_longcard .tit .file a {
         font-size: 12px;
