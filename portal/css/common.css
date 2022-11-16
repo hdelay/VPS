@@ -2047,6 +2047,18 @@
 .list_group_info .top .administration_box .btn_box_group .btn_box * {
     font-size: 14px;
 }
+.list_group_info .top .administration_box .btn_box_group .state_waiting {
+    display: flex;
+    align-items: center;
+}
+.list_group_info .top .administration_box .btn_box_group .state_waiting span {
+    border: 1px solid #3366cc;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3366cc;
+}
 .administration_box {
     display: flex;
     justify-content: space-between;
@@ -3667,6 +3679,9 @@ a.ui-button:active,
     }
     .list_group_info .top .administration_box .btn_box_group .btn_box * {
         padding: 3px 7px;
+    }
+    .list_group_info .top .administration_box .btn_box_group .state_waiting span {
+        padding: 3px 9px;
     }
     .list_group_info .top .tit strong {
         margin-bottom: 10px;
