@@ -977,10 +977,11 @@ header.font_black .btn_login_box li a::before {
 }
 .policy_list {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
-.policy_list.type_02 {
-    gap: 10px;
+.policy_list + .policy_list {
+    margin-top: 20px;
 }
 .policy_list li {
     display: flex;
@@ -989,9 +990,10 @@ header.font_black .btn_login_box li a::before {
     border: 1px solid #d9e1e7;
     border-radius: 5px;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    width: 195px;
 }
 .policy_list.type_02 li {
-    flex: 1;
+    width: 195px;
 }
 .policy_list li a {
     display: flex;
@@ -1038,18 +1040,19 @@ header.font_black .btn_login_box li a::before {
 .policy_list.type_02 li:nth-child(4) a::before {
     background-image: url(../images/ico/ico_policy_08.png);
 }
-.policy_list.type_02 li:nth-child(5) a::before {
+
+.policy_list.type_02.second li:nth-child(1) a::before {
     background-image: url(../images/ico/ico_policy_09.png);
     background-size: 100% auto;
 }
-.policy_list.type_02 li:nth-child(6) a::before {
+.policy_list.type_02.second li:nth-child(2) a::before {
     background-image: url(../images/ico/ico_policy_10.png);
     background-size: 100% auto;
 }
-.policy_list.type_02 li:nth-child(7) a::before {
+.policy_list.type_02.second li:nth-child(3) a::before {
     background-image: url(../images/ico/ico_policy_11.png);
 }
-.policy_list.type_02 li:nth-child(8) a::before {
+.policy_list.type_02.second li:nth-child(4) a::before {
     background-image: url(../images/ico/ico_policy_12.png);
 }
 
@@ -2693,7 +2696,10 @@ a.ico_folder::after {
 }
 
 /* 유관기관 안내 */
-.relevant_box {}
+.btn_box_group.type_01.relevant_box_top {
+    padding-top: 0;
+    margin-bottom: 30px;
+}
 .relevant_01 ul:nth-child(1) {
     display: flex;
     gap: 40px;
@@ -3102,7 +3108,7 @@ a.ico_folder::after {
     gap: 50px;
 }
 .relevant_04 .schematic_box dl:nth-child(1) dd .check_box {
-    width: calc(100% - 422px);
+    width: 100%;
     min-width: 318px;
     flex-direction: column;
     align-items: center;
@@ -3254,6 +3260,163 @@ a.ico_folder::after {
 }
 .relevant_05 > ul li .box .blue {
     color: #1d7cdb;
+}
+/* 액셀러레이터협회 */
+.vision-wrap .tit-style1 {
+    border-bottom: 0;
+}
+.vision-wrap .bul01 {
+    font-size: 1.75rem;
+}
+.vision-wrap .bul01 .point5 {
+    font-style: normal;
+}
+.bul01 {
+    display: block;
+    margin-bottom: 1.25rem;
+    padding-top: 1.75rem;
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-align: center;
+}
+.vision-wrap .vision-tit {
+    position: relative;
+    display: block;
+    margin: 2rem auto 2.5rem;
+    width: calc(100% - 160px);
+    height: 98px;
+    border-radius: 50px;
+    text-align: center;
+    background: -moz-linear-gradient(270deg, rgba(38,195,230,1) 0%, rgba(37,79,149,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(38,195,230,1)), color-stop(100%, rgba(37,79,149,1)));
+    background: -webkit-linear-gradient(270deg, rgba(38,195,230,1) 0%, rgba(37,79,149,1) 100%);
+    background: -o-linear-gradient(270deg, rgba(38,195,230,1) 0%, rgba(37,79,149,1) 100%);
+    background: -ms-linear-gradient(270deg, rgba(38,195,230,1) 0%, rgba(37,79,149,1) 100%);
+    background: linear-gradient(180deg, rgba(38,195,230,1) 0%, rgba(37,79,149,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26c3e6', endColorstr='#254f95',GradientType=0 );
+}
+.vision-wrap .vision-tit > div {
+    position: absolute;
+    display: table;
+    table-layout: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background: #fff;
+    border-radius: 50px;
+    color: #2a2f7c;
+}
+.vision-wrap .vision-tit > div > span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+.vision-diagram {
+    text-align: center;
+}
+.vision-diagram .arrow {
+    position: relative;
+    display: inline-block;
+    padding-top: 5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+}
+.vision-diagram .arrow:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 311px;
+    height: 145px;
+    background: url(https://www.k-ac.or.kr/webroot/images/korean/sub/vision_arrow.png)no-repeat center/cover;
+    content: '';
+}
+.vision-diagram .arrow > span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    font-size: 22px;
+}
+.point5 {
+    color: #254c93 !important;
+    font-style: normal;
+}
+.point2 {
+    color: #ff4d4d !important;
+    font-style: normal;
+}
+.vision-diagram .diagram-lst {
+    width: 60%;
+    position: relative;
+    margin: 1rem auto 0;
+    overflow: hidden;
+}
+.vision-diagram .diagram-lst > li {
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+}
+.vision-diagram .diagram-lst > li + li {
+    padding-left: 3rem;
+}
+.vision-diagram .diagram-lst > li > strong {
+    position: relative;
+    display: table;
+    margin: auto;
+    width: 201px;
+    height: 201px;
+    background: #26c6e8;
+    border-radius: 50%;
+}
+.vision-diagram .diagram-lst > li > strong:before {
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,.2);
+    font-family: 'Montserrat';
+    content: 'K';
+}
+.vision-diagram .diagram-lst > li > strong > span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+}
+.vision-diagram .diagram-lst > li:nth-of-type(2) > strong {
+    background: #254c93;
+}
+.vision-diagram .diagram-lst > li:nth-of-type(3) > strong {
+    background: #254c93;
+}
+.vision-diagram .diagram-lst > li:nth-of-type(2) > strong:before {
+    content: 'A';
+}
+.vision-diagram .diagram-lst > li:nth-of-type(3) > strong:before {
+    content: 'A';
+}
+.vision-diagram .diagram-lst > li + li > strong:after {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    content: '';
 }
 
 /* 비밀번호 확인 */
@@ -5787,15 +5950,13 @@ footer .footer_bottom {
     /* 정책 */ 
     .policy_list {
         flex-wrap: wrap;
-    }
-    .policy_list.type_01 {
         gap: 10px;
     }
     .policy_list.type_01 li {
         width: 100%;
     }
     .policy_list.type_02 li {
-        flex-basis: calc(50% - 10px);
+        width: calc(50% - 10px);
     }
 
     /* 법령 */
