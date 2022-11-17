@@ -188,6 +188,7 @@
 .btn_box_group.type_tbl {
     margin: 30px 0 50px;
     justify-content: flex-end;
+    position: relative;
 }
 .btn_box_group.type_tbl .btn_box {
     flex: none;
@@ -197,6 +198,11 @@
     padding: 5px 10px;
     box-sizing: border-box;
     border: 1px solid #d6d6d6;
+}
+.btn_box_group.type_tbl .btn_box.left {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .btn_box .btn_blue {
     background-color: #457cd7;
