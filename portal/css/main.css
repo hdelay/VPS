@@ -1363,7 +1363,8 @@ header.headerfix .header_top {
     .swiper-container .slide_wrap .img video {
         width: auto;
         margin-left: 0;
-        min-width: 600vw;
+        min-width: inherit;
+        height: 200vh;
     }
     .swiper-container .slide_wrap .inner {
         max-width: 100%;
