@@ -258,7 +258,7 @@ header.font_black .header_top .search_box .search_inp + button {
     position: relative;
     padding-left: 10px;
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     color: #fff;
 }
