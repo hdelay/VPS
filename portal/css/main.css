@@ -531,6 +531,39 @@ header.headerfix .header_top {
     font-weight: 500;
     color: #5d5d5d;
 }
+.sec2 .search_word dl dd ol.design li {
+    display: flex;
+    align-items: center;
+}
+.sec2 .search_word dl dd ol.design li::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #039be5;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+.sec2 .search_word dl dd ol.design li:nth-child(1)::before {
+    content: "1";
+}
+.sec2 .search_word dl dd ol.design li:nth-child(2)::before {
+    content: "2";
+}
+.sec2 .search_word dl dd ol.design li:nth-child(3)::before {
+    content: "3";
+}
+.sec2 .search_word dl dd ol.design li:nth-child(4)::before {
+    content: "4";
+}
+.sec2 .search_word dl dd ol.design li:nth-child(5)::before {
+    content: "5";
+}
 .sec2 .search_word dl dd ul {
     display: flex;
     flex-wrap: wrap;
