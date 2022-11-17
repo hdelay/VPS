@@ -266,33 +266,40 @@
                         <span>회원 유형에 따라 포털에서 사용하는 서비스에 대한 제한은 없으나, 맞춤 투자 가이드 등 서비스 안내에 차이가 있을 수 있습니다.</span>
                     </div>
                     <div class="category_sel">
-                        <div>
+                        <div class="individual">
                             <input type="radio" id="radio_001" name="rdo_group_02" checked>
                             <label for="radio_001">
                                 <dl>
                                     <dt>개인회원</dt>
-                                    <dd></dd>
+                                    <dd>
+                                        <div class="bg"></div>
+                                    </dd>
                                 </dl>
                             </label>
                         </div>
-                        <div>
+                        <div class="enterprise">
                             <input type="radio" id="radio_002" name="rdo_group_02">
                             <label for="radio_002">
                                 <dl>
                                     <dt>기업회원</dt>
                                     <dd>
-                                        <ul>
-                                            <li>예비 창업자</li>
-                                            <li>스타트업</li>
-                                            <li>벤처기업</li>
-                                        </ul>
+                                        <div class="bg"></div>
                                     </dd>
                                 </dl>
                             </label>
                         </div>
                     </div>
                     <div class="explanation">
-                        회원구분 및 가입에 대한 설명 내용 기재
+                        <dl>
+                            <dt>개인회원</dt>
+                            <dd>- 기업에 속하지 않은(사업자등록번호 미보유) 고객</dd>
+                            <dd>- 일반, 전문투자자</dd>
+                        </dl>
+                        <dl>
+                            <dt>기업회원</dt>
+                            <dd>- 기업에 속한(사업자등록번호 보유) 고객</dd>
+                            <dd>- 투자유치 희망기업 관리자, 기관 관리자</dd>
+                        </dl>
                     </div>
                 </div>
 

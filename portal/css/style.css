@@ -3315,6 +3315,7 @@ a.ico_folder::after {
     background-color: #f9f9f9;
     box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 9%);
     min-width: 290px;
+    min-height: 180px;
     box-sizing: border-box;
 }
 .category_sel input:checked ~ label dl {
@@ -3377,8 +3378,26 @@ a.ico_folder::after {
     background-color: #333;
     border-radius: 50%;
 }
+.category_sel .bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: no-repeat center;
+}
+.category_sel .individual .bg {
+    width: 100%;
+    height: 81px;
+    background-image: url(../images/ico/ico_individual.png);
+} 
+.category_sel .enterprise .bg {
+    width: 100%;
+    height: 81px;
+    background-image: url(../images/ico/ico_enterprise.png);
+} 
 .explanation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 48%;
@@ -3389,6 +3408,20 @@ a.ico_folder::after {
     border-radius: 10px;
     box-sizing: border-box;
     font-size: 17px;
+    font-weight: 400;
+}
+.explanation dl {
+    width: 100%;
+}
+.explanation dl + dl {
+    margin-top: 30px;
+}
+.explanation dl dt {
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 500;
+}
+.explanation dl dd {
     font-weight: 400;
 }
 .member_type ~ .btn_box_group {
@@ -6662,6 +6695,13 @@ footer .footer_bottom {
     .explanation {
         width: 100%;
         padding: 15px;
+    }
+    .explanation dl dt {
+        font-size: 16px;
+    }
+    .explanation dl dd {
+        font-size: 14px;
+        word-break: keep-all;
     }
     /* step */
     .box_step {
