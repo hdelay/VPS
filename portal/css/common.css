@@ -2106,11 +2106,12 @@
 }
 .list_group_info .bottom ul li {
     display: flex;
+    position: relative;
     align-items: center;
     font-size: 14px;
     font-weight: 400;
 }
-.list_group_info .bottom ul li + li::before {
+.list_group_info .bottom > ul > li + li::before {
     content: "ㅣ";
     margin-right: 5px;
 }
@@ -2123,6 +2124,22 @@
     width: auto;
     padding: 5px 20px;
     font-size: 14px;
+}
+.list_group_info .bottom ul li strong {
+    margin-left: 5px;
+    font-weight: 600;
+}
+.list_group_info .bottom ul li .pop_mini {
+    margin-left: 5px;
+    font-weight: 500;
+}
+.list_group_info .bottom ul li .card_set ul {
+    display: none;
+    top: 30px;
+    width: 160%;
+}
+.list_group_info .bottom ul li .card_set ul.on {
+    display: block;
 }
 
 /* 카드게시판 :: 용어사전 */
