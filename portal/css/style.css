@@ -2445,38 +2445,31 @@ a.ico_folder::after {
 .ui-dialog .talk_txt .textarea_box textarea {
     background-color: #f0f3f6;
 }
-.public_box {
+.public_box .public_btn {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    font-size: 18px;
-    font-weight: 400;
-}
-.public_box span {
-    margin: 0 5px;
-    font-size: 18px;
-    font-weight: 400;
-}
-.public_box .public_btn {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 .public_box button {
-    background-color: transparent;
-    margin: 0 0 0 5px;
-    font-size: 18px;
-    font-weight: 500;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background: url(../images/ico/ico_setting.png) no-repeat center;
+    text-indent: -9999em;
     cursor: pointer;
 }
 .public_box .public_content {
     display: none;
     position: absolute;
-    top: 35px;
-    left: 50%;
+    top: 42px;
+    right: 0;
     border: 1px solid #3366cc;
     padding: 22px 20px;
     background-color: #fff;
-    transform: translateX(-50%);
     z-index: 2;
 }
 .public_box .public_content.on {
@@ -2538,6 +2531,7 @@ a.ico_folder::after {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+    position: relative;
 }
 .mytalk_box .tab_btn ul {
     gap: 10px;
@@ -6278,12 +6272,19 @@ footer .footer_bottom {
         flex-direction: column;
         height: auto;
     }
+    .mytalk_box .tab_btn ul {
+        flex-wrap: nowrap;
+        margin-top: 30px;
+    }
     .mytalk_box .tab_btn ul > li > a {
         padding: 0 10px;
         height: 32px;
     }
-    .mytalk_box .tab_btn ul {
-        flex-wrap: nowrap;
+    .public_box .public_btn {
+        top: 6px;
+    }
+    .public_box .public_content {
+        top: 38px;
     }
 
     /* 벤처투자 불법신고 */

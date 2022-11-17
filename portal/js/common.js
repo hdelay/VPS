@@ -388,10 +388,16 @@ $(function(){
     // 공개 여부
     $('.public_box button').on('click', function(){
         $(this).parent().find('.public_content').addClass('on');
-        $('.public_box .btn_gray').on('click', function(e){
+        $('.public_box .close').on('click', function(e){
             e.preventDefault();
             $('.public_content').removeClass('on');
         });
+    });
+    // 영역 외 클릭 닫기
+    $('.wrap').click(function(e){
+        if (!$('.public_box button').parent().has(e.target).length) { 
+            $('.public_content').removeClass('on');
+        } 
     });
 
     // 카드게시판 설정
