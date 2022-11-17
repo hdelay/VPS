@@ -532,6 +532,9 @@ header.font_black .btn_login_box li a::before {
 .search_item {
     padding-top: 45px;
 }
+.search_item:nth-child(2) {
+    padding-top: 0;
+}
 .search_item.etc {
     padding-top: 10px;
 }
