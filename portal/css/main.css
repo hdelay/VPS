@@ -1351,7 +1351,12 @@ header.headerfix .header_top {
     미디어쿼리 max-width: 1024px
 ============================================================ */
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+    
+    .swiper-container .slide_wrap .img video {
+        min-width: 2000px;
+    }
+}
 
 /* ============================================================
     미디어쿼리 max-width: 768px
