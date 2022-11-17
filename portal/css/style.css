@@ -2243,7 +2243,7 @@ a.ico_folder::after {
     box-sizing: border-box;
 }
 .community_main_btn .btn_box {
-    width: 238px;
+    width: auto;
     flex: none;
 }
 .tab_group.community .tab_btn ul {
