@@ -109,7 +109,7 @@ header .header_top nav > ul > li > ul {
     position: absolute;
     top: 95px;
     left: 50%;
-    width: 160%;
+    width: 207%;
     height: 0;
     overflow: hidden;
     transform: translateX(-50%);

@@ -1362,7 +1362,7 @@ header.headerfix .header_top {
     }
     .swiper-container .slide_wrap .img video {
         width: auto;
-        margin-left: -500px;
+        margin-left: 0;
         min-width: 600vw;
     }
     .swiper-container .slide_wrap .inner {
