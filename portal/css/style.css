@@ -626,6 +626,10 @@ header.font_black .btn_login_box li a::before {
     display: block;
     margin: 0 7px;
 }
+.investor_card .info ul li span strong {
+    margin-right: 5px;
+    font-weight: 600;
+}
 .investor_card .hashtag span {
     font-size: 14px;
     font-weight: 400;
@@ -1805,9 +1809,10 @@ a.ico_folder::after {
 .statistics_group {
     position: relative;
     padding: 60px 115px;
-    background: url(../images/bg/bg_statistics_box.png) no-repeat center;
+    /* background: url(../images/bg/bg_statistics_box.png) no-repeat center; */
     background-size: 100% 100%;
     border-radius: 15px;
+    border: 1px solid #d9e0e6;
 }
 .statistics_box {
     overflow: hidden;
@@ -1825,7 +1830,7 @@ a.ico_folder::after {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    color: #fff;
+    color: #333;
 }
 .statistics_box ul li::after {
     content: "";
@@ -1835,7 +1840,7 @@ a.ico_folder::after {
     right: 0;
     width: 1px;
     height: 100%;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(0, 0, 0, .3);
 }
 .statistics_box ul li:first-child::before {
     content: "";
@@ -1845,7 +1850,7 @@ a.ico_folder::after {
     left: 0;
     width: 1px;
     height: 100%;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(0, 0, 0, .3);
 }
 .statistics_box ul li span {
     font-size: 22px;
@@ -1855,6 +1860,9 @@ a.ico_folder::after {
     text-align: center;
     font-size: 15px;
     font-weight: 400;
+}
+.statistics_group + .tit_box {
+    margin-top: 50px;
 }
 .statistics_group .swiper-button-prev,
 .statistics_group .swiper-button-next {
@@ -1869,11 +1877,11 @@ a.ico_folder::after {
 }
 .statistics_group .swiper-button-prev {
     left: 35px;
-    background-image: url(../images/ico/statistics_box_left.png);
+    background-image: url(../images/ico/statistics_box_left_b.png);
 }
 .statistics_group .swiper-button-next {
     right: 35px;
-    background-image: url(../images/ico/statistics_box_right.png);
+    background-image: url(../images/ico/statistics_box_right_b.png);
 }
 .statistics_group .standard {
     position: absolute;

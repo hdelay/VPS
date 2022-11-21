@@ -2092,6 +2092,9 @@
     font-size: 14px;
     font-weight: 400;
 }
+.list_group_info .top .tit span:nth-child(1) {
+    font-weight: 600;
+}
 .list_group_info .top .tit .details {
     display: flex;
     flex-wrap: wrap;
