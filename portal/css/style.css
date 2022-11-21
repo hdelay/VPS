@@ -1349,6 +1349,9 @@ a.ico_folder::after {
 .list_item .mna_box dd {
     font-weight: 400;
 }
+.list_item .mna_box > dd {
+    width: calc(100% - 114px);
+}
 .list_item .mna_box > dd:nth-child(3) {
     min-width: 90%;
 }
@@ -6103,6 +6106,9 @@ footer .footer_bottom {
         padding: 10px;
         word-break: keep-all;
         font-size: 14px;
+    }
+    .list_item .mna_box > dd {
+        width: 100%;
     }
     .list_item .mna_box dd .font_blue {
         align-items: flex-start;
