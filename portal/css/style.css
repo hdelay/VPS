@@ -3266,6 +3266,7 @@ a.ico_folder::after {
     border-bottom: 0;
 }
 .vision-wrap .bul01 {
+    margin-bottom: 50px;
     font-size: 1.75rem;
 }
 .vision-wrap .bul01 .point5 {
@@ -3417,6 +3418,22 @@ a.ico_folder::after {
     height: 1px;
     background: #ddd;
     content: '';
+}
+.vision-slogan {
+    text-align: center;
+    padding: 4rem 0;
+}
+.vision-slogan__img {
+    padding: 0 2rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+.vision-slogan__title {
+    display: block;
+    color: #2a2f7c;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* 비밀번호 확인 */
