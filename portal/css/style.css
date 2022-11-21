@@ -996,7 +996,7 @@ header.font_black .btn_login_box li a::before {
     width: 195px;
 }
 .policy_list.type_02 li {
-    width: 195px;
+    flex: 1;
 }
 .policy_list li a {
     display: flex;
