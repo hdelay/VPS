@@ -321,6 +321,12 @@
 .btn_box.max {
     width: auto;
 }
+.btn_box_group.type_01.atoz .btn_box {
+    width: auto;
+}
+.btn_box_group.type_01.atoz .btn_box * {
+    padding: 10px 60px;
+}
 
 /* 제목 */
 .tit_box.row {
@@ -427,6 +433,12 @@
 }
 .content_list_box .list_item + .list_item {
     margin-top: 30px;
+}
+.content_list_box .list_item + .list_item dl {
+    text-align: center;
+}
+.content_list_box .list_item + .list_item dl dd .btn_box_group {
+    justify-content: center;
 }
 .list_item.bd_b {
     padding-bottom: 60px;
@@ -974,13 +986,14 @@
     padding-left: 25px;
     line-height: 20px;
     font-size: 13px;
+    font-weight: 500;
     color: #d11919;
 }
 .inp_group .txt_warning::before {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
     width: 15px;
     height: 15px;
@@ -1802,6 +1815,18 @@
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
 }
+.tbl_longcard > ul > li.nodata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 25px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    font-size: 20px;
+    font-weight: 500;
+}
 .tbl_longcard > ul > li .tit em {
     font-style: normal;
     font-size: 14px;
@@ -2408,6 +2433,18 @@
 .tbl_card_list.type_01 > ul > li {
     flex-basis: calc(25% - 15px);
     position: relative;
+}
+.tbl_card_list > ul > li.nodata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 25px;
+    box-sizing: border-box;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    font-size: 20px;
+    font-weight: 500;
 }
 .tbl_card_list.type_01 > ul > li .content {
     display: flex;
@@ -3348,6 +3385,9 @@ a.ui-button:active,
     .btn_box_group.type_01 .btn_box {
         flex: 1;
     }
+    .btn_box_group.type_01.atoz {
+        flex-direction: column;
+    }
     
     /* 제목 */
     .tit_box h3 {
@@ -3440,6 +3480,13 @@ a.ui-button:active,
     }
     .txt_p {
         font-size: 14px;
+    }
+    .content_list_box .list_item + .list_item dl dd .btn_box_group {
+        flex-direction: column;
+    }
+    .edu_box .search_item:nth-child(3) .content_list_box .list_item dl dd .btn_box_group .btn_box * {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /* sel_box 셀렉트박스 */
@@ -3678,6 +3725,10 @@ a.ui-button:active,
     }
     .tbl_longcard .favorite_box .favorite_info li .btn_box * {
         padding: 10px;
+    }
+    .tbl_longcard > ul > li.nodata {
+        padding: 30px 15px;
+        font-size: 15px;
     }
 
     /* 리스트 타이틀 박스 */
@@ -4111,6 +4162,10 @@ a.ui-button:active,
     .tbl_card_list.type_01 > ul > li .content > ul {
         right: 15px;
         bottom: 15px;
+    }
+    .tbl_card_list > ul > li.nodata {
+        padding: 30px 15px;
+        font-size: 15px;
     }
 
     /* 카드리스트 타입 :: 법령 */
