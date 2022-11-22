@@ -311,6 +311,12 @@ $(function(){
         });
     });
 
+    // 레이어팝업 닫기
+    $('.not-today .layer-close').on('click', function(e){
+        e.preventDefault();
+        $(this).parent().parent().hide();
+    });
+
     // location
     $('.location > ul > li > a').on('click', function(){
         $(this).parent().toggleClass('on');

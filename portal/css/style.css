@@ -5498,6 +5498,60 @@ footer .footer_bottom {
     font-size: 16px;
     color: #fff;
 }
+
+/* 기본 레이어 팝업 */
+.layer-popup {
+    min-width: 300px;
+    max-width: 100%;
+    max-height: calc(100vh - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 25%);
+    margin: 10px;
+    padding: 30px 0 0 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.layer-popup img {
+    max-width: 100%;
+    max-height: calc(100vh - 196px);
+}
+.layer-link-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}
+.layer-link-wrap a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #01349a;
+    border-radius: 5px;
+    font-weight: 400;
+    color: #fff;
+}
+.not-today {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #d9e0e6;
+}
+.not-today label {
+    padding-left: 10px;
+}
+.not-today .layer-close {
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: -10px;
+}
+.not-today .layer-close img {
+    width: 100%;
+}
 /* ============================================================
     미디어쿼리 max-width: 1600px
 ============================================================ */
@@ -7556,6 +7610,23 @@ footer .footer_bottom {
         padding: 15px 30px;
         border-radius: 30px;
         font-size: 15px;
+    }
+    /* 기본 레이어 팝업 */
+    .layer-popup {
+        position: absolute;
+        top: inherit !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        min-width: 100%;
+        min-height: 0;
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+    }
+    .layer-link-wrap {
+        margin: 10px 0 0;
+    }
+    .not-today {
+        margin-top: 10px;
     }
 
     /* footer */
