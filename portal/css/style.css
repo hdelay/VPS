@@ -2172,7 +2172,15 @@ a.ico_folder::after {
 .investment_performance_box.type_03 .all .tit_box.rowsel {
     width: 100%;
 }
-
+.chart100 {
+    width: 100% !important;
+}
+.chart100 > div {
+    width: 100% !important;
+}
+.chart100 > div > div {
+    width: 100% !important;
+}
 
 /* 포털 소개 */
 .content_list_box .introduce_box {
@@ -7663,11 +7671,13 @@ footer .footer_bottom {
     }
     /* 기본 레이어 팝업 */
     .layer-popup {
-        position: absolute;
+        position: fixed !important;
         top: inherit !important;
         bottom: 0 !important;
         left: 0 !important;
         min-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
         min-height: 0;
         margin: 0;
         border-radius: 10px 10px 0 0;

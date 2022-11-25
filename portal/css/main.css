@@ -582,10 +582,8 @@ header.headerfix .header_top {
     content: "#";
 }
 
-/* section03 */
-.sec3 {
-    background-color: #2b3b76;
-}
+/* section03
+
 .sec3 .inner > .tab_group > .tab_btn {
     padding: 0 80px;
     box-sizing: border-box;
@@ -765,6 +763,142 @@ header.headerfix .header_top {
 }
 .sec3 .inner > .tab_group > .tab_content .total_chart .chart_group .chart {
     min-height: calc(100% - 42px);
+}
+ */
+.sec3 {
+    background-color: #2b3b76;
+}
+.sec3 .inner {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 7%;
+}
+.sec3 .main_statistics_box {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.sec3 .main_statistics_box dl {
+    flex: 1;
+}
+.sec3 .main_statistics_box dl dt {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 40px 35px;
+    box-sizing: border-box;
+    background: url(../images/bg/main_sec02_tab_bg_off.png) no-repeat bottom center;
+    background-size: 100%;
+    border: none;
+    color: #fff;
+}
+.sec3 .main_statistics_box dl dt .tit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.sec3 .main_statistics_box dl dt .tit strong {
+    font-size: 27px;
+    font-weight: 700;
+}
+.sec3 .main_statistics_box dl dt > span {
+    display: block;
+    width: 50px;
+    height: 63px;
+    background: no-repeat center;
+    background-size: auto 100%;
+    font-size: 24px;
+    font-weight: 800;
+}
+.sec3 .main_statistics_box dl:nth-child(1) dt > span {
+    background-image: url(../images/ico/ico_main_sec03_tab_01_off.png);
+}
+.sec3 .main_statistics_box dl:nth-child(2) dt > span {
+    background-image: url(../images/ico/ico_main_sec03_tab_02_off.png);
+}
+.sec3 .main_statistics_box dl:nth-child(3) dt > span {
+    background-image: url(../images/ico/ico_main_sec03_tab_03_off.png);
+}
+.sec3 .main_statistics_box dl dt .tit span {
+    font-size: 24px;
+    font-weight: 800;
+}
+.sec3 .main_statistics_box dl dt .tit span em {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+}
+.sec3 .main_statistics_box dl dd {
+    margin-top: 30px;
+}
+.sec3 .main_statistics_box dl dd .total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+}
+.sec3 .main_statistics_box dl dd .total ul {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+}
+.sec3 .main_statistics_box dl dd .total ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.sec3 .main_statistics_box dl dd .total ul li .total_tit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+.sec3 .main_statistics_box dl dd .total_tit::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 24px;
+    background: no-repeat center;
+    background-size: auto 100%;
+}
+.sec3 .main_statistics_box dl dd .total_tit.money::before {
+    background-image: url(../images/ico/ico_main_sec03_li_bg_01.png);
+}
+.sec3 .main_statistics_box dl dd .total_tit.search_m::before {
+    background-image: url(../images/ico/ico_main_sec03_li_bg_02.png);
+}
+.sec3 .main_statistics_box dl dd .total_tit.people::before {
+    background-image: url(../images/ico/ico_main_sec03_li_bg_03.png);
+}
+.sec3 .main_statistics_box dl dd .total_tit.chart::before {
+    background-image: url(../images/ico/ico_main_sec03_li_bg_04.png);
+}
+.sec3 .main_statistics_box dl dd .total_tit.gold::before {
+    background-image: url(../images/ico/ico_main_sec03_li_bg_05.png);
+}
+.sec3 .main_statistics_box dl dd .total > span {
+    font-size: 18px;
+    color: #fff;
+}
+.sec3 .main_statistics_box dl dd .total .total_content strong {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fdebc8;
+}
+.sec3 .main_statistics_box dl dd .total .total_content span {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
 }
 
 /* section04 */
@@ -1304,26 +1438,17 @@ header.headerfix .header_top {
     }
 
     /* section3 */
-    .sec3 .inner > .tab_group > .tab_btn {
-        padding: 0;
+    .sec3 .main_statistics_box dl dt > span {
+        width: 31px;
+        height: 40px;
     }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a {
-        padding: 30px 10px;
+    .sec3 .main_statistics_box dl dt .tit strong {
+        font-size: 22px;
     }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total ul li {
-        padding: 15px 20px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total ul li .total_tit {
-        font-size: 16px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total .total_content strong {
-        font-size: 30px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total .total_content span {
-        font-size: 16px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .chart_group .tit strong {
-        font-size: 18px;
+    .sec3 .main_statistics_box dl dd .total ul li {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     /* section4 */
@@ -1604,70 +1729,26 @@ header.headerfix .header_top {
     }
 
     /* section3 */
-    .sec3 .inner > .tab_group > .tab_btn {
-        height: auto;
-        border-bottom: none;
+    .sec3 .inner {
+        padding-bottom: 60px;
     }
-    .sec3 .inner > .tab_group > .tab_btn > ul {
-        overflow: inherit;
-        gap: 5px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li {
-        flex: 1;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a {
-        padding: 15px 5px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a > span {
-        width: 25px;
-        height: 27px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li.on > a::after {
-        bottom: -12px;
-        width: 33px;
-        height: 13px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a .tit {
-        padding-left: 5px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a .tit strong {
-        font-size: 12px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a .tit span {
-        font-size: 12px;
-    }
-    .sec3 .inner > .tab_group > .tab_btn > ul > li > a .tit span em {
-        font-size: 12px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart {
-        gap: 15px;
+    .sec3 .main_statistics_box {
         flex-direction: column;
     }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total ul li {
-        padding: 10px;
+    .sec3 .main_statistics_box dl dt {
+        padding: 15px 25px;
     }
-    .sec3 .tab_content .total li .total_tit::before {
-        width: 28px;
-        height: 28px
+    .sec3 .main_statistics_box dl dd .total {
+        gap: 15px;
     }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total {
-        gap: 5px;
+    .sec3 .main_statistics_box dl dd .total ul {
+        gap: 15px;
     }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total ul {
-        gap: 10px;
+    .sec3 .main_statistics_box dl dd .total .total_content strong {
+        font-size: 24px;
     }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total ul li .total_tit {
-        font-size: 14px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total .total_content strong {
-        font-size: 23px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total .total_content span {
-        margin-left: 0;
-        font-size: 14px;
-    }
-    .sec3 .inner > .tab_group > .tab_content .total_chart .total > span {
-        font-size: 14px;
+    .sec3 .main_statistics_box dl dd .total > span {
+        font-size: 15px;
     }
 
     /* section4 */
@@ -1800,7 +1881,7 @@ header.headerfix .header_top {
         font-size: 48px;
     }
     .swiper-container .slide_wrap.second .inner .total li {
-        min-width: 400px;
+        min-width: 430px;
     }
     .swiper-container .slide_wrap .inner .total li .total_tit {
         font-size: 18px;
