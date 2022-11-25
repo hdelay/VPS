@@ -2172,15 +2172,6 @@ a.ico_folder::after {
 .investment_performance_box.type_03 .all .tit_box.rowsel {
     width: 100%;
 }
-.chart100 {
-    width: 100% !important;
-}
-.chart100 > div {
-    width: 100% !important;
-}
-.chart100 > div > div {
-    width: 100% !important;
-}
 
 /* 포털 소개 */
 .content_list_box .introduce_box {
