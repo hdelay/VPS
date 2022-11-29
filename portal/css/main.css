@@ -1442,6 +1442,9 @@ header.headerfix .header_top {
     }
 
     /* section3 */
+    .sec3 .main_statistics_box dl dt {
+        padding: 20px;
+    }
     .sec3 .main_statistics_box dl dt > span {
         width: 31px;
         height: 40px;
@@ -1735,7 +1738,7 @@ header.headerfix .header_top {
         flex-direction: column;
     }
     .sec3 .main_statistics_box dl dt {
-        padding: 15px 25px;
+        padding: 20px 25px;
     }
     .sec3 .main_statistics_box dl dd .total {
         gap: 15px;
