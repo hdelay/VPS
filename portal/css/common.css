@@ -2014,6 +2014,42 @@
     font-size: 36px;
     font-weight: 600;
 }
+
+.tbl_main_table.alink ul li {
+    padding: 0;
+}
+.tbl_main_table.alink ul li a {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+}
+.tbl_main_table ul li a > div {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.tbl_main_table ul li a > div:nth-child(2) {
+    width: 40%;
+}
+.tbl_main_table ul li a > div div {
+    width: 100%;
+}
+.tbl_main_table ul li a .date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+.tbl_main_table ul li a .date span {
+    font-size: 12px;
+}
+.tbl_main_table ul li a .date strong {
+    font-size: 36px;
+    font-weight: 600;
+}
+
 .tbl_main_table .btn_box {
     width: auto;
     justify-content: flex-end;
