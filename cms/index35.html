@@ -1,0 +1,951 @@
+
+
+<!-- %@ page import="egovframework.com.asapro.member.admin.service.AdminMember"% -->
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="AsaCMS">
+    <meta name="author" content="">
+    
+	<title>AsaCMS</title>
+	
+
+
+
+	<!-- Plugins css -->
+	<link href="http://211.188.67.90/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+	<!-- <link href="http://211.188.67.90/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"> -->
+	<link href="http://211.188.67.90/assets/plugins/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+	
+	<!--TouchSpin CSS -->
+	<link href="http://211.188.67.90/assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+	<!--Morris Chart CSS -->
+	<link href="http://211.188.67.90/assets/plugins/morris/morris.css" rel="stylesheet" >
+	<!-- Sweet Alert -->
+	<link href="http://211.188.67.90/assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet">
+	<!--calendar css-->
+	<link href="http://211.188.67.90/assets/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+	<!--toggle(switch) css-->
+	<link href="http://211.188.67.90/assets/plugins/bootstrap4-toggle-master/css/bootstrap4-toggle.min.css" rel="stylesheet" />
+	<!-- Bootstrap rating css -->
+	<link href="http://211.188.67.90/assets/plugins/bootstrap-rating/bootstrap-rating.css" rel="stylesheet">
+	<!-- C3 charts css -->
+	<link href="http://211.188.67.90/assets/plugins/c3/c3.min.css" rel="stylesheet" />
+        
+	<link href="http://211.188.67.90/assets/css/bootstrap.min.css" rel="stylesheet" >
+	<!--bstree css-->
+	<link href="http://211.188.67.90/assets/plugins/bootstrap4-bstree/css/bstree.min.css" rel="stylesheet" />
+	<link href="http://211.188.67.90/assets/css/icons.css" rel="stylesheet" type="text/css">
+	<!-- Magnific popup -->
+	<link href="http://211.188.67.90/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+	<!-- mediaelementplayer -->
+	<link type="text/css" rel="stylesheet" href="http://211.188.67.90/design/common/js/mediaelement/mediaelementplayer.css">
+
+	<link href="http://211.188.67.90/assets/css/style.css" rel="stylesheet" type="text/css">
+	
+	<!-- javascript 전역변수 선언 -->
+	<script>var GLOBAL = {ADMIN_PATH : '/portal/cms', CONTEXT_PATH : ''};</script>
+	
+	<!-- jQuery  -->
+	<script src="http://211.188.67.90/assets/js/jquery.min.js"></script>
+	<script src="http://211.188.67.90/assets/js/popper.min.js"></script>
+	<script src="http://211.188.67.90/assets/js/bootstrap.min.js"></script>
+	<script src="http://211.188.67.90/assets/js/modernizr.min.js"></script>
+	<script src="http://211.188.67.90/assets/js/detect.js"></script>
+	<script src="http://211.188.67.90/assets/js/fastclick.js"></script>
+	<script src="http://211.188.67.90/assets/js/jquery.slimscroll.js"></script>
+	<script src="http://211.188.67.90/assets/js/jquery.blockUI.js"></script>
+	<script src="http://211.188.67.90/assets/js/waves.js"></script>
+	<script src="http://211.188.67.90/assets/js/jquery.nicescroll.js"></script>
+	<script src="http://211.188.67.90/assets/js/jquery.scrollTo.min.js"></script>
+	<!-- Sweet-Alert  -->
+	<script src="http://211.188.67.90/assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+	<!-- Bootstrap rating js -->
+	<script src="http://211.188.67.90/assets/plugins/bootstrap-rating/bootstrap-rating.min.js"></script>
+	
+	<!--C3 Chart-->
+	<script src="http://211.188.67.90/assets/plugins/d3/d3.min.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/c3/c3.min.js"></script>
+	
+	<!--Morris Chart-->
+	<script src="http://211.188.67.90/assets/plugins/raphael/raphael-min.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/morris/morris.min.js"></script>
+	
+	<!-- Tablednd -->
+	<script src="http://211.188.67.90/assets/plugins/jquery.tablednd/dist/jquery.tablednd.min.js"></script>
+	<!-- toggle(switch) -->
+	<script src="http://211.188.67.90/assets/plugins/bootstrap4-toggle-master/js/bootstrap4-toggle.min.js"></script>
+	<!-- bstree -->
+	<script src="http://211.188.67.90/assets/plugins/bootstrap4-bstree/js/jquery.bstree.min.js"></script>
+	<!-- commen -->
+	<script src="http://211.188.67.90/assets/js/common.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/clipboard/clipboard.min.js"></script>
+	
+	<!-- Minified version of `es6-promise-auto` below. -->
+	<script src="http://211.188.67.90/assets/js/es6-promise.min.js"></script>
+	<script src="http://211.188.67.90/assets/js/es6-promise.auto.min.js"></script> 
+	
+	<!-- <script src="http://211.188.67.90/assets/plugins/jquery-ui/jquery-ui.min.js"></script> -->
+	<script src="http://211.188.67.90/assets/plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/jquery-ui-1.12.1/jquery.ui.datepicker-ko.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/moment/moment.js"></script>
+	<script src='/assets/plugins/fullcalendar/js/fullcalendar.min.js'></script>
+	<script src='/assets/plugins/fontawesome-free-6.1.1-web/js/all.js'></script>
+	
+	<!-- Magnific popup -->
+	<script src="http://211.188.67.90/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="http://211.188.67.90/assets/pages/lightbox.js"></script>
+	<!-- mediaelementplayer -->
+	<script src="http://211.188.67.90/design/common/js/mediaelement/mediaelement-and-player.js"></script>
+	
+	<!-- App js -->
+	<script src="http://211.188.67.90/assets/js/app.js"></script>
+	
+	
+</head>
+<body class="fixed-left">
+	
+	
+	
+	<script>
+		jQuery(function($){
+			//url클립보드 복사
+			$('.urlClipboard').on('click', function(e){
+				e.preventDefault();
+				
+				var clipboard = new ClipboardJS('.urlClipboard');
+
+				clipboard.on('success', function(e) {
+				    /* console.info('Action:', e.action);
+				    console.info('Text:', e.text);
+				    console.info('Trigger:', e.trigger); */
+				    alert("링크 복사가 완료되었습니다.")
+				    e.clearSelection();
+				});
+
+				clipboard.on('error', function(e) {
+				    /* console.error('Action:', e.action);
+				    console.error('Trigger:', e.trigger); */
+				    alert("Ctrl + C 를 누르면 복사가 완료됩니다.")
+				});
+			});
+			
+			/* 미디어플레이어 */
+			$('video, audio').mediaelementplayer({
+				// Do not forget to put a final slash (/)
+				//pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+				// this will allow the CDN to use Flash without restrictions
+				// (by default, this is set as `sameDomain`)
+				//shimScriptAccess: 'always'
+				// more configuration
+			});
+		});
+	</script>
+
+	<!-- Loader -->
+	<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+	<!-- 에디터 파일첨부 -->
+	<!-- <div id="browser" class="mfp-hide">
+		<h5 class="modal-title mt-0">파일목록</h5>
+		<hr>
+		<div id="fileInofList">
+		
+		</div>
+	</div> -->
+	
+	<!-- Begin page -->
+	<div id="wrapper">
+
+<script src="http://211.188.67.90/assets/pages/dashborad.js"></script>
+
+<script>
+
+
+</script>
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+jQuery(function($){
+	
+	//자식메뉴 없는 부모 엘리먼트 제거
+   	$('.has_third').each(function(idx, el){
+   		if( !$('.list-unstyled > li', el).size() ){
+   			$(el).remove();
+   		}
+   	});
+	//자식메뉴 없는 부모 엘리먼트 제거
+	$('.has_sub').each(function(idx, el){
+		if( !$('.list-unstyled > li', el).size() ){
+			$(el).remove();
+		}
+	});
+});
+
+</script>
+
+	<!-- ========== Left Sidebar Start ========== -->
+	<div class="left side-menu">
+		<button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+			<i class="ion-close"></i>
+		</button>
+
+		<!-- LOGO -->
+		<div class="topbar-left">
+			<div class="text-center">
+				<!--<a href="index.html" class="logo">Admiry</a>-->
+				<a href="http://211.188.67.90/portal/cms/dashboard.do" class="logo"><img src="http://211.188.67.90/web/portal/file/image/uu/3507e31e423942fbb92a8023153e5fec"  height="24" alt="벤처투자종합포털 logo"></a>
+			</div>
+		</div>
+
+		<div class="sidebar-inner slimscrollleft">
+		
+		    <div class="user-details">
+		        <div class="text-center">
+		           
+		            <img src="http://211.188.67.90/assets/images/users/profile.jpg" alt="소요셉" onerror="this.src='/assets/images/users/profile.jpg'" class="rounded-circle">
+		        </div>
+		        <div class="user-info">
+		            <h4 class="font-16">소요셉</h4>
+		            <h6 class="font-12 font-weight-light">(Role : 최고관리자)</h6>
+		            <span class="text-muted user-status"><i class="fa fa-podcast text-success"></i> Online</span>
+		        </div>
+		    </div>
+		
+		    <div id="sidebar-menu">
+		        <ul>
+					<li class="menu-title">Main</li>
+					
+					<li><a href="http://211.188.67.90/portal/cms/dashboard.do" class="waves-effect"><i class="ti-dashboard"></i><span>대시보드</span></a></li>
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-layers"></i> <span> 사이트 관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/site/list.do">사이트 목록</a></li>
+						</ul>
+					</li>
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i> <span> 회원관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/member/admin/list.do">관리자 목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/member/user/list.do">사용자 목록</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="dripicons-store"></i> <span> 조직관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/organization/organization/list.do">기관 목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/organization/department/list.do">부서 목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/organization/team/list.do">팀 목록</a></li>
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-clipboard"></i> <span> 게시판 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/board/config/list.do">게시판목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/comment/board/list.do">댓글</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-shield"></i> <span> 보안관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/capability/list.do">권한목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/role/list.do">롤목록</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/allowip/list.do">접속가능 IP</a></li>
+							
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-layout"></i> <span> 홈페이지 관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/menu/list.do">메뉴</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/contents/list.do">콘텐츠관리</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/banner/list.do?bnType=mainVisual">메인비주얼</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/banner/list.do?bnType=banner">배너</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/banner/list.do?bnType=popupzone">팝업존</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/banner/list.do?bnType=layer">레이어팝업</a></li>
+						</ul>
+					</li>
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-files"></i> <span> 파일관리시스템 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/fileinfo/list.do">파일정보목록</a></li>
+						</ul>
+					</li>
+					
+					
+					
+					
+					
+					
+					
+					
+					 
+					
+					 
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i> <span> 공통관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/code/category/list.do">코드분류</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/code/item/list.do">상세코드</a></li>
+							
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-bar-chart"></i> <span> 통계 / 로그 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li class="has_third">
+								<a href="javascript:void(0);" class="waves-effect"><span> 사이트 접속통계 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+								<ul class="list-unstyled">
+									<li><a href="http://211.188.67.90/portal/cms/statistics/session.do">접속자</a></li>
+									<li><a href="http://211.188.67.90/portal/cms/statistics/os.do">OS</a></li>
+									<li><a href="http://211.188.67.90/portal/cms/statistics/browser.do">브라우저</a></li>
+									<li><a href="http://211.188.67.90/portal/cms/statistics/country.do">국가</a></li>
+									<li><a href="http://211.188.67.90/portal/cms/statistics/menu.do">메뉴</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="http://211.188.67.90/portal/cms/statistics/user/inquireLog/list.do">사용자정보 조회로그</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/statistics/admin/accessLog/list.do">관리자 접속로그</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/statistics/admin/inquireLog/list.do">관리자정보 조회로그</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/statistics/admin/roleHistory/list.do">관리계정 권한 로그</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-settings"></i> <span> 설정 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/config/site/list.do">사이트설정</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/config/media/list.do">파일설정</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/config/design/list.do">메뉴설정</a></li>
+							
+							<li><a href="http://211.188.67.90/portal/cms/config/security/list.do">보안설정</a></li>
+							<li><a href="http://211.188.67.90/portal/cms/config/global/list.do">전역설정</a></li>
+							
+							
+						</ul>
+					</li>
+					<!-- 
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-calendar"></i><span> 일정 </span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://211.188.67.90/portal/cms/schedule/calendar.do">일정관리</a></li>
+						</ul>
+					</li>
+					 -->
+					
+					<!-- //3댑스 매뉴처리 마크업
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="dripicons-store"></i> <span> 3뎁스 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li class="has_third">
+								<a href="javascript:void(0);" class="waves-effect"><span> 2-1 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+								<ul class="list-unstyled">
+									<li><a href="http://211.188.67.90/portal/cms/member/admin/list.do">2-1-1</a></li>
+									<li><a href="http://211.188.67.90/portal/cms/member/admin/list2.do">2-1-2</a></li>
+								</ul>
+							</li>
+							<li><a href="#dddd">2-2</a></li>
+						</ul>
+					</li>
+					 -->
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div> <!-- end sidebarinner -->
+	</div>
+	<!-- Left Sidebar End -->
+
+	
+	<!-- Start right Content here -->
+	<div class="content-page">
+	    <!-- Start content -->
+	    <div class="content">
+	
+			
+
+
+
+
+
+
+
+
+<script>
+jQuery(function($){
+	
+	//페이지 타이틀 처리
+	var page_title = '';
+	var total = $('a.active').length;
+	
+	$('a.active').each(function(index){
+		if(total == 1){
+			if(index == total-1 ){
+				page_title += $(this).find('span').eq(0).text();
+			}
+		}else{
+			if(index == total-1 ){
+				page_title += $(this).text(); 
+			}
+		}
+	});
+	$('h3.page-title').text(page_title);
+	
+	//메뉴 location 처리
+	var seo = '';
+	//seo = '<li class="breadcrumb-item"><a href="#" >벤처투자종합포털</a></li>';
+	$('a.active').each(function(index){
+		seo += '<li class="breadcrumb-item';
+		if(index == total - 1 ){
+			seo += ' active';
+		}
+		seo += '">';
+		if(index < total - 1 ){
+			seo += '<a href="#">';
+		}
+		if(index == 0 ){
+			seo += $(this).find('span').eq(0).text();
+		} else {
+			seo += $(this).text(); 
+		}
+		if(index < total - 1 ){
+			seo += '</a>';
+		}
+		seo += '</li>';
+	});
+	$('.breadcrumb').html(seo);
+	
+	//로그아웃
+	$('#logout').on('click', function(e){
+		e.preventDefault();
+		$.ajax({
+			url : '/portal/cms/logout.do'
+			, type : 'get'
+			,dataType : 'json'
+		}).then(function(result){
+			if(result.success){
+				swal({
+	                type: 'success',
+	                title: result.text,
+	            }).then(function(){
+	            	location.href = '/portal/cms/login.do';
+	            });
+				//alert(data.text);
+			} else {
+				//...
+				swal("로그아웃 실패!", "서버문제로 로그아웃에 실패하였습니다.", "danger")
+				//alert('서버문제로 로그아웃에 실패하였습니다.');
+			}
+		}).fail(function(result){
+			swal("로그아웃 실패!", "로그아웃에 실패하였습니다.[fail]", "danger")
+		});
+		
+	});
+	
+	
+	getNonOpenNoteCnt();
+	//미확인 쪽지 수량
+	function getNonOpenNoteCnt(){
+		$.ajax({
+			url : '/portal/cms/note/nonOpenCnt.do'
+			, type : 'get'
+			,dataType : 'json'
+		}).then(function(result){
+			if(result.success){
+				if(result.successCnt > 0){
+					$('.nonOpenCnt').text(result.successCnt);
+				} else {
+					$('.nonOpenCnt').text('');
+				}
+			} else {
+				//...
+				console.error('미확인 쪽지 수량을 불러오지 못했습니다.');
+			}
+		}).fail(function(result){
+			console.error('미확인 쪽지 수량확인 실패!![fail]');
+		});
+	}
+		
+});
+</script>
+	
+	<!-- Top Bar Start -->
+	<div class="topbar">
+	
+	    <nav class="navbar-custom">
+	
+	        <ul class="list-inline float-right mb-0 mr-3">
+	        
+	            
+	            <li class="list-inline-item dropdown notification-list">
+	                <span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
+	            </li>
+	            
+	            
+	
+				
+	
+	            <li class="list-inline-item dropdown notification-list">
+	            	<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+	                   aria-haspopup="false" aria-expanded="false">
+	                    <i class="fa fa-power-off noti-icon"></i>
+	                </a>
+	                
+	                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+	                    <a class="dropdown-item" href="http://211.188.67.90/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+	                    
+	                    
+		                    <a class="dropdown-item" href="http://211.188.67.90/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
+	                    
+	                    
+	                    <a class="dropdown-item" href="http://211.188.67.90/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+	                </div>
+	            </li>
+	
+	        </ul>
+	
+	        <ul class="list-inline menu-left mb-0">
+	            <li class="list-inline-item">
+	                <button type="button" class="button-menu-mobile open-left waves-effect">
+	                    <i class="ion-navicon"></i>
+	                </button>
+	            </li>
+
+	        </ul>
+	
+	        <div class="clearfix"></div>
+	
+	    </nav>
+	
+	</div>
+	<!-- Top Bar End -->
+
+	        
+	        <div class="page-content-wrapper ">
+	            <div class="container-fluid">
+	            	<div class="row">
+                        <div class="col-sm-12">
+							<div class="page-title-box">
+								<div>
+									<div class="breadcrumb-item">
+										커뮤니티관리 > 커뮤니티 상세정보
+									</div>
+								</div>
+							</div>
+						</div>
+	                </div>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card m-b-15">
+								<div class="card-body">
+									<h5>커뮤니티 정보</h5>
+									<p class="text-center text-danger">❉ 본 커뮤니티는 폐쇄 및 사용중지된 커뮤니티입니다. ❉</p>
+									<hr>
+									<form id="communityAdmin" action="#" method="post">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label" for="situation">커뮤니티명</label>
+											<div class="col-sm col-form-label form-inline">
+												AAA커뮤니티
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label" for="situation">커뮤니티장장</label>
+											<div class="col-sm col-form-label form-inline">
+												홍길동(honggildong)
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label" for="situation">커뮤니티 설명</label>
+											<div class="col-sm col-form-label form-inline">
+												커뮤니티에 대한 설명이 표시됩니다.
+											</div>
+										</div>
+	
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label" for="search">검색 노출 여부</label>
+											<div class="col-sm col-form-label">
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="searchOpen" name="search" class="custom-control-input" value="true" checked>
+													<label for="searchOpen" class="custom-control-label">
+														공개
+													</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="searchClose" name="search" class="custom-control-input" value="true" >
+													<label for="searchClose" class="custom-control-label">
+														비공개
+													</label>
+												</div>
+											</div>
+										</div>
+									</form>
+
+									<h5 class="mt-5">주제/목적</h5>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">주제</label>
+										<div class="col-sm col-form-label">
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests1" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests1" class="custom-control-label">ICT제조</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests2" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests2" class="custom-control-label">ICT서비스</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests4" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests4" class="custom-control-label">화학/소재</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests5" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests5" class="custom-control-label">바이오/의료</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests6" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests6" class="custom-control-label">영상/공연/음반</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests7" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests7" class="custom-control-label">게임</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests8" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests8" class="custom-control-label">유통/서비스</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="interests9" name="interests" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_interests" value="on">
+												<label for="interests9" class="custom-control-label">기타</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">목적</label>
+										<div class="col-sm col-form-label">
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="purpose1" name="purpose" class="custom-control-input" type="checkbox" value="true">
+												<input type="hidden" name="_purpose" value="on">
+												<label for="purpose1" class="custom-control-label">친목/모임</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="infoShare1" name="infoShare" class="custom-control-input" type="checkbox" value="true"><input type="hidden" name="_bcAllowGuestDownload" value="on">
+												<label for="infoShare1" class="custom-control-label">정보공유</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="eduStudy1" name="eduStudy" class="custom-control-input" type="checkbox" value="true"><input type="hidden" name="_bcAllowGuestDownload" value="on">
+												<label for="eduStudy1" class="custom-control-label">교육/스터디</label>
+											</div>
+											<div class="custom-control custom-checkbox custom-control-inline" style="margin-bottom: 10px;">
+												<input id="location1" name="location" class="custom-control-input" type="checkbox" value="true"><input type="hidden" name="_bcAllowGuestDownload" value="on">
+												<label for="location1" class="custom-control-label">지역/동문</label>
+											</div>
+										</div>
+									</div>
+
+									<h5 class="mt-5">대표이미지 등록</h5>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">
+											대표이미지
+										</label>
+										<div class="col-sm">
+											<div class="col-sm-2 col-form-label">
+												<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+													<path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+													<path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+
+									<h5 class="mt-5">게시판 관리</h5>
+									<hr>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card m-b-30">
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table table-striped table-hover">
+															<colgroup>
+																<!-- 번호 -->
+																<col style="width: 6%;">
+																<!-- 게시판명 -->
+																<col style="width: 35%;">
+																<!-- 대상 회원 -->
+																<col style="width: 29.5%;">
+																<!-- 관리 -->
+																<col style="width: 29.5%;">
+															</colgroup>
+															<thead>
+																<tr style="text-align: center;">
+																	<th>번호</th>
+																	<th>게시판명</th>
+																	<th>대상 회원</th>
+																	<th>관리</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr style="text-align: center;">
+																	<td class="text-center">1</td>
+																	<td>
+																		<span>공지사항</span>
+																	</td>
+																	<td>
+																		<select id="baCategory1" name="baCategory1" class="form-control">
+																			<option value="" selected="selected">전체</option>
+																			<option value="1">준회원</option>
+																			<option value="2">정회원</option>
+																			<option value="9">우수회원</option>
+																		</select>
+																	</td>
+																	<td>
+																		<span>기본 메뉴</span>
+																	</td>
+																</tr>
+																<tr style="text-align: center;">
+																	<td class="text-center">2</td>
+																	<td>
+																		<span>자유게시판</span>
+																	</td>
+																	<td>
+																		<select id="baCategory1" name="baCategory1" class="form-control">
+																			<option value="" selected="selected">전체</option>
+																			<option value="1">준회원</option>
+																			<option value="2">정회원</option>
+																			<option value="9">우수회원</option>
+																		</select>
+																	</td>
+																	<td>
+																		<span>기본 메뉴</span>
+																	</td>
+																</tr>
+																<tr style="text-align: center;">
+																	<td class="text-center">3</td>
+																	<td>
+																		<span>일정알림</span>
+																	</td>
+																	<td>
+																		<select id="baCategory1" name="baCategory1" class="form-control">
+																			<option value="" selected="selected">전체</option>
+																			<option value="1">준회원</option>
+																			<option value="2">정회원</option>
+																			<option value="9">우수회원</option>
+																		</select>
+																	</td>
+																	<td>
+																		<span>기본 메뉴</span>
+																	</td>
+																</tr>
+																<tr style="text-align: center;">
+																	<td class="text-center">4</td>
+																	<td>
+																		<span>비밀게시판</span>
+																	</td>
+																	<td>
+																		<select id="baCategory1" name="baCategory1" class="form-control">
+																			<option value="" selected="selected">전체</option>
+																			<option value="1">준회원</option>
+																			<option value="2">정회원</option>
+																			<option value="9">우수회원</option>
+																		</select>
+																	</td>
+																	<td>
+																		<span>추가 메뉴</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-inline">
+										<div class="mr-auto">
+											<button id="deleteBtn" class="btn btn-danger waves-effect waves-light">폐쇄</button>
+											<button type="button" class="btn btn-dark">사용중지</button>
+											<button type="button" class="btn btn-primary">운영전환</button>
+											<a href="/portal/cms/board/config/list.do" class="btn btn-secondary waves-effect m-l-5">목록</a>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+<style>
+	.newPost{width: 100%; height: 270px; border: 3px solid rgb(0, 0, 0, 0.1); box-sizing: border-box; padding: 10px 20px; margin: 0 auto;}
+	.newPost .list-group-flush .list-group-item{padding: 5px 5px; border: none;}
+	.newPost li{width: 100%;}
+	.newPost li a{width: 65%; float: left; display: block; color:#333333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	.newPost li span{width: 35%; display: block; float: right; text-align: right; }
+
+	.newPost li.three{width: 100%;}
+	.newPost li.three a{width: 100%; }
+	.newPost li.three span{width: 33%; float: left; text-align: left;}
+</style>
+
+<!-- 라디오 버튼 체크여부 -->
+<script>
+$("#situation1").click(function(){
+	if($(this).is(":checked")){
+		$("#searchOpen").prop('checked', true);
+		$("#closeReason").attr("disabled", true);
+	};
+});	
+$("#situation2").click(function(){
+	if($(this).is(":checked")){
+		$("#searchClose").prop('checked', true);
+		$("#closeReason").attr("disabled", false);
+	};
+});	
+
+$("#searchOpen").click(function(){
+	if($(this).is(":checked")){
+		$("#situation1").prop('checked', true);
+		$("#closeReason").attr("disabled", true);
+	};
+});
+$("#searchClose").click(function(){
+	if($(this).is(":checked")){
+		$("#situation2").prop('checked', true);
+		$("#closeReason").attr("disabled", false);
+	};
+});	
+</script>
+
+
+	                <!-- <div class="row">
+	                    <div class="col-md-6 col-xl-3">
+	                        <div class="mini-stat clearfix bg-white">
+	                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-cart-outline text-danger"></i></span>
+	                            <div class="mini-stat-info text-right text-muted">
+	                                <span class="counter text-danger">15852</span>
+	                                Total Sales
+	                            </div>
+	                            <p class="mb-0 m-t-20 text-muted">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span></p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-6 col-xl-3">
+	                        <div class="mini-stat clearfix bg-success">
+	                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-currency-usd text-success"></i></span>
+	                            <div class="mini-stat-info text-right text-white">
+	                                <span class="counter text-white">956</span>
+	                                New Orders
+	                            </div>
+	                            <p class="mb-0 m-t-20 text-light">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span></p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-6 col-xl-3">
+	                        <div class="mini-stat clearfix bg-white">
+	                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-cube-outline text-warning"></i></span>
+	                            <div class="mini-stat-info text-right text-muted">
+	                                <span class="counter text-warning">5210</span>
+	                                New Users
+	                            </div>
+	                            <p class="mb-0 m-t-20 text-muted">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span></p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-6 col-xl-3">
+	                        <div class="mini-stat clearfix bg-info">
+	                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-currency-btc text-info"></i></span>
+	                            <div class="mini-stat-info text-right text-light">
+	                                <span class="counter text-white">20544</span>
+	                                Unique Visitors
+	                            </div>
+	                            <p class="mb-0 m-t-20 text-light">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span></p>
+	                        </div>
+	                    </div>
+	                </div> -->
+	
+
+	                <!-- end row -->
+	
+	
+	            </div><!-- container -->
+	
+	
+	        </div> <!-- Page content Wrapper -->
+	
+	    </div> <!-- content -->
+	
+	</div>
+	<!-- End Right content here -->
+
+
+
+
+
+
+
+
+    
+	<footer class="footer">
+		Copyright© 2022 ASADAL, Inc. All Right Reserved.
+		 (Was : 10.150.20.6	)
+	</footer>
+    </div>
+    <!-- END wrapper -->
+    
+    
+    <!-- 해더로 옮기지 마세요  -->
+	
+	<!-- Plugins js -->
+	<script src="http://211.188.67.90/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- <script src="http://211.188.67.90/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script> -->
+	<script src="http://211.188.67.90/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="http://211.188.67.90/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+	<!-- Plugins Init js -->
+	<script src="http://211.188.67.90/assets/pages/form-advanced.js"></script>
+	<!-- <script src="http://211.188.67.90/assets/pages/calendar-init.js"></script> -->
+
+</body>
+</html>

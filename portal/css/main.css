@@ -850,7 +850,7 @@ header.headerfix .header_top {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, .1);
-    padding: 15px 30px;
+    padding: 15px;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -890,7 +890,7 @@ header.headerfix .header_top {
     color: #fff;
 }
 .sec3 .main_statistics_box dl dd .total .total_content strong {
-    font-size: 34px;
+    font-size: 26px;
     font-weight: 800;
     color: #fdebc8;
 }
@@ -1328,6 +1328,10 @@ header.headerfix .header_top {
     .sec3 .inner > .tab_group > .tab_btn > ul > li > a {
         padding: 40px 20px;
     }
+    .sec3 .main_statistics_box dl dd .total ul li {
+        flex-direction: column;
+        gap: 10px;
+    }
     
 }
 /* ============================================================
@@ -1444,11 +1448,6 @@ header.headerfix .header_top {
     }
     .sec3 .main_statistics_box dl dt .tit strong {
         font-size: 22px;
-    }
-    .sec3 .main_statistics_box dl dd .total ul li {
-        padding: 15px;
-        flex-direction: column;
-        gap: 10px;
     }
 
     /* section4 */

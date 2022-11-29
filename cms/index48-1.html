@@ -1,0 +1,1014 @@
+
+
+<!-- %@ page import="egovframework.com.asapro.member.admin.service.AdminMember"% -->
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="AsaCMS">
+    <meta name="author" content="">
+    
+	<title>AsaCMS</title>
+	
+
+
+
+	<!-- Plugins css -->
+	<link href="http://192.168.0.34/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+	<!-- <link href="http://192.168.0.34/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"> -->
+	<link href="http://192.168.0.34/assets/plugins/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+	
+	<!--TouchSpin CSS -->
+	<link href="http://192.168.0.34/assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+	<!--Morris Chart CSS -->
+	<link href="http://192.168.0.34/assets/plugins/morris/morris.css" rel="stylesheet" >
+	<!-- Sweet Alert -->
+	<link href="http://192.168.0.34/assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet">
+	<!--calendar css-->
+	<link href="http://192.168.0.34/assets/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+	<!--toggle(switch) css-->
+	<link href="http://192.168.0.34/assets/plugins/bootstrap4-toggle-master/css/bootstrap4-toggle.min.css" rel="stylesheet" />
+	<!-- Bootstrap rating css -->
+	<link href="http://192.168.0.34/assets/plugins/bootstrap-rating/bootstrap-rating.css" rel="stylesheet">
+	<!-- C3 charts css -->
+	<link href="http://192.168.0.34/assets/plugins/c3/c3.min.css" rel="stylesheet" />
+        
+	<link href="http://192.168.0.34/assets/css/bootstrap.min.css" rel="stylesheet" >
+	<!--bstree css-->
+	<link href="http://192.168.0.34/assets/plugins/bootstrap4-bstree/css/bstree.min.css" rel="stylesheet" />
+	<link href="http://192.168.0.34/assets/css/icons.css" rel="stylesheet" type="text/css">
+	<!-- Magnific popup -->
+	<link href="http://192.168.0.34/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+	<!-- mediaelementplayer -->
+	<link type="text/css" rel="stylesheet" href="http://192.168.0.34/design/common/js/mediaelement/mediaelementplayer.css">
+
+	<link href="http://192.168.0.34/assets/css/style.css" rel="stylesheet" type="text/css">
+	
+	<!-- javascript 전역변수 선언 -->
+	<script>var GLOBAL = {ADMIN_PATH : '/portal/cms', CONTEXT_PATH : ''};</script>
+	
+	<!-- jQuery  -->
+	<script src="http://192.168.0.34/assets/js/jquery.min.js"></script>
+	<script src="http://192.168.0.34/assets/js/popper.min.js"></script>
+	<script src="http://192.168.0.34/assets/js/bootstrap.min.js"></script>
+	<script src="http://192.168.0.34/assets/js/modernizr.min.js"></script>
+	<script src="http://192.168.0.34/assets/js/detect.js"></script>
+	<script src="http://192.168.0.34/assets/js/fastclick.js"></script>
+	<script src="http://192.168.0.34/assets/js/jquery.slimscroll.js"></script>
+	<script src="http://192.168.0.34/assets/js/jquery.blockUI.js"></script>
+	<script src="http://192.168.0.34/assets/js/waves.js"></script>
+	<script src="http://192.168.0.34/assets/js/jquery.nicescroll.js"></script>
+	<script src="http://192.168.0.34/assets/js/jquery.scrollTo.min.js"></script>
+	<!-- Sweet-Alert  -->
+	<script src="http://192.168.0.34/assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+	<!-- Bootstrap rating js -->
+	<script src="http://192.168.0.34/assets/plugins/bootstrap-rating/bootstrap-rating.min.js"></script>
+	
+	<!--C3 Chart-->
+	<script src="http://192.168.0.34/assets/plugins/d3/d3.min.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/c3/c3.min.js"></script>
+	
+	<!--Morris Chart-->
+	<script src="http://192.168.0.34/assets/plugins/raphael/raphael-min.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/morris/morris.min.js"></script>
+	
+	<!-- Tablednd -->
+	<script src="http://192.168.0.34/assets/plugins/jquery.tablednd/dist/jquery.tablednd.min.js"></script>
+	<!-- toggle(switch) -->
+	<script src="http://192.168.0.34/assets/plugins/bootstrap4-toggle-master/js/bootstrap4-toggle.min.js"></script>
+	<!-- bstree -->
+	<script src="http://192.168.0.34/assets/plugins/bootstrap4-bstree/js/jquery.bstree.min.js"></script>
+	<!-- commen -->
+	<script src="http://192.168.0.34/assets/js/common.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/clipboard/clipboard.min.js"></script>
+	
+	<!-- Minified version of `es6-promise-auto` below. -->
+	<script src="http://192.168.0.34/assets/js/es6-promise.min.js"></script>
+	<script src="http://192.168.0.34/assets/js/es6-promise.auto.min.js"></script> 
+	
+	<!-- <script src="http://192.168.0.34/assets/plugins/jquery-ui/jquery-ui.min.js"></script> -->
+	<script src="http://192.168.0.34/assets/plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/jquery-ui-1.12.1/jquery.ui.datepicker-ko.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/moment/moment.js"></script>
+	<script src='/assets/plugins/fullcalendar/js/fullcalendar.min.js'></script>
+	<script src='/assets/plugins/fontawesome-free-6.1.1-web/js/all.js'></script>
+	
+	<!-- Magnific popup -->
+	<script src="http://192.168.0.34/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="http://192.168.0.34/assets/pages/lightbox.js"></script>
+	<!-- mediaelementplayer -->
+	<script src="http://192.168.0.34/design/common/js/mediaelement/mediaelement-and-player.js"></script>
+	
+	<!-- App js -->
+	<script src="http://192.168.0.34/assets/js/app.js"></script>
+	
+	<!-- 1107 퍼블추가 -->
+	<style>
+		/* 웹폰트 */
+		@font-face { /* s-core-dream-light */
+			font-family: 'scoredream';
+			src: url('./fonts/scoredream/scdream3-webfont.woff2') format('woff2'),
+				url('./fonts/scoredream/scdream3-webfont.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+		}
+		@font-face { /* s-core-dream-regular */
+			font-family: 'scoredream';
+			src: url('./fonts/scoredream/scdream4-webfont.woff2') format('woff2'),
+				url('./fonts/scoredream/scdream4-webfont.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+		}
+		@font-face { /* s-core-dream-medium */
+			font-family: 'scoredream';
+			src: url('./fonts/scoredream/scdream5-webfont.woff2') format('woff2'),
+				url('./fonts/scoredream/scdream5-webfont.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		/* 구인구직 - 인력Pool 상세 */
+		.resume_list dl,
+		.resume_list dt,
+		.resume_list dd,
+		.resume_list ul,
+		.resume_list li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-family: 'scoredream', sans-serif;
+			font-weight: 400;
+		}
+		.resume_list {
+			border: 1px solid #d9e1e7;
+			padding: 10px 25px;
+			border-radius: 10px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		.resume_list dl {
+			padding: 15px 20px;
+			box-sizing: border-box;
+		}
+		.resume_list dl + dl {
+			border-top: 1px solid #d9e1e7;
+		}
+		.resume_list dl dt {
+			padding-bottom: 10px;
+		}
+		.resume_list dl dt strong {
+			word-break: break-all;
+			font-size: 20px;
+			font-weight: 500;
+		}
+		.resume_list dl dt span {
+			margin-left: 15px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #666;
+		}
+		.resume_list dl dd ul li {
+			word-break: break-all;
+			font-size: 14px;
+			font-weight: 400;
+			color: #666;
+		}
+		.resume_list dl dd ul li::before {
+			content: "-";
+			margin-right: 8px;
+		}
+		.resume_etc_box {
+			border: 1px solid #d9e1e7;
+			padding: 25px 45px;
+			border-radius: 10px;
+			box-sizing: border-box;
+			word-break: break-all;
+			font-size: 14px;
+			font-weight: 400;
+			color: #666;
+		}
+		/* ============================================================
+			미디어쿼리 max-width: 768px
+		============================================================ */
+
+		@media screen and (max-width: 768px) {
+			/* 구인구직 - 인력Pool 상세 */
+			.resume_list dl {
+				padding: 15px 0;
+			}
+		}
+		
+	</style>
+</head>
+<body class="fixed-left">
+	
+	
+	
+	<script>
+		jQuery(function($){
+			//url클립보드 복사
+			$('.urlClipboard').on('click', function(e){
+				e.preventDefault();
+				
+				var clipboard = new ClipboardJS('.urlClipboard');
+
+				clipboard.on('success', function(e) {
+				    /* console.info('Action:', e.action);
+				    console.info('Text:', e.text);
+				    console.info('Trigger:', e.trigger); */
+				    alert("링크 복사가 완료되었습니다.")
+				    e.clearSelection();
+				});
+
+				clipboard.on('error', function(e) {
+				    /* console.error('Action:', e.action);
+				    console.error('Trigger:', e.trigger); */
+				    alert("Ctrl + C 를 누르면 복사가 완료됩니다.")
+				});
+			});
+			
+			/* 미디어플레이어 */
+			$('video, audio').mediaelementplayer({
+				// Do not forget to put a final slash (/)
+				//pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+				// this will allow the CDN to use Flash without restrictions
+				// (by default, this is set as `sameDomain`)
+				//shimScriptAccess: 'always'
+				// more configuration
+			});
+		});
+	</script>
+
+	<!-- Loader -->
+	<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+	<!-- 에디터 파일첨부 -->
+	<!-- <div id="browser" class="mfp-hide">
+		<h5 class="modal-title mt-0">파일목록</h5>
+		<hr>
+		<div id="fileInofList">
+		
+		</div>
+	</div> -->
+	
+	<!-- Begin page -->
+	<div id="wrapper">
+
+<script src="http://192.168.0.34/assets/pages/dashborad.js"></script>
+
+<script>
+
+
+</script>
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+jQuery(function($){
+	
+	//자식메뉴 없는 부모 엘리먼트 제거
+   	$('.has_third').each(function(idx, el){
+   		if( !$('.list-unstyled > li', el).size() ){
+   			$(el).remove();
+   		}
+   	});
+	//자식메뉴 없는 부모 엘리먼트 제거
+	$('.has_sub').each(function(idx, el){
+		if( !$('.list-unstyled > li', el).size() ){
+			$(el).remove();
+		}
+	});
+});
+
+</script>
+
+	<!-- ========== Left Sidebar Start ========== -->
+	<div class="left side-menu">
+		<button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+			<i class="ion-close"></i>
+		</button>
+
+		<!-- LOGO -->
+		<div class="topbar-left">
+			<div class="text-center">
+				<!--<a href="index.html" class="logo">Admiry</a>-->
+				<a href="http://192.168.0.34/portal/cms/dashboard.do" class="logo"><img src="http://192.168.0.34/web/portal/file/image/uu/3507e31e423942fbb92a8023153e5fec"  height="24" alt="벤처투자종합포털 logo"></a>
+			</div>
+		</div>
+
+		<div class="sidebar-inner slimscrollleft">
+		
+		    <div class="user-details">
+		        <div class="text-center">
+		           
+		            <img src="http://192.168.0.34/assets/images/users/profile.jpg" alt="소요셉" onerror="this.src='/assets/images/users/profile.jpg'" class="rounded-circle">
+		        </div>
+		        <div class="user-info">
+		            <h4 class="font-16">소요셉</h4>
+		            <h6 class="font-12 font-weight-light">(Role : 최고관리자)</h6>
+		            <span class="text-muted user-status"><i class="fa fa-podcast text-success"></i> Online</span>
+		        </div>
+		    </div>
+		
+		    <div id="sidebar-menu">
+		        <ul>
+					<li class="menu-title">Main</li>
+					
+					<li><a href="http://192.168.0.34/portal/cms/dashboard.do" class="waves-effect"><i class="ti-dashboard"></i><span>대시보드</span></a></li>
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-layers"></i> <span> 사이트 관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/site/list.do">사이트 목록</a></li>
+						</ul>
+					</li>
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i> <span> 회원관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/member/admin/list.do">관리자 목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/member/user/list.do">사용자 목록</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="dripicons-store"></i> <span> 조직관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/organization/organization/list.do">기관 목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/organization/department/list.do">부서 목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/organization/team/list.do">팀 목록</a></li>
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-clipboard"></i> <span> 게시판 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/board/config/list.do">게시판목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/comment/board/list.do">댓글</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-shield"></i> <span> 보안관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/capability/list.do">권한목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/role/list.do">롤목록</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/allowip/list.do">접속가능 IP</a></li>
+							
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-layout"></i> <span> 홈페이지 관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/menu/list.do">메뉴</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/contents/list.do">콘텐츠관리</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/banner/list.do?bnType=mainVisual">메인비주얼</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/banner/list.do?bnType=banner">배너</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/banner/list.do?bnType=popupzone">팝업존</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/banner/list.do?bnType=layer">레이어팝업</a></li>
+						</ul>
+					</li>
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-files"></i> <span> 파일관리시스템 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/fileinfo/list.do">파일정보목록</a></li>
+						</ul>
+					</li>
+					
+					
+					
+					
+					
+					
+					
+					
+					 
+					
+					 
+					
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i> <span> 공통관리 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/code/category/list.do">코드분류</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/code/item/list.do">상세코드</a></li>
+							
+							
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-bar-chart"></i> <span> 통계 / 로그 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li class="has_third">
+								<a href="javascript:void(0);" class="waves-effect"><span> 사이트 접속통계 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+								<ul class="list-unstyled">
+									<li><a href="http://192.168.0.34/portal/cms/statistics/session.do">접속자</a></li>
+									<li><a href="http://192.168.0.34/portal/cms/statistics/os.do">OS</a></li>
+									<li><a href="http://192.168.0.34/portal/cms/statistics/browser.do">브라우저</a></li>
+									<li><a href="http://192.168.0.34/portal/cms/statistics/country.do">국가</a></li>
+									<li><a href="http://192.168.0.34/portal/cms/statistics/menu.do">메뉴</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="http://192.168.0.34/portal/cms/statistics/user/inquireLog/list.do">사용자정보 조회로그</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/statistics/admin/accessLog/list.do">관리자 접속로그</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/statistics/admin/inquireLog/list.do">관리자정보 조회로그</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/statistics/admin/roleHistory/list.do">관리계정 권한 로그</a></li>
+						</ul>
+					</li>
+					
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-settings"></i> <span> 설정 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/config/site/list.do">사이트설정</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/config/media/list.do">파일설정</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/config/design/list.do">메뉴설정</a></li>
+							
+							<li><a href="http://192.168.0.34/portal/cms/config/security/list.do">보안설정</a></li>
+							<li><a href="http://192.168.0.34/portal/cms/config/global/list.do">전역설정</a></li>
+							
+							
+						</ul>
+					</li>
+					<!-- 
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="ti-calendar"></i><span> 일정 </span></a>
+						<ul class="list-unstyled">
+							<li><a href="http://192.168.0.34/portal/cms/schedule/calendar.do">일정관리</a></li>
+						</ul>
+					</li>
+					 -->
+					
+					<!-- //3댑스 매뉴처리 마크업
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="dripicons-store"></i> <span> 3뎁스 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+						<ul class="list-unstyled">
+							<li class="has_third">
+								<a href="javascript:void(0);" class="waves-effect"><span> 2-1 </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
+								<ul class="list-unstyled">
+									<li><a href="http://192.168.0.34/portal/cms/member/admin/list.do">2-1-1</a></li>
+									<li><a href="http://192.168.0.34/portal/cms/member/admin/list2.do">2-1-2</a></li>
+								</ul>
+							</li>
+							<li><a href="#dddd">2-2</a></li>
+						</ul>
+					</li>
+					 -->
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div> <!-- end sidebarinner -->
+	</div>
+	<!-- Left Sidebar End -->
+
+	
+	<!-- Start right Content here -->
+	<div class="content-page">
+	    <!-- Start content -->
+	    <div class="content">
+	
+			
+
+
+
+
+
+
+
+
+<script>
+jQuery(function($){
+	
+	//페이지 타이틀 처리
+	var page_title = '';
+	var total = $('a.active').length;
+	
+	$('a.active').each(function(index){
+		if(total == 1){
+			if(index == total-1 ){
+				page_title += $(this).find('span').eq(0).text();
+			}
+		}else{
+			if(index == total-1 ){
+				page_title += $(this).text(); 
+			}
+		}
+	});
+	$('h3.page-title').text(page_title);
+	
+	//메뉴 location 처리
+	var seo = '';
+	//seo = '<li class="breadcrumb-item"><a href="#" >벤처투자종합포털</a></li>';
+	$('a.active').each(function(index){
+		seo += '<li class="breadcrumb-item';
+		if(index == total - 1 ){
+			seo += ' active';
+		}
+		seo += '">';
+		if(index < total - 1 ){
+			seo += '<a href="#">';
+		}
+		if(index == 0 ){
+			seo += $(this).find('span').eq(0).text();
+		} else {
+			seo += $(this).text(); 
+		}
+		if(index < total - 1 ){
+			seo += '</a>';
+		}
+		seo += '</li>';
+	});
+	$('.breadcrumb').html(seo);
+	
+	//로그아웃
+	$('#logout').on('click', function(e){
+		e.preventDefault();
+		$.ajax({
+			url : '/portal/cms/logout.do'
+			, type : 'get'
+			,dataType : 'json'
+		}).then(function(result){
+			if(result.success){
+				swal({
+	                type: 'success',
+	                title: result.text,
+	            }).then(function(){
+	            	location.href = '/portal/cms/login.do';
+	            });
+				//alert(data.text);
+			} else {
+				//...
+				swal("로그아웃 실패!", "서버문제로 로그아웃에 실패하였습니다.", "danger")
+				//alert('서버문제로 로그아웃에 실패하였습니다.');
+			}
+		}).fail(function(result){
+			swal("로그아웃 실패!", "로그아웃에 실패하였습니다.[fail]", "danger")
+		});
+		
+	});
+	
+	
+	getNonOpenNoteCnt();
+	//미확인 쪽지 수량
+	function getNonOpenNoteCnt(){
+		$.ajax({
+			url : '/portal/cms/note/nonOpenCnt.do'
+			, type : 'get'
+			,dataType : 'json'
+		}).then(function(result){
+			if(result.success){
+				if(result.successCnt > 0){
+					$('.nonOpenCnt').text(result.successCnt);
+				} else {
+					$('.nonOpenCnt').text('');
+				}
+			} else {
+				//...
+				console.error('미확인 쪽지 수량을 불러오지 못했습니다.');
+			}
+		}).fail(function(result){
+			console.error('미확인 쪽지 수량확인 실패!![fail]');
+		});
+	}
+		
+});
+</script>
+	
+	<!-- Top Bar Start -->
+	<div class="topbar">
+	
+	    <nav class="navbar-custom">
+	
+	        <ul class="list-inline float-right mb-0 mr-3">
+	        
+	            
+	            <li class="list-inline-item dropdown notification-list">
+	                <span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
+	            </li>
+	            
+	            
+	
+				
+	
+	            <li class="list-inline-item dropdown notification-list">
+	            	<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+	                   aria-haspopup="false" aria-expanded="false">
+	                    <i class="fa fa-power-off noti-icon"></i>
+	                </a>
+	                
+	                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+	                    <a class="dropdown-item" href="http://192.168.0.34/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+	                    
+	                    
+		                    <a class="dropdown-item" href="http://192.168.0.34/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
+	                    
+	                    
+	                    <a class="dropdown-item" href="http://192.168.0.34/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+	                </div>
+	            </li>
+	
+	        </ul>
+	
+	        <ul class="list-inline menu-left mb-0">
+	            <li class="list-inline-item">
+	                <button type="button" class="button-menu-mobile open-left waves-effect">
+	                    <i class="ion-navicon"></i>
+	                </button>
+	            </li>
+
+	        </ul>
+	
+	        <div class="clearfix"></div>
+	
+	    </nav>
+	
+	</div>
+	<!-- Top Bar End -->
+
+	        
+	        <div class="page-content-wrapper ">
+	
+	            <div class="container-fluid">
+	            	<div class="row">
+						<div class="col-sm-12">
+							<div class="page-title-box">
+								<div>
+									<div class="breadcrumb-item">
+										구인구직관리 > 이력서관리
+									</div>
+								</div>
+							</div>
+						</div>
+	                </div>
+	
+					<!-- 이력서 기본정보 -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card m-b-15">
+								<div class="card-body">
+                                    <h4>이력서 기본정보</h4>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <label for="resumeName" class="col-sm-2 col-form-label">
+                                            이력서 명
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="resumeName" name="resumeName" class="form-control col-sm-10" placeholder="이력서 명" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label id="jobName" class="col-sm-2 col-form-label">분야</label>
+                                        <div class="col-sm col-form-label">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="jobName1" name="jobName" class="custom-control-input" type="radio" value="true" checked="checked">
+                                                <label for="jobName1" class="custom-control-label">
+                                                    변호사
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="jobName2" name="jobName" class="custom-control-input" type="radio" value="false">
+                                                <label for="jobName2" class="custom-control-label">
+                                                    변리사
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="career" class="col-sm-2 col-form-label">경력</label>
+                                        <div class="col-sm col-form-label">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="career1" name="career" class="custom-control-input" type="radio" value="true" checked="checked">
+                                                <label for="career1" class="custom-control-label">
+                                                    3년 이하
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="career2" name="career" class="custom-control-input" type="radio" value="false">
+                                                <label for="career2" class="custom-control-label">
+                                                    3 ~ 5년
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="career3" name="career" class="custom-control-input" type="radio" value="false">
+                                                <label for="career3" class="custom-control-label">
+                                                    5 ~ 10년
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="career4" name="career" class="custom-control-input" type="radio" value="false">
+                                                <label for="career4" class="custom-control-label">
+                                                    10 ~ 15년
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input id="career5" name="career" class="custom-control-input" type="radio" value="false">
+                                                <label for="career5" class="custom-control-label">
+                                                    15년 이상
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="introduce" class="col-sm-2 col-form-label">자기소개</label>
+                                        <div class="col-sm form-inline">
+                                            <textarea id="introduceCon" name="introduceCon" class="form-control col-sm-10 work" placeholder="자기소개" style="height: 80px; min-height: 37px; max-height: 220px;" maxlength="257"></textarea>
+                                            <span class="col-sm-2 text-center textCounting">0 / 256</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="careerList" class="col-sm-2 col-form-label">경력</label>
+										<div class="col-sm col-form-label">
+											
+											<!-- 1107 퍼블작업 -->
+											<div class="resume_list">
+												<dl>
+													<dt>
+														<strong>카카오페이</strong>
+														<span>2022-04-23 ~ 재직중</span>
+													</dt>
+													<dd>
+														<ul>
+															<li>내/외부용 CMS 관련 프로젝트 참여</li>
+															<li>React, NextJS, TypeScript, Styled-Component, React-Query, Zustand, Antd</li>
+														</ul>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<strong>핵클</strong>
+														<span>2021-01-01 ~ 2022-04-15</span>
+													</dt>
+													<dd>
+														<ul>
+															<li>AWS 인프라 구축 및 Java &amp; Spring 서버 개발</li>
+															<li>사내 프로젝트 개발, SI 프로젝트 참여</li>
+															<li>메인 개발자로 개발/운영<br>프로젝트 : 산림공간정보서비스 개발 및 데이터 융합 가공, cofact, 산림공간정보서비스 개발 및 데이터 융합 가공, 부건FNC 홈페이지 개발, 임산물 가격 예측 시스템 구축 및 데이터 관리</li>
+														</ul>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<strong>회사명</strong>
+														<span>기간</span>
+													</dt>
+													<dd>
+														<ul>
+															<li>상세업무</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+											
+										</div>
+                                    </div>
+									<hr>
+									<div class="form-group row">
+										<label for="etc" class="col-sm-2 col-form-label">
+											기타사항
+										</label>
+										<div class="col-sm form-inline">
+                                            <textarea id="etc" name="etc" class="form-control col-sm-10 work" placeholder="학력, 상훈, 자격증, 언어" style="height: 80px; min-height: 37px; max-height: 220px;" maxlength="257"></textarea>
+                                            <span class="col-sm-2 text-center textCounting">0 / 256</span>
+                                        </div>
+									</div>
+									<div class="form-inline" style="margin-top: 30px;">
+										<div class="mr-auto">
+											<button type="submit" class="btn btn-primary waves-effect waves-light">저장</button>
+											<a href="/portal/cms/member/admin/list.do" class="btn btn-secondary waves-effect m-1-5">목록</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+	
+	            </div><!-- container -->
+	
+	        </div> <!-- Page content Wrapper -->
+	
+	    </div> <!-- content -->
+	
+	</div>
+	<!-- End Right content here -->
+
+    <script>
+		
+		$('table').on('click','input[name="progress"]',function(){
+			if($(this).is(":checked")){
+				$(this).parent('div').prev().attr("disabled", true);
+			}else{
+				$(this).parent('div').prev().attr("disabled", false);
+			};
+		});
+
+	function tableAdd(){
+		var tableCount = $('table tbody').length+1;
+		if(tableCount < 11){
+			var add = "";
+			add += '<tbody class="tbody">';
+			add += '	<tr>';
+			add += '		<td rowspan="2">';
+			add += '			<div class="custom-control custom-checkbox" style="padding-left: 33px; padding-top: 42px;">';
+			add += '				<input type="checkbox" name="bcIds" value="data-issue" class="custom-control-input" id="bcIds'+tableCount+'">';
+			add += '				<label for="bcIds'+tableCount+'" class="custom-control-label"><label>';
+			add += '			</div>';
+			add += '		</td>';
+			add += '		<td>';
+			add += '			<form class="form-floation">';
+			add += '				<input type="text" class="form-control" id="companyName2" placeholder="회사명">';
+			add += '			</form>';
+			add += '		</td>';
+			add += '		<td>';
+			add += '			<form class="form-floation form-inline">';
+			add += '				<input type="date" class="form-control col-3" id="jobDateStart">';
+			add += '				<span class="col-1 text-center">~</span>';
+			add += '				<input type="date" class="form-control col-3 mr-auto" id="jobDateEnd'+tableCount+'">';
+			add += '				<div class="custom-control custom-checkbox col-2 firstShow" style="padding-left: 50px;">';
+			add += '					<input type="checkbox" name="progress" value="data-issue" class="custom-control-input" id="progress'+tableCount+'">';
+			add += '					<label for="progress'+tableCount+'" class="custom-control-label" style="font-weight: normal; display: block;">재직중</label>';
+			add += '				</div>';
+			add += '			</form>';
+			add += '		</td>';
+			add += '	</tr>';
+			add += '	<tr>';
+			add += '		<td colspan="2">';
+			add += '			<form class="form-floation form-inline">';
+			add += '				<input type="text" class="form-control col-10 work" onkeyup="action_keyup()" id="work'+tableCount+'" placeholder="역할 및 업무">';
+			add += '				<span class="text-center col-2">0 / 256</span>';
+			add += '			</form>';
+			add += '		</td>';
+			add += '	</tr>';
+			add += '</tbody>';
+			
+			$('table').append(add);
+
+			$('.tbody:first').find('input[name="bcIds"]').attr({'id':'bcIds'+2});
+			$('.tbody:first').find('input[name="bcIds"]').next().attr({'for':'bcIds'+2}); // 작동 됨
+
+			$('.tbody:nth-child(4)').find('input[name="bcIds"]').attr({'id':'bcIds'+3});
+			$('.tbody:nth-child(4)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+3});
+
+			$('.tbody:nth-child(5)').find('input[name="bcIds"]').attr({'id':'bcIds'+4});
+			$('.tbody:nth-child(5)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+4});
+
+			$('.tbody:nth-child(6)').find('input[name="bcIds"]').attr({'id':'bcIds'+5});
+			$('.tbody:nth-child(6)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+5});
+
+			$('.tbody:nth-child(7)').find('input[name="bcIds"]').attr({'id':'bcIds'+6});
+			$('.tbody:nth-child(7)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+6});
+
+			$('.tbody:nth-child(8)').find('input[name="bcIds"]').attr({'id':'bcIds'+7});
+			$('.tbody:nth-child(8)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+7});
+
+			$('.tbody:nth-child(9)').find('input[name="bcIds"]').attr({'id':'bcIds'+8});
+			$('.tbody:nth-child(9)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+8});
+
+			$('.tbody:nth-child(10)').find('input[name="bcIds"]').attr({'id':'bcIds'+9});
+			$('.tbody:nth-child(10)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+9});
+
+			$('.tbody:nth-child(11)').find('input[name="bcIds"]').attr({'id':'bcIds'+10});
+			$('.tbody:nth-child(11)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+10});
+		}else{
+			alert("최대 10개까지만 가능합니다.");
+			return false;
+		};
+		$('table tbody').find('.firstShow').css('display','none');
+		$('table tbody:first').find('.firstShow').css('display','block');
+	};
+
+	function tableDel(){
+		var size = $('table tbody').size();
+		if(size > 1){
+			$('input[name="bcIds"]:checked').parents('tbody').remove();
+			$('table tbody').find('.firstShow').css('display','none');
+			$('table tbody:first').find('.firstShow').css('display','block');
+
+			$('.tbody:first').find('input[name="bcIds"]').attr({'id':'bcIds'+2});
+			$('.tbody:first').find('input[name="bcIds"]').next().attr({'for':'bcIds'+2}); // 작동 됨
+
+			$('.tbody:nth-child(4)').find('input[name="bcIds"]').attr({'id':'bcIds'+3});
+			$('.tbody:nth-child(4)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+3});
+
+			$('.tbody:nth-child(5)').find('input[name="bcIds"]').attr({'id':'bcIds'+4});
+			$('.tbody:nth-child(5)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+4});
+
+			$('.tbody:nth-child(6)').find('input[name="bcIds"]').attr({'id':'bcIds'+5});
+			$('.tbody:nth-child(6)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+5});
+
+			$('.tbody:nth-child(7)').find('input[name="bcIds"]').attr({'id':'bcIds'+6});
+			$('.tbody:nth-child(7)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+6});
+
+			$('.tbody:nth-child(8)').find('input[name="bcIds"]').attr({'id':'bcIds'+7});
+			$('.tbody:nth-child(8)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+7});
+
+			$('.tbody:nth-child(9)').find('input[name="bcIds"]').attr({'id':'bcIds'+8});
+			$('.tbody:nth-child(9)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+8});
+
+			$('.tbody:nth-child(10)').find('input[name="bcIds"]').attr({'id':'bcIds'+9});
+			$('.tbody:nth-child(10)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+9});
+
+			$('.tbody:nth-child(11)').find('input[name="bcIds"]').attr({'id':'bcIds'+10});
+			$('.tbody:nth-child(11)').find('input[name="bcIds"]').next().attr({'for':'bcIds'+10});
+
+			$('input[id="selectAll"]').prop('checked', false);
+		}else{
+			alert('최소 1개 이상 입력해주세요.');
+		};
+		
+	};
+
+	$('table').on('keyup','.work',function (e){
+        var content = $(this).val();
+        $(this).next().html(content.length+" / 256");    //글자수 실시간 카운팅
+    
+        if (content.length > 256){
+            alert("최대 256자까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 256));
+        	$(this).next().html("256 / 256");
+        }
+    });
+	
+	// 전체선택 , 전체선택 해제
+	$('table').on('click','input[id="selectAll"]',function(){
+		if($(this).is(":checked")){
+			$('input[name="bcIds"]').prop('checked', true);
+		}else{
+			$('input[name="bcIds"]').prop('checked', false);
+		};
+	});
+
+	// 전체선택 후 하나라도 체크 해제시 전체체크 체크 해제
+	$('table').on('click','input[name="bcIds"]',function() {
+		var total = $("input[name=bcIds]").length;
+		var checked = $("input[name=bcIds]:checked").length;
+
+		if(total != checked) $("#selectAll").prop("checked", false);
+		else $("#selectAll").prop("checked", true); 
+	});
+
+
+	$('table tbody').find('.firstShow').css('display','none');
+	$('table tbody:first').find('.firstShow').css('display','block');
+
+	document.getElementById('jobDateEnd1').value = new Date().toISOString().substring(0, 10);;
+
+    </script>
+
+
+    <style>
+        tr, th, td{border: 2px solid rgba(0,0,0,0.1); border-collapse: collapse; border-spacing: 0;}
+		/* .firstShow{display: none;}
+		table tbody:nth-child(1) .firstShow{display: block !important;} */
+    </style>
+    
+	<footer class="footer">
+		Copyright© 2022 ASADAL, Inc. All Right Reserved.
+		(Was : 10.150.20.6	)
+	</footer>
+    </div>
+    <!-- END wrapper -->
+    
+    
+    <!-- 해더로 옮기지 마세요  -->
+	
+	<!-- Plugins js -->
+	<script src="http://192.168.0.34/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- <script src="http://192.168.0.34/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script> -->
+	<script src="http://192.168.0.34/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="http://192.168.0.34/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+	<!-- Plugins Init js -->
+	<script src="http://192.168.0.34/assets/pages/form-advanced.js"></script>
+	<!-- <script src="http://192.168.0.34/assets/pages/calendar-init.js"></script> -->
+
+</body>
+</html>
