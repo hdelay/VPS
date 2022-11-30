@@ -4228,38 +4228,38 @@ a.ui-button:active,
     .tbl_main_table > span {
         margin-bottom: 5px;
     }
-    .tbl_main_table ul li {
+    .tbl_main_table ul li a {
         padding: 15px 0;
     }
-    .tbl_main_table ul li > div {
+    .tbl_main_table ul li a > div {
         padding: 0 5px;
         justify-content: center;
         width: 25%;
         font-size: 12px;
     }
-    .tbl_main_table ul li > div:nth-child(2) {
+    .tbl_main_table ul li a > div:nth-child(2) {
         width: 20%;
     }
-    .tbl_main_table ul li > div:nth-child(2) {
+    .tbl_main_table ul li a > div:nth-child(2) {
         display: flex;
         flex-direction: column;
         width: 35%;
     }
-    .tbl_main_table ul li > div:nth-child(3) {
+    .tbl_main_table ul li a > div:nth-child(3) {
         width: 13%;
     }
-    .tbl_main_table ul li > div:nth-child(4) {
+    .tbl_main_table ul li a > div:nth-child(4) {
         width: 35%;
         justify-content: flex-start;
     }
-    .tbl_main_table ul li .date {
+    .tbl_main_table ul li a .date {
         padding: 0 5px;
         align-items: center;
     }
-    .tbl_main_table ul li .date strong {
+    .tbl_main_table ul li a .date strong {
         font-size: 24px;
     }
-    .tbl_main_table ul li .date span {
+    .tbl_main_table ul li a .date span {
         font-size: 10px;
     }
     .tbl_main_table .btn_box {
