@@ -1707,6 +1707,10 @@
     font-size: 14px;
     font-weight: 400;
 }
+.tbl_longcard > ul > li .tit > a {
+    display: block;
+    width: 100%;
+}
 .tbl_longcard > ul > li .tit strong {
     display: flex;
     gap: 10px;
