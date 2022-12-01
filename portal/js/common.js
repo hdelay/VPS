@@ -28,7 +28,7 @@ $(function(){
         showOn: "both",
         changeMonth: true,
         changeYear: true,
-        yearRange: 'c-100:c',
+        yearRange: 'c-100:c+15',
 		// maxDate: "d",
         buttonImage: "../images/ico/ico_datepicker_img.png",
         buttonImageOnly: true,
@@ -49,7 +49,7 @@ $(function(){
         showOn: "both",
         changeMonth: true,
         changeYear: true,
-        yearRange: 'c-100:c',
+        yearRange: 'c-100:c+15',
         buttonImage: "../images/ico/ico_datepicker_img.png",
         buttonImageOnly: true,
         buttonText: "날짜선택"
@@ -68,7 +68,7 @@ $(function(){
         showOn: "both",
         changeMonth: true,
         changeYear: true,
-        yearRange: 'c-100:c',
+        yearRange: 'c-100:c+15',
         buttonImage: "../images/ico/ico_datepicker_img.png",
         buttonImageOnly: true,
         buttonText: "날짜선택"
@@ -505,7 +505,7 @@ $(function(){
     });
 
     // 통합검색 remove
-    $('.search_page .search_box .search_word .delete').on('click', function(e){
+    $('.search_word .delete').on('click', function(e){
         e.preventDefault();
         $(this).parent().remove();
     });

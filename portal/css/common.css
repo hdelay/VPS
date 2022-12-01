@@ -3083,16 +3083,17 @@
 .search_form_group {
     display: flex;
     flex-direction: column;
+    gap: 5px;
     padding-bottom: 45px;
-}
-.search_form_box {
-    display: flex;
-    gap: 15px;
     background-color: #f0f3f6;
     padding: 22px 25px;
     box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+.search_form_box {
+    display: flex;
+    gap: 15px;
 }
 .search_form_box .sel_box {
     width: 170px;

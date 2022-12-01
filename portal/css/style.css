@@ -558,9 +558,6 @@ header.font_black .btn_login_box li a::before {
 .search_item_more.on {
     display: block;
 }
-.search_item .search_form_group {
-    padding-bottom: 0;
-}
 .search_item.board_infobox .btn_box {
     width: auto;
     flex: none;
@@ -4517,7 +4514,7 @@ a.ico_folder::after {
     width: 110px;
     flex: none;
 }
-.search_page .search_box .search_word {
+.search_word {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -4525,7 +4522,7 @@ a.ico_folder::after {
     gap: 10px;
     margin-top: 10px;
 }
-.search_page .search_box .search_word .tit {
+.search_word .tit {
     display: flex;
     position: relative;
     padding: 5px 10px;
@@ -4536,11 +4533,11 @@ a.ico_folder::after {
     font-weight: 400;
     color: #fff;
 }
-.search_page .search_box .search_word .word_box {
+.search_word .word_box {
     display: flex;
     align-items: center;
 }
-.search_page .search_box .search_word .tit::after {
+.search_word .tit::after {
     content: "";
     display: block;
     position: absolute;
@@ -4551,7 +4548,7 @@ a.ico_folder::after {
     background-color: #615a53;
     transform: rotate(45deg) translateY(-80%);
 }
-.search_page .search_box .search_word .delete {
+.search_word .delete {
     display: flex;
     position: relative;
     width: 15px;
@@ -4561,8 +4558,8 @@ a.ico_folder::after {
     margin-left: 5px;
     cursor: pointer;
 }
-.search_page .search_box .search_word .delete::before,
-.search_page .search_box .search_word .delete::after {
+.search_word .delete::before,
+.search_word .delete::after {
     content: "";
     display: block;
     position: absolute;
@@ -4572,10 +4569,10 @@ a.ico_folder::after {
     height: 1px; 
     background-color: #fff;
 }
-.search_page .search_box .search_word .delete::before {
+.search_word .delete::before {
     transform: rotate(-45deg);
 }
-.search_page .search_box .search_word .delete::after {
+.search_word .delete::after {
     transform: rotate(45deg);
 }
 .search_result_box {
@@ -7462,14 +7459,14 @@ footer .footer_bottom {
     .search_page .search_box .inp_group .btn_box * {
         font-size: 15px;
     }
-    .search_page .search_box .search_word {
+    .search_word {
         width: 100%;
         gap: 5px;
     }
-    .search_page .search_box .search_word .tit {
+    .search_word .tit {
         font-size: 14px;
     }
-    .search_page .search_box .search_word a {
+    .search_word a {
         font-size: 14px;
     }
     .search_result_box .tab_group .tab_btn ul > li > a span {
