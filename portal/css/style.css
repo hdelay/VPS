@@ -4514,6 +4514,15 @@ a.ico_folder::after {
     width: 110px;
     flex: none;
 }
+.search_word_box {
+    display: flex;
+    gap: 5px;
+    background-color: #f0f3f6;
+    padding: 22px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 20px;
+}
 .search_word {
     display: flex;
     align-items: center;
@@ -4521,6 +4530,10 @@ a.ico_folder::after {
     width: 55%;
     gap: 10px;
     margin-top: 10px;
+}
+.search_word_box .search_word {
+    margin-top: 0;
+    width: 100%;
 }
 .search_word .tit {
     display: flex;
