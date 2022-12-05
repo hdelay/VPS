@@ -496,6 +496,7 @@ header.headerfix .header_top {
     justify-content: space-between;
     gap: 40px;
     margin-top: 40px;
+    width: 100%;
 }
 .sec2 .search_word dl {
     width: calc(50% - 20px);
