@@ -217,14 +217,14 @@ header.headerfix .header_top {
     color: #333;
     z-index: 2;
 }
-.swiper-container .slide_wrap .inner .tit h2 div {
+.swiper-container .slide_wrap .inner .tit h2 > span {
     font-family: 'ONEmobileTitle';
     font-weight: 500;
     font-size: 65px;
     font-style: normal;
     /* text-shadow: 2px 0px 6px rgb(0 0 0 / 22%); */
 }
-.swiper-container .slide_wrap .inner .tit h2 div strong {
+.swiper-container .slide_wrap .inner .tit h2 > span strong {
     font-weight: 400;
 }
 .swiper-container .slide_wrap .inner .total {
@@ -1364,7 +1364,7 @@ header.headerfix .header_top {
         font-size: 50px;
     }
     .swiper-container .slide_wrap .inner .tit h2 strong,
-    .swiper-container .slide_wrap .inner .tit h2 div {
+    .swiper-container .slide_wrap .inner .tit h2 > span {
         font-size: 50px;
     }
     .swiper-container .slide_wrap .inner .tit h2 em {
@@ -1562,7 +1562,7 @@ header.headerfix .header_top {
         margin-top: 50px;
     }
     .swiper-container .slide_wrap .inner .tit h2 strong,
-    .swiper-container .slide_wrap .inner .tit h2 div {
+    .swiper-container .slide_wrap .inner .tit h2 > span {
         font-size: 32px;
         word-break: keep-all;
     }
@@ -1880,7 +1880,7 @@ header.headerfix .header_top {
     .swiper-container .swiper-pagination.sec1_full .swiper-pagination-bullet::after {
         font-size: 20px;
     }
-    .swiper-container .slide_wrap .inner .tit h2 div {
+    .swiper-container .slide_wrap .inner .tit h2 > span {
         font-size: 48px;
     }
     .swiper-container .slide_wrap.second .inner .total li {
@@ -1962,7 +1962,7 @@ header.headerfix .header_top {
     .swiper-container .swiper-pagination.sec1_full {
         top: 11%;
     }
-    .swiper-container .slide_wrap .inner .tit h2 div {
+    .swiper-container .slide_wrap .inner .tit h2 > span {
         font-size: 32px;
     }
 }
