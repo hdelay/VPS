@@ -4290,7 +4290,6 @@ a.ico_folder::after {
     gap: 10px;
 }
 .mypage_group .top .info_box .info_list ul li {
-    width: calc((100% / 4) - 8px);
     min-width: 191px;
 }
 .mypage_group .top .info_box .info_list ul li a {
