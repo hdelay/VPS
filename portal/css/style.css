@@ -4290,13 +4290,14 @@ a.ico_folder::after {
     gap: 10px;
 }
 .mypage_group .top .info_box .info_list ul li {
-    width: calc((100% / 5) - 8px);
-    min-width: 158px;
+    width: calc((100% / 4) - 8px);
+    min-width: 191px;
 }
 .mypage_group .top .info_box .info_list ul li a {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 8px;
     width: 100%;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -7406,7 +7407,7 @@ footer .footer_bottom {
         gap: 5px;
     }
     .mypage_group .top .info_box .info_list ul li {
-        width: calc(50% - 3px);
+        width: 100%;
         min-width: 0;
     }
     .mypage_group .top .info_box .info_list ul li a {
