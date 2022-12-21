@@ -442,9 +442,11 @@
 .content_list_box .list_item + .list_item {
     margin-top: 30px;
 }
-.content_list_box .list_item + .list_item dl {
+/* .content_list_box .list_item + .list_item dl {
     text-align: center;
-}
+} 
+벤처투자마트란? 페이지 수정
+*/
 .content_list_box .list_item + .list_item dl dd .btn_box_group {
     justify-content: center;
 }
@@ -3135,6 +3137,13 @@
     flex: 1;
     position: relative;
 }
+.tab_group .tab_btn.type_01 > ul {
+    justify-content: space-around;
+}
+.tab_group .tab_btn.type_01 > ul > li {
+    flex: none;
+    min-width: 150px;
+}
 .tab_group .tab_btn > ul > li > a {
     display: flex;
     justify-content: center;
@@ -4356,6 +4365,9 @@ a.ui-button:active,
     }
     .tab_group .tab_btn ul > li {
         flex: none;
+    }
+    .tab_group .tab_btn.type_01 ul > li {
+        min-width: 0;
     }
     .tab_group .tab_btn ul > li > a {
         padding: 10px 0;
