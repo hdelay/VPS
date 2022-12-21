@@ -53,7 +53,7 @@ header .header_top nav {
 header .header_top nav > ul {
     display: flex;
     height: 100%;
-    gap: 90px;
+    gap: 110px;
 }
 header .header_top nav > ul > li {
     display: flex;
@@ -5694,7 +5694,7 @@ footer .footer_bottom {
         padding: 0 20px;
     }
     header .header_top nav > ul {
-        gap: 33px;
+        gap: 80px;
     }
     /* header .header_top nav > ul > li {
         width: 160px;
@@ -5752,6 +5752,9 @@ footer .footer_bottom {
     header .header_bottom .btn_bottom {
         flex-direction: column;
     }
+    header .header_top nav > ul {
+        gap: 50px;
+    }
     header .header_top nav > ul > li > a {
         font-size: 16px;
     }
@@ -5774,6 +5777,9 @@ footer .footer_bottom {
     header .header_top,
     header .header_bottom {
         min-width: 955px;
+    }
+    header .header_top nav > ul {
+        gap: 33px;
     }
     header .header_top nav > ul > li > a {
         font-size: 16px;
