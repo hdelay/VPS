@@ -2507,10 +2507,11 @@
     flex-basis: calc(25% - 15px);
     position: relative;
 }
-.tbl_card_list > ul > li.nodata {
+.content_box .tbl_card_list > ul > li.nodata {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100% !important;
     padding: 50px 25px;
     box-sizing: border-box;
     border: 1px solid #d9e1e7;
