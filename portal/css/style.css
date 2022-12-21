@@ -653,6 +653,8 @@ header.font_black .btn_login_box li a::before {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
     font-size: 21px;
     font-weight: 500;
 }
@@ -671,7 +673,7 @@ header.font_black .btn_login_box li a::before {
 }
 .investment_content > ul > li .btn_investment_content li button {
     display: block;
-    padding: 7px 45px;
+    padding: 7px 20px;
     box-sizing: border-box;
     background-color: #fff;
     border: 1px solid #d9e1e7;
@@ -727,14 +729,25 @@ header.font_black .btn_login_box li a::before {
 }
 .investment_list ul {
     display: flex;
-    gap: 20px
+    gap: 20px;
+    flex-wrap: wrap;
 }
 .investment_list ul li {
-    flex: 1;
+    width: calc((100% / 5) - 16px);
     padding: 30px;
     border: 1px solid #d9e1e7;
     border-radius: 10px;
+    box-sizing: border-box;
     background: #fff;
+}
+.investment_list ul li.nodata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 116px;
+    font-size: 18px;
+    font-weight: 500;
 }
 .investment_list ul li a {
     display: flex;
@@ -764,6 +777,7 @@ header.font_black .btn_login_box li a::before {
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #d9e1e7;
+    background-color: #f5f5f5;
 }
 .enterprise_info ul li > dl > dt {
     padding-bottom: 25px;
@@ -774,6 +788,7 @@ header.font_black .btn_login_box li a::before {
     padding-top: 25px;
 }
 .enterprise_info ul li > dl > dd {
+    padding-left: 10px;
     font-size: 14px;
     font-weight: 400;
 }
@@ -6151,6 +6166,9 @@ footer .footer_bottom {
     .investment_content > ul > li .tit strong {
         flex-direction: column;
     }
+    .investment_content > ul > li .tit strong em {
+        width: 100%;
+    }
     .investment_content > ul > li .btn_investment_content {
         margin-bottom: 10px;
     }
@@ -6169,6 +6187,7 @@ footer .footer_bottom {
         gap: 10px;
     }
     .investment_list ul li {
+        width: 100%;
         padding: 15px;
     }
 
