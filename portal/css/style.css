@@ -117,6 +117,10 @@ header .header_top nav > ul > li > ul {
     opacity: 0;
     transition: .5s;
 }
+header .header_top nav > ul > li:nth-child(1) > ul,
+header .header_top nav > ul > li:nth-child(2) > ul {
+    width: 200%;
+}
 /* header .header_top nav > ul > li > ul::after {
     content: "";
     display: block;
