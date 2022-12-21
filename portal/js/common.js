@@ -102,6 +102,7 @@ $(function(){
     });
     $(document).bind("mouseleave", function(){ // 마우스가 브라우저 밖으로 나갔을 경우
         $('body').removeClass('gnb_open');
+        $('.header_bg').css({'height': '0'});
     })
 
     // 탭키시 gnb 오픈
