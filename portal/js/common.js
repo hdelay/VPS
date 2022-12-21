@@ -80,33 +80,6 @@ $(function(){
         $(".datepicker_end").datepicker( "option", "minDate", selectedDate );
     });
 
-    // $('.datepicker_month').datepicker({
-    //     displayFormat: 'yy-mm',
-    //     dateFormat: 'yy-mm',
-    //     prevText: '이전 달',
-    //     nextText: '다음 달',
-    //     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    //     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    //     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-    //     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-    //     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-    //     showMonthAfterYear: true,
-    //     yearSuffix: '년',
-    //     showOn: 'both',
-    //     buttonImage: './images/ico/ico_datepicker.svg',
-    //     buttonImageOnly: true,
-    //     changeMonth: true,
-    //     changeYear: true,
-    //     showButtonPanel: true,
-    //     closeText: '완료',
-    //     onClose: function(dateText, inst) { 
-    //         $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
-    //     }
-    // });
-    // $('.datepicker_month').focus(function(){
-    //     $('.ui-datepicker-calendar, .ui-datepicker-current').hide();
-    // });
-
     // header
     $('header .header_top nav > ul > li').hover(function(){
         if($('.header_bg').mouseover()){
@@ -129,7 +102,6 @@ $(function(){
     });
     $(document).bind("mouseleave", function(){ // 마우스가 브라우저 밖으로 나갔을 경우
         $('body').removeClass('gnb_open');
-        $('.header_bg').css({'height': '0'});
     })
 
     // 탭키시 gnb 오픈
