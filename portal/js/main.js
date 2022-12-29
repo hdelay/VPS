@@ -53,6 +53,23 @@ $(function(){
             }
             
         },
+        keyboardScrolling: true,    // 키보드 스크롤 사용
+		recordHistory: true,
+        animateAnchor: true
+    });
+
+    
+    $('.first .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '0');
+    $('.second .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+    $('.third .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+    $('.shortcuts_box .swiper-wrapper .swiper-slide:last-child a').focus(function(){
+        console.log('홛인');
+        $(this).keydown(function(e) {
+            if(e.keyCode == 9){
+                console.log('탭키입력');
+                $('.swiper-pagination-bullet').eq(0).focus();
+            }
+        });
     });
 
     // swiper
@@ -82,6 +99,25 @@ $(function(){
                     $('header').addClass('font_black');
                 }
                 // console.log('즉시 : ' + idx);
+
+                // tabindex 조절
+                console.log(idx);
+                if(idx === 0){
+                    $('.first .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '0');
+                    $('.second .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.third .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.sec2 .search_box .inp_box input').attr('tabindex', '-1');
+                } else if(idx === 1) {
+                    $('.first .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.second .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '0');
+                    $('.third .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.sec2 .search_box .inp_box input').attr('tabindex', '-1');
+                } else if(idx === 2) {
+                    $('.first .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.second .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
+                    $('.third .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '0');
+                    $('.sec2 .search_box .inp_box input').attr('tabindex', '-1');
+                }
             },  
             slideChangeTransitionEnd: function(){
                 var idx = this.activeIndex;
@@ -95,8 +131,9 @@ $(function(){
                 const activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
                 activeSlideVideo.play();
                 */
-            },      
+            },
         }, 
+        touchEventsTarget: 'wrapper'
     });
     
     // 메인 섹션1 스와이퍼 안 스와이퍼

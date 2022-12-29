@@ -520,6 +520,19 @@ $(function(){
         $('.chk_list_more').toggleClass('on');
     });
 
+    // ?팝업
+    $('.q_btn').hover(function(){
+        $(this).parent().addClass('on');
+    }, function(){
+        $(this).parent().removeClass('on');
+    });
+    $('.q_btn').focus(function(){
+        $(this).parent().addClass('on');
+    });
+    $('.q_btn').blur(function(){
+        $(this).parent().removeClass('on');
+    });
+
 });
 
 //Toast 팝업

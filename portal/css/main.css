@@ -267,6 +267,14 @@ header.headerfix .header_top {
     border-radius: 20px;
     font-weight: 500;
 }
+.total_tit .q_box {
+    position: absolute;
+    top: -23px;
+    left: 90px;
+}
+.swiper-slide.first .total_tit .q_box {
+    left: 66px;
+}
 .swiper-container .slide_wrap .inner .total li .total_content {
     display: flex;
     align-items: end;
@@ -1853,6 +1861,14 @@ header.headerfix .header_top {
     /* footer banner */
     .main_ban_swiper_wrap {
         display: none;
+    }
+
+    .q_box .q_content {
+        transform: translateX(-17%);
+    }
+    .q_box .q_content::before {
+        left: 14%;
+        transform: rotate(45deg);
     }
 }
 

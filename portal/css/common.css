@@ -337,6 +337,9 @@
 }
 
 /* 제목 */
+.tit_box {
+    position: relative;
+}
 .tit_box.row {
     display: flex;
     justify-content: space-between;
@@ -426,6 +429,17 @@
     margin-top: -20px;
     margin-bottom: 30px;
     font-weight: 400;
+}
+
+.tit_box .q_box {
+    position: relative;
+    margin-left: 10px;
+}
+.tit_box .q_box .q_content {
+    min-width: 0;
+    width: 200px;
+    text-align: center;
+    word-break: keep-all;
 }
 
 .req {
@@ -3433,6 +3447,50 @@ a.ui-button:active,
     background-color: #1c44c8;
     border-radius: 5px;
     color: #fff;
+}
+
+.q_box .q_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #ffc000;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+.q_box .q_content {
+    display: none;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    min-width: 200px;
+    font-size: 13px;
+    font-weight: 500;
+    transform: translateX(-50%);
+    box-shadow: 0px 1px 8px 2px rgb(0 0 0 / 28%);
+    z-index: 3;
+}
+.q_box.on .q_content {
+    display: block;
+}
+.q_box .q_content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 /* ============================================================
