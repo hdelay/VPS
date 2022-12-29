@@ -912,16 +912,17 @@ header.headerfix .header_top {
 
 /* section04 */
 .sec4 {
-    padding: 40px 0;
+    padding: 0;
     box-sizing: border-box;
     background-color: #e8eff6;
 }
 .sec4 .inner {
     display: flex;
-    gap: 30px;
     justify-content: space-between;
-    padding-bottom: 50px;
+    gap: 30px;
+    /* padding-bottom: 50px; */
     box-sizing: border-box;
+    height: auto;
 }
 .sec4 .inner .board_group {
     gap: 30px;
@@ -929,11 +930,8 @@ header.headerfix .header_top {
 .sec4 .inner .board_group {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: calc(25% - 10px);
-}
-.sec4 .inner .board_group:nth-child(3) {
-    width: calc(50% - 10px);
 }
 .sec4 .inner .board_group li {
     width: 100%;
@@ -987,7 +985,7 @@ header.headerfix .header_top {
 }
 .sec4 .inner .board_group li dl dt .tit {
     position: relative;
-    padding: 4px 20px;
+    padding: 4px 20px 4px 15px;
     margin-left: 53px;
     background-color: #ddeaf7;
     border-radius: 10px 3px 5px 3px;
