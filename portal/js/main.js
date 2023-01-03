@@ -101,7 +101,7 @@ $(function(){
 
                 // tabindex 조절
                 
-                console.log(idx);
+                
                 if(idx === 0){
                     $('.first .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '0');
                     $('.second .shortcuts_box .swiper-wrapper .swiper-slide a').attr('tabindex', '-1');
@@ -251,8 +251,8 @@ $(document).ready(function() {
                         $.fn.fullpage.moveSectionDown();
                         $.fn.fullpage.moveSectionDown();
                         $.fn.fullpage.moveSectionDown();
-                        setTimeout(function() {
-                            fnGetLastFocusableElements("sec6").focus();
+                        setTimeout(function(){
+                            $("#focusibleLast").focus();
                         }, 650);
                     }
                 }
@@ -263,7 +263,7 @@ $(document).ready(function() {
                         e.preventDefault();
                         $.fn.fullpage.moveSectionUp();//location.href = "#main-section_1";
                         setTimeout(function() {							
-                            fnGetLastFocusableElements("sectionView0").focus();
+                            $("#sectionView0").focus();
                         }, 400);
                     }
                 }
@@ -273,11 +273,8 @@ $(document).ready(function() {
                     if (document.activeElement === document.body || document.activeElement === document.getElementById("focusible3")) {
                         e.preventDefault();
                         $.fn.fullpage.moveSectionUp();//location.href = "#main-section_2";
-                        if ($('#secTmp1').val() != "Y") {
-                            fnSection1();
-                        }
                         setTimeout(function() {							
-                            fnGetLastFocusableElements("sectionView1").focus();
+                            $("#sectionView1").focus();
                         }, 400);
                     }
                 }
@@ -287,11 +284,8 @@ $(document).ready(function() {
                     if (document.activeElement === document.body || document.activeElement === document.getElementById("section3AId")) {
                         e.preventDefault();
                         $.fn.fullpage.moveSectionUp();//location.href = "#main-section_3";
-                        if ($('#secTmp2').val() != "Y") {
-                            fnSection2();
-                        }
                         setTimeout(function() {							
-                            fnGetLastFocusableElements("sectionView2").focus();
+                            $("#sectionView2").focus();
                         }, 400);
                     }
                 }
@@ -301,18 +295,15 @@ $(document).ready(function() {
                     if (document.activeElement === document.body || document.activeElement === document.getElementById("section5AId")) {
                         e.preventDefault();
                         $.fn.fullpage.moveSectionUp();//location.href = "#main-section_5";
-                        if ($('#secTmp4').val() != "Y") {
-                            fnSection4();
-                        }
                         setTimeout(function() {							
-                            fnGetLastFocusableElements("sectionView4").focus();
+                            $("#sectionView4").focus();
                         }, 400);
                     }
                 }
                 // footer 쪽
                 else if ($("body").hasClass("fp-viewing-5") == true || ($("body").hasClass("fp-viewing-main-section_6") == true && location.hash == "#undefined")) {
                     // 화면 초기 상태이거나 첫 번째 엘리먼트에서 백탭을 누른 경우, 이전 페이지, 마지막 포커스로 이동
-                    if (document.activeElement === document.body || document.activeElement === fnGetFirstFocusableElements("sectionViewFooter")) {
+                    if (document.activeElement === document.body || document.activeElement === $("#sectionViewFooter")) {
                         $.fn.fullpage.moveSectionUp();//location.href = "#main-section_6";
                     }
                 }
@@ -423,8 +414,8 @@ $(document).ready(function() {
                 // footer 쪽
                 else if ($("body").hasClass("fp-viewing-5") == true || ($("body").hasClass("fp-viewing-main-section_6") == true && location.hash == "#undefined")) {
                     // 마지막 포커스이면 처음 오브젝트로 이동
-                    var sectionLastTabStop = getElementById("focusibleLast");
-                    if(document.activeElement === sectionLastTabStop) {
+                    var sectionLastTabStop = $('#focusibleLast').attr('id');
+                    if(document.activeElement.id === sectionLastTabStop) {
                         e.preventDefault();
                         //fnGetFirstFocusableElements("sectionView5").focus();
                         $.fn.fullpage.moveTo();//location.href = "#main-section_1";
