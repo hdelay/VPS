@@ -5962,6 +5962,16 @@ footer .footer_bottom {
     .mypage_group div .dl_list dd {
         align-items: baseline;
     }
+    .mypage_group .tit.talk.public_box .public_btn {
+        top: inherit;
+        right: inherit;
+        transform: translateY(0);
+    }
+    .mypage_group .tit.talk.public_box .public_content.on {
+        top: 45px;
+        transform: translateX(22%);
+    }
+
 }
 /* ============================================================
     미디어쿼리 max-width: 1200px
