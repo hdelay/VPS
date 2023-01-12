@@ -1,6 +1,7 @@
 
 $(function(){
 
+    
     // 메인
     // fullpage
     $('#fullpage').fullpage({
@@ -21,10 +22,14 @@ $(function(){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
                     $('header').removeClass('font_black');
+                    $('.etc_quickmenu').removeClass('orange');
+                } else if($(this).index() === 2){
+                    $('.etc_quickmenu').addClass('orange');
                 } else if($(this).index() === 3){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');
                     $('header').removeClass('font_black');
+                    $('.etc_quickmenu').removeClass('orange');
                 } else if($(this).index() === 4){
                     $('header').addClass('headerfix');
                     $('.main_quickmenu').addClass('black');

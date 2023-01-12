@@ -140,6 +140,9 @@ header.headerfix .header_top {
     font-weight: 500;
     color: #7000e3;
 }
+.main_quickmenu ul.etc_quickmenu.orange li a {
+    color: #e99908;
+}
 .main_quickmenu .mymenu {
     display: flex;
     align-items: center;

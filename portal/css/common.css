@@ -45,6 +45,7 @@
 .pr20 {padding-right: 20px !important;}
 
 /* 폰트컬러 */
+.f_color_black {color: #333;}
 .f_color_blue {color: #3f89e5;}
 .f_color_orange {color: #ff6f00;}
 .f_color_navy {color: #3949ab;}
@@ -1026,7 +1027,7 @@
     width: 100% !important;
     padding-left: 25px;
     line-height: 20px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: #d11919;
 }

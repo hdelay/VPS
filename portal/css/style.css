@@ -110,7 +110,7 @@ header .header_top nav > ul > li > ul {
     position: absolute;
     top: 95px;
     left: 50%;
-    width: 150%;
+    width: 170%;
     height: 0;
     overflow: hidden;
     transform: translateX(-41%);
@@ -4464,8 +4464,9 @@ a.ico_folder::after {
     background-color: #fff;
     border: 1px dashed #ddd;
     border-radius: 10px;
-    width: 32%;
+    width: 37%;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .mypage_group .top .info_box .info_list ul {
