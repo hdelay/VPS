@@ -6651,6 +6651,14 @@ footer .footer_bottom {
         box-sizing: border-box;
     }
 
+    /* 벤처/개인투자조합 안내 가이드 */
+    .guide_box .back_box {
+        flex-direction: column;
+    }
+    .guide_box .back_box .img {
+        width: 100%;
+    }
+
     /* 용어사전 */
     .dictionary_box {
         padding: 0;
