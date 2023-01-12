@@ -34,8 +34,8 @@ header .header_top {
 }
 header .header_top h1 a {
     display: flex;
-    background: url(../images/logo.png) no-repeat center;
-    width: 252px;
+    background: url(../images/logo/logo_w_w.svg) no-repeat center;
+    width: 275px;
     height: 45px;
     background-size: 100%;
     text-indent: -9999px;
@@ -43,7 +43,7 @@ header .header_top h1 a {
 .gnb_open header .header_top h1 a,
 header.headerfix .header_top h1 a,
 header.font_black .header_top h1 a {
-    background: url(../images/logo_b.png) no-repeat center;
+    background: url(../images/logo/logo_w.svg) no-repeat center;
     background-size: 100%;
 }
 /* menu 1depth */
@@ -144,6 +144,7 @@ header .header_top nav > ul > li > ul > li > a {
     padding: 5px 10px 5px 20px;
     font-weight: 500;
     transition: .2s;
+    word-break: keep-all;
 }
 header .header_top nav > ul > li > ul > li > a::after {
     content: "";
@@ -419,6 +420,7 @@ header.font_black .btn_login_box li a::before {
     width: 100%;
     height: 65px;
     padding: 0 20px;
+    padding-right: 40px;
     box-sizing: border-box;
     font-weight: 500;
     font-size: var(--font-common);
@@ -1179,6 +1181,9 @@ a.ico_folder::after {
 .btn_mart_content {
     margin-top: 60px;
 }
+.list_item .tit_box.row .btn_box.pd0 {
+    margin: 60px 0 20px;
+}
 
 /* VC구주유통망 */
 .transaction_procedure_box {
@@ -1593,6 +1598,40 @@ a.ico_folder::after {
     background-size: 100% auto;
 }
 
+/* 벤처/개인투자조합 안내 가이드 */
+.guide_box + .guide_box {
+    margin-top: 100px;
+}
+.guide_box .back_box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 35px;
+    border-radius: 10px;
+    border: 1px solid #d9e1e7;
+    background-color: #f6f7f9;
+}
+.guide_box .back_box .img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: no-repeat center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.guide_box:nth-child(1) .back_box .img {
+    background-image: url(../images/content/guide_img_01.png);
+}
+.guide_box:nth-child(2) .back_box .img {
+    background-image: url(../images/content/guide_img_02.png);
+}
+.guide_box .back_box .txt p {
+    font-weight: 500;
+}
+.guide_box .btn_box_group.type_01 .btn_box {
+    width: auto;
+}
+
 /* 벤처투자상담 */
 .answer_box {
     display: flex;
@@ -1608,6 +1647,13 @@ a.ico_folder::after {
 }
 .answer_box .cont {
     width: calc(100% - 36px);
+}
+.answer_box .cont .state_box {
+    line-height: 15px;
+    margin: 0;
+}
+.answer_box .cont .state_box * {
+    margin-right: 5px;
 }
 
 /* 용어사전 */
@@ -2355,6 +2401,15 @@ a.ico_folder::after {
     font-size: 17px;
     font-weight: 400;
 }
+.design_box .design_bi {
+    width: 80%;
+}
+.design_box:nth-child(2) .design_bi {
+    width: 50%;
+}
+.design_box .img_bi img {
+    width: 100%;
+}
 .design_box_group {
     display: flex;
     gap: 20px;
@@ -2364,7 +2419,7 @@ a.ico_folder::after {
     justify-content: center;
 }
 .design_box_group .design_box:nth-child(1) .img_bi img {
-    width: 70%;
+    width: 100%;
 }
 .content_list_box .list_item .design_bi .btn_box {
     margin: 15px 0 0 0;
@@ -2499,8 +2554,15 @@ a.ico_folder::after {
     flex: none;
 }
 .community_content dl dd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 30px;
     box-sizing: border-box;
+    height: calc(100% - 86px);
+}
+.community_content dl dd ul {
+    width: 100%;
 }
 .community_content dl dd ul li {
     display: flex;
@@ -4371,10 +4433,24 @@ a.ico_folder::after {
     justify-content: center;
 }
 .mypage_group .top .info_box .info_content .right .tit {
-    padding: 10px 0;
-    text-align: center;
     font-size: 23px;
     font-weight: 500;
+}
+.mypage_group .top .info_box .info_content .right .tit a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 23px;
+    font-weight: 500;
+}
+.mypage_group .top .info_box .info_content .right .tit.talk a::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ico/ico_setting.png) no-repeat center;
+    margin-left: 10px;
 }
 .mypage_group .top .info_box .info_content .right .sns_state {
     display: flex;
@@ -4398,7 +4474,7 @@ a.ico_folder::after {
     gap: 10px;
 }
 .mypage_group .top .info_box .info_list ul li {
-    min-width: 191px;
+    min-width: 210px;
 }
 .mypage_group .top .info_box .info_list ul li a {
     display: flex;
@@ -4421,7 +4497,6 @@ a.ico_folder::after {
     font-weight: 500;
     color: #1861b3;
 }
-
 .mypage_group .top .favorites_box {
     width: calc(30% - 15px);
 }
@@ -4457,6 +4532,8 @@ a.ico_folder::after {
     padding: 15px 30px;
     box-sizing: border-box;
 }
+
+
 .favorites_box ul {
     display: flex;
     flex-direction: column;
@@ -4532,8 +4609,61 @@ a.ico_folder::after {
     font-size: 15px;
     font-weight: 400;
 }
-.received_note_box dl dd {
+/* .received_note_box dl dd {
     height: calc(100% - 59px);
+} */
+.received_note_box .tab_group {
+    overflow: hidden;
+    border: 1px solid #d9e1e7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 5%);
+    height: 100%;
+}
+.received_note_box .tab_group .tab_btn {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #f6f7f9;
+    box-sizing: border-box;
+}
+.received_note_box .tab_group .tab_btn ul {
+    flex-direction: row;
+    border-bottom: 0;
+    align-items: center;
+    gap: 20px;
+}
+.received_note_box .tab_group .tab_btn ul li {
+    flex: none;
+}
+.received_note_box .tab_group .tab_btn ul li + li {
+    border-top: 0;
+}
+.received_note_box .tab_group .tab_btn ul li a {
+    padding: 0;
+}
+.received_note_box .tab_group .tab_btn > ul > li.on > a {
+    border: none;
+}
+.received_note_box .tab_group .tab_btn .btn_box {
+    width: auto;
+    flex: none;
+}
+.received_note_box .tab_group .tab_btn .btn_box .more {
+    padding: 0;
+}
+.received_note_box .tab_group .tab_content {
+    height: calc(100% - 59px);
+}
+.received_note_box .tab_group .tab_content > div {
+    padding: 15px 30px;
+    height: 100%;
+}
+.received_note_box .tab_group .tab_content > div .dl_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .comu_calendar {
@@ -6713,6 +6843,17 @@ footer .footer_bottom {
     .investment_performance_box.type_03 .all .all_right {
         margin-top: 20px;
     }
+    
+    .investment_performance_box.type_03 .all .tit_box .q_box .q_content {
+        left: inherit;
+        transform: translateX(0);
+        right: 0;
+    }
+    .investment_performance_box.type_03 .all .tit_box .q_box .q_content::before {
+        left: inherit;
+        transform: translateX(0) rotate(45deg);
+        right: 3px;
+    }
 
     /* 포털 소개 */
     .content_list_box .introduce_box {
@@ -6728,10 +6869,10 @@ footer .footer_bottom {
         padding: 15px;
         box-sizing: border-box;
     }
-    .design_bi {
+    .design_box .design_bi {
         width: 80%;
     }
-    .design_bi img {
+    .design_box .design_bi img {
         width: 100%;
     }
     .design_box + dl {
@@ -6780,7 +6921,10 @@ footer .footer_bottom {
         justify-content: center;
     }
     .design_box_group .design_box:nth-child(2) .img_bi img {
-        width: 80% !important;
+        width: 100% !important;
+    }
+    .tit_box + .design_box:nth-child(2) .design_bi {
+        width: 100%;
     }
     .design_color ul {
         flex-direction: column;
@@ -7590,6 +7734,21 @@ footer .footer_bottom {
     .received_note_box ul li a strong span,
     .received_note_box ul li a .date {
         font-size: 13px;
+    }
+    .received_note_box .tab_group .tab_btn {
+        padding: 15px;
+    }
+    .received_note_box .tab_group .tab_btn ul {
+        overflow-x: inherit;
+        overflow-y: inherit;
+        padding-bottom: 0;
+        gap: 10px;
+    }
+    .received_note_box .tab_group .tab_content > div {
+        padding: 10px 15px;
+    }
+    .received_note_box .tab_group .tab_btn > ul > li > a {
+        font-size: 22px;
     }
     .comu_calendar ul li a {
         flex-direction: column;

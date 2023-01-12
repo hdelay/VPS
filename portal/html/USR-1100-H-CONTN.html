@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벤처투자종합포털</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub js -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/common.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon/favicon-16.png" sizes="16x16"> 
+    <link rel="icon" href="../images/favicon/favicon-32.png" sizes="32x32"> 
+    <link rel="icon" href="../images/favicon/favicon-48.png" sizes="48x48"> 
+    <link rel="icon" href="../images/favicon/favicon-64.png" sizes="64x64"> 
+    <link rel="icon" href="../images/favicon/favicon-128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="../images/favicon/favicon-144.png">
+    <link rel="shortcut icon" href="../images/favicon/favicon-144.png">
+    <link rel="icon" href="../images/favicon.ico">
+
+</head>
+<body>
+<div class="wrap">
+    <!-- skip nav -->
+    <div class="skip_nav" title="스킵 네비게이션">
+        <ul>
+            <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+            <li><a href="#container" title="본문 바로가기">본문 바로가기</a></li>
+        </ul>
+    </div>
+
+    <!-- header -->
+    <header>
+        <div class="header_top">
+            <h1><a href="./main.html">벤처투자포털</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">벤처투자매칭</a>
+                        <ul>
+                            <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
+                            <li><a href="./USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
+                            <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
+                            <li><a href="./USR-1040-F-DASH.html">통합공시</a></li>
+                            <li>
+                                <a href="javascript:void(0);">벤처투자마트</a>
+                                <ul>
+                                    <li><a href="./USR-1051-H-CONTN.html">- 벤처투자마트란?</a></li>
+                                    <li><a href="./USR-1054-F-FORM.html">- 벤처투자마트 신청</a></li>
+                                    <li><a href="./USR-1056-F-LIST.html">- 신청 정보 확인</a></li>
+                                    <li><a href="./USR-1052-B-LIST.html">- 벤처투자마트 공지</a></li>
+                                    <li><a href="./USR-1053-B-LIST.html">- 벤처투자마트 FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">주식유통정보</a>
+                                <ul>
+                                    <li><a href="./USR-1061-H-CONTN.html">- VC구주유통망</a></li>
+                                    <li><a href="./USR-1063-H-CONTN.html">- M&A 거래정보망</a></li>
+                                    <li><a href="./USR-1064-H-CONTN.html">- 비상장주식거래플랫폼</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">투자가이드</a>
+                        <ul>
+                            <li><a href="./USR-1100-H-CONTN.html">벤처/개인투자조합 안내 가이드</a></li>
+                            <li><a href="./USR-1110-H-CONTN.html">벤처투자 가이드 A to Z</a></li>
+                            <li><a href="./USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                            <li><a href="./USR-02-04-B-LIST.html">벤처투자 FAQ</a></li>
+                            <li><a href="./USR-1150-B-LIST.html">용어사전</a></li>
+                            <li><a href="./USR-1161-H-CONTN.html">교육</a></li>
+                            <li><a href="./USR-1162-B-LIST.html">벤처투자상담</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">정보서비스</a>
+                        <ul>
+                            <li><a href="./USR-1211-H-CONTN.html">정책</a></li>
+                            <li><a href="./USR-1213-H-CONTN.html">법령</a></li>
+                            <li>
+                                <a href="javascript:void(0);">통계</a>
+                                <ul>
+                                    <li><a href="./USR-1220-F-DASH.html">- 대시보드</a></li>
+                                    <li><a href="./USR-1221-F-DASH.html">- 투자실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">정보광장</a>
+                                <ul>
+                                    <li><a href="./USR-1231-B-LIST.html">- 통계/연구 보고서</a></li>
+                                    <li><a href="./USR-1232-B-LIST.html">- 뉴스레터 웹진</a></li>
+                                    <li><a href="./USR-1234-B-LIST.html">- 발행물</a></li>
+                                    <li><a href="./USR-1235-B-LIST.html">- 자료실</a></li>
+                                    <li><a href="./USR-1236-H-CONTN.html">- 프로그램</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">구인구직</a>
+                                <ul>
+                                    <li><a href="./USR-1241-F-LIST.html">- 채용공고</a></li>
+                                    <li><a href="./USR-1242-F-LIST.html">- 인력Pool</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./USR-12511-H-CONTN.html">업무처리지원</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">벤처투자포털</a>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">포털소개</a>
+                                <ul>
+                                    <li><a href="./USR-1310-H-CONTN.html">- 포털소개</a></li>
+                                    <li><a href="./USR-1311-H-CONTN.html">- BI소개</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./USR-1320-B-LIST.html">공지사항</a></li>
+                            <li><a href="./USR-1330-F-LIST.html">커뮤니티</a></li>
+                            <li><a href="./USR-1341-F-LIST.html">벤처투자 TALK</a></li>
+                            <li>
+                                <a href="javascript:void(0);">벤처투자 불법신고</a>
+                                <ul>
+                                    <li><a href="./USR-1350-F-FORM.html">- 부당행위 신고</a></li>
+                                    <li><a href="./USR-1350-F-LIST.html">- 신고내역확인</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./USR-1361-H-CONTN.html">유관기관 안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util_box">
+                <ul class="btn_login_box">
+                    <li><a href="./USR-2020-F-FORM.html">로그인</a></li>
+                    <li><a href="./USR-2009-F-FORM.html">회원가입</a></li>
+                </ul>
+                <div class="search_box">
+                    <div class="search_inp">
+                        <input type="text" id="search_inp">
+                        <label for="search_inp" class="hidden">검색어 입력</label>
+                    </div>
+                    <button>검색</button>
+                </div>
+                <a href="./USR-2210-F-LIST.html" class="btn_sitemap" title="사이트맵">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="" class="btn_allmenu" title="모바일 전체메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div class="allmenu_box">
+            <div class="allmenu_box_header">
+                <div class="logo_m"><a href=""></a></div>
+                <div class="allmenu_util">
+                    <ul>
+                        <li class="login"><a href="">로그인</a></li>
+                        <li class="logout"><a href="">로그아웃</a></li>
+                        <li class="join"><a href="">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul>
+                <li class="on">
+                    <a href="javascript:void(0);">벤처투자매칭</a>
+                    <ul>
+                        <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
+                        <li><a href="./USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
+                        <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
+                        <li><a href="./USR-1040-F-DASH.html">통합공시</a></li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">벤처투자마트</a>
+                            <ul>
+                                <li><a href="./USR-1051-H-CONTN.html">벤처투자마트란?</a></li>
+                                <li><a href="./USR-1054-F-FORM.html">벤처투자마트 신청</a></li>
+                                <li><a href="./USR-1056-F-LIST.html">신청 정보 확인</a></li>
+                                <li><a href="./USR-1052-B-LIST.html">벤처투자마트 공지</a></li>
+                                <li><a href="./USR-1053-B-LIST.html">벤처투자마트 FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">주식유통정보</a>
+                            <ul>
+                                <li><a href="./USR-1061-H-CONTN.html">VC구주유통망</a></li>
+                                <li><a href="./USR-1063-H-CONTN.html">M&A 거래정보망</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">투자가이드</a>
+                    <ul>
+                        <li><a href="./USR-1100-H-CONTN.html">벤처/개인투자조합 안내 가이드</a></li>
+                            <li><a href="./USR-1110-H-CONTN.html">벤처투자 가이드 A to Z</a></li>
+                        <li><a href="./USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                        <li><a href="./USR-02-04-B-LIST.html">벤처투자 FAQ</a></li>
+                        <li><a href="./USR-1150-B-LIST.html">용어사전</a></li>
+                        <li><a href="./USR-1161-H-CONTN.html">교육</a></li>
+                        <li><a href="./USR-1162-B-LIST.html">벤처투자상담</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">정보서비스</a>
+                    <ul>
+                        <li><a href="./USR-1211-H-CONTN.html">정책</a></li>
+                        <li><a href="./USR-1213-H-CONTN.html">법령</a></li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">통계</a>
+                            <ul>
+                                <li><a href="./USR-1220-F-DASH.html">대시보드</a></li>
+                                <li><a href="./USR-1221-F-DASH.html">투자실적</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">정보광장</a>
+                            <ul>
+                                <li><a href="./USR-1231-B-LIST.html">통계/연구 보고서</a></li>
+                                <li><a href="./USR-1232-B-LIST.html">뉴스레터 웹진</a></li>
+                                <li><a href="./USR-1234-B-LIST.html">발행물</a></li>
+                                <li><a href="./USR-1235-B-LIST.html">자료실</a></li>
+                                <li><a href="./USR-1236-H-CONTN.html">프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">구인구직</a>
+                            <ul>
+                                <li><a href="./USR-1241-F-LIST.html">채용공고</a></li>
+                                <li><a href="./USR-1242-F-LIST.html">인력Pool</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">업무처리지원</a>
+                            <ul>
+                                <li><a href="./USR-12511-H-CONTN.html">VC 경력 확인</a></li>
+                                <li><a href="./USR-1252-F-LIST.html">신청내역확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">벤처투자포털</a>
+                    <ul>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">포털소개</a>
+                            <ul>
+                                <li><a href="./USR-1310-H-CONTN.html">포털소개</a></li>
+                                <li><a href="./USR-1311-H-CONTN.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./USR-1320-B-LIST.html">공지사항</a></li>
+                        <li><a href="./USR-1330-F-LIST.html">커뮤니티</a></li>
+                        <li><a href="./USR-1341-F-LIST.html">벤처투자 TALK</a></li>
+                        <li class="depth3">
+                            <a href="javascript:void(0);">벤처투자 불법신고</a>
+                            <ul>
+                                <li><a href="./USR-1350-F-FORM.html">부당행위 신고</a></li>
+                                <li><a href="./USR-1350-F-LIST.html">신고내역확인</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./USR-1361-H-CONTN.html">유관기관 안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="" class="allmenu_close" title="닫기"><span></span><span></span></a>
+        </div>
+    </header>
+    <div class="header_bg"></div>
+
+    <!-- quick menu -->
+    <aside class="quick_box">
+        <ul>
+            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
+            <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
+            <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- conteiner -->
+    <div id="container" class="container type_02">
+        
+        <!-- sub title -->
+        <div class="tit_box sub_tit">
+            <h2>투자가이드</h2>
+        </div>
+        <!-- //sub title -->
+
+        <!-- main content -->
+        <div class="content_box">
+            
+            <!-- location -->
+            <div class="location">
+                <ul>
+                    <li class="home">
+                        <a href="./main.html">home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">투자가이드</a>
+                        <ul>
+                            <li><a href="">벤처투자매칭</a></li>
+                            <li><a href="">정보서비스</a></li>
+                            <li><a href="">벤처투자포털</a></li>
+                        </ul>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:void(0);">벤처/개인투자조합 안내 가이드</a>
+                        <ul>
+                            <li><a href="./USR-1110-H-CONTN.html">벤처투자 가이드 A to Z</a></li>
+                            <li><a href="./USR-02-02-F-LIST.html">맞춤투자 가이드</a></li>
+                            <li><a href="./USR-02-04-B-LIST.html">벤처투자 FAQ</a></li>
+                            <li><a href="./USR-1150-B-LIST.html">용어사전</a></li>
+                            <li><a href="./USR-1161-H-CONTN.html">교육</a></li>
+                            <li><a href="./USR-1162-B-LIST.html">벤처투자상담</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="inner">
+
+                <div class="tit_box">
+                    <h3>벤처/개인투자조합 안내 가이드</h3>
+                    <span>메뉴에 대한 설명을 상세하게 작성합니다. 메뉴에 대한 설명을 상세하게 작성합니다.</span>
+                </div>
+
+                <div class="guide_group_box">
+                    <div class="guide_box">
+                
+                        <div class="tit_box">
+                            <h4><span></span>벤처투자조합 안내</h4>
+                        </div>
+    
+                        <div class="back_box">
+                            <div class="img"></div>
+                            <div class="txt">
+                                <p>벤처투자 촉진에 관한 법률 시행령 제48조(권한의 위임·위탁)에 의해 ‘벤처투자조합 등록·변경·해산·청산 결과 보고의 접수 및 확인’에 관한 업무를 수행합니다.</p>
+                            </div>
+                        </div>
+    
+                        <div class="btn_box_group type_01">
+                            <div class="btn_box">
+                                <a href="http://www.kvca.or.kr/contents/support/support1_10.html?sm=2_1_1_1" class="btn_blue" target="_blank" title="새 창으로 열림">벤처투자조합 바로가기 ></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="guide_box">
+                    
+                        <div class="tit_box">
+                            <h4><span></span>개인투자조합 안내</h4>
+                        </div>
+    
+                        <div class="back_box">
+                            <div class="img"></div>
+                            <div class="txt">
+                                <p>개인 등이 벤처투자와 그 성과의 배분을 주된 목적으로 결성하는 조합으로서 벤처투자 촉진에 관한 법률 제12조에 따라 등록한 조합</p>
+                            </div>
+                        </div>
+    
+                        <div class="btn_box_group type_01">
+                            <div class="btn_box">
+                                <a href="https://www.kban.or.kr/jsp/ext/iia/info.jsp" class="btn_blue" target="_blank" title="새 창으로 열림">개인투자조합 바로가기 ></a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- //main content -->
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_top">
+            <ul class="footer_link">
+                <li><a href="./USR-4010-H-CONTN.html"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="./USR-4110-H-CONTN.html">서비스 이용약관</a></li>
+                <li><a href="./USR-4210-H-CONTN.html">이메일무단수집거부</a></li>
+                <li><a href="./USR-4310-H-CONTN.html">저작권보호방침</a></li>
+            </ul>
+            <div class="familysite_box">
+                <div class="family_select">
+                    <label for="sel_family" class="hidden">관련사이트 선택</label>
+                    <select id="sel_family">
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트좀더긴텍스트</option>
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트</option>
+                    </select>
+                </div>
+                <button>GO</button>
+            </div>
+        </div>
+        <!-- footer 전화번호 수정 -->
+        <div class="footer_bottom">
+            <address>(06595) 서울특별시 서초구 서초대로 45길 16 VR빌딩 2층</address>
+            <div class="tel_num">
+                <dl>
+                    <dt>TEL : </dt>
+                    <dd>02-2156-2100</dd>
+                </dl>
+                <dl>
+                    <dt>FAX : </dt>
+                    <dd>02-2156-2112 / 02-2156-2118</dd>
+                </dl>
+            </div>
+            <span>Copyright(C) 2022 KVCA. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</div>
+
+<!-- 경고팝업 3 -->
+<div id="alpop_03" class="dialog alpop_box">
+
+    <div class="pop_header">
+        <span class="img3"></span>
+    </div>
+
+    <div class="pop_content">
+        내 즐겨찾기에 추가하시겠습니까?
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box">
+            <button class="btn_gray pop_close">취소</button>
+            <button class="btn_mint">확인</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -235,6 +235,12 @@
 .btn_box .btn_navy {
     background-color: #303f9f;
 }
+.btn_box .btn_orange {
+    background-color: #ff7e00;
+}
+.btn_box .btn_pink {
+    background-color: #ca4873;
+}
 .btn_box.bg * {
     font-size: var(--font-common);
     color: #333;
@@ -398,6 +404,8 @@
     width: auto;
 }
 .tit_box h5 {
+    display: flex;
+    align-items: center;
     position: relative;
     padding-left: 20px;
     margin-bottom: 15px;
@@ -1758,7 +1766,7 @@
 }
 .tbl_longcard > ul > li .tit > ul {
     display: block;
-    width: 100%;
+    width: calc(100% - 90px);
 }
 .tbl_longcard > ul > li .info {
     display: flex;
@@ -2548,10 +2556,11 @@
     flex-direction: column;
     gap: 5px;
     position: relative;
-    padding: 22px;
+    padding: 22px 22px 57px 22px;
     padding-right: 30px;
     box-sizing: border-box;
     min-height: 195px;
+    height: 100%;
     border-radius: 10px;
     border: 1px solid #d9e1e7;
 }
@@ -2561,13 +2570,13 @@
     font-weight: 300;
     word-break: break-all;
 }
-.tbl_card_list.type_01 > ul > li .content.open span {
+/* .tbl_card_list.type_01 > ul > li .content.open span {
     height: 93px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-}
+} */
 .tbl_card_list.type_01.nomore > ul > li .content {
     min-height: 170px;
 }
@@ -2748,6 +2757,19 @@
     background: url(../images/ico/ico_add.png) no-repeat center;
     margin-left: 8px;
     font-size: 14px;
+}
+.tbl_card_list .list_info.reverse ul li .btn_box > * {
+    background-color: #3949ab;
+    border-color: #3949ab;
+    color: #fff;
+}
+.tbl_card_list .list_info.reverse ul li.on .btn_box > * {
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    color: #333;
+}
+.tbl_card_list .list_info.reverse ul li .btn_box > *.comu_add::after {
+    background: url(../images/ico/ico_add_w.png) no-repeat center;
 }
 .list_info ul li.on .btn_box > * {
     background-color: #3949ab;
@@ -3614,6 +3636,9 @@ a.ui-button:active,
     .content_list_box .tit_box h4 {
         margin-top: 35px;
     }
+    .list_item .tit_box.row .btn_box.pd0 {
+        margin-top: 35px !important;
+    }
     .content_list_box dl {
         gap: 15px;
         padding: 0 15px;
@@ -3819,6 +3844,9 @@ a.ui-button:active,
         font-size: 17px;
     }
     .tbl_longcard > ul > li .tit strong a {
+        width: 100%;
+    }
+    .tbl_longcard > ul > li .tit > ul {
         width: 100%;
     }
     .tbl_longcard > ul > li.notice .tit strong::before {

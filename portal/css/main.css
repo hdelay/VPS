@@ -136,6 +136,10 @@ header.headerfix .header_top {
     font-weight: 600;
     color: #3f71c4;
 }
+.main_quickmenu ul.etc_quickmenu li a {
+    font-weight: 500;
+    color: #7000e3;
+}
 .main_quickmenu .mymenu {
     display: flex;
     align-items: center;
@@ -395,6 +399,12 @@ header.headerfix .header_top {
 }
 .second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(4) a:hover span {
     background-image: url(../images/ico/ico_main_sec1_shortcut2_04_on.png);
+}
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(5) a span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_05_off.png);
+}
+.second .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(5) a:hover span {
+    background-image: url(../images/ico/ico_main_sec1_shortcut2_05_on.png);
 }
 
 .third .shortcuts_box .swiper-wrapper .swiper-slide:nth-child(1) a span {
@@ -824,13 +834,13 @@ header.headerfix .header_top {
     font-size: 24px;
     font-weight: 800;
 }
-.sec3 .main_statistics_box dl:nth-child(1) dt > span {
+.sec3 .main_statistics_box dl:nth-child(2) dt > span {
     background-image: url(../images/ico/ico_main_sec03_tab_01_off.png);
 }
-.sec3 .main_statistics_box dl:nth-child(2) dt > span {
+.sec3 .main_statistics_box dl:nth-child(3) dt > span {
     background-image: url(../images/ico/ico_main_sec03_tab_02_off.png);
 }
-.sec3 .main_statistics_box dl:nth-child(3) dt > span {
+.sec3 .main_statistics_box dl:nth-child(4) dt > span {
     background-image: url(../images/ico/ico_main_sec03_tab_03_off.png);
 }
 .sec3 .main_statistics_box dl dt .tit span {
@@ -978,7 +988,7 @@ header.headerfix .header_top {
 .sec4 .inner .board_group li dl {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     height: 100%;
 }
 .sec4 .inner .board_group li dl dt {
@@ -1075,16 +1085,24 @@ header.headerfix .header_top {
     font-weight: 400;
 }
 .sec4 .inner .board_group li dl dd a span {
-    margin-top: 20px;
+    margin-top: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     width: 100%;
-    line-height: 27px;
+    line-height: 20px;
     font-size: 16px;
     color: #767676;
+}
+.sec4 .inner .board_group li dl dd .nodata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 22px;
+    box-sizing: border-box;
 }
 .sec4 .inner .board_group li dl dd .txt > span {
     text-align: right;
