@@ -121,6 +121,9 @@ header .header_top nav > ul > li:nth-child(1) > ul,
 header .header_top nav > ul > li:nth-child(2) > ul {
     width: 200%;
 }
+header .header_top nav > ul > li:nth-child(2) > ul {
+    width: 260%;
+}
 /* header .header_top nav > ul > li > ul::after {
     content: "";
     display: block;
@@ -4444,13 +4447,16 @@ a.ico_folder::after {
     font-size: 23px;
     font-weight: 500;
 }
-.mypage_group .top .info_box .info_content .right .tit.talk a::after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: url(../images/ico/ico_setting.png) no-repeat center;
-    margin-left: 10px;
+.mypage_group .tit.talk.public_box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.mypage_group .tit.talk.public_box .public_btn {
+    position: inherit;
+}
+.mypage_group .tit.talk.public_box .public_btn .btn_box a {
+    font-size: 15px;
 }
 .mypage_group .top .info_box .info_content .right .sns_state {
     display: flex;
@@ -5969,6 +5975,9 @@ footer .footer_bottom {
     }
     header .header_top nav > ul > li > a {
         font-size: 16px;
+    }
+    header .header_top nav > ul > li:nth-child(2) > ul {
+        width: 178%;
     }
 }
 @media screen and (max-width: 1280px) {

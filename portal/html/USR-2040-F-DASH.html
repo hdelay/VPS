@@ -368,7 +368,39 @@
 
                                 <div class="right">
                                     <!-- 20230112 수정 -->
-                                    <div class="tit talk"><a href="">벤처투자TALK</a></div>
+                                    <div class="tit talk public_box">
+                                        <a href="">벤처투자TALK</a>
+                                        <div class="public_btn">
+                                            <button>설정</button>
+                                            <!-- 상태변경 팝업 -->
+                                            <div class="public_content">
+                                                <div class="rdo_box">
+                                                    <span>
+                                                        <input type="radio" id="radio_001" name="rdo_group_02" checked="">
+                                                        <label for="radio_001">전체공개</label>
+                                                    </span>
+                                                    <span>
+                                                        <input type="radio" id="radio_002" name="rdo_group_02">
+                                                        <label for="radio_002">파트너 공개</label>
+                                                    </span>
+                                                    <span>
+                                                        <input type="radio" id="radio_003" name="rdo_group_02">
+                                                        <label for="radio_003">비공개 (본인만 공개)</label>
+                                                    </span>
+                                                </div>
+                
+                                                <div class="btn_box_group">
+                                                    <div class="btn_box">
+                                                        <a href="" class="btn_gray shadow close">취소</a>
+                                                    </div>
+                                                    <div class="btn_box">
+                                                        <a href="javascript:void(0);" class="btn_blue shadow close" onclick="onShowToast('상태가 변경되었습니다.')">수정</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //상태변경 팝업 -->
+                                        </div>
+                                    </div>
                                     <!-- //20230112 수정 -->
                                     <div class="sns_state">
                                         <div class="post">
@@ -822,6 +854,9 @@
     <!-- //pop_content -->
 
 </div>
+
+<!-- 토스트 메세지 -->
+<div class="toast_box"><div class="txt"></div></div>
 
 </body>
 </html>
