@@ -24,6 +24,7 @@ $(function(){
                     $('header').removeClass('font_black');
                     $('.etc_quickmenu').removeClass('orange');
                 } else if($(this).index() === 2){
+                    $('.main_quickmenu').removeClass('black');
                     $('.etc_quickmenu').addClass('orange');
                 } else if($(this).index() === 3){
                     $('header').addClass('headerfix');
