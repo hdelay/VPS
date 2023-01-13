@@ -2299,6 +2299,14 @@ a.ico_folder::after {
 .investment_performance_box .all .tit_box .tbl_info_etc {
     margin-bottom: 0;
 }
+.investment_performance_box > .all .tbl_investment.wid table tr td {
+    min-width: 95px;
+    max-width: 95px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    box-sizing: border-box;
+}
 .investment_performance_box.type_02 > div {
     width: calc(50% - 25px);
     padding: 0;
@@ -5873,18 +5881,20 @@ footer .footer_bottom {
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 25%);
     margin: 10px;
-    padding: 30px 0 0 0;
+    padding: 0;
     box-sizing: border-box;
     text-align: center;
+    overflow: hidden;
 }
 .layer-popup img {
+    display: block;
     max-width: 100%;
     max-height: calc(100vh - 196px);
 }
 .layer-link-wrap {
     display: flex;
     justify-content: center;
-    margin: 30px 0 0;
+    margin: 10px 0 0;
 }
 .layer-link-wrap a {
     display: block;
@@ -5899,7 +5909,7 @@ footer .footer_bottom {
     position: relative;
     align-items: center;
     padding: 15px 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     box-sizing: border-box;
     border-top: 1px solid #d9e0e6;
 }
