@@ -981,6 +981,8 @@ header.font_black .btn_login_box li a::before {
 
 /* 통합공시 */
 .integrated_box .img {
+    display: flex;
+    justify-content: center;
     padding: 20px 0;
     border-top: 1px solid #e8e7e7;
     border-bottom: 1px solid #e8e7e7;
@@ -1352,19 +1354,32 @@ a.ico_folder::after {
 .vc_faq + .btn_box_group .btn_box * {
     padding: 10px 20px;
 }
+.vc_tel {
+    margin-top: 40px;
+}
+.vc_tel h5 {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
 .vc_tel dl {
     flex-direction: row;
     gap: 5px;
     align-items: center;
 }
+.vc_tel dl::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #9ba7f8;
+}
 .vc_tel dl dt {
     font-weight: 500;
 }
-.vc_tel dl dt::after {
-    content: ":";
-}
 .vc_tel dl dd {
-    font-size: 15px;
     font-weight: 400;
 }
 .vc_tel dl dd strong {
@@ -6474,6 +6489,7 @@ footer .footer_bottom {
 
     /* 통합공시 */
     .integrated_box .img {
+        justify-content: flex-start;
         width: 100%;
         overflow: auto;
     }
@@ -6577,10 +6593,12 @@ footer .footer_bottom {
     .content_list_box .vc_tel {
         padding: 15px;
     }
+    .vc_tel h5 {
+        padding-left: 0;
+    }
     .vc_tel dl {
         padding: 0;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
     }
     .vc_tel dl dd {
         word-break: keep-all;

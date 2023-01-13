@@ -1468,7 +1468,7 @@
     color: #b4b3b3;
 }
 .tbl_box_list ul li a .employment_status .dday {
-    font-size: 45px;
+    font-size: 32px;
     font-weight: 600;
     color: #b4b3b3;
 }
@@ -3041,6 +3041,10 @@
     justify-content: center;
     align-items: center;
     width: auto;
+}
+.chk_list.type_01 .chk_box input ~ label::before {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* 체크박스 리스트타입2 :: 투자자 검색 */
