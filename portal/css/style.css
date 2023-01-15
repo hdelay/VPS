@@ -589,7 +589,7 @@ header.font_black .btn_login_box li a::before {
 }
 .search_item.board_infobox .btn_box > * {
     padding: 10px 20px;
-    min-width: 160px;
+    min-width: 100px;
 }
 .search_item.board_infobox .more {
     padding: 10px 20px;
@@ -2477,7 +2477,7 @@ a.ico_folder::after {
     align-items: center;
     width: 100%;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     background-color: #f6f7f9;
     border: 1px solid #d9e1e7;
 }
@@ -2494,7 +2494,7 @@ a.ico_folder::after {
     font-weight: 500;
 }
 .design_color .color_box {
-    width: 40%;
+    width: 22%;
     height: 100%;
     border-radius: 10px;
 }
@@ -2507,6 +2507,9 @@ a.ico_folder::after {
 .design_color .color_box.navy {
     background-color: rgb(2, 47, 135);
 }
+.design_color .color_box.violet {
+    background-color: rgb(214, 118, 235);
+}
 
 /* 커뮤니티 */
 .community_main_btn {
@@ -2516,7 +2519,7 @@ a.ico_folder::after {
     box-sizing: border-box;
 }
 .community_main_btn .btn_box {
-    width: auto;
+    width: 100px;
     flex: none;
 }
 .tab_group.community .tab_btn ul {

@@ -282,6 +282,9 @@ header.headerfix .header_top {
 .swiper-slide.first .total_tit .q_box {
     left: 66px;
 }
+.swiper-slide.first .total li:nth-child(even) .total_tit .q_box {
+    left: 77px;
+}
 .swiper-container .slide_wrap .inner .total li .total_content {
     display: flex;
     align-items: end;

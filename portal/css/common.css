@@ -2250,6 +2250,26 @@
     align-items: center;
     font-size: 14px;
     font-weight: 400;
+    gap: 10px;
+}
+.list_group_info .bottom ul li .btn_box {
+    flex: none;
+    position: relative;
+}
+.list_group_info .bottom ul li .btn_box .q_box {
+    flex: none;
+    width: auto;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    padding: 0;
+}
+.list_group_info .bottom ul li .btn_box .q_box button {
+    width: 21px;
+    padding: 0;
+}
+.list_group_info .bottom ul li .btn_box .q_box .q_content {
+    color: #333;
 }
 .list_group_info .bottom > ul > li + li::before {
     content: "ㅣ";
@@ -3045,6 +3065,14 @@
 .chk_list.type_01 .chk_box input ~ label::before {
     top: 50%;
     transform: translateY(-50%);
+}
+.chk_list.type_01 .chk_box input ~ label::after {
+    top: 50%;
+    transform: rotate(45deg) scale(0) translate(-68%, -50%);
+}
+.chk_list.type_01 .chk_box input:checked ~ label::after {
+    top: 50%;
+    transform: rotate(45deg) scale(1) translate(-68%, -50%);
 }
 
 /* 체크박스 리스트타입2 :: 투자자 검색 */
@@ -3996,6 +4024,16 @@ a.ui-button:active,
     .list_group_info .bottom > ul > li + li::before {
         display: none;
     }
+    /* .list_group_info .bottom ul li .q_box .q_content {
+        left: inherit;
+        right: 0;
+        transform: translateX(0);
+    }
+    .list_group_info .bottom ul li .q_box .q_content::before {
+        left: inherit;
+        right: 4px;
+        transform: translateX(0) rotate(45deg);
+    } */
 
     /* 카드게시판 :: 용어사전 */
     .tbl_card > ul {
