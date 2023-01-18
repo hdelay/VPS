@@ -2522,6 +2522,9 @@ a.ico_folder::after {
     width: 100px;
     flex: none;
 }
+.community_main_btn .btn_box.type_02 {
+    width: auto;
+}
 .tab_group.community .tab_btn ul {
     border-bottom: none;
     gap: 10px;

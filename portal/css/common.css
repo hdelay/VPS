@@ -4502,6 +4502,9 @@ a.ui-button:active,
     .tab_group .tab_btn ul > li {
         flex: none;
     }
+    .tab_group .tab_btn.type_01 > ul {
+        justify-content: flex-start;
+    }
     .tab_group .tab_btn.type_01 ul > li {
         min-width: 0;
     }
