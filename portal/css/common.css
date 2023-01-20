@@ -3223,6 +3223,8 @@
 .tab_group .tab_btn > ul > li > a {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-bottom: -1px;
     padding: 30px 0;
     font-size: 22px;

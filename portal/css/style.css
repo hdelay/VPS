@@ -2627,6 +2627,19 @@ a.ico_folder::after {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+.tab_submenu_group > a::after {
+    content: "";
+    display: flex;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(-17%, -31%);
+    transition: .2s;
+}
+.tab_submenu_group:hover > a::after {
+    transform: rotate(-135deg) translate(-10%, -8%);
+}
 
 /* 내 커뮤니티 목록 */
 .community_btn_list {
