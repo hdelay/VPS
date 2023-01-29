@@ -1558,6 +1558,10 @@
 .tbl_box_detail > table > tbody > tr.bg > td {
     background-color: #f9fafa;
 }
+/*230126 기업홍보 링크에 hover 추가*/
+.tbl_box_detail table tbody tr td div a:hover {
+    text-decoration: underline;
+}
 .tbl_box_detail table tr td .file_download {
     display: flex;
     align-items: center;
@@ -2796,6 +2800,12 @@
     background-color: #3949ab;
     border-color: #3949ab;
     color: #fff;
+}
+.list_info ul li.desc .btn_box > * {
+    background-color: #3949ab;
+    border-color: #3949ab;
+    color: #fff;
+    content: "▼";
 }
 .list_info ul li.on .btn_box > *.arrow::after {
     content: "▲";
