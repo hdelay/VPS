@@ -2233,20 +2233,23 @@
 .list_group_info .top .tit .details {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px 0px;
 }
 .list_group_info .top .tit .details li {
     font-size: 14px;
     font-weight: 400;
 }
-.list_group_info .top .tit .details li span + span::before {
+.list_group_info .top .tit .details li::after {
     content: "ㅣ";
-    margin-right: 5px;
+    margin: 0 5px 0 5px;
+}
+.list_group_info .top .tit .details li:last-child::after {
+    display: none;
 }
 .list_group_info .bottom ul {
     display: flex;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 10px;
 }
 .list_group_info .bottom ul li {
     display: flex;
@@ -2275,10 +2278,10 @@
 .list_group_info .bottom ul li .btn_box .q_box .q_content {
     color: #333;
 }
-.list_group_info .bottom > ul > li + li::before {
+/* .list_group_info .bottom > ul > li + li::before {
     content: "ㅣ";
     margin-right: 5px;
-}
+} */
 .list_group_info .bottom ul li .btn_box {
     width: auto;
     gap: 5px;
@@ -2403,7 +2406,16 @@
     color: #3f89e5;
 }
 .tbl_faq ul li a dl dt {
-    max-width: 170px;
+    display: flex;
+    align-items: center;
+    max-width: 290px;
+}
+.tbl_faq ul li a dl dt .sub_faq {
+    padding: 1px 5px;
+    background-color: #1c44c8;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fff;
 }
 .tbl_faq ul li a dl dd {
     max-width: calc(100% - 185px);
@@ -4019,11 +4031,14 @@ a.ui-button:active,
         padding: 5px 10px;
         font-size: 13px;
     }
+    .list_group_info .top .tit .details {
+        gap: 20px;
+    }
     .list_group_info .top .tit .details li {
         display: flex;
         flex-direction: column;
     }
-    .list_group_info .top .tit .details li span + span::before {
+    .list_group_info .top .tit .details li::after {
         display: none;
     }
     .list_group_info .bottom {

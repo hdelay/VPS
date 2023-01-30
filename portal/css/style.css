@@ -3914,6 +3914,9 @@ a.ico_folder::after {
 .explanation dl dd {
     font-weight: 400;
 }
+.explanation dl dd * {
+    font-weight: 400;
+}
 .member_type ~ .btn_box_group {
     justify-content: center;
     margin-top: 50px;
