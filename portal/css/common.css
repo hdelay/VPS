@@ -1827,6 +1827,28 @@
 .tbl_longcard.type_chk > ul > li .tit {
     padding: 25px 25px 25px 65px;
 }
+.tbl_longcard.type_chk.another > ul > li .tit {
+    justify-content: space-between;
+    padding: 25px 120px 25px 65px;
+}
+.tbl_longcard.type_chk.another > ul > li .tit strong {
+    width: auto;
+}
+.tbl_longcard.type_chk.another > ul > li .tit strong a {
+    width: auto;
+    max-width: 100%;
+}
+.tbl_longcard.type_chk.another > ul > li .tit ul {
+    display: flex;
+    width: auto;
+}
+.tbl_longcard.type_chk.another > ul > li .tit ul li {
+    display: flex;
+    align-items: center;
+}
+.tbl_longcard.type_chk.another > ul > li .tit ul li + li::before {
+    content: "ㅣ";
+}
 .tbl_longcard.type_chk > ul > li .info {
     top: 50%;
     bottom: inherit;
@@ -3972,6 +3994,15 @@ a.ui-button:active,
         top: 9px;
         left: inherit;
     }
+    .tbl_longcard.type_chk.another > ul > li .tit {
+        flex-direction: column;
+        padding: 15px 15px 15px 65px;
+    }
+    .tbl_longcard.type_chk.another > ul > li .tit ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
     .tbl_longcard.type_02 > ul > li {
         padding: 15px;
     }
