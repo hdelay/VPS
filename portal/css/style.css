@@ -733,7 +733,7 @@ header.font_black .btn_login_box li a::before {
 }
 .investment_list .tit .btn_box {
     flex: none;
-    width: 115px;
+    width: auto;
 }
 .investment_list .tit .btn_box * {
     background-color: #47ade7;
@@ -760,6 +760,20 @@ header.font_black .btn_login_box li a::before {
     border-radius: 10px;
     box-sizing: border-box;
     background: #fff;
+}
+.investment_list .investment_tit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #679cbb;
+    padding: 4px 0;
+    border-radius: 5px;
+    min-height: 44px;
+    margin-bottom: 10px;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 14px;
+    color: #fff;
 }
 .investment_list ul li.nodata {
     display: flex;
@@ -6480,6 +6494,22 @@ footer .footer_bottom {
     }
     .investment_list {
         padding: 15px;
+    }
+    .investment_list .tit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .investment_list .tit .btn_box_group {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .investment_list .tit .btn_box {
+        width: 100%;
+    }
+    .investment_list .investment_tit {
+        min-height: 0;
     }
     .investment_list ul {
         flex-direction: column;

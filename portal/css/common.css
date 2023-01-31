@@ -2440,7 +2440,7 @@
     color: #fff;
 }
 .tbl_faq ul li a dl dd {
-    max-width: calc(100% - 185px);
+    max-width: calc(100% - 240px);
     color: #333;
 }
 .tbl_faq ul li a dl dd::before {
