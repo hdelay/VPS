@@ -5448,6 +5448,24 @@ a.ico_folder::after {
     color: #fff;
 }
 
+/* quick_box sns */
+.quick_box.sns {
+    transform: translateY(-144%);
+    background: linear-gradient(#8553c4, #763fb5);
+    padding: 5px 0;
+    box-shadow: -1px 1px 7px 3px rgb(0 0 0 / 40%);
+}
+.quick_box.sns ul li {
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.quick_box.sns ul li a {
+    background-size: 35px auto;
+}
+.quick_box ul li.ico_instar a {background-image: url(../images/ico/ico_instar_w.png);}
+.quick_box ul li.ico_facebook a {background-image: url(../images/ico/ico_facebook_w.png);}
+.quick_box ul li.ico_blog a {background-image: url(../images/ico/ico_blog_w.png);}
+
 /* footer */
 footer {
     padding: 30px 0 110px 0;
