@@ -533,6 +533,11 @@ $(function(){
         $(this).parent().removeClass('on');
     });
 
+    // 메인 상단팝업
+    $('.top_pop_box .close button').on('click', function(){
+        $('body').removeClass('top_p_open');
+    });
+
 });
 
 //Toast 팝업

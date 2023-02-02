@@ -5981,6 +5981,126 @@ footer .footer_bottom {
 .not-today .layer-close img {
     width: 100%;
 }
+
+/* 상단팝업 */
+.top_pop_box {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    padding: 10px 45px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.top_pop_box .pop_content {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 176px);
+}
+.top_pop_box .ico_notice {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(../images/ico/ico_notice.svg) no-repeat center;
+    background-size: auto 100%;
+    margin-right: 10px;
+}
+.top_pop_box .pop_content .tit {
+    display: block;
+    width: calc(100% - 40px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.top_pop_box .pop_chk {
+    display: flex;
+    gap: 10px;
+}
+.top_pop_box .pop_chk .chk_box span {
+    width: auto;
+}
+.top_pop_box .pop_chk .close button {
+    display: flex;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.top_pop_box .pop_chk .close button span {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-indent: -9999px;
+    width: 100%;
+    height: 100%;
+}
+.top_pop_box .pop_chk .close button span::before,
+.top_pop_box .pop_chk .close button span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+.top_pop_box .pop_chk .close button span::before {
+    transform: rotate(45deg);
+}
+.top_pop_box .pop_chk .close button span::after {
+    transform: rotate(-45deg);
+}
+.top_pop_box .pop_chk .chk_box input ~ label {
+    align-items: center;
+    padding: 0 15px 0 35px;
+    height: 30px;
+    font-size: 13px;
+}
+.top_pop_box .pop_chk .chk_box input ~ label::before {
+    background: transparent;
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #d9e1e7;
+    z-index: -1;
+}
+.top_pop_box .pop_chk .chk_box input ~ label::after {
+    top: 9px;
+    left: 16px;
+    border-color: #ddd;
+    transform: rotate(45deg) scale(1);
+}
+.top_pop_box .pop_chk .chk_box input:checked ~ label {
+    color: #fff;
+}
+.top_pop_box .pop_chk .chk_box input:checked ~ label::before {
+    background-color: #3949ab;
+}
+.top_pop_box .pop_chk .chk_box input:checked ~ label::after {
+    border-color: #fff;
+}
+
+.top_p_open .top_pop_box {
+    display: flex;
+}
+.top_p_open .wrap {
+    padding-top: 70px;
+}
+.top_p_open header {
+    top: 70px;
+}
+.top_p_open .header_bg {
+    top: 70px;
+}
+.top_p_open .container::before {
+    top: 70px;
+}
 /* ============================================================
     미디어쿼리 max-width: 1600px
 ============================================================ */
@@ -5988,6 +6108,9 @@ footer .footer_bottom {
 @media screen and (max-width: 1600px) {
     /* header */
     header .header_top {
+        padding: 0 20px;
+    }
+    .top_pop_box {
         padding: 0 20px;
     }
     header .header_top nav > ul {
@@ -6322,6 +6445,83 @@ footer .footer_bottom {
     }
     header .header_top .search_box input {
         width: calc(100vw - 73px);
+    }
+
+    /* 상단팝업 */
+    .top_pop_box {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        height: 65px;
+        padding: 0;
+    }
+    .top_pop_box .pop_content {
+        width: 100%;
+        height: 35px;
+        justify-content: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .top_pop_box .pop_content .tit {
+        width: auto;
+        max-width: calc(100% - 40px);
+    }
+    .top_pop_box .pop_chk {
+        width: 100%;
+        height: 30px;
+        gap: 0;
+        border-top: 1px solid #d9e1e7;
+    }
+    .top_pop_box .pop_chk .chk_box {
+        width: 50%;
+        border-right: 1px solid #d9e1e7;;
+        box-sizing: border-box;
+    }
+    .top_pop_box .pop_chk .chk_box span {
+        width: 100%;
+    }
+    .top_pop_box .pop_chk .chk_box input ~ label {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .top_pop_box .pop_chk .chk_box input ~ label::before {
+        border: none;
+        border-radius: 0;
+        height: 100%;
+    }
+    .top_pop_box .pop_chk .chk_box input ~ label::after {
+        left: 35%;
+    }
+    .top_pop_box .pop_chk .close {
+        width: 50%;
+    }
+    .top_pop_box .pop_chk .close button {
+        width: 100%;
+        height: 100%;
+    }
+    .top_pop_box .pop_chk .close button span {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-indent: 0;
+    }
+    .top_pop_box .pop_chk .close button span::before,
+    .top_pop_box .pop_chk .close button span::after {
+        display: none;
+    }
+
+    .top_p_open .wrap {
+        padding-top: 65px;
+    }
+    .top_p_open header {
+        top: 65px;
+    }
+    .top_p_open .header_bg {
+        top: 65px;
+    }
+    .top_p_open .container::before {
+        top: 65px;
     }
 
     /* quick_box */
