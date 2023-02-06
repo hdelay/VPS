@@ -12,7 +12,7 @@
 
     <!-- pub js -->
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/common.js"></script>
 
     <!-- favicon -->
@@ -283,8 +283,8 @@
     <!-- quick menu -->
     <aside class="quick_box">
         <ul>
-            <li class="btn_bell"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_01">알림<span>333</span></a></li>
-            <li class="btn_bookmark"><a href="javascript:void(0)" class="dialog-link" data-target="#quick_02">즐겨찾기</a></li>
+            <li class="btn_bell"><a href="javascript:void(0)">알림<span>333</span></a></li>
+            <li class="btn_bookmark"><a href="javascript:void(0)">즐겨찾기</a></li>
             <li class="btn_chatbot"><a href="javascript:void(0)">챗봇</a></li>
             <li class="btn_top"><a href="javascript:void(0)"><span>TOP</span></a></li>
         </ul>
@@ -317,23 +317,45 @@
                         </ul>
                     </li>
                     <li class="selected">
-                        <a href="javascript:void(0);">투자자 검색</a>
+                        <a href="javascript:void(0);">모태출자펀드 운용사 찾기</a>
                         <ul>
+                            <li><a href="./USR-1020-F-LIST.html">투자자 검색</a></li>
                             <li><a href="./USR-1010-F-LIST.html">투자유치 희망기업 검색</a></li>
-                            <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
                             <li><a href="./USR-1040-F-DASH.html">통합공시</a></li>
+                            <li><a href="./USR-1030-B-LIST.html">기업홍보</a></li>
                             <li><a href="./USR-1051-H-CONTN.html">벤처투자마트</a></li>
                             <li><a href="./USR-1070-H-CONTN.html">모태출자펀드 운용사 찾기</a></li>
-                            <li><a href="./USR-1061-H-CONTN.html">주식유통정보</a></li>
+                            <li><a href="./USR-1051-H-CONTN.html">주식유통정보</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
             <div class="inner">
+
                 <div class="tit_box">
-                    <h3>투자자 검색</h3>
-                    <span>투자자를 검색합니다.</span>
+                    <h3>모태출자펀드 운용사 찾기</h3>
+                    <span>한국모태펀드에서 출자한 펀드를 운용하는 운용사(투자자)를 검색해보세요.</span>
+                </div>
+
+                <div class="search_item">
+    
+                    <div class="content_list_box">
+                        <div class="list_item">
+                            <div class="tit_box">
+                                <h4><span></span>한국모태펀드 소개</h4>
+                            </div>
+                            <dl>
+                                <dt><span>한국모태펀드란?</span></dt>
+                                <dd>
+                                    <ul>
+                                        <li>시장 수요를 반영한 회수재원의 재순환 방식으로 안정적 벤처투자재원 공급체계 마련을 위해 「벤처기업육성에 관한 특별조치법」에 근거하여 투자재원 공급은 정부가 하되, 투자의사결정은 전문기관 "한국벤처투자"가 담당하여 운용 중</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- 주요투자업종 -->
@@ -983,476 +1005,165 @@
                     </div>
                 </div>
 
-                <!-- 탭 -->
+                <!-- 검색결과 -->
                 <div class="tab_group">
                     <div class="tab_btn">
                         <ul>
-                            <li class="on"><a href="" rel="tab_content_01">투자사 보기</a></li>
-                            <li><a href="" rel="tab_content_02">펀드/조합 보기</a></li>
+                            <li class="on"><a href="" rel="tab_content_08">펀드/조합 보기</a></li>
                         </ul>
                     </div>
                     <div class="tab_content">
-                        <!-- 첫번째 탭 -->
-                        <div class="on tab_content_01">
-
-                            <!-- 리스트 -->
-                            <div class="tbl_card_list type_02">
-
-                                <!-- 테이블 상단정보 -->
-                                <div class="list_info">
-                                    <ul>
-                                        <li>
-                                            <div class="btn_box">
-                                                <button class="arrow">투자사명 순</button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="btn_box">
-                                                <button class="arrow">업력 순</button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="btn_box">
-                                                <button class="arrow">운용규모 순</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="total"></div>
-                                </div>
-                                <!-- //테이블 상단정보 -->
-
+                        <div class="on tab_content_08">
+                            
+                            <!-- 버튼 -->
+                            <div class="list_info">
                                 <ul>
                                     <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="mauve">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘엔에스벤처캐피탈<span>(운영중인 펀드 10개)</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 <em class="comma">100</em>억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#벤처기업</span>
-                                                <span>#이노비즈</span>
-                                            </div>
-                                        </a>
+                                        <div class="btn_box">
+                                            <button class="arrow">투자사명 순</button>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">투자사구분</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
+                                        <div class="btn_box">
+                                            <button class="arrow">업력 순</button>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="apricot">창투사</span>
-                                                <span class="lightgreen">창업기획자</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./USR-1020-F-DTL.html">
-                                            <div class="state_box type_02">
-                                                <span class="skyblue">신기술사</span>
-                                            </div>
-                                            <div class="tit">
-                                                엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                            </div>
-                                            <div class="info">
-                                                <span>업력 7년 11개월</span>
-                                                <span>운영규모 100억</span>
-                                                <span>이메일 ins-venture@naver.com</span>
-                                            </div>
-                                            <div class="hashtag">
-                                                <span>#세컨더리</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- 데이터 없을시 문구출력 -->
-                                    <li class="nodata">
-                                        데이터가 존재하지 않습니다.
+                                        <div class="btn_box">
+                                            <button class="arrow">운용규모 순</button>
+                                        </div>
                                     </li>
                                 </ul>
-
+                                <div class="total"></div>
                             </div>
-                            <!-- //리스트 -->
 
-                            <!-- paging -->
-                            <div class="board_btn">
-                                <div class="paging_box">
-                                    <ul>
-                                        <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
-                                        <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
-                                        <li class="on"><a href="">1</a></li>
-                                        <li><a href="">2</a></li>
-                                        <li><a href="">3</a></li>
-                                        <li><a href="">4</a></li>
-                                        <li><a href="">5</a></li>
-                                        <li class="next"><a href="" title="다음페이지로 이동"></a></li>
-                                        <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
-                                    </ul>
-                                </div>
+                            <!-- 테이블 info -->
+                            <div class="board_infobox">
+                                <div class="total">전체 <span>150</span>개의 펀드(결성총액 10,672억원)가 조회되었습니다.</div>
                             </div>
-                            <!-- //paging -->
+
+                            <!-- 테이블 -->
+                            <div class="tbl_box">
+                                <table>
+                                    <caption>검색결과 테이블</caption>
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="15%">
+                                        <col width="13%">
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2">번호</th>
+                                            <th scope="col" rowspan="2">펀드명</th>
+                                            <th scope="col">결성일</th>
+                                            <th scope="col">결성총액<br/>(투자금액)</th>
+                                            <th scope="col">존속기간</th>
+                                            <th scope="col">운용사명<br/>(전화번호)</th>
+                                            <th scope="col">담당자명<br/>연락처</th>
+                                            <th scope="col">담당자<br/>이메일</th>
+                                            <th scope="col">소재지</th>
+                                            <th scope="col">홈페이지</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" colspan="8">투자목적</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 2tr 한줄 -->
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">피앤피 아이피테크 크라우드 투자조합</td>
+                                            <td>2022-01-20</td>
+                                            <td>140억<br/>(20억)</td>
+                                            <td>8년</td>
+                                            <td>피앤피인베스트먼트<br/>(031-628-1280)</td>
+                                            <td>김진하<br/>(031-628-1280)</td>
+                                            <td>김진하<br/>clsrnclsrn1111@naver.com</td>
+                                            <td><a href="" class="btn_map">경기</a></td>
+                                            <td><a href="">http://www.intervaluep.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">특허기술, 창업초기, 전라북도, 서울</td>
+                                        </tr>
+                                        <!-- 2tr 한줄 -->
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">피앤피 아이피테크 크라우드 투자조합</td>
+                                            <td>2022-01-20</td>
+                                            <td>140억<br/>(20억)</td>
+                                            <td>8년</td>
+                                            <td>피앤피인베스트먼트<br/>(031-628-1280)</td>
+                                            <td>-<br/>-</td>
+                                            <td>-</td>
+                                            <td><a href="" class="btn_map">경기</a></td>
+                                            <td><a href="">http://www.intervaluep.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">특허기술, 창업초기, 전라북도, 서울</td>
+                                        </tr>
+                                        <!-- 2tr 한줄 -->
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">피앤피 아이피테크 크라우드 투자조합</td>
+                                            <td>2022-01-20</td>
+                                            <td>140억<br/>(20억)</td>
+                                            <td>8년</td>
+                                            <td>피앤피인베스트먼트<br/>(031-628-1280)</td>
+                                            <td>-<br/>-</td>
+                                            <td>-</td>
+                                            <td><a href="" class="btn_map">경기</a></td>
+                                            <td><a href="">http://www.intervaluep.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">특허기술, 창업초기, 전라북도, 서울</td>
+                                        </tr>
+                                        <!-- 2tr 한줄 -->
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">피앤피 아이피테크 크라우드 투자조합</td>
+                                            <td>2022-01-20</td>
+                                            <td>140억<br/>(20억)</td>
+                                            <td>8년</td>
+                                            <td>피앤피인베스트먼트<br/>(031-628-1280)</td>
+                                            <td>-<br/>-</td>
+                                            <td>-</td>
+                                            <td><a href="" class="btn_map">경기</a></td>
+                                            <td><a href="">http://www.intervaluep.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">특허기술, 창업초기, 전라북도, 서울</td>
+                                        </tr>
+                                        <!-- 2tr 한줄 -->
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">피앤피 아이피테크 크라우드 투자조합</td>
+                                            <td>2022-01-20</td>
+                                            <td>140억<br/>(20억)</td>
+                                            <td>8년</td>
+                                            <td>피앤피인베스트먼트<br/>(031-628-1280)</td>
+                                            <td>-<br/>-</td>
+                                            <td>-</td>
+                                            <td><a href="" class="btn_map">경기</a></td>
+                                            <td><a href="">http://www.intervaluep.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">특허기술, 창업초기, 전라북도, 서울</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                         </div>
-                        <!-- //첫번째 탭 -->
-
-                        <!-- 두번째 탭 -->
-                        <div class="tab_content_02">
-
-                            <!-- 리스트 -->
-                            <div class="tbl_card_list type_04">
-
-                                <!-- 테이블 상단정보 -->
-                                <div class="list_info">
-                                    <ul>
-                                        <li>
-                                            <div class="btn_box">
-                                                <button class="arrow">투자기간</button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="btn_box">
-                                                <button class="arrow">소진비율</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="total"></div>
-                                </div>
-                                <!-- //테이블 상단정보 -->
-
-                                <ul>
-                                    <li>    
-                                        <div class="state_box type_02">
-                                            <span class="mauve">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">투자사구분</span>
-                                        </div>
-                                        <div class="tit">
-                                            펀드명<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="apricot">창투사</span>
-                                            <span class="lightgreen">창업기획자</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="state_box type_02">
-                                            <span class="skyblue">신기술사</span>
-                                        </div>
-                                        <div class="tit">
-                                            엘비넥스트이노베이션펀드 1호<span>엘비인베스트먼트</span>
-                                        </div>
-                                        <div class="info">
-                                            <span>업력 7년 11개월</span>
-                                            <span>운영규모 100억</span>
-                                            <span>이메일 ins-venture@naver.com</span>
-                                        </div>
-                                        <div class="hashtag">
-                                            <span>#세컨더리</span>
-                                        </div>
-                                    </li>
-                                    <!-- 데이터 없을시 문구출력 -->
-                                    <li class="nodata">
-                                        데이터가 존재하지 않습니다.
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- //리스트 -->
-
-                            <!-- paging -->
-                            <div class="board_btn">
-                                <div class="paging_box">
-                                    <ul>
-                                        <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
-                                        <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
-                                        <li class="on"><a href="">1</a></li>
-                                        <li><a href="">2</a></li>
-                                        <li><a href="">3</a></li>
-                                        <li><a href="">4</a></li>
-                                        <li><a href="">5</a></li>
-                                        <li class="next"><a href="" title="다음페이지로 이동"></a></li>
-                                        <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- //paging -->
-
-                        </div>
-                        <!-- //두번째 탭 -->
                     </div>
                 </div>
-                <!-- //탭 -->
-                
+
             </div>
 
         </div>
@@ -1500,84 +1211,5 @@
     </footer>
 
 </div>
-
-<!-- 알림 팝업 -->
-<div id="quick_01" class="quick_dialog">
-
-    <!-- pop_header -->
-    <div class="pop_header">
-        <h5 class="alarm"><span></span>알림</h5>
-        <div class="more">
-            <button>더보기</button>
-        </div>
-    </div>
-    <!-- //pop_header -->
-
-    <!-- pop_content -->
-    <div class="pop_content">
-        <div class="pop_list">
-            <ul>
-                <li>
-                    <a href="">
-                        <span class="pop_state">쪽지알림</span>
-                        IR 자료 요청드립니다.
-                    </a>
-                    <span class="state_box"><span class="state_box red">NEW</span></span>
-                </li>
-                <li>
-                    <a href="">채용공고가 승인되었습니다.</a>
-                    <span class="state_box"><span class="state_box red">NEW</span></span>
-                </li>
-                <li>
-                    <a href="">커뮤니티 5월 정모 공지</a>
-                </li>
-                <li>
-                    <a href="">작성하신 IR 정보가 등록되었습니다.</a>
-                </li>
-                <li>
-                    <a href=""><span class="pop_state">쪽지알림</span>IR 자료 요청</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- //pop_content -->
-
-</div>
-
-<!-- 즐겨찾기 팝업 -->
-<div id="quick_02" class="quick_dialog">
-
-    <!-- pop_header -->
-    <div class="pop_header">
-        <h5 class="favorites"><span></span>즐겨찾기</h5>
-        <div class="more">
-            <button>더보기</button>
-        </div>
-    </div>
-    <!-- //pop_header -->
-
-    <!-- pop_content -->
-    <div class="pop_content">
-        <div class="pop_list">
-            <ul>
-                <li>
-                    <a href="">벤처기업 검색</a>
-                </li>
-                <li>
-                    <a href="">벤처투자마트 신청</a>
-                </li>
-                <li>
-                    <a href="">커뮤니티명 - 게시판명</a>
-                </li>
-            </ul>
-        </div>
-        <div class="btn_box">
-            <button>현재 메뉴 즐겨찾기 추가 +</button>
-        </div>
-    </div>
-    <!-- //pop_content -->
-
-</div>
-
 </body>
 </html>

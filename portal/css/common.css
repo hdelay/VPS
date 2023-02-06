@@ -342,6 +342,18 @@
 .btn_box_group.type_01.atoz .btn_box * {
     padding: 10px 60px;
 }
+.btn_map {
+    display: flex;
+    justify-content: center;
+}
+.btn_map::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/ico/ico_map.svg) no-repeat center left;
+    background-size: auto 97%;
+}
 
 /* 제목 */
 .tit_box {
@@ -1361,9 +1373,9 @@
 }
 .tbl_box table thead tr th {
     background-color: #f0f3f6;
-    border-bottom: 1px solid #333;
     padding: 25px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid #333;
     border-right: 1px solid #e2e2e2;
     vertical-align: middle;
     font-weight: 500;
@@ -2773,25 +2785,25 @@
 }
 
 /* 카드리스트 타입 :: 투자자 검색 */
-.tbl_card_list .list_info {
+.list_info {
     padding-bottom: 45px;
 }
-.tbl_card_list .list_info ul {
+.list_info ul {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
 }
-.tbl_card_list .list_info ul li .sel_box {
+.list_info ul li .sel_box {
     width: 170px;
 }
-.tbl_card_list .list_info ul li .sel_box select {
+.list_info ul li .sel_box select {
     padding: 15px;
 }
-.tbl_card_list .list_info ul li .btn_box {
+.list_info ul li .btn_box {
     min-width: 170px;
     width: auto;
 }
-.tbl_card_list .list_info ul li .btn_box > * {
+.list_info ul li .btn_box > * {
     padding: 15px;
     border: 1px solid #e6e6e6;
     border-radius: 5px;
@@ -2801,15 +2813,15 @@
     color: #333;
     cursor: pointer;
 }
-.tbl_card_list .list_info ul li .btn_box > *.arrow::after {
+.list_info ul li .btn_box > *.arrow::after {
     content: "▼";
     margin-left: 3px;
     margin-top: -2px;
 }
-.tbl_card_list .list_info ul li .btn_box > *.comu_add {
+.list_info ul li .btn_box > *.comu_add {
     align-items: center;
 }
-.tbl_card_list .list_info ul li .btn_box > *.comu_add::after {
+.list_info ul li .btn_box > *.comu_add::after {
     content: "";
     width: 11px;
     height: 11px;
@@ -2852,11 +2864,11 @@
     content: "▲";
     margin-left: 5px;
 }
-.tbl_card_list .list_info .total {
+.list_info .total {
     font-size: 18px;
     font-weight: 500;
 }
-.tbl_card_list .list_info .total strong {
+.list_info .total strong {
     margin-left: 7px;
     font-weight: 700;
     color: #475de6;
@@ -4289,35 +4301,35 @@ a.ui-button:active,
     }
 
     /* 카드리스트 타입 :: 투자자 검색 */
-    .tbl_card_list .list_info {
+    .list_info {
         padding-bottom: 20px;
     }
-    .tbl_card_list .list_info ul {
+    .list_info ul {
         justify-content: flex-start;
         gap: 5px;
         flex-wrap: wrap;
     }
-    .tbl_card_list .list_info ul li {
+    .list_info ul li {
         width: calc(50% - 5px);
     }
-    .tbl_card_list .list_info ul li .sel_box {
+    .list_info ul li .sel_box {
         width: 100%;
     }
-    .tbl_card_list .list_info ul li .btn_box {
+    .list_info ul li .btn_box {
         min-width: 0;
         width: 100%;
     }
-    .tbl_card_list .list_info ul li .btn_box > * {
+    .list_info ul li .btn_box > * {
         padding: 15px 10px;
         font-size: 12px;
     }
-    .tbl_card_list .list_info ul li .btn_box > *.comu_add {
+    .list_info ul li .btn_box > *.comu_add {
         flex-direction: row;
     }
-    .tbl_card_list .list_info ul li .btn_box > *.comu_add::after {
+    .list_info ul li .btn_box > *.comu_add::after {
         font-size: 11px;
     }
-    .tbl_card_list .list_info .total {
+    .list_info .total {
         padding-top: 20px;
     }
     .tbl_card_list.type_02 > ul {
