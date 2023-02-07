@@ -113,12 +113,12 @@
 	<!-- App js -->
 	<script src="http://www.vcs.go.kr/assets/js/app.js"></script>
 	
+	<style>
+		.table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {padding: 5px;}
+	</style>
 	
 </head>
 <body class="fixed-left">
-	
-	
-	
 	<script>
 		jQuery(function($){
 			//url클립보드 복사
@@ -156,37 +156,29 @@
 
 	<!-- Loader -->
 	<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
-	<!-- 에디터 파일첨부 -->
-	<!-- <div id="browser" class="mfp-hide">
-		<h5 class="modal-title mt-0">파일목록</h5>
-		<hr>
-		<div id="fileInofList">
-		
-		</div>
-	</div> -->
 	
 	<!-- Begin page -->
 	<div id="wrapper">
 
-<script src="http://www.vcs.go.kr/assets/pages/dashborad.js"></script>
-<script>
-jQuery(function($){
-	
-	//자식메뉴 없는 부모 엘리먼트 제거
-   	$('.has_third').each(function(idx, el){
-   		if( !$('.list-unstyled > li', el).size() ){
-   			$(el).remove();
-   		}
-   	});
-	//자식메뉴 없는 부모 엘리먼트 제거
-	$('.has_sub').each(function(idx, el){
-		if( !$('.list-unstyled > li', el).size() ){
-			$(el).remove();
-		}
+	<script src="http://www.vcs.go.kr/assets/pages/dashborad.js"></script>
+	<script>
+	jQuery(function($){
+		
+		//자식메뉴 없는 부모 엘리먼트 제거
+		$('.has_third').each(function(idx, el){
+			if( !$('.list-unstyled > li', el).size() ){
+				$(el).remove();
+			}
+		});
+		//자식메뉴 없는 부모 엘리먼트 제거
+		$('.has_sub').each(function(idx, el){
+			if( !$('.list-unstyled > li', el).size() ){
+				$(el).remove();
+			}
+		});
 	});
-});
 
-</script>
+	</script>
 
 	<!-- ========== Left Sidebar Start ========== -->
 	<div class="left side-menu">
@@ -378,433 +370,292 @@ jQuery(function($){
 	<div class="content-page">
 	    <!-- Start content -->
 	    <div class="content">
-<script>
-jQuery(function($){
-	
-	//페이지 타이틀 처리
-	var page_title = '';
-	var total = $('a.active').length;
-	
-	$('a.active').each(function(index){
-		if(total == 1){
-			if(index == total-1 ){
-				page_title += $(this).find('span').eq(0).text();
-			}
-		}else{
-			if(index == total-1 ){
-				page_title += $(this).text(); 
-			}
-		}
-	});
-	$('h3.page-title').text(page_title);
-	
-	//메뉴 location 처리
-	var seo = '';
-	//seo = '<li class="breadcrumb-item"><a href="#" >벤처투자종합포털</a></li>';
-	$('a.active').each(function(index){
-		seo += '<li class="breadcrumb-item';
-		if(index == total - 1 ){
-			seo += ' active';
-		}
-		seo += '">';
-		if(index < total - 1 ){
-			seo += '<a href="#">';
-		}
-		if(index == 0 ){
-			seo += $(this).find('span').eq(0).text();
-		} else {
-			seo += $(this).text(); 
-		}
-		if(index < total - 1 ){
-			seo += '</a>';
-		}
-		seo += '</li>';
-	});
-	$('.breadcrumb').html(seo);
-	
-	//로그아웃
-	$('#logout').on('click', function(e){
-		e.preventDefault();
-		$.ajax({
-			url : '/portal/cms/logout.do'
-			, type : 'get'
-			,dataType : 'json'
-		}).then(function(result){
-			if(result.success){
-				swal({
-	                type: 'success',
-	                title: result.text,
-	            }).then(function(){
-	            	location.href = '/portal/cms/login.do';
-	            });
-				//alert(data.text);
-			} else {
-				//...
-				swal("로그아웃 실패!", "서버문제로 로그아웃에 실패하였습니다.", "danger")
-				//alert('서버문제로 로그아웃에 실패하였습니다.');
-			}
-		}).fail(function(result){
-			swal("로그아웃 실패!", "로그아웃에 실패하였습니다.[fail]", "danger")
-		});
-		
-	});
-	
-	
-	getNonOpenNoteCnt();
-	//미확인 쪽지 수량
-	function getNonOpenNoteCnt(){
-		$.ajax({
-			url : '/portal/cms/note/nonOpenCnt.do'
-			, type : 'get'
-			,dataType : 'json'
-		}).then(function(result){
-			if(result.success){
-				if(result.successCnt > 0){
-					$('.nonOpenCnt').text(result.successCnt);
-				} else {
-					$('.nonOpenCnt').text('');
-				}
-			} else {
-				//...
-				console.error('미확인 쪽지 수량을 불러오지 못했습니다.');
-			}
-		}).fail(function(result){
-			console.error('미확인 쪽지 수량확인 실패!![fail]');
-		});
-	}
-		
-});
-</script>
-	
-	<!-- Top Bar Start -->
-	<div class="topbar">
-	
-	    <nav class="navbar-custom">
-	
-	        <ul class="list-inline float-right mb-0 mr-3">
-	        
-	            
-	            <li class="list-inline-item dropdown notification-list">
-	                <span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
-	            </li>
-	            
-	            
-	
-				
-	
-	            <li class="list-inline-item dropdown notification-list">
-	            	<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
-	                   aria-haspopup="false" aria-expanded="false">
-	                    <i class="fa fa-power-off noti-icon"></i>
-	                </a>
-	                
-	                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-	                    <a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
-	                    
-	                    
-		                    <a class="dropdown-item" href="http://www.vcs.go.kr/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
-	                    
-	                    
-	                    <a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
-	                </div>
-	            </li>
-	
-	        </ul>
-	
-	        <ul class="list-inline menu-left mb-0">
-	            <li class="list-inline-item">
-	                <button type="button" class="button-menu-mobile open-left waves-effect">
-	                    <i class="ion-navicon"></i>
-	                </button>
-	            </li>
+			<!-- Top Bar Start -->
+			<div class="topbar">
+			
+				<nav class="navbar-custom">
+			
+					<ul class="list-inline float-right mb-0 mr-3">
+					
+						
+						<li class="list-inline-item dropdown notification-list">
+							<span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
+						</li>
+						
+						
+			
+						
+			
+						<li class="list-inline-item dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+							aria-haspopup="false" aria-expanded="false">
+								<i class="fa fa-power-off noti-icon"></i>
+							</a>
+							
+							<div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+								<a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+								
+								
+									<a class="dropdown-item" href="http://www.vcs.go.kr/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
+								
+								
+								<a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+							</div>
+						</li>
+			
+					</ul>
+			
+					<ul class="list-inline menu-left mb-0">
+						<li class="list-inline-item">
+							<button type="button" class="button-menu-mobile open-left waves-effect">
+								<i class="ion-navicon"></i>
+							</button>
+						</li>
 
-	        </ul>
-	
-	        <div class="clearfix"></div>
-	
-	    </nav>
-	
-	</div>
-	<!-- Top Bar End -->
+					</ul>
+			
+					<div class="clearfix"></div>
+			
+				</nav>
+			
+			</div>
+			<!-- Top Bar End -->
 
-	        
-	        <div class="page-content-wrapper ">
-	            <div class="container-fluid">
-	            	<div class="row">
-                        <div class="col-sm-12">
+			<div class="page-content-wrapper ">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
 							<div class="page-title-box">
 								<div>
 									<div class="breadcrumb-item">
-										벤처투자마트 > 1차 신청 기업 상세 정보
+										관리자 통계화면
 									</div>
 								</div>
 							</div>
 						</div>
-	                </div>
-	
-					<!-- 정렬 / 검색 폼 -->
-					<div class="row">
-					    <div class="col-sm-12">
-					        <div class="card m-b-15">
-					        	<div class="card-header">
-									<h4 class="mt-0 header-title">기업 상세 정보</h4>
-								</div>
-					        
-					            <div class="card-body">
-					            
-									<!-- 테이블 -->
-									<div class="form-group row">
-										<div class="col-sm">
-											
-											<div class="table-responsive-lg">
-												<table class="table table-bordered">
-													<colgroup>
-														<col style="width: 15%;">
-														<col style="width: 35%;">
-														<col style="width: 15%;">
-														<col style="width: 35%;">
-													</colgroup>
-													<tbody>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">기업명</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username">
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">기업분류</th>
-															<td class="align-middle">
-																<select id="" name="" class="form-control">
-																	<option value="">선택</option>
-																	<option value="">법인</option>
-																</select>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">대표자명</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username">
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">사업자번호</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username">
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">종업원수</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username">
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">업종</th>
-															<td class="align-middle">
-																<select id="" name="" class="form-control">
-																	<option value="">선택</option>
-																	<option value="">법인</option>
-																</select>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">설립일</th>
-															<td class="align-middle">
-																<div class="form-inline">
-																	<input id="" name="" class="form-control mr-sm-2 mb-2 datepicker-ui" type="date" value="" autocomplete="off" size="10">
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">신청상태</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username" value="승인">
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">전화번호</th>
-															<td class="align-middle">
-																<div class="form-inline">
-																	<select id="" name="" class="form-control mr-2">
-																		<option value="" label="선택"></option>
-																		<option value="02">02</option>
-																		<option value="031">031</option>
-																		<option value="032">032</option>
-																		<option value="033">033</option>
-																		<option value="041">041</option>
-																		<option value="042">042</option>
-																		<option value="043">043</option>
-																		<option value="044">044</option>
-																		<option value="051">051</option>
-																		<option value="052">052</option>
-																		<option value="053">053</option>
-																		<option value="054">054</option>
-																		<option value="055">055</option>
-																		<option value="061">061</option>
-																		<option value="062">062</option>
-																		<option value="063">063</option>
-																		<option value="064">064</option>
-																		<option value="070">070</option>
-																	</select>
-																	 - <input id="adminTel2" name="adminTel2" class="form-control col-sm-3 ml-2 mr-2" type="text" value="" maxlength="4">
-																	 - <input id="adminTel3" name="adminTel3" class="form-control col-sm-3 ml-2" type="text" value="" maxlength="4">
-																	
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">메일주소</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input id="adminEmail" name="adminEmail" class="form-control" placeholder="ex)admin@cms.com" type="text" value="">
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">상담희망</th>
-															<td class="align-middle">
-																<div class="input-group">
-																	<input type="text" class="form-control" placeholder="" aria-label="Username" value="엔젤투자자" disabled>
-																</div>
-															</td>
-															<th class="text-center bg-light align-middle" scope="row">상담승인</th>
-															<td class="align-middle">
-																<select id="" name="" class="form-control">
-																	<option value="">엔젤투자자</option>
-																	<option value="">법인</option>
-																</select>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">매출액</th>
-															<td class="align-middle" colspan="3">
-																<div class="table-responsive-lg">
-																	<table class="table table-bordered">
-																		<colgroup>
-																			<col style="width: 33%;">
-																			<col style="width: 33%;">
-																			<col style="width: 33%;">
-																		</colgroup>
-																		<thead>
-																			<tr>
-																				<th scope="row" class="text-center bg-light align-middle">2021년</th>
-																				<th scope="row" class="text-center bg-light align-middle">2020년</th>
-																				<th scope="row" class="text-center bg-light align-middle">2019년</th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																			<tr>
-																				<td>
-																					<div class="input-group">
-																						<input id="" name="" class="form-control" type="text" value="">
-																						<span class="input-group-text" id="">원</span>
-																					</div>
-																				</td>
-																				<td>
-																					<div class="input-group">
-																						<input id="" name="" class="form-control" type="text" value="">
-																						<span class="input-group-text" id="">원</span>
-																					</div>
-																				</td>
-																				<td>
-																					<div class="input-group">
-																						<input id="" name="" class="form-control" type="text" value="">
-																						<span class="input-group-text" id="">원</span>
-																					</div>
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">주요제품</th>
-															<td class="align-middle" colspan="3">
-																<textarea class="form-control" id="" rows="3"></textarea>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">핵심사업</th>
-															<td class="align-middle" colspan="3">
-																<textarea class="form-control" id="" rows="3"></textarea>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">주소</th>
-															<td class="align-middle" colspan="3">
-																<div class="form-inline">
-																	<input id="zipcode" name="adminZipcode" class="form-control col-sm-3 mr-sm-2" placeholder="우편번호" type="text" value="">
-																	<button id="zipSearchBtn" class="btn btn-primary waves-effect waves-light">우편번호 찾기</button>
-																</div>
-																<div class="form-inline mt-2">
-																	<input id="zipcode" name="adminZipcode" class="form-control col-sm-3 mr-sm-2" placeholder="" type="text" value="">
-																	<input id="zipcode" name="adminZipcode" class="form-control col-sm-4 mr-sm-2" placeholder="" type="text" value="">
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">주요제품 이미지</th>
-															<td class="align-middle" colspan="3">
-																<a href="" title="다운로드">2022년 창업진흥원 홍보 리플렛(국문).pdf (4.6MB)</a>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">기업소개자료<br/>(IR자료, 사업계획서)</th>
-															<td class="align-middle" colspan="3">
-																<a href="" title="다운로드">2022년 창업진흥원 홍보 리플렛(국문).pdf (4.6MB)</a>
-															</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">최종처리자</th>
-															<td class="align-middle">성명(아이디)</td>
-															<th class="text-center bg-light align-middle" scope="row">소속</th>
-															<td class="align-middle">소속기관명</td>
-														</tr>
-														<tr>
-															<th class="text-center bg-light align-middle" scope="row">최종처리일시</th>
-															<td class="align-middle" colspan="3">YYYY-MM-DD HH:MM:SS</td>
-														</tr>
-													</tbody>
-												</table>
-														
-											</div>
-											
-											
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<button type="button" class="btn btn-success">승인</button>
-										<button class="btn btn-primary waves-effect waves-light" id="">수정</button>
-										<a href="" class="btn btn-secondary waves-effect m-l-5">목록</a>
-									</div>
-									
-					            </div>
-					        </div>
-					    </div>
 					</div>
 
-	                <!-- end row -->
-	
-	
-	            </div><!-- container -->
-	
-	
-	        </div> <!-- Page content Wrapper -->
+					<!-- 정렬 / 검색 폼 -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card m-b-15">
+								<div class="card-body">
+									<form id="adminNotice" action="/portal/cms/member/admin/list.do" method="get">
+										<div class="form-inline">
+											<div class="form-row mr-auto mt-2 form-inline">
+												<label class="mr-sm-2 mb-2">정렬조건</label>
+												<select name="pageSize" id="pageSize" class="form-control mr-sm-2 mb-2" title="페이지크기">
+													<option value="" selected="selected">목록 10개</option>
+												</select>
+												<select id="sortDirection" name="sortDirection" class="form-control mr-sm-2 mb-2" title="정렬방향">
+													<option value="DESC">신청일자 순</option>
+													<option value="ASC">승인일자 순</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-inline">
+											<div class="form-row mr-auto mt-2 form-inline">
+												<label for="sc" class="mr-sm-3 mb-2">기준년도</label>
+												<select id="sc" name="sc" class="form-control mr-sm-2 mb-2" title="구분">
+													<option value="">2021</option>
+												</select>
+											</div>
+											<div class="form-row mt-2 form-inline">
+												<label for="sc" class="mr-sm-2 mb-2">기준분기</label>
+												<select id="sc" name="sc" class="form-control mr-sm-2 mb-2" title="구분">
+													<option value="">1분기</option>
+													<option value="">2분기</option>
+													<option value="">3분기</option>
+												</select>
+												<button class="btn btn-outline-success waves-effect mb-2 " type="submit">검색</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<!-- 테이블 -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card m-b-30">
+								<div class="card-header">
+									<ul class="nav nav-tabs card-header-tabs" role="tablist">
+										<li class="nav-item"><a class="nav-link" href="./index55.html" role="tab">통합통계</a></li>
+										<li class="nav-item"><a class="nav-link active" href="./index56.html" role="tab">분류별통계</a></li>
+									</ul>
+								</div>
+								<div class="card-body">
+									
+									<!-- 셀렉트박스 -->
+									<div class="form-row mt-2 form-inline">
+										<select id="sc" name="sc" class="form-control ml-auto mr-sm-2 mb-2" title="구분">
+											<option value="">전체</option>
+											<option value="">분류별 보기</option>
+											<option value="">종류별 보기</option>
+										</select>
+									</div>
+
+									<!-- 테이블시작 -->
+									<div class="table-responsive-lg">
+										<table class="table table-bordered">
+											<colgroup>
+												<col style="width: 20%;">
+												<col style="width: 20%;">
+												<col style="width: 20%;">
+												<col style="width: 20%;">
+												<col style="width: 20%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="row" class="text-center bg-light align-middle">분류</th>
+													<th scope="row" class="text-center bg-light align-middle" colspan="2">구분</th>
+													<th scope="row" class="text-center bg-light align-middle">금액</th>
+													<th scope="row" class="text-center bg-light align-middle">비중</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th class="text-center bg-light align-middle" scope="row" rowspan="9">분류</th>
+													<td class="align-middle text-left" colspan="2">ICT제조</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="298,663,545,682">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="24.3">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">ICT서비스</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="2,351,842,859,425">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="55.4">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">전기/기계/장비</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="410,769,347,806">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="10.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">화학/소재</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="287,094,562,161">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="8.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">바이오/의료</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,105,817,448,836">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="0.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">영상/공연/음반</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="460,437,826,660">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="10.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">게임</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="161,509,423,651">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="8.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">유통/서비스</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,312,562,574,497">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="10.8">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-left" colspan="2">중기(3년 초과 ~ 7년 이하)</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="375,274,308,972">
+														</div>
+													</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="8.8">
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- end row -->
+
+
+				</div><!-- container -->
+
+
+			</div> <!-- Page content Wrapper -->
 	
 	    </div> <!-- content -->
 	
 	</div>
 	<!-- End Right content here -->
-
-
-
-
-
-
-
-
     
 	<footer class="footer">
 		Copyright© 2022 ASADAL, Inc. All Right Reserved.

@@ -113,6 +113,9 @@
 	<!-- App js -->
 	<script src="http://www.vcs.go.kr/assets/js/app.js"></script>
 	
+	<style>
+		.table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {padding: 5px;}
+	</style>
 	
 </head>
 <body class="fixed-left">
@@ -153,37 +156,29 @@
 
 	<!-- Loader -->
 	<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
-	<!-- 에디터 파일첨부 -->
-	<!-- <div id="browser" class="mfp-hide">
-		<h5 class="modal-title mt-0">파일목록</h5>
-		<hr>
-		<div id="fileInofList">
-		
-		</div>
-	</div> -->
 	
 	<!-- Begin page -->
 	<div id="wrapper">
 
-<script src="http://www.vcs.go.kr/assets/pages/dashborad.js"></script>
-<script>
-jQuery(function($){
-	
-	//자식메뉴 없는 부모 엘리먼트 제거
-   	$('.has_third').each(function(idx, el){
-   		if( !$('.list-unstyled > li', el).size() ){
-   			$(el).remove();
-   		}
-   	});
-	//자식메뉴 없는 부모 엘리먼트 제거
-	$('.has_sub').each(function(idx, el){
-		if( !$('.list-unstyled > li', el).size() ){
-			$(el).remove();
-		}
+	<script src="http://www.vcs.go.kr/assets/pages/dashborad.js"></script>
+	<script>
+	jQuery(function($){
+		
+		//자식메뉴 없는 부모 엘리먼트 제거
+		$('.has_third').each(function(idx, el){
+			if( !$('.list-unstyled > li', el).size() ){
+				$(el).remove();
+			}
+		});
+		//자식메뉴 없는 부모 엘리먼트 제거
+		$('.has_sub').each(function(idx, el){
+			if( !$('.list-unstyled > li', el).size() ){
+				$(el).remove();
+			}
+		});
 	});
-});
 
-</script>
+	</script>
 
 	<!-- ========== Left Sidebar Start ========== -->
 	<div class="left side-menu">
@@ -375,523 +370,600 @@ jQuery(function($){
 	<div class="content-page">
 	    <!-- Start content -->
 	    <div class="content">
-<script>
-jQuery(function($){
-	
-	//페이지 타이틀 처리
-	var page_title = '';
-	var total = $('a.active').length;
-	
-	$('a.active').each(function(index){
-		if(total == 1){
-			if(index == total-1 ){
-				page_title += $(this).find('span').eq(0).text();
-			}
-		}else{
-			if(index == total-1 ){
-				page_title += $(this).text(); 
-			}
-		}
-	});
-	$('h3.page-title').text(page_title);
-	
-	//메뉴 location 처리
-	var seo = '';
-	//seo = '<li class="breadcrumb-item"><a href="#" >벤처투자종합포털</a></li>';
-	$('a.active').each(function(index){
-		seo += '<li class="breadcrumb-item';
-		if(index == total - 1 ){
-			seo += ' active';
-		}
-		seo += '">';
-		if(index < total - 1 ){
-			seo += '<a href="#">';
-		}
-		if(index == 0 ){
-			seo += $(this).find('span').eq(0).text();
-		} else {
-			seo += $(this).text(); 
-		}
-		if(index < total - 1 ){
-			seo += '</a>';
-		}
-		seo += '</li>';
-	});
-	$('.breadcrumb').html(seo);
-	
-	//로그아웃
-	$('#logout').on('click', function(e){
-		e.preventDefault();
-		$.ajax({
-			url : '/portal/cms/logout.do'
-			, type : 'get'
-			,dataType : 'json'
-		}).then(function(result){
-			if(result.success){
-				swal({
-	                type: 'success',
-	                title: result.text,
-	            }).then(function(){
-	            	location.href = '/portal/cms/login.do';
-	            });
-				//alert(data.text);
-			} else {
-				//...
-				swal("로그아웃 실패!", "서버문제로 로그아웃에 실패하였습니다.", "danger")
-				//alert('서버문제로 로그아웃에 실패하였습니다.');
-			}
-		}).fail(function(result){
-			swal("로그아웃 실패!", "로그아웃에 실패하였습니다.[fail]", "danger")
-		});
-		
-	});
-	
-	
-	getNonOpenNoteCnt();
-	//미확인 쪽지 수량
-	function getNonOpenNoteCnt(){
-		$.ajax({
-			url : '/portal/cms/note/nonOpenCnt.do'
-			, type : 'get'
-			,dataType : 'json'
-		}).then(function(result){
-			if(result.success){
-				if(result.successCnt > 0){
-					$('.nonOpenCnt').text(result.successCnt);
-				} else {
-					$('.nonOpenCnt').text('');
-				}
-			} else {
-				//...
-				console.error('미확인 쪽지 수량을 불러오지 못했습니다.');
-			}
-		}).fail(function(result){
-			console.error('미확인 쪽지 수량확인 실패!![fail]');
-		});
-	}
-		
-});
-</script>
-	
-	<!-- Top Bar Start -->
-	<div class="topbar">
-	
-	    <nav class="navbar-custom">
-	
-	        <ul class="list-inline float-right mb-0 mr-3">
-	        
-	            
-	            <li class="list-inline-item dropdown notification-list">
-	                <span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
-	            </li>
-	            
-	            
-	
-				
-	
-	            <li class="list-inline-item dropdown notification-list">
-	            	<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
-	                   aria-haspopup="false" aria-expanded="false">
-	                    <i class="fa fa-power-off noti-icon"></i>
-	                </a>
-	                
-	                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-	                    <a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
-	                    
-	                    
-		                    <a class="dropdown-item" href="http://www.vcs.go.kr/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
-	                    
-	                    
-	                    <a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
-	                </div>
-	            </li>
-	
-	        </ul>
-	
-	        <ul class="list-inline menu-left mb-0">
-	            <li class="list-inline-item">
-	                <button type="button" class="button-menu-mobile open-left waves-effect">
-	                    <i class="ion-navicon"></i>
-	                </button>
-	            </li>
+			<!-- Top Bar Start -->
+			<div class="topbar">
+			
+				<nav class="navbar-custom">
+			
+					<ul class="list-inline float-right mb-0 mr-3">
+					
+						
+						<li class="list-inline-item dropdown notification-list">
+							<span class="text-white">마지막 방문 일시 : 2022-07-13 13:35:28</span>
+						</li>
+						
+						
+			
+						
+			
+						<li class="list-inline-item dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+							aria-haspopup="false" aria-expanded="false">
+								<i class="fa fa-power-off noti-icon"></i>
+							</a>
+							
+							<div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+								<a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/member/admin/profile/update.do"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+								
+								
+									<a class="dropdown-item" href="http://www.vcs.go.kr/web/portal/main" target="_blank"><i class="mdi mdi-arrow-right-bold-hexagon-outline m-r-5 text-muted"></i> Site Go</a>
+								
+								
+								<a class="dropdown-item" href="http://www.vcs.go.kr/portal/cms/logout.do" id="logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+							</div>
+						</li>
+			
+					</ul>
+			
+					<ul class="list-inline menu-left mb-0">
+						<li class="list-inline-item">
+							<button type="button" class="button-menu-mobile open-left waves-effect">
+								<i class="ion-navicon"></i>
+							</button>
+						</li>
 
-	        </ul>
-	
-	        <div class="clearfix"></div>
-	
-	    </nav>
-	
-	</div>
-	<!-- Top Bar End -->
+					</ul>
+			
+					<div class="clearfix"></div>
+			
+				</nav>
+			
+			</div>
+			<!-- Top Bar End -->
 
-	        
-	        <div class="page-content-wrapper ">
-	            <div class="container-fluid">
-	            	<div class="row">
-                        <div class="col-sm-12">
+			<div class="page-content-wrapper ">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12">
 							<div class="page-title-box">
 								<div>
 									<div class="breadcrumb-item">
-										벤처투자마트 > 2차 신청 기업 상세 정보
+										관리자 통계화면
 									</div>
 								</div>
 							</div>
 						</div>
-	                </div>
+					</div>
 
+					<!-- 정렬 / 검색 폼 -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card m-b-15">
+								<div class="card-body">
+									<form id="adminNotice" action="/portal/cms/member/admin/list.do" method="get">
+										<div class="form-inline">
+											<div class="form-row mr-auto mt-2 form-inline">
+												<label class="mr-sm-2 mb-2">정렬조건</label>
+												<select name="pageSize" id="pageSize" class="form-control mr-sm-2 mb-2" title="페이지크기">
+													<option value="" selected="selected">목록 10개</option>
+												</select>
+												<select id="sortDirection" name="sortDirection" class="form-control mr-sm-2 mb-2" title="정렬방향">
+													<option value="DESC">신청일자 순</option>
+													<option value="ASC">승인일자 순</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-inline">
+											<div class="form-row mr-auto mt-2 form-inline">
+												<label for="sc" class="mr-sm-3 mb-2">기준년도</label>
+												<select id="sc" name="sc" class="form-control mr-sm-2 mb-2" title="구분">
+													<option value="">2021</option>
+												</select>
+											</div>
+											<div class="form-row mt-2 form-inline">
+												<label for="sc" class="mr-sm-2 mb-2">기준분기</label>
+												<select id="sc" name="sc" class="form-control mr-sm-2 mb-2" title="구분">
+													<option value="">1분기</option>
+													<option value="">2분기</option>
+													<option value="">3분기</option>
+												</select>
+												<button class="btn btn-outline-success waves-effect mb-2 " type="submit">검색</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				
 					<!-- 테이블 -->
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="card m-b-30">
 								<div class="card-header">
 									<ul class="nav nav-tabs card-header-tabs" role="tablist">
-										<li class="nav-item"><a class="nav-link" href="./index43-1.html" role="tab">기업개요</a></li>
-										<li class="nav-item"><a class="nav-link" href="./index43-2.html" role="tab">인력정보</a></li>
-										<li class="nav-item"><a class="nav-link" href="./index43-3.html" role="tab">주식정보</a></li>
-										<li class="nav-item"><a class="nav-link" href="./index43-4.html" role="tab">재무정보</a></li>
-										<li class="nav-item"><a class="nav-link active" href="./index43-5.html" role="tab">기술/권리 및 IR등록</a></li>
-										<li class="nav-item"><a class="nav-link" href="./index43-6.html" role="tab">검토의견서</a></li>
+										<li class="nav-item"><a class="nav-link active" href="./index55.html" role="tab">통합통계</a></li>
+										<li class="nav-item"><a class="nav-link" href="./index56.html" role="tab">분류별통계</a></li>
 									</ul>
 								</div>
 								<div class="card-body">
-
-									<h5>핵심기술 / 권리</h5>
-									<hr>
-
+									
 									<!-- 테이블시작 -->
 									<div class="table-responsive-lg">
 										<table class="table table-bordered">
 											<colgroup>
 												<col style="width: 20%;">
-												<col style="width: 30%;">
 												<col style="width: 20%;">
-												<col style="width: 30%;">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th class="text-center bg-light align-middle" scope="row">핵심사업</th>
-													<td class="align-middle" colspan="3">
-														<div class="input-group">
-															<textarea class="form-control" id="" rows="3"></textarea>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<th class="text-center bg-light align-middle" scope="row">핵심기술 및 권리</th>
-													<td class="align-middle" colspan="3">
-														<div class="input-group">
-															<textarea class="form-control" id="" rows="3"></textarea>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<th class="text-center bg-light align-middle" scope="row">주요연혁</th>
-													<td class="align-middle" colspan="3">
-														<div class="input-group">
-															<textarea class="form-control" id="" rows="3"></textarea>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<h5 class="mt-5">자가진단표 (아래의 사유에 해당되면 체크하여 주시기 바랍니다.(확인 후 해당 시 선택 요망))</h5>
-									<hr>
-
-									<!-- 테이블시작 -->
-									<div class="table-responsive-lg">
-										<table class="table table-bordered">
-											<colgroup>
-												<col width="85%">
-												<col width="15%">
-											</colgroup>
-											<thead>
-												<tr>
-													<th scope="col" class="text-center bg-light align-middle">진단내용</th>
-													<th scope="col" class="text-center bg-light align-middle">해당</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>① 세금을 체납중인 기업이십니까? (단, 세금분납계획에 따라 성실납부 중인 기업은 제외)</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex1" name="adminSex" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex1" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex2" name="adminSex" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex2" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>② 전국은행연합회의 ❝신용정보관리규약❞에 따라 연체, 대위변제·대지급, 부도, 관련인, 금융질서문란, 화의·법정관리·기업회생신청·청산절차 등의 정보가 등록되어 있는 기업이십니까?</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex3" name="adminSex1" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex3" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex4" name="adminSex1" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex4" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>③ 과거 투자를 받으신 적이 있으십니까?</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex5" name="adminSex2" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex5" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex6" name="adminSex2" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex6" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>④ 업력 3년 이하 중소기업이십니까? (사업자등록증 기준)</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex7" name="adminSex3" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex7" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex8" name="adminSex3" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex8" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														⑤ 중소기업창업 지원법 시행령 제4조에서의 정의하는 ❝창업에서 제외되는 업종❞을 영위하지 아니한 업종의 예비창업자이십니까?<br>
-														※ 창업에서 제외되는 업종(중소기업창업 지원법 시행령 제4조)<br>
-														- 금융 및 보험업<br>
-														- 부동산업<br>
-														- 숙박 및 음식점업(호텔업, 휴양콘도 운영업 및 상시근로자 20명 이상의 법인인 음식점은 제외)<br>
-														- 무도장운영업<br>
-														- 골프장 및 스키장운영업<br>
-														- 기타 갬블링 및 베팅업<br>
-														- 기타 개인 서비스업(상업용 세탁업은 제외)
-													</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex9" name="adminSex4" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex9" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex10" name="adminSex4" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex10" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>⑥ 부채비율이 250% 이상인 기업이십니까?</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex11" name="adminSex5" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex11" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex12" name="adminSex5" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex12" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														⑦ 업력이 3년 초과 7년 이하의 기업일 경우, 직전년도 매출액이 10억원 이하이고 연구개발비가 매출액의 5% 이상이 되십니까?<br>
-														(단, 직전년도 매출액 5억미만, 연구개발비 최소 2천5백만원 이상)
-													</td>
-													<td>
-														<div class="input-group">
-															<div class="custom-control custom-radio custom-control-inline ml-3">
-																<input id="adminSex13" name="adminSex6" class="custom-control-input" type="radio" value="M" checked="" disabled="">
-																<label for="adminSex13" class="custom-control-label">예</label>
-															</div>
-															<div class="custom-control custom-radio custom-control-inline">
-																<input id="adminSex14" name="adminSex6" class="custom-control-input" type="radio" value="F" disabled="">
-																<label for="adminSex14" class="custom-control-label">아니오</label>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<h5 class="mt-5">사업계획</h5>
-									<hr>
-
-									<!-- 테이블시작 -->
-									<div class="table-responsive-lg">
-										<table class="table table-bordered">
-											<colgroup>
 												<col style="width: 20%;">
-												<col style="width: 30%;">
 												<col style="width: 20%;">
-												<col style="width: 30%;">
+												<col style="width: 20%;">
 											</colgroup>
 											<tbody>
+												<!-- 종합 -->
 												<tr>
-													<th class="text-center bg-light align-middle" scope="row">투자자금 활용계획 및 내용</th>
-													<td class="align-middle" colspan="3">
+													<th class="text-center bg-light align-middle" scope="row" rowspan="4">종합</th>
+													<td class="align-middle text-center" rowspan="2">벤처투자조합</td>
+													<td class="align-middle text-center" colspan="2">투자받은 기업 수</td>
+													<td>
 														<div class="input-group">
-															<textarea class="form-control" id="" rows="3"></textarea>
-														</div>
-														<div class="mx-2 bg-light font-weight-bold text-info mt-2">
-															※ 투자신청 주요내용 및 목적 (일반적인 사업계획 혹은 보유기술에 대한 사업화, 제품화 내용 및 목적 등에 대해 약식 기술 등)을 기술하고 별도로 작성한 사업계획서가 있을 경우 대체 가능
+															<input class="form-control text-right" type="text" value="2,474">
 														</div>
 													</td>
 												</tr>
 												<tr>
-													<th class="text-center bg-light align-middle" scope="row">기대효과</th>
-													<td class="align-middle" colspan="3">
+													<td class="align-middle text-center" colspan="2">투자받은 금액</td>
+													<td>
 														<div class="input-group">
-															<textarea class="form-control" id="" rows="3"></textarea>
+															<input class="form-control text-right" type="text" value="6,763,971,897,690">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="2">창업기획자</td>
+													<td class="align-middle text-center" colspan="2">투자받은 기업 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="342">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">투자받은 금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="303,826,402,499">
+														</div>
+													</td>
+												</tr>
+
+												<!-- 투자자 -->
+												<tr>
+													<th class="text-center bg-light align-middle" scope="row" rowspan="8">투자자</th>
+													<td class="align-middle text-center" rowspan="4">벤처투자조합</td>
+													<td class="align-middle text-center" rowspan="2">신규결성조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="380">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="10,728,557,000,000">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="2">운영중인조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,737">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="51,265,299,248,087">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="4">개인투자조합</td>
+													<td class="align-middle text-center" rowspan="2">신규결성조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,737">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="51,265,299,248,087">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="2">운영중인조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,737">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="51,265,299,248,087">
+														</div>
+													</td>
+												</tr>
+
+												<!-- 투자희망기업 -->
+												<tr>
+													<th class="text-center bg-light align-middle" scope="row" rowspan="4">투자희망기업</th>
+													<td class="align-middle text-center" colspan="3">전체 벤처기업 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="3">중 벤처투자유형 기업 수(비중%)</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="3">올해 코스닥 신규상장기업 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="112">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="3">중 VC투자기업 수(비중 %)</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="67(59.8)">
+														</div>
+													</td>
+												</tr>
+
+												<!-- 현황/통계 -->
+												<tr>
+													<th class="text-center bg-light align-middle" scope="row" rowspan="10">현황/통계</th>
+													<td class="align-middle text-center" rowspan="3">창업투자회사</td>
+													<td class="align-middle text-center" colspan="2">창업투자회사 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="231">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">운용중인 펀드금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="42,420,156,018,047">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">출자펀드 투자금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="27,832,425,018,019">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="3">창업기획자</td>
+													<td class="align-middle text-center" colspan="2">창업기획자 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="43">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">투자실적</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="2,664,031,802,380">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">출자펀드 투자금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="2,001,901,915,622">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="4">전문엔젤</td>
+													<td class="align-middle text-center" colspan="2">전문개인투자자 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,254">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">엔젤클럽 수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="253">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">개인투자조합</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="3,236">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="2">출자총액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="2,238,321,929,434">
+														</div>
+													</td>
+												</tr>
+
+												<!-- 통계 대쉬보드 -->
+												<tr>
+													<th class="text-center bg-light align-middle" scope="row" rowspan="24">통계 대쉬보드</th>
+													<td class="align-middle text-center" rowspan="8" colspan="2">한국모태펀드 현황</td>
+													<td class="align-middle text-center">총 조성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="82,153">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">출자펀드</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,082">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">투자기업수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="8,974">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">투자금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="276,338">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">자조합 청산 수익률</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="231">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">유니콘기업 전체/배출수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="37/33">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">창업기업투자후7년 생존율</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="63.7">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">코스닥 상장기업 중<br/>모태자펀드 투자기업</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="46.7">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="4">벤처투자조합 현황</td>
+													<td class="align-middle text-center" rowspan="2">신규결성조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="380">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="10,728,557,000,000">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="2">운영중인조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="1,737">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="51,265,299,248,087">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="4">창업기획자 투자현황</td>
+													<td class="align-middle text-center" rowspan="2">신규결성조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="65">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="730537,800,000">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="2">누적결성조합</td>
+													<td class="align-middle text-center">조합수</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="235">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">결성금액</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="2,732,906,802,380">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="7">투자조합 현황</td>
+													<td class="align-middle text-center" rowspan="4">벤처투자조합</td>
+													<td class="align-middle text-center">창투사</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="193">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">신기술사</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="21">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">LLC</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="43">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">창업기획자</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="41">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" rowspan="3">개인투자조합</td>
+													<td class="align-middle text-center">개인투자조합</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="862">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">창업기획자</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="26">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center">기타</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="196">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="align-middle text-center" colspan="3">연도별 신규투자실적</td>
+													<td>
+														<div class="input-group">
+															<input class="form-control text-right" type="text" value="6,763,971,897,690">
 														</div>
 													</td>
 												</tr>
 											</tbody>
 										</table>
 									</div>
-
-									<h5 class="mt-5">제출서류</h5>
-									<hr>
-
-									<!-- 테이블시작 -->
-									<div class="table-responsive-lg">
-										<table class="table table-bordered">
-											<colgroup>
-												<col width="85%">
-												<col width="15%">
-											</colgroup>
-											<thead>
-												<tr>
-													<th scope="col" class="text-center bg-light align-middle">구분</th>
-													<th scope="col" class="text-center bg-light align-middle">비고</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>
-														① 투자유치제안서(IR자료) 1부<br>
-														* 기존에 투자유치제안서를 보유하지 않은 업체의 경우 첨부된 양식 활용
-													</td>
-													<td>제출</td>
-												</tr>
-												<tr>
-													<td>② 주주명부(법인기업에 한함)</td>
-													<td>제출</td>
-												</tr>
-												<tr>
-													<td>③ 경영진이력, 조직도</td>
-													<td>필요시 현장확인</td>
-												</tr>
-												<tr>
-													<td>
-														④ 산업재산권, 규격표시 인증, 기타 인증서류 등 사본 (해당기업)<br>
-														* 특허, 실용신안, 디자인, 프로그램등록 (단, 특허, 실용신안의 경우 별도의 사업계획서상에 등록번호를 정확히 기재하고 별도 제출할 필요 없음)<br>
-														* ISO, KS, JIS, UL, CE 등 국내외 규격, Q마크등 품질인증<br>
-														* 신기술(NET), NEP(신제품), GH인증 등 기술 및 제품인증<br>
-														* 정부지원 기술개발사업 성공판정 공문<br>
-														* 벤처기업 확인서, Inno-biz 확인서, 경영혁신형중소기업 확인서, 수출유망중소기업 지정서, 부품소재전문기업 확인서, 서비스품질우수기업인증서<br>
-														* PL교육·컨설팅 수료증, 납세자의날 표창장, 대북투자진출 확인서류 등
-													</td>
-													<td>필요시 현장확인</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<h5 class="mt-5">IR자료</h5>
-									<hr>
-
-									<!-- 테이블시작 -->
-									<div class="table-responsive-lg">
-										<table class="table table-bordered">
-											<colgroup>
-												<col width="20%">
-												<col width="80%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th scope="row" class="text-center bg-light align-middle">첨부파일<span class="text-danger">*</span></td>
-													<td>
-														<div><a href="" title="다운로드">미래를 여는 사람들 IR 자료 20221007.pdf (4.6MB)</a></div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<h5 class="mt-5">기타자료</h5>
-									<hr>
-
-									<!-- 테이블시작 -->
-									<div class="table-responsive-lg">
-										<table class="table table-bordered">
-											<colgroup>
-												<col width="20%">
-												<col width="80%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th scope="row" class="text-center bg-light align-middle">첨부파일<span class="text-danger">*</span></td>
-													<td>
-														<div><a href="" title="다운로드">주주명부.xlsx (4.6MB)</a></div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<div class="form-inline" style="margin-top: 50px;">
-                                        <div class="mr-auto">
-                                            <a href="#" class="btn btn-primary waves-effect waves-light">수정</a>
-                                            <a href="" class="btn btn-secondary waves-effect m-l-5">목록</a>
-                                        </div>
-                                    </div>
 
 								</div>
 							</div>
 						</div>
 					</div>
-	
 
-	                <!-- end row -->
-	
-	
-	            </div><!-- container -->
-	
-	
-	        </div> <!-- Page content Wrapper -->
+
+					<!-- end row -->
+
+
+				</div><!-- container -->
+
+
+			</div> <!-- Page content Wrapper -->
 	
 	    </div> <!-- content -->
 	
 	</div>
 	<!-- End Right content here -->
+    
 	<footer class="footer">
 		Copyright© 2022 ASADAL, Inc. All Right Reserved.
 		 (Was : 10.150.20.6	)
 	</footer>
     </div>
     <!-- END wrapper -->
+    
     
     <!-- 해더로 옮기지 마세요  -->
 	
