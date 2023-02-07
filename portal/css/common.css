@@ -1413,7 +1413,7 @@
     font-size: var(--font-common);
 }
 .tbl_box table tbody tr td {
-    word-break: keep-all;
+    word-break: break-all;
 }
 .tbl_box table tbody tr td a,
 .tbl_box table tbody tr td button {
